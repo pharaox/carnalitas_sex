@@ -1,0 +1,15 @@
+﻿carnx_debug_log_effect = {
+	if = {
+		limit = { debug_only = yes }
+		debug_log = $MSG$
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_debug_log_no_details_effect = {
+	if = {
+		limit = { debug_only = yes }
+		debug_log = $MSG$
+	}
+}
