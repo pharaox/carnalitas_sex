@@ -1,0 +1,235 @@
+﻿carnx_sex_scene_text = {
+	type = character
+
+	text = {
+		trigger = {
+			carn_sex_scene_was_dubcon = yes
+			carn_sex_scene_was_dom_player = yes
+		}
+		localization_key = carnx_sex_scene_dubcon_dom_text
+	}
+	text = {
+		trigger = {
+			carn_sex_scene_was_dubcon = yes
+			carn_sex_scene_was_sub_player = yes
+		}
+		localization_key = carnx_sex_scene_dubcon_sub_text
+	}
+	text = {
+		localization_key = sex_scene_text
+	}
+}
+
+carnx_sex_scene_dubcon_dom_opening = {
+	type = character
+
+	text = {
+		trigger = { exists = var:sex_scene_location }
+		localization_key = carnx_sex_scene_dubcon_dom_opening_location
+	}
+	text = {
+		localization_key = carnx_sex_scene_dubcon_dom_opening_random
+	}
+}
+
+carnx_sex_scene_dubcon_dom_opening_random = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_dom_opening_1
+	}
+}
+
+carnx_sex_scene_dubcon_dom_opening_location = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { var:sex_scene_location = flag:private_chamber }
+		localization_key = carnx_sex_scene_dubcon_dom_opening_private_chambers_1
+	}
+	text = {
+		trigger = { var:sex_scene_location = flag:garden }
+		localization_key = carnx_sex_scene_dubcon_dom_opening_garden_1
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = carnx_sex_scene_dubcon_dom_opening_random
+	}
+}
+
+carnx_sex_scene_dubcon_dom_first = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_dom_first_1
+	}
+}
+
+carnx_sex_scene_dubcon_dom_second = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_dom_second_1
+	}
+}
+
+carnx_sex_scene_dubcon_dom_third = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_dom_third_1
+	}
+}
+
+carnx_sex_scene_dubcon_dom_ending = {
+	type = character
+
+	text = {
+		trigger = { exists = var:sex_scene_location }
+		localization_key = carnx_sex_scene_dubcon_dom_ending_location
+	}
+	text = {
+		localization_key = carnx_sex_scene_dubcon_dom_ending_random
+	}
+}
+
+carnx_sex_scene_dubcon_dom_ending_random = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_dom_ending_1
+	}
+}
+
+carnx_sex_scene_dubcon_dom_ending_location = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { var:sex_scene_location = flag:private_chamber }
+		localization_key = carnx_sex_scene_dubcon_dom_ending_private_chambers_1
+	}
+	text = {
+		trigger = { var:sex_scene_location = flag:garden }
+		localization_key = carnx_sex_scene_dubcon_dom_ending_garden_1
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = carnx_sex_scene_dubcon_dom_ending_random
+	}
+}
+
+carnx_sex_scene_dubcon_sub_opening = {
+	type = character
+
+	text = {
+		trigger = { exists = var:sex_scene_location }
+		localization_key = carnx_sex_scene_dubcon_sub_opening_location
+	}
+	text = {
+		localization_key = carnx_sex_scene_dubcon_sub_opening_random
+	}
+}
+
+carnx_sex_scene_dubcon_sub_opening_random = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_sub_opening_1
+	}
+}
+
+carnx_sex_scene_dubcon_sub_opening_location = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { var:sex_scene_location = flag:private_chamber }
+		localization_key = carnx_sex_scene_dubcon_sub_opening_private_chambers_1
+	}
+	text = {
+		trigger = { var:sex_scene_location = flag:garden }
+		localization_key = carnx_sex_scene_dubcon_sub_opening_garden_1
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = carnx_sex_scene_dubcon_sub_opening_random
+	}
+}
+
+carnx_sex_scene_dubcon_sub_first = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_sub_first_1
+	}
+}
+
+carnx_sex_scene_dubcon_sub_second = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_sub_second_1
+	}
+}
+
+carnx_sex_scene_dubcon_sub_third = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_sub_third_1
+	}
+}
+
+carnx_sex_scene_dubcon_sub_ending = {
+	type = character
+
+	text = {
+		trigger = { exists = var:sex_scene_location }
+		localization_key = carnx_sex_scene_dubcon_sub_ending_location
+	}
+	text = {
+		localization_key = carnx_sex_scene_dubcon_sub_ending_random
+	}
+}
+
+carnx_sex_scene_dubcon_sub_ending_random = {
+	type = character
+	random_valid = yes
+
+	text = {
+		localization_key = carnx_sex_scene_dubcon_sub_ending_1
+	}
+}
+
+carnx_sex_scene_dubcon_sub_ending_location = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { var:sex_scene_location = flag:private_chamber }
+		localization_key = carnx_sex_scene_dubcon_sub_ending_private_chambers_1
+	}
+	text = {
+		trigger = { var:sex_scene_location = flag:garden }
+		localization_key = carnx_sex_scene_dubcon_sub_ending_garden_1
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = carnx_sex_scene_dubcon_sub_ending_random
+	}
+}

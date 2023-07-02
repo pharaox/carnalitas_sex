@@ -1,0 +1,17 @@
+﻿carnx_set_sex_scene_location_effect = {
+	random_list = {
+		50 = {
+			set_variable = { name = sex_scene_location value = flag:private_chamber }
+		}
+		50 = {
+			set_variable = { name = sex_scene_location value = flag:garden }
+		}
+	}
+}
+
+carnx_remove_sex_scene_location_effect = {
+	if = {
+		limit = { has_variable = sex_scene_location }
+		remove_variable = sex_scene_location
+	}
+}

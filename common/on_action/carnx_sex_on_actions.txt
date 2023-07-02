@@ -1,0 +1,23 @@
+﻿carn_on_sex = {
+	on_actions = { carnx_on_sex }
+}
+
+carnx_on_sex = {
+	effect = {
+		# Save requested, excluded, and scene flags
+		every_in_global_list = {
+			variable = carn_sex_scene_requested_flags
+			add_to_list = debug_sex_scene_requested_flags
+		}
+		every_in_global_list = {
+			variable = carn_sex_scene_excluded_flags
+			add_to_list = debug_sex_scene_excluded_flags
+		}
+		every_in_global_list = {
+			variable = carn_sex_scene_flags
+			add_to_list = debug_sex_scene_flags
+		}
+
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_character_had_sex }
+	}
+}

@@ -1,0 +1,47 @@
+﻿##################################################################################
+# carn_sex_scene
+##################################################################################
+# Empty list of sex interactions. Modders should add their own scenes to this as random_events.
+# You can adjust the random chance based on how often you think your event should appear.
+
+carn_sex_scene = {
+	random_events = {
+		# CSR: Replace default Carnalitas sex scenes
+		100 = carnx_sex_scene.0001 # Generic consensual scene, using the PDX sex scene generator
+		100 = carnx_sex_scene.0003 # Generic dubcon / noncon scene (dom)
+		100 = carnx_sex_scene.0004 # Generic dubcon / noncon scene (sub)
+	}
+	fallback = carn_sex_scene_fallback
+}
+
+carn_sex_scene_fallback = {
+	events = {
+		carn_sex_scene.0002 # fallback to PDX sex scene
+	}
+}
+
+##################################################################################
+# carn_on_sex
+##################################################################################
+
+# Triggers whenever a character has sex via event or decision, in the scope of that character.
+
+# DOES NOT trigger off random passive pregnancy with spouse/consort
+
+# You can check the chance of pregnancy with
+# scope:carn_sex_char_1_could_be_impregnated,
+# scope:carn_sex_char_2_could_be_impregnated
+
+# You can check whether impregnation happened with
+# scope:carn_sex_char_1_impregnated,
+# scope:carn_sex_char_2_impregnated
+
+# You can check for specific sex acts with "carn_sex_scene_was_vaginal = yes", etc
+
+# root = the character that sees the sex scene event
+# scope:carn_sex_partner = the other partner in the sex effect
+
+carn_on_sex = {
+	events = {
+	}
+}

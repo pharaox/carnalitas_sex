@@ -1,0 +1,58 @@
+﻿l_english:
+ carnx_sex_scene_dubcon_dom_text: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first', SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_second', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_third' , SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_ending', SCOPE.sC('second'))]"
+
+ carnx_sex_scene_dubcon_dom_opening_location: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening_location' , SCOPE.sC('second') )]"
+ carnx_sex_scene_dubcon_dom_opening_random: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening_random' , SCOPE.sC('second') )]"
+
+ carnx_sex_scene_dubcon_dom_ending_location: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_ending_location' , SCOPE.sC('second') )]"
+ carnx_sex_scene_dubcon_dom_ending_random: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_ending_random' , SCOPE.sC('second') )]"
+
+ carnx_sex_scene_dubcon_dom_opening_1: "[second.GetSheHe|U] seems resigned to [second.GetHerHis] fate and ready to oblige me in any way I choose."
+
+ carnx_sex_scene_dubcon_dom_opening_private_chambers_1: "[second.GetSheHe|U] knows why [second.GetSheHe] has been brought to my private chambers and seems ready to oblige me in any way I choose."
+ carnx_sex_scene_dubcon_dom_opening_garden_1: "[second.GetSheHe|U] has been brought to a secluded part of my garden. The scent of [second.GetHerHis] skin mixes with the sweetness of the flowers."
+
+ carnx_sex_scene_dubcon_dom_first_1: "I approach [second.GetHerHim] and slowly remove [second.GetHerHis] clothes, fondling [second.GetHerHis] body while [second.GetSheHe] avoids looking at me."
+
+ carnx_sex_scene_dubcon_dom_second_1: "I ask [second.GetHerHim] to stand on [second.GetHerHis] knees and pleasure me with [second.GetHerHis] mouth, and [second.GetSheHe] obeys without a moment's hesitation. I feel the desire throbbing in my loins as I grab [second.GetHerHim] and press [second.GetHerHim] closer to me."
+
+ carnx_sex_scene_dubcon_dom_third_1: "As [second.GetSheHe] responds to my movements, the passion consumes me, and I am ready to burst..."
+
+ carnx_sex_scene_dubcon_dom_ending_1: "When I am finished with [second.GetHerHim], [second.GetSheHe] gets up and leaves without saying a word."
+
+ carnx_sex_scene_dubcon_dom_ending_private_chambers_1: "Afterwards, I try to be gentle with [second.GetHerHim] but [second.GetSheHe] remains silent and numb."
+ carnx_sex_scene_dubcon_dom_ending_garden_1: "When I am done, [second.GetSheHe] gets up and enters the nearby pool in silence."
+
+ carnx_sex_scene_dubcon_sub_text: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_first', SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_second', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_third' , SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_ending', SCOPE.sC('second'))]"
+
+ carnx_sex_scene_dubcon_sub_opening_location: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening_location' , SCOPE.sC('second') )]"
+ carnx_sex_scene_dubcon_sub_opening_random: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening_random' , SCOPE.sC('second') )]"
+
+ carnx_sex_scene_dubcon_sub_ending_location: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_ending_location' , SCOPE.sC('second') )]"
+ carnx_sex_scene_dubcon_sub_ending_random: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_ending_random' , SCOPE.sC('second') )]"
+
+ carnx_sex_scene_dubcon_sub_opening_1: "I don't want to give in to [second.GetHerHis] lust, but I know better than to protest and so I am ready to oblige [second.GetHerHim] in any way [second.GetSheHe] chooses."
+
+ carnx_sex_scene_dubcon_sub_opening_private_chambers_1: "I know why I have been brought to [second.GetHerHis] private chambers, so I am ready to oblige [second.GetHerHim] in any way [second.GetSheHe] chooses."
+ carnx_sex_scene_dubcon_sub_opening_garden_1: "I have been brought to a secluded part of [second.GetHerHis] garden. [second.GetSheHe|U] looks at me lustfully and draws a deep breath."
+
+ carnx_sex_scene_dubcon_sub_first_1: "[second.GetSheHe|U] approaches me and slowly removes my clothes, fondling my body while I avoid looking at [second.GetHerHim]."
+
+ carnx_sex_scene_dubcon_sub_second_1: "[second.GetSheHe|U] asks me to stand on my knees and pleasure [second.GetHerHim] with my mouth, and I obey without a moment's hesitation. I feel myself suffocating as [second.GetSheHe] grabs me and presses me closer to [second.GetHerHim]."
+
+ carnx_sex_scene_dubcon_sub_third_1: "As I somehow manage to respond to [second.GetHerHis] movements, the desire awakens in me, but now it's already too late..."
+
+ carnx_sex_scene_dubcon_sub_ending_1: "When [second.GetSheHe] is finished with me, I get up and leave without saying a word."
+
+ carnx_sex_scene_dubcon_sub_ending_private_chambers_1: "Afterwards, [second.GetSheHe] tries to be gentle with me but I remain silent and numb."
+ carnx_sex_scene_dubcon_sub_ending_garden_1: "When [second.GetSheHe] is done, I get up and enter the nearby pool in silence."
+
+ carnx_sex_scene.0003.t: "No Love Lost Between Us"
+ carnx_sex_scene.0003.desc_opening: "I find my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] [carn_sex_target.GetTitledFirstName] waiting for me with apprehension."
+ carnx_sex_scene.0003.desc_ending: "[ROOT.Char.Custom2('carnx_sex_scene_text', SCOPE.sC('carn_sex_target'))]"
+ carnx_sex_scene.0003.a: "I should try something else next time."
+
+ carnx_sex_scene.0004.t: "No Love Lost Between Us"
+ carnx_sex_scene.0004.desc_opening: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] [carn_sex_target.GetTitledFirstName] finds me waiting for [carn_sex_target.GetHerHim] with apprehension."
+ carnx_sex_scene.0004.desc_ending: "[ROOT.Char.Custom2('carnx_sex_scene_text', SCOPE.sC('carn_sex_target'))]"
+ carnx_sex_scene.0004.a: "I wish [carn_sex_target.GetSheHe] could leave me alone for a while."
