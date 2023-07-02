@@ -17,6 +17,14 @@ carnx_on_sex = {
 			variable = carn_sex_scene_flags
 			add_to_list = debug_sex_scene_flags
 		}
+		every_in_global_list = {
+			variable = carnx_requested_sex_scene_locations
+			add_to_list = debug_requested_sex_scene_locations
+		}
+		every_in_global_list = {
+			variable = carnx_sex_scene_locations
+			add_to_list = debug_sex_scene_locations
+		}
 
 		carnx_debug_log_effect = { MSG = carnx_debug_msg_character_had_sex }
 	}

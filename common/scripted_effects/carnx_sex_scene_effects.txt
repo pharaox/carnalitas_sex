@@ -1,11 +1,55 @@
-﻿carnx_set_sex_scene_location_effect = {
+﻿carnx_request_sex_scene_location_effect = {
+	add_to_global_variable_list = {
+		name = carnx_requested_sex_scene_locations
+		target = flag:$LOCATION$
+	}
+}
+
+carnx_add_sex_scene_location_effect = {
+	add_to_global_variable_list = {
+		name = carnx_sex_scene_locations
+		target = flag:$LOCATION$
+	}
+}
+
+carnx_clear_sex_scene_locations_effect = {
+	clear_global_variable_list = carnx_requested_sex_scene_locations
+	clear_global_variable_list = carnx_sex_scene_locations
+}
+
+carnx_set_sex_scene_location_effect = {
 	random_list = {
-		50 = {
+		10 = {
+			trigger = {
+				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = private_chamber }
+			}
 			set_variable = { name = sex_scene_location value = flag:private_chamber }
 		}
-		50 = {
+		10 = {
+			trigger = {
+				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = garden }
+			}
 			set_variable = { name = sex_scene_location value = flag:garden }
 		}
+		10 = {
+			trigger = {
+				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = stable }
+			}
+			set_variable = { name = sex_scene_location value = flag:stable }
+		}
+		10 = {
+			trigger = {
+				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = copse }
+			}
+			set_variable = { name = sex_scene_location value = flag:copse }
+		}
+		10 = {
+			trigger = {
+				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = kitchen }
+			}
+			set_variable = { name = sex_scene_location value = flag:kitchen }
+		}
+		50 = {}
 	}
 }
 

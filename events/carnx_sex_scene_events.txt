@@ -1,8 +1,8 @@
 ﻿namespace = carnx_sex_scene
 
 # 0001. Generic consensual scene
-# 0003. Generic dubcon / noncon scene (dom)
-# 0004. Generic dubcon / noncon scene (sub)
+# 0003. Generic dubcon (dom)
+# 0004. Generic dubcon (sub)
 
 carnx_sex_scene.0001 = {
 	type = character_event
@@ -15,12 +15,18 @@ carnx_sex_scene.0001 = {
 	theme = seduction
 	override_background = {
 		trigger = {
-			OR = {
-				NOT = { has_variable = sex_scene_location }
+			NOT = { has_variable = sex_scene_location }
+		}
+		reference = bedchamber
+	}
+	override_background = {
+		trigger = {
+			AND = {
+				has_variable = sex_scene_location
 				var:sex_scene_location = flag:private_chamber
 			}
 		}
-		reference = bedchamber
+		reference = sitting_room
 	}
 	override_background = {
 		trigger = {
@@ -76,6 +82,12 @@ carnx_sex_scene.0001 = {
 	immediate = {
 		carn_sex_scene_is_consensual = yes
 
+		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
+		carnx_add_sex_scene_location_effect = { LOCATION = garden }
+		carnx_add_sex_scene_location_effect = { LOCATION = stable }
+		carnx_add_sex_scene_location_effect = { LOCATION = copse }
+		carnx_add_sex_scene_location_effect = { LOCATION = kitchen }
+
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
@@ -92,23 +104,7 @@ carnx_sex_scene.0001 = {
 			carn_undress_character_effect = yes
 		}
 
-		random = {
-			chance = 30
-			if = {
-				limit = {
-					scope:carn_sex_player = {
-						OR = {
-							has_relation_lover = scope:carn_sex_target
-							has_relation_soulmate = scope:carn_sex_target
-						}
-					}
-				}
-				set_random_sex_scene_location_effect = yes
-			}
-			else = {
-				carnx_set_sex_scene_location_effect = yes
-			}
-		}
+		carnx_set_sex_scene_location_effect = yes
 	}
 
 	after = {
@@ -120,6 +116,7 @@ carnx_sex_scene.0001 = {
 		}
 
 		carnx_remove_sex_scene_location_effect = yes
+		carnx_clear_sex_scene_locations_effect = yes
 	}
 
 	option = {
@@ -138,12 +135,18 @@ carnx_sex_scene.0003 = {
 	theme = seduction
 	override_background = {
 		trigger = {
-			OR = {
-				NOT = { has_variable = sex_scene_location }
+			NOT = { has_variable = sex_scene_location }
+		}
+		reference = bedchamber
+	}
+	override_background = {
+		trigger = {
+			AND = {
+				has_variable = sex_scene_location
 				var:sex_scene_location = flag:private_chamber
 			}
 		}
-		reference = bedchamber
+		reference = sitting_room
 	}
 	override_background = {
 		trigger = {
@@ -166,15 +169,16 @@ carnx_sex_scene.0003 = {
 
 	trigger = {
 		carn_sex_scene_is_dubcon = yes
-		carn_sex_scene_is_noncon = yes
 		carn_sex_scene_is_dom_player = yes
 		carn_sex_scene_matches_requested_flags_trigger = yes
 	}
 
 	immediate = {
 		carn_sex_scene_is_dubcon = yes
-		carn_sex_scene_is_noncon = yes
 		carn_sex_scene_is_dom_player = yes
+
+		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
+		carnx_add_sex_scene_location_effect = { LOCATION = garden }
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
@@ -192,10 +196,7 @@ carnx_sex_scene.0003 = {
 			carn_undress_character_effect = yes
 		}
 
-		random = {
-			chance = 50
-			carnx_set_sex_scene_location_effect = yes
-		}
+		carnx_set_sex_scene_location_effect = yes
 	}
 
 	after = {
@@ -207,6 +208,7 @@ carnx_sex_scene.0003 = {
 		}
 
 		carnx_remove_sex_scene_location_effect = yes
+		carnx_clear_sex_scene_locations_effect = yes
 	}
 
 	option = {
@@ -225,12 +227,18 @@ carnx_sex_scene.0004 = {
 	theme = seduction
 	override_background = {
 		trigger = {
-			OR = {
-				NOT = { has_variable = sex_scene_location }
+			NOT = { has_variable = sex_scene_location }
+		}
+		reference = bedchamber
+	}
+	override_background = {
+		trigger = {
+			AND = {
+				has_variable = sex_scene_location
 				var:sex_scene_location = flag:private_chamber
 			}
 		}
-		reference = bedchamber
+		reference = sitting_room
 	}
 	override_background = {
 		trigger = {
@@ -253,15 +261,16 @@ carnx_sex_scene.0004 = {
 
 	trigger = {
 		carn_sex_scene_is_dubcon = yes
-		carn_sex_scene_is_noncon = yes
 		carn_sex_scene_is_sub_player = yes
 		carn_sex_scene_matches_requested_flags_trigger = yes
 	}
 
 	immediate = {
 		carn_sex_scene_is_dubcon = yes
-		carn_sex_scene_is_noncon = yes
 		carn_sex_scene_is_sub_player = yes
+
+		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
+		carnx_add_sex_scene_location_effect = { LOCATION = garden }
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
@@ -279,10 +288,7 @@ carnx_sex_scene.0004 = {
 			carn_undress_character_effect = yes
 		}
 
-		random = {
-			chance = 50
-			carnx_set_sex_scene_location_effect = yes
-		}
+		carnx_set_sex_scene_location_effect = yes
 	}
 
 	after = {
@@ -294,6 +300,7 @@ carnx_sex_scene.0004 = {
 		}
 
 		carnx_remove_sex_scene_location_effect = yes
+		carnx_clear_sex_scene_locations_effect = yes
 	}
 
 	option = {

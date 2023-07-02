@@ -239,6 +239,27 @@
 					carn_sex_scene_request_consensual = yes
 				}
 
+				# CSR: Sex scene locations
+				if = {
+					limit = {
+						scope:actor = {
+							OR = {
+								has_relation_lover = scope:recipient
+								has_relation_soulmate = scope:recipient
+							}
+						}
+					}
+					carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
+					carnx_request_sex_scene_location_effect = { LOCATION = garden }
+					carnx_request_sex_scene_location_effect = { LOCATION = stable }
+					carnx_request_sex_scene_location_effect = { LOCATION = copse }
+					carnx_request_sex_scene_location_effect = { LOCATION = kitchen }
+				}
+				else = {
+					carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
+					carnx_request_sex_scene_location_effect = { LOCATION = garden }
+				}
+
 				# actually fire the sex scene
 				carn_sex_scene_effect = {
 					PLAYER = scope:actor
