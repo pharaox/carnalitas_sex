@@ -18,38 +18,40 @@ carnx_clear_sex_scene_locations_effect = {
 }
 
 carnx_set_sex_scene_location_effect = {
-	random_list = {
-		10 = {
-			trigger = {
-				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = private_chamber }
+	random = {
+		chance = 50
+		random_list = {
+			20 = {
+				trigger = {
+					carnx_sex_scene_supports_requested_location_trigger = { LOCATION = private_chamber }
+				}
+				set_variable = { name = sex_scene_location value = flag:private_chamber }
 			}
-			set_variable = { name = sex_scene_location value = flag:private_chamber }
-		}
-		10 = {
-			trigger = {
-				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = garden }
+			20 = {
+				trigger = {
+					carnx_sex_scene_supports_requested_location_trigger = { LOCATION = garden }
+				}
+				set_variable = { name = sex_scene_location value = flag:garden }
 			}
-			set_variable = { name = sex_scene_location value = flag:garden }
-		}
-		10 = {
-			trigger = {
-				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = stable }
+			20 = {
+				trigger = {
+					carnx_sex_scene_supports_requested_location_trigger = { LOCATION = stable }
+				}
+				set_variable = { name = sex_scene_location value = flag:stable }
 			}
-			set_variable = { name = sex_scene_location value = flag:stable }
-		}
-		10 = {
-			trigger = {
-				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = copse }
+			20 = {
+				trigger = {
+					carnx_sex_scene_supports_requested_location_trigger = { LOCATION = copse }
+				}
+				set_variable = { name = sex_scene_location value = flag:copse }
 			}
-			set_variable = { name = sex_scene_location value = flag:copse }
-		}
-		10 = {
-			trigger = {
-				carnx_sex_scene_supports_requested_location_trigger = { LOCATION = kitchen }
+			20 = {
+				trigger = {
+					carnx_sex_scene_supports_requested_location_trigger = { LOCATION = kitchen }
+				}
+				set_variable = { name = sex_scene_location value = flag:kitchen }
 			}
-			set_variable = { name = sex_scene_location value = flag:kitchen }
 		}
-		50 = {}
 	}
 }
 
