@@ -213,7 +213,8 @@
 					}
 					# Noncon: I either hate you or I don't swing this way, get me outta here
 					else = {
-						carn_sex_scene_request_noncon = yes
+						# CSR: Noncon reserved for raping prisoners, don't request it here
+						carn_sex_scene_request_dubcon = yes
 						carn_sex_scene_request_dom_player = yes
 					}
 				}

@@ -24,7 +24,7 @@ TODO
 
 TODO
 
-### Dubcon / Noncon Sex Scene Generator
+### Dubcon Sex Scene Generator
 
 TODO
 
