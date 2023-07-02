@@ -1,0 +1,46 @@
+﻿carnx_sex_scene = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/type_seduction.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_seduction"
+	}
+	background = {
+		trigger = {
+			has_variable = sex_scene_location
+			var:sex_scene_location = flag:private_chamber
+		}
+		reference = sitting_room
+	}
+	background = {
+		trigger = {
+			has_variable = sex_scene_location
+			var:sex_scene_location = flag:garden
+		}
+		reference = garden
+	}
+	background = {
+		trigger = {
+			has_variable = sex_scene_location
+			var:sex_scene_location = flag:stable
+		}
+		reference = armory
+	}
+	background = {
+		trigger = {
+			has_variable = sex_scene_location
+			var:sex_scene_location = flag:copse
+		}
+		reference = terrain
+	}
+	background = {
+		trigger = {
+			has_variable = sex_scene_location
+			var:sex_scene_location = flag:kitchen
+		}
+		reference = bp1_kitchen_western
+	}
+	background = {
+		reference = bedchamber
+	}
+}

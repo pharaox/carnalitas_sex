@@ -12,58 +12,7 @@ carnx_sex_scene.0001 = {
 		desc = carn_sex_scene.0001.desc_ending
 	}
 
-	theme = seduction
-	override_background = {
-		trigger = {
-			NOT = { has_variable = sex_scene_location }
-		}
-		reference = bedchamber
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:private_chamber
-			}
-		}
-		reference = sitting_room
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:garden
-			}
-		}
-		reference = garden
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:stable
-			}
-		}
-		reference = armory
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:copse
-			}
-		}
-		reference = terrain
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:kitchen
-			}
-		}
-		reference = bp1_kitchen_western
-	}
+	theme = carnx_sex_scene
 
 	left_portrait = {
 		character = scope:carn_sex_player
@@ -132,31 +81,7 @@ carnx_sex_scene.0003 = {
 		desc = carnx_sex_scene.0003.desc_ending
 	}
 
-	theme = seduction
-	override_background = {
-		trigger = {
-			NOT = { has_variable = sex_scene_location }
-		}
-		reference = bedchamber
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:private_chamber
-			}
-		}
-		reference = sitting_room
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:garden
-			}
-		}
-		reference = garden
-	}
+	theme = carnx_sex_scene
 
 	left_portrait = {
 		character = scope:carn_sex_player
@@ -224,31 +149,7 @@ carnx_sex_scene.0004 = {
 		desc = carnx_sex_scene.0004.desc_ending
 	}
 
-	theme = seduction
-	override_background = {
-		trigger = {
-			NOT = { has_variable = sex_scene_location }
-		}
-		reference = bedchamber
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:private_chamber
-			}
-		}
-		reference = sitting_room
-	}
-	override_background = {
-		trigger = {
-			AND = {
-				has_variable = sex_scene_location
-				var:sex_scene_location = flag:garden
-			}
-		}
-		reference = garden
-	}
+	theme = carnx_sex_scene
 
 	left_portrait = {
 		character = scope:carn_sex_player
