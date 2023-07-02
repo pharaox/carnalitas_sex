@@ -1,0 +1,23 @@
+﻿carnx_consensual_animation = {
+	triggered_animation = {
+		trigger = { always = yes }
+		animation = { flirtation flirtation_left love happiness admiration }
+	}
+	animation = flirtation
+}
+
+carnx_dubcon_dom_animation = {
+	triggered_animation = {
+		trigger = { always = yes }
+		animation = { flirtation schadenfreude scheme personality_dishonorable personality_vengeful personality_callous }
+	}
+	animation = flirtation
+}
+
+carnx_dubcon_sub_animation = {
+	triggered_animation = {
+		trigger = { always = yes }
+		animation = { idle shame boredom flirtation_left eyeroll personality_coward personality_content personality_cynical }
+	}
+	animation = idle
+}

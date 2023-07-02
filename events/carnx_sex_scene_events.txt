@@ -16,11 +16,11 @@ carnx_sex_scene.0001 = {
 
 	left_portrait = {
 		character = scope:carn_sex_player
-		animation = flirtation
+		scripted_animation = carnx_consensual_animation
 	}
 	right_portrait = {
 		character = scope:carn_sex_target
-		animation = love
+		scripted_animation = carnx_consensual_animation
 	}
 
 	trigger = {
@@ -85,11 +85,11 @@ carnx_sex_scene.0003 = {
 
 	left_portrait = {
 		character = scope:carn_sex_player
-		animation = personality_dishonorable
+		scripted_animation = carnx_dubcon_dom_animation
 	}
 	right_portrait = {
 		character = scope:carn_sex_target
-		animation = personality_cynical
+		scripted_animation = carnx_dubcon_sub_animation
 	}
 
 	trigger = {
@@ -153,11 +153,11 @@ carnx_sex_scene.0004 = {
 
 	left_portrait = {
 		character = scope:carn_sex_player
-		animation = personality_cynical
+		scripted_animation = carnx_dubcon_sub_animation
 	}
 	right_portrait = {
 		character = scope:carn_sex_target
-		animation = personality_dishonorable
+		scripted_animation = carnx_dubcon_dom_animation
 	}
 
 	trigger = {
