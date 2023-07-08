@@ -1,0 +1,11 @@
+﻿carnx_demanded_sex_crime_opinion = {
+	opinion = -20
+	decaying = yes
+	years = 5
+}
+
+carnx_demanded_sex_shunned_opinion = {
+	opinion = -10
+	decaying = yes
+	years = 3
+}

@@ -1,0 +1,190 @@
+﻿dsi_demand_sex_interaction = {
+	category = interaction_category_friendly
+	desc = carnx_demand_sex_interaction_desc
+	interface_priority = 40
+	icon = icon_scheme_seduce
+
+	is_shown = {
+		NOR = {
+			has_game_rule = carn_sex_interaction_disabled
+			has_game_rule = carn_content_consent_always
+			scope:actor = scope:recipient
+		}
+		scope:actor = {
+			is_adult = yes
+			carnx_is_sex_interaction_blocked_trigger = no
+		}
+		scope:recipient = {
+			is_adult = yes
+			carnx_is_sex_interaction_blocked_trigger = no
+		}
+		scope:actor = {
+			carnx_relationship_allows_demand_sex_trigger = { PARTNER = scope:recipient }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			carn_can_have_sex_trigger = yes
+		}
+		scope:recipient = {
+			carn_can_have_sex_trigger = yes
+		}
+		scope:actor = {
+			has_usable_hook = scope:recipient
+		}
+	}
+
+	cooldown = { months = carn_sex_interaction_cooldown }
+
+	on_accept = {
+		scope:actor = {
+			# Use the hook on the recipient
+			if = {
+				limit = {
+					has_usable_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+
+			# If not on cooldown, show the effect and add the cooldown flag
+			if = {
+				limit = {
+					NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+				}
+
+				show_as_tooltip = {
+					carn_had_sex_with_effect = {
+						CHARACTER_1 = scope:actor
+						CHARACTER_2 = scope:recipient
+						C1_PREGNANCY_CHANCE = pregnancy_chance
+						C2_PREGNANCY_CHANCE = pregnancy_chance
+						STRESS_EFFECTS = yes
+						DRAMA = yes
+					}
+				}
+
+				# Stress effects
+				# Only lose stress if arousal stress is enabled
+				if = {
+					limit = {
+						has_game_rule = carn_arousal_stress_enabled
+						is_attracted_to_gender_of = scope:recipient
+					}
+					stress_impact = {
+						base = minor_stress_impact_loss
+					}
+				}
+				else = {
+					custom_tooltip = carn_sex_interaction_not_attracted_to_warning_tt
+					stress_impact = {
+						base = minor_stress_impact_gain
+					}
+				}
+				stress_impact = {
+					compassionate = minor_stress_impact_gain
+					sadistic = minor_stress_impact_loss
+					callous = miniscule_stress_impact_loss
+					honest = miniscule_stress_impact_gain
+					deceitful = miniscule_stress_impact_loss
+				}
+
+				# Piety effects
+				# Lose piety if sodomy or adultery is not accepted by faith
+				if = {
+					limit = {
+						relation_with_character_is_sodomy_trigger = { CHARACTER = scope:recipient }
+					}
+					if = {
+						limit = {
+							carnx_is_sodomy_crime_trigger = yes
+						}
+						add_piety = minor_piety_loss
+					}
+					else_if = {
+						limit = {
+							carnx_is_sodomy_shunned_trigger = yes
+						}
+						add_piety = miniscule_piety_loss
+					}
+				}
+				if = {
+					limit = {
+						carnx_is_adultery_crime_trigger = yes
+					}
+					add_piety = minor_piety_loss
+				}
+				else_if = {
+					limit = {
+						carnx_is_adultery_shunned_trigger = yes
+					}
+					add_piety = miniscule_piety_loss
+				}
+
+				# Opinion effects
+				# Lose opinion with recipient if sodomy or adultery is not accepted by their faith
+				scope:recipient = {
+					if = {
+						limit = {
+							OR = {
+								AND = {
+									relation_with_character_is_sodomy_trigger = { CHARACTER = scope:actor }
+									carnx_is_sodomy_crime_trigger = yes
+								}
+								carnx_is_adultery_crime_trigger = yes
+							}
+						}
+						add_opinion = {
+							target = scope:actor
+							modifier = carnx_demanded_sex_crime_opinion
+						}
+					}
+					else_if = {
+						limit = {
+							OR = {
+								AND = {
+									relation_with_character_is_sodomy_trigger = { CHARACTER = scope:actor }
+									carnx_is_sodomy_shunned_trigger = yes
+								}
+								carnx_is_adultery_shunned_trigger = yes
+							}
+						}
+						add_opinion = {
+							target = scope:actor
+							modifier = carnx_demanded_sex_shunned_opinion
+						}
+					}
+				}
+
+				add_character_flag = {
+					flag = carn_sex_interaction_effect_cd
+					months = carn_sex_interaction_cooldown_base
+				}
+			}
+			else = {
+				custom_tooltip = carn_sex_interaction_effect_cd_tt
+				add_character_flag = carn_block_next_had_sex_with_effect
+			}
+
+			hidden_effect = {
+				# Request sex scene flags
+				carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
+
+				# Request sex scene locations
+				carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
+
+				# TODO Request sex scene themes
+
+				# Actually fire the sex scene
+				carn_sex_scene_effect = {
+					PLAYER = scope:actor
+					TARGET = scope:recipient
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+}

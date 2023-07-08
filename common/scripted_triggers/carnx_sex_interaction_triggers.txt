@@ -1,0 +1,204 @@
+﻿carn_relationship_allows_free_sex_trigger = {
+	save_temporary_scope_as = character
+
+	OR = {
+		has_relation_lover = $PARTNER$
+		has_relation_soulmate = $PARTNER$
+		$PARTNER$ = { 
+			OR = {
+				is_consort_of = scope:character
+				carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character }
+			}
+		}
+	}
+}
+
+carnx_relationship_allows_demand_sex_trigger = {
+	save_temporary_scope_as = character
+
+	has_relation_slave = $PARTNER$
+	$PARTNER$ = {
+		NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character } }
+	}
+	NOT = { relation_with_character_is_incestuous_in_my_faith_trigger = { CHARACTER = $PARTNER$ } }
+}
+
+carnx_is_slave_consort_of_trigger = {
+	exists = $CHARACTER$
+	always = no
+}
+
+carnx_is_sex_interaction_blocked_trigger = {
+	has_trait_with_flag = carn_block_send_sex_interaction
+	has_character_flag = carn_block_send_sex_interaction
+	has_opinion_modifier = {
+		target = scope:recipient
+		modifier = carn_block_sex_interaction_to_opinion
+	}
+}
+
+carnx_is_attracted_consort_happy_with_sex_trigger = {
+	trigger_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= very_high_positive_opinion }
+		}
+		$CHARACTER$.attraction >= high_negative_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= high_positive_opinion }
+		}
+		$CHARACTER$.attraction >= medium_negative_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= medium_positive_opinion }
+		}
+		$CHARACTER$.attraction >= low_negative_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= low_positive_opinion }
+		}
+		$CHARACTER$.attraction >= 0
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= 0 }
+		}
+		$CHARACTER$.attraction >= low_positive_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= low_negative_opinion }
+		}
+		$CHARACTER$.attraction >= medium_positive_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= medium_negative_opinion }
+		}
+		$CHARACTER$.attraction >= high_positive_attraction
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+carnx_is_attracted_slave_happy_with_sex_trigger = {
+	trigger_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= very_high_positive_opinion }
+		}
+		$CHARACTER$.attraction >= low_negative_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= high_positive_opinion }
+		}
+		$CHARACTER$.attraction >= 0
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= medium_positive_opinion }
+		}
+		$CHARACTER$.attraction >= low_positive_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= low_positive_opinion }
+		}
+		$CHARACTER$.attraction >= medium_positive_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= 0 }
+		}
+		$CHARACTER$.attraction >= high_positive_attraction
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+carnx_is_attracted_prostitute_happy_with_sex_trigger = {
+	trigger_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= medium_positive_opinion }
+		}
+		$CHARACTER$.attraction >= high_negative_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= low_positive_opinion }
+		}
+		$CHARACTER$.attraction >= medium_negative_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= 0 }
+		}
+		$CHARACTER$.attraction >= low_negative_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= low_negative_opinion }
+		}
+		$CHARACTER$.attraction >= 0
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= medium_negative_opinion }
+		}
+		$CHARACTER$.attraction >= low_positive_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= high_negative_opinion }
+		}
+		$CHARACTER$.attraction >= medium_positive_attraction
+	}
+	trigger_else_if = {
+		limit = {
+			opinion = { target = $CHARACTER$ value >= very_high_negative_opinion }
+		}
+		$CHARACTER$.attraction >= high_positive_attraction
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+carnx_is_adultery_crime_trigger = {
+	OR = {
+		AND = {
+			is_male = yes
+			faith = { has_doctrine_parameter = adultery_male_crime }
+		}
+		AND = {
+			is_female = yes
+			faith = { has_doctrine_parameter = adultery_female_crime }
+		}
+	}
+}
+
+carnx_is_adultery_shunned_trigger = {
+	OR = {
+		AND = {
+			is_male = yes
+			faith = { has_doctrine_parameter = adultery_male_shunned }
+		}
+		AND = {
+			is_female = yes
+			faith = { has_doctrine_parameter = adultery_female_shunned }
+		}
+	}
+}
+
+carnx_is_sodomy_crime_trigger = {
+	faith = { has_doctrine_parameter = homosexuality_illegal }
+}
+
+carnx_is_sodomy_shunned_trigger = {
+	faith = { has_doctrine_parameter = homosexuality_shunned }
+}

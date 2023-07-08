@@ -1,0 +1,4 @@
+﻿l_english:
+ dsi_demand_sex_interaction: "Demand Sex"
+ carnx_demand_sex_interaction: "$dsi_demand_sex_interaction$"
+ carnx_demand_sex_interaction_desc: "Demand sex from your slave [recipient.GetShortUINameNoTooltip]"

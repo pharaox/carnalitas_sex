@@ -1,0 +1,150 @@
+﻿carn_sex_interaction = {
+	category = interaction_category_friendly
+	desc = carn_sex_interaction_desc
+	interface_priority = 40
+	icon = icon_scheme_seduce
+
+	is_shown = {
+		NOR = {
+			has_game_rule = carn_sex_interaction_disabled
+			scope:actor = scope:recipient
+		}
+		scope:actor = {
+			is_adult = yes
+			carnx_is_sex_interaction_blocked_trigger = no
+		}
+		scope:recipient = {
+			is_adult = yes
+			carnx_is_sex_interaction_blocked_trigger = no
+		}
+		OR = {
+			scope:actor = {
+				carn_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient }
+			}
+			scope:recipient = {
+				carn_is_working_as_prostitute_trigger = yes
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			carn_can_have_sex_trigger = yes
+		}
+		scope:recipient = {
+			carn_can_have_sex_trigger = yes
+		}
+
+		# If the recipient is a prostitute, check if actor has enough gold
+		trigger_if = {
+			limit = {
+				scope:recipient = {
+					carn_is_working_as_prostitute_trigger = yes
+				}
+				scope:actor = {
+					NOT = { carn_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient } }
+				}
+			}
+			scope:actor.gold >= scope:recipient.carn_prostitute_sex_interaction_price_value
+		}
+	}
+
+	cooldown = { months = carn_sex_interaction_cooldown }
+
+	on_accept = {
+		scope:actor = {
+			# If the recpient is a prostitute, pay the price and possibly lose piety
+			if = {
+				limit = {
+					scope:recipient = {
+						carn_is_working_as_prostitute_trigger = yes
+					}
+					scope:actor = {
+						NOT = { carn_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient } }
+					}
+				}
+
+				# Pay prostitution price
+				pay_short_term_gold = {
+					target = scope:recipient
+					gold = scope:recipient.carn_prostitute_sex_interaction_price_value
+				}
+
+				# Lose piety if prostitution not accepted by faith
+				if = {
+					limit = {
+						faith = { 
+							NOT = { has_doctrine = carn_doctrine_prostitution_accepted }
+						}
+					}
+					add_piety = minor_piety_loss
+				}
+			}
+
+			# If not on cooldown, show the effect and add the cooldown flag
+			if = {
+				limit = {
+					NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+				}
+
+				show_as_tooltip = {
+					carn_had_sex_with_effect = {
+						CHARACTER_1 = scope:actor
+						CHARACTER_2 = scope:recipient
+						C1_PREGNANCY_CHANCE = pregnancy_chance
+						C2_PREGNANCY_CHANCE = pregnancy_chance
+						STRESS_EFFECTS = yes
+						DRAMA = yes
+					}
+				}
+
+				# Stress effects
+				# Only lose stress if arousal stress is enabled
+				if = {
+					limit = {
+						has_game_rule = carn_arousal_stress_enabled
+						is_attracted_to_gender_of = scope:recipient
+					}
+					stress_impact = {
+						base = minor_stress_impact_loss
+					}
+				}
+				else = {
+					custom_tooltip = carn_sex_interaction_not_attracted_to_warning_tt
+					stress_impact = {
+						base = minor_stress_impact_gain
+					}
+				}
+
+				add_character_flag = {
+					flag = carn_sex_interaction_effect_cd
+					months = carn_sex_interaction_cooldown_base
+				}
+			}
+			else = {
+				custom_tooltip = carn_sex_interaction_effect_cd_tt
+				add_character_flag = carn_block_next_had_sex_with_effect
+			}
+
+			hidden_effect = {
+				# Request sex scene flags
+				carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
+
+				# Request sex scene locations
+				carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
+
+				# TODO Request sex scene themes
+
+				# Actually fire the sex scene
+				carn_sex_scene_effect = {
+					PLAYER = scope:actor
+					TARGET = scope:recipient
+					STRESS_EFFECTS = yes
+					DRAMA = yes
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+}

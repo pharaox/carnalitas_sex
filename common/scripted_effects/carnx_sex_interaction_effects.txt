@@ -1,0 +1,109 @@
+﻿# Request sex scene flags, either consensual or dubcon
+# Noncon is reserved for raping prisoners, so we don't request it here
+carnx_request_sex_scene_flags_effect = {
+	save_temporary_scope_as = character
+
+	# Lovers and soulmates: consensual
+	if = {
+		limit = {
+			OR = {
+				has_relation_lover = $TARGET$
+				has_relation_soulmate = $TARGET$
+			}
+		}
+		carn_sex_scene_request_consensual = yes
+	}
+	# Consorts (spouses, concubines, and slave consorts): consensual or dubcon depending on opinion and attraction
+	else_if = {
+		limit = {
+			$TARGET$ = {
+				OR = {
+					is_consort_of = scope:character
+					carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character }
+				}
+			}
+		}
+		if = {
+			limit = {
+				$TARGET$ = {
+					is_attracted_to_gender_of = scope:character
+					carnx_is_attracted_consort_happy_with_sex_trigger = { CHARACTER = scope:character }
+				}
+			}
+			carn_sex_scene_request_consensual = yes
+		}
+		else = {
+			carn_sex_scene_request_dubcon = yes
+			carn_sex_scene_request_dom_player = yes
+		}
+	}
+	# Slaves that are not consorts: consensual or dubcon depending on opinion and attraction
+	else_if = {
+		limit = {
+			has_relation_slave = $TARGET$
+			$TARGET$ = {
+				NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character } }
+			}
+		}
+		if = {
+			limit = {
+				$TARGET$ = {
+					is_attracted_to_gender_of = scope:character
+					carnx_is_attracted_slave_happy_with_sex_trigger = { CHARACTER = scope:character }
+				}
+			}
+			carn_sex_scene_request_consensual = yes
+		}
+		else = {
+			carn_sex_scene_request_dubcon = yes
+			carn_sex_scene_request_dom_player = yes
+		}
+	}
+	# Prostitutes: consensual or dubcon depending on opinion and attraction
+	else_if = {
+		limit = {
+			$TARGET$ = {
+				carn_is_working_as_prostitute_trigger = yes
+			}
+		}
+		if = {
+			limit = {
+				$TARGET$ = {
+					is_attracted_to_gender_of = scope:character
+					carnx_is_attracted_prostitute_happy_with_sex_trigger = { CHARACTER = scope:character }
+				}
+			}
+			carn_sex_scene_request_consensual = yes
+		}
+		else = {
+			carn_sex_scene_request_dubcon = yes
+			carn_sex_scene_request_dom_player = yes
+		}
+	}
+	# Others: consensual
+	else = {
+		carn_sex_scene_request_consensual = yes
+	}
+}
+
+carnx_request_sex_scene_locations_effect = {
+	# Lovers and soulmates: all locations supported by the PDX sex scene generator
+	if = {
+		limit = {
+			OR = {
+				has_relation_lover = $TARGET$
+				has_relation_soulmate = $TARGET$
+			}
+		}
+		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
+		carnx_request_sex_scene_location_effect = { LOCATION = garden }
+		carnx_request_sex_scene_location_effect = { LOCATION = stable }
+		carnx_request_sex_scene_location_effect = { LOCATION = copse }
+		carnx_request_sex_scene_location_effect = { LOCATION = kitchen }
+	}
+	# Others: only private_chamber and garden
+	else = {
+		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
+		carnx_request_sex_scene_location_effect = { LOCATION = garden }
+	}
+}
