@@ -29,6 +29,7 @@
 		}
 		scope:recipient = {
 			carn_can_have_sex_trigger = yes
+			is_at_same_location = scope:actor
 		}
 		scope:actor = {
 			has_usable_hook = scope:recipient
@@ -87,38 +88,36 @@
 					callous = miniscule_stress_impact_loss
 					honest = miniscule_stress_impact_gain
 					deceitful = miniscule_stress_impact_loss
+					chaste = minor_stress_impact_gain
+					#lustful = minor_stress_impact_loss
+				}
+
+				# Stress effects for recipient
+				scope:recipient = {
+					if = {
+						limit = {
+							NOT = { is_attracted_to_gender_of = scope:actor }
+						}
+						custom_tooltip = carnx_sex_interaction_recipient_not_attracted_to_warning_tt
+						stress_impact = {
+							base = minor_stress_impact_gain
+						}
+					}
+					stress_impact = {
+						honest = miniscule_stress_impact_gain
+						deceitful = miniscule_stress_impact_loss
+						chaste = minor_stress_impact_gain
+						#lustful = minor_stress_impact_loss
+					}
 				}
 
 				# Piety effects
 				# Lose piety if sodomy or adultery is not accepted by faith
-				if = {
-					limit = {
-						relation_with_character_is_sodomy_trigger = { CHARACTER = scope:recipient }
-					}
-					if = {
-						limit = {
-							carnx_is_sodomy_crime_trigger = yes
-						}
-						add_piety = minor_piety_loss
-					}
-					else_if = {
-						limit = {
-							carnx_is_sodomy_shunned_trigger = yes
-						}
-						add_piety = miniscule_piety_loss
-					}
-				}
-				if = {
-					limit = {
-						carnx_is_adultery_crime_trigger = yes
-					}
-					add_piety = minor_piety_loss
-				}
-				else_if = {
-					limit = {
-						carnx_is_adultery_shunned_trigger = yes
-					}
-					add_piety = miniscule_piety_loss
+				carnx_demand_sex_add_piety_effect = { PARTNER = scope:recipient }
+
+				# Piety effects for recipient
+				scope:recipient = {
+					carnx_demand_sex_add_piety_effect = { PARTNER = scope:actor }
 				}
 
 				# Opinion effects
@@ -172,8 +171,6 @@
 
 				# Request sex scene locations
 				carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
-
-				# TODO Request sex scene themes
 
 				# Actually fire the sex scene
 				carn_sex_scene_effect = {

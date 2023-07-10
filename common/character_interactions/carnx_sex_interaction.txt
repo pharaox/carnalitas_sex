@@ -33,6 +33,7 @@
 		}
 		scope:recipient = {
 			carn_can_have_sex_trigger = yes
+			is_at_same_location = scope:actor
 		}
 
 		# If the recipient is a prostitute, check if actor has enough gold
@@ -73,7 +74,7 @@
 				# Lose piety if prostitution not accepted by faith
 				if = {
 					limit = {
-						faith = { 
+						faith = {
 							NOT = { has_doctrine = carn_doctrine_prostitution_accepted }
 						}
 					}
@@ -115,6 +116,27 @@
 						base = minor_stress_impact_gain
 					}
 				}
+				stress_impact = {
+					chaste = minor_stress_impact_gain
+					#lustful = minor_stress_impact_loss
+				}
+
+				# Stress effects for recipient
+				scope:recipient = {
+					if = {
+						limit = {
+							NOT = { is_attracted_to_gender_of = scope:actor }
+						}
+						custom_tooltip = carnx_sex_interaction_recipient_not_attracted_to_warning_tt
+						stress_impact = {
+							base = minor_stress_impact_gain
+						}
+					}
+					stress_impact = {
+						chaste = minor_stress_impact_gain
+						#lustful = minor_stress_impact_loss
+					}
+				}
 
 				add_character_flag = {
 					flag = carn_sex_interaction_effect_cd
@@ -132,8 +154,6 @@
 
 				# Request sex scene locations
 				carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
-
-				# TODO Request sex scene themes
 
 				# Actually fire the sex scene
 				carn_sex_scene_effect = {

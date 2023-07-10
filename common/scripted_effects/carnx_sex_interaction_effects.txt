@@ -107,3 +107,57 @@ carnx_request_sex_scene_locations_effect = {
 		carnx_request_sex_scene_location_effect = { LOCATION = garden }
 	}
 }
+
+carnx_demand_sex_add_piety_effect = {
+	save_temporary_scope_as = character
+
+	if = {
+		limit = {
+			relation_with_character_is_sodomy_trigger = { CHARACTER = $PARTNER$ }
+		}
+		if = {
+			limit = {
+				carnx_is_sodomy_crime_trigger = yes
+			}
+			custom_tooltip = carnx_sex_interaction_sodomy_crime_warning_tt
+			add_piety = minor_piety_loss
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+				cynical = minor_stress_impact_loss
+			}
+		}
+		else_if = {
+			limit = {
+				carnx_is_sodomy_shunned_trigger = yes
+			}
+			custom_tooltip = carnx_sex_interaction_sodomy_shunned_warning_tt
+			add_piety = miniscule_piety_loss
+			stress_impact = {
+				zealous = miniscule_stress_impact_gain
+				cynical = miniscule_stress_impact_loss
+			}
+		}
+	}
+	if = {
+		limit = {
+			carnx_is_adultery_crime_trigger = yes
+		}
+		custom_tooltip = carnx_sex_interaction_adultery_crime_warning_tt
+		add_piety = minor_piety_loss
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			cynical = minor_stress_impact_loss
+		}
+	}
+	else_if = {
+		limit = {
+			carnx_is_adultery_shunned_trigger = yes
+		}
+		custom_tooltip = carnx_sex_interaction_adultery_shunned_warning_tt
+		add_piety = miniscule_piety_loss
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_loss
+		}
+	}
+}
