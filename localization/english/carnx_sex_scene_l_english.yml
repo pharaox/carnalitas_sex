@@ -1,58 +1,85 @@
 ﻿l_english:
- carnx_sex_scene_dubcon_dom_text: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first', SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_second', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_third' , SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_ending', SCOPE.sC('second'))]"
+ carnx_sex_scene_dubcon_dom_text: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening', SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first_a', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first_b' , SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_second_a', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_second_b', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_third_a', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_third_b' , SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_ending', SCOPE.sC('second'))]"
 
- carnx_sex_scene_dubcon_dom_opening_location: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening_location' , SCOPE.sC('second') )]"
- carnx_sex_scene_dubcon_dom_opening_random: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening_random' , SCOPE.sC('second') )]"
+ carnx_sex_scene_dubcon_dom_opening_location_generic: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening_location' , SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening_generic' , SCOPE.sC('second'))]"
+ carnx_sex_scene_dubcon_dom_opening_generic: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening_generic' , SCOPE.sC('second'))]"
 
- carnx_sex_scene_dubcon_dom_ending_location: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_ending_location' , SCOPE.sC('second') )]"
- carnx_sex_scene_dubcon_dom_ending_random: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_ending_random' , SCOPE.sC('second') )]"
-
+ carnx_sex_scene_dubcon_dom_opening_0: "[second.GetSheHe|U] welcomes me respectfully, but [second.GetHerHis] true feelings are not easy to read."
  carnx_sex_scene_dubcon_dom_opening_1: "[second.GetSheHe|U] seems resigned to [second.GetHerHis] fate and ready to oblige me in any way I choose."
 
- carnx_sex_scene_dubcon_dom_opening_private_chambers_1: "[second.GetSheHe|U] knows why [second.GetSheHe] has been brought to my private chambers and seems ready to oblige me in any way I choose."
- carnx_sex_scene_dubcon_dom_opening_garden_1: "[second.GetSheHe|U] has been brought to a secluded part of my garden. The scent of [second.GetHerHis] skin mixes with the sweetness of the flowers."
+ carnx_sex_scene_dubcon_dom_opening_default_0: "<fallback dom opening default>"
+ carnx_sex_scene_dubcon_dom_opening_private_chambers_1: "[second.GetSheHe|U] has been requested to join me in my private chambers."
+ carnx_sex_scene_dubcon_dom_opening_garden_1: "[second.GetSheHe|U] has been requested to join me in a secluded part of my garden."
 
- carnx_sex_scene_dubcon_dom_first_1: "I approach [second.GetHerHim] and slowly remove [second.GetHerHis] clothes, fondling [second.GetHerHis] body while [second.GetSheHe] avoids looking at me."
+ carnx_sex_scene_dubcon_dom_first_a_0: "<fallback dom first a>"
+ carnx_sex_scene_dubcon_dom_first_a_1: "I approach [second.GetHerHim] and slowly remove [second.GetHerHis] clothes,"
 
- carnx_sex_scene_dubcon_dom_second_1: "I ask [second.GetHerHim] to stand on [second.GetHerHis] knees and pleasure me with [second.GetHerHis] mouth, and [second.GetSheHe] obeys without a moment's hesitation. I feel the desire throbbing in my loins as I grab [second.GetHerHim] and press [second.GetHerHim] closer to me."
+ carnx_sex_scene_dubcon_dom_first_b_0: "<fallback dom first b>"
+ carnx_sex_scene_dubcon_dom_first_b_1: "while [second.GetSheHe] looks at me, trying to anticipate my desires."
 
- carnx_sex_scene_dubcon_dom_third_1: "As [second.GetSheHe] responds to my movements, the passion consumes me, and I am ready to burst..."
+ carnx_sex_scene_dubcon_dom_second_a_0: "<fallback dom second a>"
+ carnx_sex_scene_dubcon_dom_second_a_1: "I ask [second.GetHerHim] to stand on [second.GetHerHis] knees and pleasure me with [second.GetHerHis] mouth"
 
- carnx_sex_scene_dubcon_dom_ending_1: "When I am finished with [second.GetHerHim], [second.GetSheHe] gets up and leaves without saying a word."
+ carnx_sex_scene_dubcon_dom_second_b_0: "<fallback dom second b>"
+ carnx_sex_scene_dubcon_dom_second_b_1: "and [second.GetSheHe] obeys without a moment's hesitation."
 
- carnx_sex_scene_dubcon_dom_ending_private_chambers_1: "Afterwards, I try to be gentle with [second.GetHerHim] but [second.GetSheHe] remains silent and numb."
- carnx_sex_scene_dubcon_dom_ending_garden_1: "When I am done, [second.GetSheHe] gets up and enters the nearby pool in silence."
+ carnx_sex_scene_dubcon_dom_third_a_0: "<fallback dom third a>"
+ carnx_sex_scene_dubcon_dom_third_a_1: "I feel the desire throbbing in my loins as I press [second.GetHerHim] closer to me."
 
- carnx_sex_scene_dubcon_sub_text: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_first', SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_second', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_third' , SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_ending', SCOPE.sC('second'))]"
+ carnx_sex_scene_dubcon_dom_third_b_0: "<fallback dom third b>"
+ carnx_sex_scene_dubcon_dom_third_b_1: "The passion consumes me, and I am ready to burst..."
 
- carnx_sex_scene_dubcon_sub_opening_location: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening_location' , SCOPE.sC('second') )]"
- carnx_sex_scene_dubcon_sub_opening_random: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening_random' , SCOPE.sC('second') )]"
+ carnx_sex_scene_dubcon_dom_ending_0: "<fallback dom ending>"
+ carnx_sex_scene_dubcon_dom_ending_1: "When I am finished, [second.GetSheHe] asks for permission to leave, dresses in silence, and bids me farewell."
+ carnx_sex_scene_dubcon_dom_ending_2: "Afterwards, I try to be gentle with [second.GetHerHim] but [second.GetSheHe] remains silent and numb."
 
- carnx_sex_scene_dubcon_sub_ending_location: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_ending_location' , SCOPE.sC('second') )]"
- carnx_sex_scene_dubcon_sub_ending_random: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_ending_random' , SCOPE.sC('second') )]"
+ carnx_sex_scene_dubcon_sub_text: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening', SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_first_a', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_first_b' , SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_second_a', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_second_b', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_third_a', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_third_b' , SCOPE.sC('second'))]\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_ending', SCOPE.sC('second'))]"
 
- carnx_sex_scene_dubcon_sub_opening_1: "I don't want to give in to [second.GetHerHis] lust, but I know better than to protest and so I am ready to oblige [second.GetHerHim] in any way [second.GetSheHe] chooses."
+ carnx_sex_scene_dubcon_sub_opening_location_generic: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening_location' , SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening_generic' , SCOPE.sC('second'))]"
+ carnx_sex_scene_dubcon_sub_opening_generic: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening_generic' , SCOPE.sC('second'))]"
 
- carnx_sex_scene_dubcon_sub_opening_private_chambers_1: "I know why I have been brought to [second.GetHerHis] private chambers, so I am ready to oblige [second.GetHerHim] in any way [second.GetSheHe] chooses."
- carnx_sex_scene_dubcon_sub_opening_garden_1: "I have been brought to a secluded part of [second.GetHerHis] garden. [second.GetSheHe|U] looks at me lustfully and draws a deep breath."
+ carnx_sex_scene_dubcon_sub_opening_0: "<fallback sub opening>"
 
- carnx_sex_scene_dubcon_sub_first_1: "[second.GetSheHe|U] approaches me and slowly removes my clothes, fondling my body while I avoid looking at [second.GetHerHim]."
+ carnx_sex_scene_dubcon_sub_opening_default_0: "<fallback sub opening default>"
+ carnx_sex_scene_dubcon_sub_opening_private_chambers_1: "I have been requested to join [second.GetHerHim] in [second.GetHerHis] private chambers."
+ carnx_sex_scene_dubcon_sub_opening_garden_1: "I have been requested to join [second.GetHerHim] in a secluded part of [second.GetHerHis] garden."
 
- carnx_sex_scene_dubcon_sub_second_1: "[second.GetSheHe|U] asks me to stand on my knees and pleasure [second.GetHerHim] with my mouth, and I obey without a moment's hesitation. I feel myself suffocating as [second.GetSheHe] grabs me and presses me closer to [second.GetHerHim]."
+ carnx_sex_scene_dubcon_sub_first_a_0: "<fallback sub first a>"
 
- carnx_sex_scene_dubcon_sub_third_1: "As I somehow manage to respond to [second.GetHerHis] movements, the desire awakens in me, but now it's already too late..."
+ carnx_sex_scene_dubcon_sub_first_b_0: "<fallback sub first b>"
 
- carnx_sex_scene_dubcon_sub_ending_1: "When [second.GetSheHe] is finished with me, I get up and leave without saying a word."
+ carnx_sex_scene_dubcon_sub_second_a_0: "<fallback sub second a>"
 
- carnx_sex_scene_dubcon_sub_ending_private_chambers_1: "Afterwards, [second.GetSheHe] tries to be gentle with me but I remain silent and numb."
- carnx_sex_scene_dubcon_sub_ending_garden_1: "When [second.GetSheHe] is done, I get up and enter the nearby pool in silence."
+ carnx_sex_scene_dubcon_sub_second_b_0: "<fallback sub second b>"
 
- carnx_sex_scene.0003.t: "No Love Lost Between Us"
- carnx_sex_scene.0003.desc_opening: "I find my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] [carn_sex_target.GetTitledFirstName] waiting for me with apprehension."
+ carnx_sex_scene_dubcon_sub_third_a_0: "<fallback sub third a>"
+
+ carnx_sex_scene_dubcon_sub_third_b_0: "<fallback sub third b>"
+
+ carnx_sex_scene_dubcon_sub_ending_0: "<fallback sub ending>"
+
+ carnx_sex_scene_dubcon_dom_title: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_title' , SCOPE.sC('second'))]"
+
+ carnx_sex_scene_dubcon_dom_title_0: "An Amorous Encounter"
+
+ carnx_sex_scene_dubcon_sub_title: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_title' , SCOPE.sC('second'))]"
+
+ carnx_sex_scene_dubcon_sub_title_0: "No Love Lost Between Us"
+
+ carnx_sex_scene_dubcon_dom_option: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_option' , SCOPE.sC('second'))]"
+
+ carnx_sex_scene_dubcon_dom_option_0: "I should try something else next time."
+
+ carnx_sex_scene_dubcon_sub_option: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_option' , SCOPE.sC('second'))]"
+
+ carnx_sex_scene_dubcon_sub_option_0: "I wish [second.GetSheHe] could leave me alone for a while."
+
+ carnx_sex_scene.0003.t: "[ROOT.Char.Custom2('carnx_sex_scene_title', SCOPE.sC('carn_sex_target'))]"
+ carnx_sex_scene.0003.desc_opening: "I find my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] [carn_sex_target.GetTitledFirstName] waiting for me."
  carnx_sex_scene.0003.desc_ending: "[ROOT.Char.Custom2('carnx_sex_scene_text', SCOPE.sC('carn_sex_target'))]"
- carnx_sex_scene.0003.a: "I should try something else next time."
+ carnx_sex_scene.0003.a: "[ROOT.Char.Custom2('carnx_sex_scene_option', SCOPE.sC('carn_sex_target'))]"
 
- carnx_sex_scene.0004.t: "No Love Lost Between Us"
- carnx_sex_scene.0004.desc_opening: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] [carn_sex_target.GetTitledFirstName] finds me waiting for [carn_sex_target.GetHerHim] with apprehension."
+ carnx_sex_scene.0004.t: "[ROOT.Char.Custom2('carnx_sex_scene_title', SCOPE.sC('carn_sex_target'))]"
+ carnx_sex_scene.0004.desc_opening: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('carn_sex_target'))] [carn_sex_target.GetTitledFirstName] finds me waiting for [carn_sex_target.GetHerHim]."
  carnx_sex_scene.0004.desc_ending: "[ROOT.Char.Custom2('carnx_sex_scene_text', SCOPE.sC('carn_sex_target'))]"
- carnx_sex_scene.0004.a: "I wish [carn_sex_target.GetSheHe] could leave me alone for a while."
+ carnx_sex_scene.0004.a: "[ROOT.Char.Custom2('carnx_sex_scene_option', SCOPE.sC('carn_sex_target'))]"

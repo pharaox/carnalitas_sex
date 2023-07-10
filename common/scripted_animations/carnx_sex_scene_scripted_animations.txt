@@ -6,18 +6,154 @@
 	animation = flirtation
 }
 
-carnx_dubcon_dom_animation = {
+carnx_dubcon_player_animation = {
 	triggered_animation = {
-		trigger = { always = yes }
-		animation = { flirtation schadenfreude scheme personality_dishonorable personality_vengeful personality_callous }
+		trigger = {
+			scope:sex_scene_player_attitude = flag:amorous
+		}
+		animation = { flirtation flirtation_left }
 	}
-	animation = flirtation
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:reserved
+		}
+		animation = { boredom eyeroll }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:respectful
+		}
+		animation = { personality_content }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:hedonistic
+		}
+		animation = { personality_cynical }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:accommodating
+		}
+		animation = { personality_content }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:disgusted
+		}
+		animation = { disgust disapproval }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:faithful
+		}
+		animation = { personality_honorable }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:deceitful
+		}
+		animation = { personality_dishonorable }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:gentle
+		}
+		animation = { personality_compassionate }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:dominating
+		}
+		animation = { personality_callous }
+	}
+	animation = idle
 }
 
-carnx_dubcon_sub_animation = {
+carnx_dubcon_target_animation = {
 	triggered_animation = {
-		trigger = { always = yes }
-		animation = { idle shame boredom flirtation_left eyeroll personality_coward personality_content personality_cynical }
+		trigger = {
+			scope:sex_scene_target_attitude = flag:amorous
+		}
+		animation = { flirtation flirtation_left }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:reserved
+		}
+		animation = { boredom eyeroll }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:respectful
+		}
+		animation = { personality_content }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:hedonistic
+		}
+		animation = { personality_cynical }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:accommodating
+		}
+		animation = { personality_content }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:disgusted
+		}
+		animation = { disgust disapproval }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:faithful
+		}
+		animation = { personality_honorable }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:deceitful
+		}
+		animation = { personality_dishonorable }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:obedient
+		}
+		animation = { personality_forgiving }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:resisting
+		}
+		animation = { personality_vengeful }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:flirtatious
+		}
+		animation = { flirtation flirtation_left }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:calculating
+		}
+		animation = { scheme personality_greedy }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:intimidated
+		}
+		animation = { personality_coward }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:defiant
+		}
+		animation = { personality_bold }
 	}
 	animation = idle
 }

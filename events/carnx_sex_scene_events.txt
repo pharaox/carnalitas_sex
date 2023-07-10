@@ -37,6 +37,11 @@ carnx_sex_scene.0001 = {
 		carnx_add_sex_scene_location_effect = { LOCATION = copse }
 		carnx_add_sex_scene_location_effect = { LOCATION = kitchen }
 
+		carnx_set_sex_scene_location_effect = yes
+		carnx_set_sex_scene_target_effect = yes
+		carnx_set_sex_scene_player_attitude_effect = yes
+		carnx_set_sex_scene_target_attitude_effect = yes
+
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
@@ -52,8 +57,6 @@ carnx_sex_scene.0001 = {
 		scope:carn_sex_target = {
 			carn_undress_character_effect = yes
 		}
-
-		carnx_set_sex_scene_location_effect = yes
 	}
 
 	after = {
@@ -64,7 +67,7 @@ carnx_sex_scene.0001 = {
 			carn_dress_character_effect = yes
 		}
 
-		carnx_remove_sex_scene_location_effect = yes
+		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
 	}
 
@@ -85,11 +88,11 @@ carnx_sex_scene.0003 = {
 
 	left_portrait = {
 		character = scope:carn_sex_player
-		scripted_animation = carnx_dubcon_dom_animation
+		scripted_animation = carnx_dubcon_player_animation
 	}
 	right_portrait = {
 		character = scope:carn_sex_target
-		scripted_animation = carnx_dubcon_sub_animation
+		scripted_animation = carnx_dubcon_target_animation
 	}
 
 	trigger = {
@@ -104,6 +107,11 @@ carnx_sex_scene.0003 = {
 
 		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_add_sex_scene_location_effect = { LOCATION = garden }
+
+		carnx_set_sex_scene_location_effect = yes
+		carnx_set_sex_scene_target_effect = yes
+		carnx_set_sex_scene_player_attitude_effect = yes
+		carnx_set_sex_scene_target_attitude_effect = yes
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
@@ -120,8 +128,6 @@ carnx_sex_scene.0003 = {
 		scope:carn_sex_target = {
 			carn_undress_character_effect = yes
 		}
-
-		carnx_set_sex_scene_location_effect = yes
 	}
 
 	after = {
@@ -132,7 +138,7 @@ carnx_sex_scene.0003 = {
 			carn_dress_character_effect = yes
 		}
 
-		carnx_remove_sex_scene_location_effect = yes
+		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
 	}
 
@@ -153,11 +159,11 @@ carnx_sex_scene.0004 = {
 
 	left_portrait = {
 		character = scope:carn_sex_player
-		scripted_animation = carnx_dubcon_sub_animation
+		scripted_animation = carnx_dubcon_player_animation
 	}
 	right_portrait = {
 		character = scope:carn_sex_target
-		scripted_animation = carnx_dubcon_dom_animation
+		scripted_animation = carnx_dubcon_target_animation
 	}
 
 	trigger = {
@@ -172,6 +178,11 @@ carnx_sex_scene.0004 = {
 
 		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_add_sex_scene_location_effect = { LOCATION = garden }
+
+		carnx_set_sex_scene_location_effect = yes
+		carnx_set_sex_scene_target_effect = yes
+		carnx_set_sex_scene_player_attitude_effect = yes
+		carnx_set_sex_scene_target_attitude_effect = yes
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
@@ -188,8 +199,6 @@ carnx_sex_scene.0004 = {
 		scope:carn_sex_target = {
 			carn_undress_character_effect = yes
 		}
-
-		carnx_set_sex_scene_location_effect = yes
 	}
 
 	after = {
@@ -200,7 +209,7 @@ carnx_sex_scene.0004 = {
 			carn_dress_character_effect = yes
 		}
 
-		carnx_remove_sex_scene_location_effect = yes
+		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
 	}
 
