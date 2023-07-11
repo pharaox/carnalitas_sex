@@ -3,6 +3,7 @@
 # 0001. Generic consensual scene
 # 0003. Generic dubcon (dom)
 # 0004. Generic dubcon (sub)
+# 0005. Bdsm dubcon (dom)
 
 carnx_sex_scene.0001 = {
 	type = character_event
@@ -218,3 +219,72 @@ carnx_sex_scene.0004 = {
 	}
 }
 
+carnx_sex_scene.0005 = {
+	type = character_event
+	title = carnx_sex_scene.0005.t
+	desc = {
+		desc = carnx_sex_scene.0005.desc_opening
+		desc = carnx_sex_scene.0005.desc_ending
+	}
+
+	theme = carnx_sex_scene
+
+	left_portrait = {
+		character = scope:carn_sex_player
+		scripted_animation = carnx_dubcon_player_animation
+	}
+	right_portrait = {
+		character = scope:carn_sex_target
+		animation = prisondungeon
+	}
+
+	trigger = {
+		carn_sex_scene_is_dubcon = yes
+		carn_sex_scene_is_dom_player = yes
+		carn_sex_scene_is_bdsm = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+	}
+
+	immediate = {
+		carn_sex_scene_is_dubcon = yes
+		carn_sex_scene_is_dom_player = yes
+		carn_sex_scene_is_bdsm = yes
+
+		carnx_set_sex_scene_target_effect = yes
+		set_variable = { name = sex_scene_location value = flag:dungeon }
+		carnx_set_sex_scene_player_attitude_effect = yes
+		carnx_set_sex_scene_target_attitude_effect = yes
+
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+
+		scope:carn_sex_player = {
+			carn_undress_character_effect = yes
+		}
+		scope:carn_sex_target = {
+			carn_undress_character_effect = yes
+		}
+	}
+
+	after = {
+		scope:carn_sex_player = {
+			carn_dress_character_effect = yes
+		}
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+		}
+
+		carnx_clear_sex_scene_variables_effect = yes
+		carnx_clear_sex_scene_locations_effect = yes
+	}
+
+	option = {
+		name = carnx_sex_scene.0005.a
+	}
+}

@@ -41,6 +41,13 @@
 		reference = bp1_kitchen_western
 	}
 	background = {
+		trigger = {
+			has_variable = sex_scene_location
+			var:sex_scene_location = flag:dungeon
+		}
+		reference = dungeon
+	}
+	background = {
 		reference = bedchamber
 	}
 }

@@ -60,6 +60,10 @@ carnx_sex_scene_dubcon_dom_opening_location = {
 		localization_key = carnx_sex_scene_dubcon_dom_opening_garden_1
 	}
 	text = {
+		trigger = { var:sex_scene_location = flag:dungeon }
+		localization_key = carnx_sex_scene_dubcon_dom_opening_dungeon_1
+	}
+	text = {
 		trigger = { always = no }
 		fallback = yes
 		localization_key = carnx_sex_scene_dubcon_dom_opening_default_0

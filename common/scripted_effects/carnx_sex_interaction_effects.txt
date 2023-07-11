@@ -57,6 +57,12 @@ carnx_request_sex_scene_flags_effect = {
 		else = {
 			carn_sex_scene_request_dubcon = yes
 			carn_sex_scene_request_dom_player = yes
+
+			# Request bdsm for sadistic characters
+			if = {
+				limit = { has_trait = sadistic }
+				carn_sex_scene_request_bdsm = yes
+			}
 		}
 	}
 	# Prostitutes: consensual or dubcon depending on opinion and attraction
@@ -78,6 +84,12 @@ carnx_request_sex_scene_flags_effect = {
 		else = {
 			carn_sex_scene_request_dubcon = yes
 			carn_sex_scene_request_dom_player = yes
+
+			# Request bdsm for sadistic characters
+			if = {
+				limit = { has_trait = sadistic }
+				carn_sex_scene_request_bdsm = yes
+			}
 		}
 	}
 	# Others: consensual
