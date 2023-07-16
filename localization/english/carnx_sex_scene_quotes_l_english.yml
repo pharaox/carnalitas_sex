@@ -1,0 +1,46 @@
+﻿l_english:
+ # Sappho, Fragment 22
+ # Source: The Joy of Poetry, https://the-joy-of-poetry.quora.com/Sappho-translation-of-clinging-dresses
+ # Target: female, amorous, faithful, flirtatious; Player: amorous, faithful, gentle
+ carnx_sex_scene_quote_01: "#EMP That enticing girl's clinging dresses\nleave me trembling, overcome by happiness,\nas once, when I saw the Goddess in my prayers\neclipsing Cyprus.#!\n\n#weak ― Sappho, Fragment 22, loose translation by Michael R. Burch#!"
+
+ # Musa Lapidaria
+ # Source: Ancient Erotica: The Best Ancient Erotic Poems of All Time, http://www.thehypertexts.com/The%20Best%20Ancient%20Erotic%20Poems.html
+ # Target: female, hedonistic, accommodating, obedient, flirtatious; Player: male, hedonistic, accommodating, dominating
+ carnx_sex_scene_quote_02: "#EMP Cunt, while you weep and seep neediness all night,\nass has claimed what would bring you delight.#!\n\n#weak ― Musa Lapidaria, 100A, loose translation by Michael R. Burch#!"
+
+ # Song of Solomon
+ # Source: King James Bible, https://biblehub.com/kjv/songs/2.htm
+ # Target: amorous, faithful, flirtatious; Player: amorous, faithful, gentle
+ carnx_sex_scene_quote_03: "#EMP O my dove, that art in the clefts of the rock, in the secret places of the stairs, let me see thy countenance,\nlet me hear thy voice; for sweet is thy voice, and thy countenance is comely.\nTake us the foxes, the little foxes, that spoil the vines: for our vines have tender grapes.\n\nMy beloved is mine, and I am his: he feedeth among the lilies.\nUntil the day break, and the shadows flee away, turn, my beloved,\nand be thou like a roe or a young hart upon the mountains of Bether.#!\n\n#weak ― Song of Solomon, King James Bible#!"
+
+ # An Ancient Egyptian Love Lyric
+ # Source: The Joy of Poetry, https://the-joy-of-poetry.quora.com/Sometimes-the-Dead-2
+ # Target: female, amorous, faithful, flirtatious; Player: amorous, faithful, gentle
+ carnx_sex_scene_quote_04a: "#EMP Is there anything sweeter than these hours of love,\nwhen we're together, and my heart races?\nFor what is better than embracing and fondling\nwhen you visit me and we surrender to delights?*\n\nIf you reach to caress my thigh,\nI will offer you my breast also —\nit's soft; it won't jab you or thrust you away!\n\nWill you leave me because you're hungry?\nAre you ruled by your belly?\nWill you leave me because you need something to wear?\nI have chests full of fine linen!\nWill you leave me because you're thirsty?\nHere, suck my breasts! They're full to overflowing, and all for you!#!\n\n#weak ― An Ancient Egyptian Love Lyric, loose translation by Michael R. Burch#!"
+ carnx_sex_scene_quote_04b: "#EMP The thrill of your love spreads through my body\nlike honey in water,\nlike a drug mixed with spices,\nlike wine mingled with water.\n\nOh, that you would speed to see your sister\nlike a stallion in heat, like a bull to his heifer!\nFor the heavens have granted us love like flames igniting straw,\ndesire like the falcon's free-falling frenzy!#!\n\n#weak ― An Ancient Egyptian Love Lyric, loose translation by Michael R. Burch#!"
+
+ # An Ancient Egyptian Love Song
+ # Source: The Joy of Poetry, https://the-joy-of-poetry.quora.com/These-are-epigrams-by-Michael-R-Burch-both-original-epigrams-and-translations-of-epigrams-by-poets-like-Michelangelo-a
+ # Target: female, amorous, faithful, flirtatious; Player: amorous, faithful, gentle
+ carnx_sex_scene_quote_05a: "#EMP Lover, let's slip down to the pond;\nI'll bathe while you watch me from the nearest bank.\nI'll wear my sexiest swimsuit, just for you,\nmade of sheer linen, fit for a princess!\nCome, see how it looks when it's wet!\nCan I coax you to wade in with me?\nTo let the cool water surround us?#!\n\n#weak ― An Ancient Egyptian Love Song, loose translation by Michael R. Burch#!"
+ carnx_sex_scene_quote_05b: "#EMP Then I'll dive way down deep, just for you,\nand come up dripping,\nletting you feast your eyes\non the little pink fish I've found.\nThen I'll say, standing there in the shallows:\nLook at my little pink fish, love,\nas I hold it in my hand.\nSee how my fingers caress it,\nslipping down its sides, then inside!\nSee how it wiggles?\nBut then I'll giggle softly and sigh,\nmy eyes bright with your seeing:\nIt's a gift, my love, no more words!\nCome closer and see,\nit's all me!#!\n\n#weak ― An Ancient Egyptian Love Song, loose translation by Michael R. Burch#!"
+
+ # Fallback
+ carnx_sex_scene_quote_f: "#EMP <fallback quote>#!\n\n#weak ― Anonymous#!"
+
+ # Marquis de Sade, The 120 Days of Sodom
+ # Sources:
+ # * odaha.com, https://www.odaha.com/sites/default/files/120_days_of_sodom.pdf
+ # * Internet Archive, https://archive.org/details/the120daysofsodom/
+ # * Wikisource, https://fr.wikisource.org/wiki/Les_120_Journ%C3%A9es_de_Sodome
+ # Target: female; Player: reserved, hedonistic, deceitful, dominating
+ carnx_sex_scene_bdsm_quote_01a: "#EMP She is bound hand and foot to the wall. Facing her, and also attached to the wall, is a blade of steel adjusted to the height of her belly. If she strives to avoid a blow, it is forward she must lunge; she cuts herself. If she wishes to avoid the blade, she must fling herself backward toward the lash.#!\n\n#weak ― Marquis de Sade, The 120 Days of Sodom, Translated by Richard Seaver and Austryn Wainhouse#!"
+
+ # John Cleland, Memoirs of Fanny Hill
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/25305
+ # Target: female; Player: male, amorous, respectful, faithful, gentle
+ carnx_sex_scene_bdsm_quote_02a: "#EMP Then, springing eagerly towards me, he covered all those naked parts with a fond profusion of kisses; and now, taking hold of the rod, rather wantoned with me, in gentle inflictions on those tender trembling masses of my flesh behind, than in any way hurt them, till by degrees, he began to tingle them with smarter lashes, so as to provoke a red colour into them, which I knew, as well by the flagrant glow I felt there, as by his telling me, they now emulated the native roses of my other cheeks. When he had thus amused himself with admiring, and toying with them, he went on to strike harder, and more hard, so that I needed all my patience not to cry out, or complain at least.#!\n\n#weak ― John Cleland, Memoirs of Fanny Hill#!"
+
+ # Fallback
+ carnx_sex_scene_bdsm_quote_f: "#EMP <fallback quote>#!\n\n#weak ― Anonymous#!"

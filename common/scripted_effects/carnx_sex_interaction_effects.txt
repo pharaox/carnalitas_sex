@@ -35,6 +35,9 @@ carnx_request_sex_scene_flags_effect = {
 		else = {
 			carn_sex_scene_request_dubcon = yes
 			carn_sex_scene_request_dom_player = yes
+
+			# Request special dubcon scene flags, e.g. bdsm for sadistic characters
+			carnx_request_special_dubcon_sex_scene_flags_effect = yes
 		}
 	}
 	# Slaves that are not consorts: consensual or dubcon depending on opinion and attraction
@@ -58,11 +61,8 @@ carnx_request_sex_scene_flags_effect = {
 			carn_sex_scene_request_dubcon = yes
 			carn_sex_scene_request_dom_player = yes
 
-			# Request bdsm for sadistic characters
-			if = {
-				limit = { has_trait = sadistic }
-				carn_sex_scene_request_bdsm = yes
-			}
+			# Request special dubcon scene flags, e.g. bdsm for sadistic characters
+			carnx_request_special_dubcon_sex_scene_flags_effect = yes
 		}
 	}
 	# Prostitutes: consensual or dubcon depending on opinion and attraction
@@ -85,16 +85,24 @@ carnx_request_sex_scene_flags_effect = {
 			carn_sex_scene_request_dubcon = yes
 			carn_sex_scene_request_dom_player = yes
 
-			# Request bdsm for sadistic characters
-			if = {
-				limit = { has_trait = sadistic }
-				carn_sex_scene_request_bdsm = yes
-			}
+			# Request special dubcon scene flags, e.g. bdsm for sadistic characters
+			carnx_request_special_dubcon_sex_scene_flags_effect = yes
 		}
 	}
 	# Others: consensual
 	else = {
 		carn_sex_scene_request_consensual = yes
+	}
+}
+
+carnx_request_special_dubcon_sex_scene_flags_effect = {
+	# Request bdsm for sadistic characters
+	if = {
+		limit = { has_trait = sadistic }
+		carn_sex_scene_request_bdsm = yes
+	}
+	else = {
+		carn_sex_scene_exclude_bdsm = yes
 	}
 }
 

@@ -7,43 +7,37 @@
 	}
 	background = {
 		trigger = {
-			has_variable = sex_scene_location
-			var:sex_scene_location = flag:private_chamber
+			var:sex_scene_location ?= flag:private_chamber
 		}
 		reference = sitting_room
 	}
 	background = {
 		trigger = {
-			has_variable = sex_scene_location
-			var:sex_scene_location = flag:garden
+			var:sex_scene_location ?= flag:garden
 		}
 		reference = garden
 	}
 	background = {
 		trigger = {
-			has_variable = sex_scene_location
-			var:sex_scene_location = flag:stable
+			var:sex_scene_location ?= flag:stable
 		}
 		reference = armory
 	}
 	background = {
 		trigger = {
-			has_variable = sex_scene_location
-			var:sex_scene_location = flag:copse
+			var:sex_scene_location ?= flag:copse
 		}
 		reference = terrain
 	}
 	background = {
 		trigger = {
-			has_variable = sex_scene_location
-			var:sex_scene_location = flag:kitchen
+			var:sex_scene_location ?= flag:kitchen
 		}
 		reference = bp1_kitchen_western
 	}
 	background = {
 		trigger = {
-			has_variable = sex_scene_location
-			var:sex_scene_location = flag:dungeon
+			var:sex_scene_location ?= flag:dungeon
 		}
 		reference = dungeon
 	}

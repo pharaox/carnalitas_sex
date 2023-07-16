@@ -1,4 +1,17 @@
-﻿carnx_sex_scene_supports_requested_location_trigger = {
+﻿carn_sex_scene_matches_requested_flags_trigger = {
+	NOR = {
+		any_in_global_list = {
+			variable = carn_sex_scene_requested_flags
+			NOT = { is_in_list = carn_sex_scene_flags }
+		}
+		any_in_global_list = {
+			variable = carn_sex_scene_excluded_flags
+			is_in_list = carn_sex_scene_flags
+		}
+	}
+}
+
+carnx_sex_scene_supports_requested_location_trigger = {
 	is_target_in_global_variable_list = {
 		name = carnx_requested_sex_scene_locations
 		target = flag:$LOCATION$
@@ -6,5 +19,61 @@
 	is_target_in_global_variable_list = {
 		name = carnx_sex_scene_locations
 		target = flag:$LOCATION$
+	}
+}
+
+carnx_sex_scene_target_attitude_1_trigger = {
+	var:sex_scene_target_attitude = $F1$
+}
+
+carnx_sex_scene_target_attitude_2_trigger = {
+	OR = {
+		var:sex_scene_target_attitude = $F1$
+		var:sex_scene_target_attitude = $F2$
+	}
+}
+
+carnx_sex_scene_target_attitude_3_trigger = {
+	OR = {
+		var:sex_scene_target_attitude = $F1$
+		var:sex_scene_target_attitude = $F2$
+		var:sex_scene_target_attitude = $F3$
+	}
+}
+
+carnx_sex_scene_target_attitude_4_trigger = {
+	OR = {
+		var:sex_scene_target_attitude = $F1$
+		var:sex_scene_target_attitude = $F2$
+		var:sex_scene_target_attitude = $F3$
+		var:sex_scene_target_attitude = $F4$
+	}
+}
+
+carnx_sex_scene_player_attitude_1_trigger = {
+	var:sex_scene_player_attitude = $F1$
+}
+
+carnx_sex_scene_player_attitude_2_trigger = {
+	OR = {
+		var:sex_scene_player_attitude = $F1$
+		var:sex_scene_player_attitude = $F2$
+	}
+}
+
+carnx_sex_scene_player_attitude_3_trigger = {
+	OR = {
+		var:sex_scene_player_attitude = $F1$
+		var:sex_scene_player_attitude = $F2$
+		var:sex_scene_player_attitude = $F3$
+	}
+}
+
+carnx_sex_scene_player_attitude_4_trigger = {
+	OR = {
+		var:sex_scene_player_attitude = $F1$
+		var:sex_scene_player_attitude = $F2$
+		var:sex_scene_player_attitude = $F3$
+		var:sex_scene_player_attitude = $F4$
 	}
 }

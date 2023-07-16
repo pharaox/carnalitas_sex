@@ -80,10 +80,7 @@ carnx_sex_scene.0001 = {
 carnx_sex_scene.0003 = {
 	type = character_event
 	title = carnx_sex_scene.0003.t
-	desc = {
-		desc = carnx_sex_scene.0003.desc_opening
-		desc = carnx_sex_scene.0003.desc_ending
-	}
+	desc = carnx_sex_scene.0003.desc
 
 	theme = carnx_sex_scene
 
@@ -151,10 +148,7 @@ carnx_sex_scene.0003 = {
 carnx_sex_scene.0004 = {
 	type = character_event
 	title = carnx_sex_scene.0004.t
-	desc = {
-		desc = carnx_sex_scene.0004.desc_opening
-		desc = carnx_sex_scene.0004.desc_ending
-	}
+	desc = carnx_sex_scene.0004.desc
 
 	theme = carnx_sex_scene
 
@@ -222,10 +216,7 @@ carnx_sex_scene.0004 = {
 carnx_sex_scene.0005 = {
 	type = character_event
 	title = carnx_sex_scene.0005.t
-	desc = {
-		desc = carnx_sex_scene.0005.desc_opening
-		desc = carnx_sex_scene.0005.desc_ending
-	}
+	desc = carnx_sex_scene.0005.desc
 
 	theme = carnx_sex_scene
 
@@ -235,7 +226,7 @@ carnx_sex_scene.0005 = {
 	}
 	right_portrait = {
 		character = scope:carn_sex_target
-		animation = prisondungeon
+		scripted_animation = carnx_dubcon_target_animation
 	}
 
 	trigger = {

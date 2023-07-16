@@ -73,6 +73,12 @@ carnx_dubcon_player_animation = {
 carnx_dubcon_target_animation = {
 	triggered_animation = {
 		trigger = {
+			carn_sex_scene_was_bdsm = yes
+		}
+		animation = { prisondungeon }
+	}
+	triggered_animation = {
+		trigger = {
 			scope:sex_scene_target_attitude = flag:amorous
 		}
 		animation = { flirtation flirtation_left }
