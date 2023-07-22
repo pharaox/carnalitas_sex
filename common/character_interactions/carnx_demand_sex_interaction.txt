@@ -60,78 +60,46 @@
 						CHARACTER_2 = scope:recipient
 						C1_PREGNANCY_CHANCE = pregnancy_chance
 						C2_PREGNANCY_CHANCE = pregnancy_chance
-						STRESS_EFFECTS = yes
+						STRESS_EFFECTS = no
 						DRAMA = yes
 					}
 				}
 
-				# Stress effects
-				# Only lose stress if arousal stress is enabled
+				# Piety impact
+				carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:recipient }
+
+				# Lose stress if arousal stress is enabled
 				if = {
 					limit = {
 						has_game_rule = carn_arousal_stress_enabled
 						is_attracted_to_gender_of = scope:recipient
 					}
-					stress_impact = {
-						base = minor_stress_impact_loss
-					}
+					add_stress = minor_stress_impact_loss
 				}
-				else = {
-					custom_tooltip = carn_sex_interaction_not_attracted_to_warning_tt
-					stress_impact = {
-						base = minor_stress_impact_gain
-					}
-				}
+
+				# Stress impact
+				carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:recipient }
+
+				# Additional stress impact of demanding sex
 				stress_impact = {
 					compassionate = minor_stress_impact_gain
 					sadistic = minor_stress_impact_loss
 					callous = miniscule_stress_impact_loss
-					honest = miniscule_stress_impact_gain
-					deceitful = miniscule_stress_impact_loss
-					chaste = minor_stress_impact_gain
-					#lustful = minor_stress_impact_loss
+					# TODO More traits causing stress impact?
 				}
 
-				# Stress effects for recipient
+				# Effects for recipient
 				scope:recipient = {
+					# Piety impact
+					carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:actor }
+
+					# Stress impact
+					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
+
+					# Opinion effects of being demanded sex
 					if = {
 						limit = {
-							NOT = { is_attracted_to_gender_of = scope:actor }
-						}
-						custom_tooltip = carnx_sex_interaction_recipient_not_attracted_to_warning_tt
-						stress_impact = {
-							base = minor_stress_impact_gain
-						}
-					}
-					stress_impact = {
-						honest = miniscule_stress_impact_gain
-						deceitful = miniscule_stress_impact_loss
-						chaste = minor_stress_impact_gain
-						#lustful = minor_stress_impact_loss
-					}
-				}
-
-				# Piety effects
-				# Lose piety if sodomy or adultery is not accepted by faith
-				carnx_demand_sex_add_piety_effect = { PARTNER = scope:recipient }
-
-				# Piety effects for recipient
-				scope:recipient = {
-					carnx_demand_sex_add_piety_effect = { PARTNER = scope:actor }
-				}
-
-				# Opinion effects
-				# Lose opinion with recipient if sodomy or adultery is not accepted by their faith
-				scope:recipient = {
-					if = {
-						limit = {
-							OR = {
-								AND = {
-									relation_with_character_is_sodomy_trigger = { CHARACTER = scope:actor }
-									carnx_is_sodomy_crime_trigger = yes
-								}
-								carnx_is_adultery_crime_trigger = yes
-							}
+							carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:actor }
 						}
 						add_opinion = {
 							target = scope:actor
@@ -140,13 +108,7 @@
 					}
 					else_if = {
 						limit = {
-							OR = {
-								AND = {
-									relation_with_character_is_sodomy_trigger = { CHARACTER = scope:actor }
-									carnx_is_sodomy_shunned_trigger = yes
-								}
-								carnx_is_adultery_shunned_trigger = yes
-							}
+							carnx_is_sex_with_character_shunned_trigger = { CHARACTER = scope:actor }
 						}
 						add_opinion = {
 							target = scope:actor
@@ -176,7 +138,7 @@
 				carn_sex_scene_effect = {
 					PLAYER = scope:actor
 					TARGET = scope:recipient
-					STRESS_EFFECTS = yes
+					STRESS_EFFECTS = no
 					DRAMA = yes
 				}
 			}

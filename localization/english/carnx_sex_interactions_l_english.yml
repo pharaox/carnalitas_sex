@@ -3,9 +3,13 @@
  carnx_demand_sex_interaction: "$dsi_demand_sex_interaction$"
  carnx_demand_sex_interaction_desc: "Demand sex from your slave [recipient.GetShortUINameNoTooltip]"
 
- carnx_sex_interaction_recipient_not_attracted_to_warning_tt: "#X [recipient.GetShortUINameNoTooltip] is not attracted to you#!"
+ carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip] is not attracted to [partner.GetShortUINameNoTooltip]#!"
 
- carnx_sex_interaction_sodomy_crime_warning_tt: "#X Sodomy is crime in [character.GetFaith.GetName]#!"
+ carnx_sex_interaction_sodomy_crime_warning_tt: "#X Sodomy is illegal in [character.GetFaith.GetName]#!"
  carnx_sex_interaction_sodomy_shunned_warning_tt: "#X Sodomy is shunned in [character.GetFaith.GetName]#!"
- carnx_sex_interaction_adultery_crime_warning_tt: "#X Adultery is crime in [character.GetFaith.GetName]#!"
+ carnx_sex_interaction_adultery_crime_warning_tt: "#X Adultery is illegal in [character.GetFaith.GetName]#!"
  carnx_sex_interaction_adultery_shunned_warning_tt: "#X Adultery is shunned in [character.GetFaith.GetName]#!"
+ carnx_sex_interaction_incest_crime_warning_tt: "#X Incest is illegal in [character.GetFaith.GetName]#!"
+ carnx_sex_interaction_incest_shunned_warning_tt: "#X Incest is shunned in [character.GetFaith.GetName]#!"
+ carnx_sex_interaction_prostitution_crime_warning_tt: "#X Prostitution is illegal in [character.GetFaith.GetName]#!"
+ carnx_sex_interaction_prostitution_shunned_warning_tt: "#X Prostitution is shunned in [character.GetFaith.GetName]#!"

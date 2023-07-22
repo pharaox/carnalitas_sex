@@ -1,0 +1,7 @@
+﻿carnx_opinion_attraction_value = {
+	value = scope:opinion_of_character
+	add = {
+		value = attraction
+		multiply = 2
+	}
+}

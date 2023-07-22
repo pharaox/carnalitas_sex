@@ -29,6 +29,8 @@ carnx_request_sex_scene_flags_effect = {
 					is_attracted_to_gender_of = scope:character
 					carnx_is_attracted_consort_happy_with_sex_trigger = { CHARACTER = scope:character }
 				}
+				is_attracted_to_gender_of = $TARGET$
+				carnx_is_attracted_player_happy_with_sex_trigger = { CHARACTER = $TARGET$ }
 			}
 			carn_sex_scene_request_consensual = yes
 		}
@@ -54,6 +56,8 @@ carnx_request_sex_scene_flags_effect = {
 					is_attracted_to_gender_of = scope:character
 					carnx_is_attracted_slave_happy_with_sex_trigger = { CHARACTER = scope:character }
 				}
+				is_attracted_to_gender_of = $TARGET$
+				carnx_is_attracted_player_happy_with_sex_trigger = { CHARACTER = $TARGET$ }
 			}
 			carn_sex_scene_request_consensual = yes
 		}
@@ -78,6 +82,8 @@ carnx_request_sex_scene_flags_effect = {
 					is_attracted_to_gender_of = scope:character
 					carnx_is_attracted_prostitute_happy_with_sex_trigger = { CHARACTER = scope:character }
 				}
+				is_attracted_to_gender_of = $TARGET$
+				carnx_is_attracted_player_happy_with_sex_trigger = { CHARACTER = $TARGET$ }
 			}
 			carn_sex_scene_request_consensual = yes
 		}
@@ -128,42 +134,60 @@ carnx_request_sex_scene_locations_effect = {
 	}
 }
 
-carnx_demand_sex_add_piety_effect = {
+carnx_sex_iteraction_piety_impact_effect = {
+	carnx_sin_piety_impact_effect = { SIN = adultery PARTNER = $PARTNER$ }
+	carnx_sin_piety_impact_effect = { SIN = sodomy PARTNER = $PARTNER$ }
+	carnx_sin_piety_impact_effect = { SIN = incest PARTNER = $PARTNER$ }
+	carnx_sin_piety_impact_effect = { SIN = prostitution PARTNER = $PARTNER$ }
+}
+
+carnx_sin_piety_impact_effect = {
 	save_temporary_scope_as = character
 
+	# Lose piety if $SIN$ is illegal or shunned in this character's faith
 	if = {
 		limit = {
-			relation_with_character_is_sodomy_trigger = { CHARACTER = $PARTNER$ }
+			NOR = {
+				has_relation_lover = $PARTNER$
+				has_relation_soulmate = $PARTNER$
+			}
+			carnx_is_sex_with_character_$SIN$_trigger = { CHARACTER = $PARTNER$ }
 		}
 		if = {
 			limit = {
-				carnx_is_sodomy_crime_trigger = yes
+				carnx_is_$SIN$_crime_trigger = yes
 			}
-			custom_tooltip = carnx_sex_interaction_sodomy_crime_warning_tt
+			custom_tooltip = carnx_sex_interaction_$SIN$_crime_warning_tt
 			add_piety = minor_piety_loss
-			stress_impact = {
-				zealous = minor_stress_impact_gain
-				cynical = minor_stress_impact_loss
-			}
 		}
 		else_if = {
 			limit = {
-				carnx_is_sodomy_shunned_trigger = yes
+				carnx_is_$SIN$_shunned_trigger = yes
 			}
-			custom_tooltip = carnx_sex_interaction_sodomy_shunned_warning_tt
+			custom_tooltip = carnx_sex_interaction_$SIN$_shunned_warning_tt
 			add_piety = miniscule_piety_loss
-			stress_impact = {
-				zealous = miniscule_stress_impact_gain
-				cynical = miniscule_stress_impact_loss
-			}
 		}
 	}
+}
+
+carnx_sex_interaction_stress_impact_effect = {
+	save_temporary_scope_as = character
+	$PARTNER$ = { save_scope_as = partner }
+
+	# Gain stress if not attracted to the gender of partner
 	if = {
 		limit = {
-			carnx_is_adultery_crime_trigger = yes
+			NOT = { is_attracted_to_gender_of = $PARTNER$ }
 		}
-		custom_tooltip = carnx_sex_interaction_adultery_crime_warning_tt
-		add_piety = minor_piety_loss
+		custom_tooltip = carnx_sex_interaction_not_attracted_to_warning_tt
+		add_stress = minor_stress_impact_gain
+	}
+
+	# Gain / lose stress if sex with partner is crime or shunned and zealous / cynical
+	if = {
+		limit = {
+			carnx_is_sex_with_character_crime_trigger = { CHARACTER = $PARTNER$ }
+		}
 		stress_impact = {
 			zealous = minor_stress_impact_gain
 			cynical = minor_stress_impact_loss
@@ -171,13 +195,18 @@ carnx_demand_sex_add_piety_effect = {
 	}
 	else_if = {
 		limit = {
-			carnx_is_adultery_shunned_trigger = yes
+			carnx_is_sex_with_character_shunned_trigger = { CHARACTER = $PARTNER$ }
 		}
-		custom_tooltip = carnx_sex_interaction_adultery_shunned_warning_tt
-		add_piety = miniscule_piety_loss
 		stress_impact = {
 			zealous = miniscule_stress_impact_gain
 			cynical = miniscule_stress_impact_loss
 		}
+	}
+
+	# Gain / lose stress if chaste / lustful
+	stress_impact = {
+		chaste = minor_stress_impact_gain
+		lustful = minor_stress_impact_loss
+		rakish = minor_stress_impact_loss
 	}
 }

@@ -4,7 +4,7 @@
 	OR = {
 		has_relation_lover = $PARTNER$
 		has_relation_soulmate = $PARTNER$
-		$PARTNER$ = { 
+		$PARTNER$ = {
 			OR = {
 				is_consort_of = scope:character
 				carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character }
@@ -20,7 +20,6 @@ carnx_relationship_allows_demand_sex_trigger = {
 	$PARTNER$ = {
 		NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character } }
 	}
-	NOT = { relation_with_character_is_incestuous_in_my_faith_trigger = { CHARACTER = $PARTNER$ } }
 }
 
 carnx_is_slave_consort_of_trigger = {
@@ -37,136 +36,95 @@ carnx_is_sex_interaction_blocked_trigger = {
 	}
 }
 
+# Checks if an attracted consort is happy to have sex with $CHARACTER$,
+# and therefore a consensual scene would be appropriate.
 carnx_is_attracted_consort_happy_with_sex_trigger = {
-	trigger_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= very_high_positive_opinion }
-		}
-		$CHARACTER$.attraction >= high_negative_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= high_positive_opinion }
-		}
-		$CHARACTER$.attraction >= medium_negative_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= medium_positive_opinion }
-		}
-		$CHARACTER$.attraction >= low_negative_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= low_positive_opinion }
-		}
-		$CHARACTER$.attraction >= 0
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= 0 }
-		}
-		$CHARACTER$.attraction >= low_positive_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= low_negative_opinion }
-		}
-		$CHARACTER$.attraction >= medium_positive_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= medium_negative_opinion }
-		}
-		$CHARACTER$.attraction >= high_positive_attraction
-	}
-	trigger_else = {
-		always = no
-	}
+	save_temporary_opinion_value_as = { name = opinion_of_character target = $CHARACTER$ }
+	$CHARACTER$.carnx_opinion_attraction_value >= 20
 }
 
+# Checks if an attracted slave is happy to have sex with $CHARACTER$,
+# and therefore a consensual scene would be appropriate.
 carnx_is_attracted_slave_happy_with_sex_trigger = {
-	trigger_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= very_high_positive_opinion }
-		}
-		$CHARACTER$.attraction >= low_negative_attraction
+	save_temporary_opinion_value_as = { name = opinion_of_character target = $CHARACTER$ }
+	$CHARACTER$.carnx_opinion_attraction_value >= 60
+}
+
+# Checks if an attracted prostitute is happy to have sex with $CHARACTER$,
+# and therefore a consensual scene would be appropriate.
+carnx_is_attracted_prostitute_happy_with_sex_trigger = {
+	save_temporary_opinion_value_as = { name = opinion_of_character target = $CHARACTER$ }
+	$CHARACTER$.carnx_opinion_attraction_value >= 20
+}
+
+# Checks if an attracted player is happy to have sex with $CHARACTER$,
+# and therefore a consensual scene would be appropriate.
+carnx_is_attracted_player_happy_with_sex_trigger = {
+	save_temporary_opinion_value_as = { name = opinion_of_character target = $CHARACTER$ }
+	$CHARACTER$.carnx_opinion_attraction_value >= 20
+}
+
+carnx_is_sex_with_character_crime_trigger = {
+	NOR = {
+		has_relation_lover = $CHARACTER$
+		has_relation_soulmate = $CHARACTER$
 	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= high_positive_opinion }
-		}
-		$CHARACTER$.attraction >= 0
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= medium_positive_opinion }
-		}
-		$CHARACTER$.attraction >= low_positive_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= low_positive_opinion }
-		}
-		$CHARACTER$.attraction >= medium_positive_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= 0 }
-		}
-		$CHARACTER$.attraction >= high_positive_attraction
-	}
-	trigger_else = {
-		always = no
+	OR = {
+		carnx_is_sex_with_character_sin_crime_trigger = { SIN = adultery CHARACTER = $CHARACTER$ }
+		carnx_is_sex_with_character_sin_crime_trigger = { SIN = sodomy CHARACTER = $CHARACTER$ }
+		carnx_is_sex_with_character_sin_crime_trigger = { SIN = incest CHARACTER = $CHARACTER$ }
+		carnx_is_sex_with_character_sin_crime_trigger = { SIN = prostitution CHARACTER = $CHARACTER$ }
 	}
 }
 
-carnx_is_attracted_prostitute_happy_with_sex_trigger = {
-	trigger_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= medium_positive_opinion }
+carnx_is_sex_with_character_shunned_trigger = {
+	NOR = {
+		has_relation_lover = $CHARACTER$
+		has_relation_soulmate = $CHARACTER$
+	}
+	OR = {
+		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = adultery CHARACTER = $CHARACTER$ }
+		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = sodomy CHARACTER = $CHARACTER$ }
+		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = incest CHARACTER = $CHARACTER$ }
+		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = prostitution CHARACTER = $CHARACTER$ }
+	}
+}
+
+carnx_is_sex_with_character_sin_crime_trigger = {
+	carnx_is_sex_with_character_$SIN$_trigger = { CHARACTER = $CHARACTER$ }
+	carnx_is_$SIN$_crime_trigger = yes
+}
+
+carnx_is_sex_with_character_sin_shunned_trigger = {
+	carnx_is_sex_with_character_$SIN$_trigger = { CHARACTER = $CHARACTER$ }
+	carnx_is_$SIN$_shunned_trigger = yes
+}
+
+carnx_is_sex_with_character_adultery_trigger = {
+	save_temporary_scope_as = character
+	NOR = {
+		is_consort_of = $CHARACTER$
+		carnx_is_slave_consort_of_trigger = { CHARACTER = $CHARACTER$ }
+	}
+	$CHARACTER$ = {
+		NOR = {
+			is_consort_of = scope:character
+			carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character }
 		}
-		$CHARACTER$.attraction >= high_negative_attraction
 	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= low_positive_opinion }
-		}
-		$CHARACTER$.attraction >= medium_negative_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= 0 }
-		}
-		$CHARACTER$.attraction >= low_negative_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= low_negative_opinion }
-		}
-		$CHARACTER$.attraction >= 0
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= medium_negative_opinion }
-		}
-		$CHARACTER$.attraction >= low_positive_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= high_negative_opinion }
-		}
-		$CHARACTER$.attraction >= medium_positive_attraction
-	}
-	trigger_else_if = {
-		limit = {
-			opinion = { target = $CHARACTER$ value >= very_high_negative_opinion }
-		}
-		$CHARACTER$.attraction >= high_positive_attraction
-	}
-	trigger_else = {
-		always = no
-	}
+}
+
+carnx_is_sex_with_character_sodomy_trigger = {
+	relation_with_character_is_sodomy_trigger = { CHARACTER = $CHARACTER$ }
+}
+
+carnx_is_sex_with_character_incest_trigger = {
+	relation_with_character_is_incestuous_in_my_faith_trigger = { CHARACTER = $CHARACTER$ }
+}
+
+carnx_is_sex_with_character_prostitution_trigger = {
+	$CHARACTER$ = { carn_is_working_as_prostitute_trigger = yes }
+	NOT = { carn_relationship_allows_free_sex_trigger = { PARTNER = $CHARACTER$ } }
 }
 
 carnx_is_adultery_crime_trigger = {
@@ -196,9 +154,27 @@ carnx_is_adultery_shunned_trigger = {
 }
 
 carnx_is_sodomy_crime_trigger = {
+	is_male = yes
 	faith = { has_doctrine_parameter = homosexuality_illegal }
 }
 
 carnx_is_sodomy_shunned_trigger = {
+	is_male = yes
 	faith = { has_doctrine_parameter = homosexuality_shunned }
+}
+
+carnx_is_incest_crime_trigger = {
+	always = no
+}
+
+carnx_is_incest_shunned_trigger = {
+	NOT = { faith = { has_doctrine_parameter = allows_unrestricted_marriage } }
+}
+
+carnx_is_prostitution_crime_trigger = {
+	faith = { has_doctrine_parameter = carn_prostitution_illegal }
+}
+
+carnx_is_prostitution_shunned_trigger = {
+	faith = { has_doctrine_parameter = carn_prostitution_shunned }
 }
