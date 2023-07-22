@@ -134,6 +134,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 					is_attracted_to_gender_of = scope:carn_sex_player
 					opinion = { target = scope:carn_sex_player value >= 0 }
 				}
+				scope:carn_sex_player.attraction >= 0
 			}
 			opinion_modifier = {
 				who = scope:carn_sex_target
@@ -143,7 +144,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 			compare_modifier = {
 				target = scope:carn_sex_player
 				value = attraction
-				multiplier = 0.2
+				multiplier = 0.25
 			}
 			modifier = {
 				scope:carn_sex_target = {
@@ -165,6 +166,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 					is_attracted_to_gender_of = scope:carn_sex_player
 					opinion = { target = scope:carn_sex_player value < 0 }
 				}
+				scope:carn_sex_player.attraction <= 0
 			}
 			opinion_modifier = {
 				who = scope:carn_sex_target
@@ -174,7 +176,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 			compare_modifier = {
 				target = scope:carn_sex_player
 				value = attraction
-				multiplier = -0.2
+				multiplier = -0.25
 			}
 			modifier = {
 				scope:carn_sex_target = {
@@ -196,6 +198,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 					is_attracted_to_gender_of = scope:carn_sex_player
 					opinion = { target = scope:carn_sex_player value >= 0 }
 				}
+				scope:carn_sex_player.attraction <= 0
 			}
 			opinion_modifier = {
 				who = scope:carn_sex_target
@@ -205,7 +208,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 			compare_modifier = {
 				target = scope:carn_sex_player
 				value = attraction
-				multiplier = -0.2
+				multiplier = -0.25
 			}
 			modifier = {
 				scope:carn_sex_target = {
@@ -227,6 +230,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 					is_attracted_to_gender_of = scope:carn_sex_player
 					opinion = { target = scope:carn_sex_player value < 0 }
 				}
+				scope:carn_sex_player.attraction >= 0
 			}
 			opinion_modifier = {
 				who = scope:carn_sex_target
@@ -236,7 +240,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 			compare_modifier = {
 				target = scope:carn_sex_player
 				value = attraction
-				multiplier = 0.2
+				multiplier = 0.25
 			}
 			modifier = {
 				scope:carn_sex_target = {
@@ -455,6 +459,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 					is_attracted_to_gender_of = scope:carn_sex_target
 					opinion = { target = scope:carn_sex_target value >= 0 }
 				}
+				scope:carn_sex_target.attraction >= 0
 			}
 			opinion_modifier = {
 				who = scope:carn_sex_player
@@ -464,7 +469,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 			compare_modifier = {
 				target = scope:carn_sex_target
 				value = attraction
-				multiplier = 0.2
+				multiplier = 0.25
 			}
 			modifier = {
 				scope:carn_sex_player = {
@@ -486,6 +491,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 					is_attracted_to_gender_of = scope:carn_sex_target
 					opinion = { target = scope:carn_sex_target value < 0 }
 				}
+				scope:carn_sex_target.attraction <= 0
 			}
 			opinion_modifier = {
 				who = scope:carn_sex_player
@@ -495,7 +501,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 			compare_modifier = {
 				target = scope:carn_sex_target
 				value = attraction
-				multiplier = -0.2
+				multiplier = -0.25
 			}
 			modifier = {
 				scope:carn_sex_player = {
@@ -517,6 +523,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 					is_attracted_to_gender_of = scope:carn_sex_target
 					opinion = { target = scope:carn_sex_target value >= 0 }
 				}
+				scope:carn_sex_target.attraction <= 0
 			}
 			opinion_modifier = {
 				who = scope:carn_sex_player
@@ -526,7 +533,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 			compare_modifier = {
 				target = scope:carn_sex_target
 				value = attraction
-				multiplier = -0.2
+				multiplier = -0.25
 			}
 			modifier = {
 				scope:carn_sex_player = {
@@ -548,6 +555,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 					is_attracted_to_gender_of = scope:carn_sex_target
 					opinion = { target = scope:carn_sex_target value < 0 }
 				}
+				scope:carn_sex_target.attraction >= 0
 			}
 			opinion_modifier = {
 				who = scope:carn_sex_player
@@ -557,7 +565,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 			compare_modifier = {
 				target = scope:carn_sex_target
 				value = attraction
-				multiplier = 0.2
+				multiplier = 0.25
 			}
 			modifier = {
 				scope:carn_sex_player = {
