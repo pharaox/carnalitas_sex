@@ -3,8 +3,13 @@
 
 	text = {
 		trigger = {
-			carn_sex_scene_was_dubcon = yes
-			carn_sex_scene_was_dom_player = yes
+			OR = {
+				carn_sex_scene_was_consensual = yes
+				AND = {
+					carn_sex_scene_was_dubcon = yes
+					carn_sex_scene_was_dom_player = yes
+				}
+			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_text
 	}
@@ -65,7 +70,6 @@ carnx_sex_scene_dubcon_dom_first_target = {
 		trigger = {
 			scope:second = { is_female = yes }
 			carnx_sex_scene_target_attitude_2_trigger = { F1 = flag:hedonistic F2 = flag:flirtatious }
-			carn_sex_scene_was_bdsm = no
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_02
 	}
@@ -135,13 +139,13 @@ carnx_sex_scene_dubcon_dom_first_target = {
 	}
 	text = {
 		trigger = {
-			carnx_sex_scene_target_attitude_1_trigger = { F1 = flag:obedient }
+			carnx_sex_scene_target_attitude_1_trigger = { F1 = flag:intimidated }
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_13
 	}
 	text = {
 		trigger = {
-			carnx_sex_scene_target_attitude_2_trigger = { F1 = flag:resisting F2 = flag:defiant }
+			carnx_sex_scene_target_attitude_1_trigger = { F1 = flag:defiant }
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_14
 	}
@@ -296,6 +300,133 @@ carnx_sex_scene_dubcon_dom_generic_quote = {
 		localization_key = carnx_sex_scene_quote_05b # An Ancient Egyptian Love Song
 	}
 	text = {
+		trigger = {
+			carnx_has_different_gender_trigger = { CHARACTER = scope:second }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:respectful F2 = flag:accommodating F3 = flag:faithful F4 = flag:obedient }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:respectful F2 = flag:accommodating F3 = flag:faithful F4= flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_06a # Wulf and Eadwacer
+	}
+	text = {
+		trigger = {
+			carnx_has_different_gender_trigger = { CHARACTER = scope:second }
+			carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:respectful F2 = flag:faithful F3 = flag:obedient }
+			carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:respectful F2 = flag:faithful F3 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_06b # Wulf and Eadwacer
+	}
+	text = {
+		trigger = {
+			scope:second = { is_female = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_10 # Upon Julia's Breasts
+	}
+	text = {
+		trigger = {
+			carnx_sex_scene_player_attitude_1_trigger = { F1 = flag:amorous }
+		}
+		localization_key = carnx_sex_scene_quote_11 # To Constantia, Singing
+	}
+	text = {
+		trigger = {
+			scope:second = { is_female = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:reserved F2 = flag:deceitful F3 = flag:resisting F4 = flag:calculating }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_12 # Sweet Rose of Virtue
+	}
+	text = {
+		trigger = {
+			carnx_sex_scene_player_attitude_1_trigger = { F1 = flag:amorous }
+		}
+		localization_key = carnx_sex_scene_quote_13 # Sonnet 147
+	}
+	text = {
+		trigger = {
+			scope:second = { is_female = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_14a # To His Mistress Going to Bed
+	}
+	text = {
+		trigger = {
+			scope:second = { is_female = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_14b # To His Mistress Going to Bed
+	}
+	text = {
+		trigger = {
+			scope:second = { is_female = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_14c # To His Mistress Going to Bed
+	}
+	text = {
+		trigger = {
+			scope:second = { is_female = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_14d # To His Mistress Going to Bed
+	}
+	text = {
+		trigger = {
+			scope:second = { is_female = yes }
+			carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:respectful F2 = flag:accommodating }
+		}
+		localization_key = carnx_sex_scene_quote_15 # Whoso list to hunt, I know where is an hind
+	}
+	text = {
+		trigger = {
+			is_male = yes
+			scope:second = { is_female = yes }
+			carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:reserved F2 = flag:disgusted }
+		}
+		localization_key = carnx_sex_scene_quote_16 # By All Love's Soft, Yet Mighty Powers
+	}
+	text = {
+		trigger = {
+			is_female = yes
+			scope:second = { is_male = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_17a # Capitolo 19: A Courtesan's Love Lyric
+	}
+	text = {
+		trigger = {
+			is_female = yes
+			scope:second = { is_male = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_17b # Capitolo 19: A Courtesan's Love Lyric
+	}
+	text = {
+		trigger = {
+			is_male = yes
+			scope:second = { is_female = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_20 # The Memoirs of Jacques Casanova
+	}
+	text = {
+		trigger = {
+			is_male = yes
+			scope:second = { is_female = yes }
+			carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:obedient F4 = flag:flirtatious }
+			carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+		}
+		localization_key = carnx_sex_scene_quote_21 # The Decameron
+	}
+	text = {
 		trigger = { always = no }
 		fallback = yes
 		localization_key = carnx_sex_scene_quote_f
@@ -424,5 +555,117 @@ carnx_sex_scene_dubcon_option = {
 	}
 	text = {
 		localization_key = carnx_sex_scene_dubcon_option_f
+	}
+}
+
+carnx_sex_scene_target_attitude = {
+	type = character
+
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:amorous }
+		localization_key = carnx_sex_scene_attitude_amorous
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:reserved }
+		localization_key = carnx_sex_scene_attitude_reserved
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:respectful }
+		localization_key = carnx_sex_scene_attitude_respectful
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:hedonistic }
+		localization_key = carnx_sex_scene_attitude_hedonistic
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:accommodating }
+		localization_key = carnx_sex_scene_attitude_accommodating
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:disgusted }
+		localization_key = carnx_sex_scene_attitude_disgusted
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:faithful }
+		localization_key = carnx_sex_scene_attitude_faithful
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:deceitful }
+		localization_key = carnx_sex_scene_attitude_deceitful
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:obedient }
+		localization_key = carnx_sex_scene_attitude_obedient
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:resisting }
+		localization_key = carnx_sex_scene_attitude_resisting
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:flirtatious }
+		localization_key = carnx_sex_scene_attitude_flirtatious
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:calculating }
+		localization_key = carnx_sex_scene_attitude_calculating
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:intimidated }
+		localization_key = carnx_sex_scene_attitude_intimidated
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:defiant }
+		localization_key = carnx_sex_scene_attitude_defiant
+	}
+	text = {
+		localization_key = carnx_sex_scene_attitude_unknown
+	}
+}
+
+carnx_sex_scene_player_attitude = {
+	type = character
+
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:amorous }
+		localization_key = carnx_sex_scene_attitude_amorous
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:reserved }
+		localization_key = carnx_sex_scene_attitude_reserved
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:respectful }
+		localization_key = carnx_sex_scene_attitude_respectful
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:hedonistic }
+		localization_key = carnx_sex_scene_attitude_hedonistic
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:accommodating }
+		localization_key = carnx_sex_scene_attitude_accommodating
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:disgusted }
+		localization_key = carnx_sex_scene_attitude_disgusted
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:faithful }
+		localization_key = carnx_sex_scene_attitude_faithful
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:deceitful }
+		localization_key = carnx_sex_scene_attitude_deceitful
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:gentle }
+		localization_key = carnx_sex_scene_attitude_gentle
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:dominating }
+		localization_key = carnx_sex_scene_attitude_dominating
+	}
+	text = {
+		localization_key = carnx_sex_scene_attitude_unknown
 	}
 }
