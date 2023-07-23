@@ -6,10 +6,7 @@ carnx_request_sex_scene_flags_effect = {
 	# Lovers and soulmates: consensual
 	if = {
 		limit = {
-			OR = {
-				has_relation_lover = $TARGET$
-				has_relation_soulmate = $TARGET$
-			}
+			carnx_is_lover_trigger = { CHARACTER = $TARGET$ }
 		}
 		carn_sex_scene_request_consensual = yes
 	}
@@ -99,6 +96,12 @@ carnx_request_sex_scene_flags_effect = {
 	else = {
 		carn_sex_scene_request_consensual = yes
 	}
+
+	# Randomly request "giving player" to give the default events chance to fire
+	random = {
+		chance = 25
+		carn_sex_scene_request_giving_player = yes
+	}
 }
 
 carnx_request_special_dubcon_sex_scene_flags_effect = {
@@ -113,19 +116,26 @@ carnx_request_special_dubcon_sex_scene_flags_effect = {
 }
 
 carnx_request_sex_scene_locations_effect = {
-	# Lovers and soulmates: all locations supported by the PDX sex scene generator
+	# Consensual, lovers and soulmates: all locations supported by the PDX sex scene generator
 	if = {
 		limit = {
-			OR = {
-				has_relation_lover = $TARGET$
-				has_relation_soulmate = $TARGET$
-			}
+			carnx_sex_scene_flag_requested_trigger = { FLAG = consensual }
+			carnx_is_lover_trigger = { CHARACTER = $TARGET$ }
 		}
 		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_request_sex_scene_location_effect = { LOCATION = garden }
 		carnx_request_sex_scene_location_effect = { LOCATION = stable }
 		carnx_request_sex_scene_location_effect = { LOCATION = copse }
 		carnx_request_sex_scene_location_effect = { LOCATION = kitchen }
+	}
+	# Dubcon, bdsm: only private_chamber and dungeon
+	else_if = {
+		limit = {
+			carnx_sex_scene_flag_requested_trigger = { FLAG = dubcon }
+			carnx_sex_scene_flag_requested_trigger = { FLAG = bdsm }
+		}
+		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
+		carnx_request_sex_scene_location_effect = { LOCATION = dungeon }
 	}
 	# Others: only private_chamber and garden
 	else = {
@@ -147,10 +157,7 @@ carnx_sin_piety_impact_effect = {
 	# Lose piety if $SIN$ is illegal or shunned in this character's faith
 	if = {
 		limit = {
-			NOR = {
-				has_relation_lover = $PARTNER$
-				has_relation_soulmate = $PARTNER$
-			}
+			NOT = { carnx_is_lover_trigger = { CHARACTER = $PARTNER$ } }
 			carnx_is_sex_with_character_$SIN$_trigger = { CHARACTER = $PARTNER$ }
 		}
 		if = {
@@ -203,9 +210,8 @@ carnx_sex_interaction_stress_impact_effect = {
 		}
 	}
 
-	# Gain / lose stress if chaste / lustful
+	# Lose stress if lustful or rakish
 	stress_impact = {
-		chaste = minor_stress_impact_gain
 		lustful = minor_stress_impact_loss
 		rakish = minor_stress_impact_loss
 	}

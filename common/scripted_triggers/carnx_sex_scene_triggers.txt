@@ -11,6 +11,13 @@
 	}
 }
 
+carnx_sex_scene_flag_requested_trigger = {
+	is_target_in_global_variable_list = {
+		name = carn_sex_scene_requested_flags
+		target = title:d_carn_$FLAG$
+	}
+}
+
 carnx_sex_scene_supports_requested_location_trigger = {
 	is_target_in_global_variable_list = {
 		name = carnx_requested_sex_scene_locations
@@ -75,5 +82,36 @@ carnx_sex_scene_player_attitude_4_trigger = {
 		var:sex_scene_player_attitude = $F2$
 		var:sex_scene_player_attitude = $F3$
 		var:sex_scene_player_attitude = $F4$
+	}
+}
+
+carnx_has_different_gender_trigger = {
+	trigger_if = {
+		limit = { is_male = yes }
+		$CHARACTER$ = { is_female = yes }
+	}
+	trigger_else = {
+		$CHARACTER$ = { is_male = yes }
+	}
+}
+
+carnx_is_lover_trigger = {
+	OR = {
+		has_relation_lover = $CHARACTER$
+		has_relation_soulmate = $CHARACTER$
+	}
+}
+
+carnx_is_friend_trigger = {
+	OR = {
+		has_relation_friend = $CHARACTER$
+		has_relation_best_friend = $CHARACTER$
+	}
+}
+
+carnx_is_rival_trigger = {
+	OR = {
+		has_relation_rival = $CHARACTER$
+		has_relation_nemesis = $CHARACTER$
 	}
 }

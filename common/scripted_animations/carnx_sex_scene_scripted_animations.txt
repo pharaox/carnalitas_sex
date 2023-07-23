@@ -1,17 +1,9 @@
-﻿carnx_consensual_animation = {
-	triggered_animation = {
-		trigger = { always = yes }
-		animation = { flirtation flirtation_left love happiness admiration }
-	}
-	animation = flirtation
-}
-
-carnx_dubcon_player_animation = {
+﻿carnx_sex_scene_player_animation = {
 	triggered_animation = {
 		trigger = {
 			scope:sex_scene_player_attitude = flag:amorous
 		}
-		animation = { flirtation flirtation_left }
+		animation = { love admiration }
 	}
 	triggered_animation = {
 		trigger = {
@@ -29,7 +21,7 @@ carnx_dubcon_player_animation = {
 		trigger = {
 			scope:sex_scene_player_attitude = flag:hedonistic
 		}
-		animation = { personality_cynical }
+		animation = { flirtation_left }
 	}
 	triggered_animation = {
 		trigger = {
@@ -70,18 +62,25 @@ carnx_dubcon_player_animation = {
 	animation = idle
 }
 
-carnx_dubcon_target_animation = {
+carnx_sex_scene_target_animation = {
 	triggered_animation = {
 		trigger = {
 			carn_sex_scene_was_bdsm = yes
+			scope:sex_scene_location = flag:dungeon
 		}
 		animation = { prisondungeon }
 	}
 	triggered_animation = {
 		trigger = {
+			carn_sex_scene_was_bdsm = yes
+		}
+		animation = { prisonhouse }
+	}
+	triggered_animation = {
+		trigger = {
 			scope:sex_scene_target_attitude = flag:amorous
 		}
-		animation = { flirtation flirtation_left }
+		animation = { love admiration }
 	}
 	triggered_animation = {
 		trigger = {
@@ -99,7 +98,7 @@ carnx_dubcon_target_animation = {
 		trigger = {
 			scope:sex_scene_target_attitude = flag:hedonistic
 		}
-		animation = { personality_cynical }
+		animation = { flirtation }
 	}
 	triggered_animation = {
 		trigger = {
@@ -141,7 +140,7 @@ carnx_dubcon_target_animation = {
 		trigger = {
 			scope:sex_scene_target_attitude = flag:flirtatious
 		}
-		animation = { flirtation flirtation_left }
+		animation = { flirtation }
 	}
 	triggered_animation = {
 		trigger = {

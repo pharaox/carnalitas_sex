@@ -73,6 +73,7 @@
 					limit = {
 						has_game_rule = carn_arousal_stress_enabled
 						is_attracted_to_gender_of = scope:recipient
+						NOT = { has_trait = chaste }
 					}
 					add_stress = minor_stress_impact_loss
 				}

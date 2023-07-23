@@ -8,6 +8,7 @@ carn_sex_scene = {
 	random_events = {
 		# CSR: Replace default Carnalitas sex scenes
 		100 = carnx_sex_scene.0001 # Generic consensual scene, using the PDX sex scene generator
+		100 = carnx_sex_scene.0002 # Generic consensual scene
 		100 = carnx_sex_scene.0003 # Generic dubcon scene (dom)
 		100 = carnx_sex_scene.0004 # Generic dubcon scene (sub)
 		100 = carnx_sex_scene.0005 # Bdsm dubcon scene (dom)

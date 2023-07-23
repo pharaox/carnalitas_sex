@@ -51,6 +51,12 @@ carnx_set_sex_scene_location_effect = {
 				}
 				save_scope_value_as = { name = sex_scene_location value = flag:kitchen }
 			}
+			20 = {
+				trigger = {
+					carnx_sex_scene_supports_requested_location_trigger = { LOCATION = dungeon }
+				}
+				save_scope_value_as = { name = sex_scene_location value = flag:dungeon }
+			}
 		}
 		set_variable = { name = sex_scene_location value = scope:sex_scene_location }
 	}
@@ -79,10 +85,7 @@ carnx_set_sex_scene_target_effect = {
 	if = {
 		limit = {
 			scope:carn_sex_player = {
-				OR = {
-					has_relation_lover = scope:carn_sex_target
-					has_relation_soulmate = scope:carn_sex_target
-				}
+				carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_target }
 			}
 		}
 		save_scope_value_as = { name = sex_scene_target value = flag:lover }
@@ -158,10 +161,17 @@ carnx_set_sex_scene_target_attitude_effect = {
 				}
 				add = -10
 			}
+			modifier = {
+				scope:carn_sex_target = {
+					carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_player }
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:amorous }
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					is_attracted_to_gender_of = scope:carn_sex_player
 					opinion = { target = scope:carn_sex_player value < 0 }
@@ -187,6 +197,12 @@ carnx_set_sex_scene_target_attitude_effect = {
 			modifier = {
 				scope:carn_sex_target = {
 					has_trait = chaste
+				}
+				add = 10
+			}
+			modifier = {
+				scope:carn_sex_target = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_player }
 				}
 				add = 10
 			}
@@ -219,6 +235,12 @@ carnx_set_sex_scene_target_attitude_effect = {
 			modifier = {
 				scope:carn_sex_target = {
 					has_trait = chaste
+				}
+				add = 10
+			}
+			modifier = {
+				scope:carn_sex_target = {
+					carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_player }
 				}
 				add = 10
 			}
@@ -258,6 +280,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					NOT = { is_attracted_to_gender_of = scope:carn_sex_player }
 					opinion = { target = scope:carn_sex_player value >= 0 }
@@ -273,10 +296,20 @@ carnx_set_sex_scene_target_attitude_effect = {
 				ai_compassion = 0.05
 				ai_sociability = 0.05
 			}
+			modifier = {
+				scope:carn_sex_target = {
+					OR = {
+						carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_player }
+						carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_player }
+					}
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:accommodating }
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					NOT = { is_attracted_to_gender_of = scope:carn_sex_player }
 					opinion = { target = scope:carn_sex_player value < 0 }
@@ -291,6 +324,12 @@ carnx_set_sex_scene_target_attitude_effect = {
 				who = scope:carn_sex_target
 				ai_compassion = -0.05
 				ai_sociability = -0.05
+			}
+			modifier = {
+				scope:carn_sex_target = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_player }
+				}
+				add = 10
 			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:disgusted }
 		}
@@ -313,6 +352,15 @@ carnx_set_sex_scene_target_attitude_effect = {
 				who = scope:carn_sex_target
 				ai_honor = 0.1
 			}
+			modifier = {
+				scope:carn_sex_target = {
+					OR = {
+						carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_player }
+						carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_player }
+					}
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:faithful }
 		}
 		10 = {
@@ -333,6 +381,12 @@ carnx_set_sex_scene_target_attitude_effect = {
 			ai_value_modifier = {
 				who = scope:carn_sex_target
 				ai_honor = -0.1
+			}
+			modifier = {
+				scope:carn_sex_target = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_player }
+				}
+				add = 10
 			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:deceitful }
 		}
@@ -356,10 +410,20 @@ carnx_set_sex_scene_target_attitude_effect = {
 				ai_rationality = 0.05
 				ai_vengefulness = -0.05
 			}
+			modifier = {
+				scope:carn_sex_target = {
+					OR = {
+						carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_player }
+						carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_player }
+					}
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:obedient }
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					has_relation_slave_owner = scope:carn_sex_player
 					NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:carn_sex_player } }
@@ -377,6 +441,12 @@ carnx_set_sex_scene_target_attitude_effect = {
 				ai_compassion = -0.05
 				ai_rationality = -0.05
 				ai_vengefulness = 0.05
+			}
+			modifier = {
+				scope:carn_sex_target = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_player }
+				}
+				add = 10
 			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:resisting }
 		}
@@ -397,6 +467,15 @@ carnx_set_sex_scene_target_attitude_effect = {
 				ai_greed = -0.05
 				ai_rationality = -0.05
 			}
+			modifier = {
+				scope:carn_sex_target = {
+					OR = {
+						carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_player }
+						carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_player }
+					}
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:flirtatious }
 		}
 		10 = {
@@ -416,10 +495,17 @@ carnx_set_sex_scene_target_attitude_effect = {
 				ai_greed = 0.05
 				ai_rationality = 0.05
 			}
+			modifier = {
+				scope:carn_sex_target = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_player }
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:calculating }
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					has_dread_level_towards = { target = scope:carn_sex_player level >= 1 }
 					opinion = { target = scope:carn_sex_player value < 0 }
@@ -433,6 +519,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					has_dread_level_towards = { target = scope:carn_sex_player level < 1 }
 					opinion = { target = scope:carn_sex_player value < 0 }
@@ -483,10 +570,17 @@ carnx_set_sex_scene_player_attitude_effect = {
 				}
 				add = -10
 			}
+			modifier = {
+				scope:carn_sex_player = {
+					carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_target }
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_player_attitude value = flag:amorous }
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_player = {
 					is_attracted_to_gender_of = scope:carn_sex_target
 					opinion = { target = scope:carn_sex_target value < 0 }
@@ -512,6 +606,12 @@ carnx_set_sex_scene_player_attitude_effect = {
 			modifier = {
 				scope:carn_sex_player = {
 					has_trait = chaste
+				}
+				add = 10
+			}
+			modifier = {
+				scope:carn_sex_player = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_target }
 				}
 				add = 10
 			}
@@ -544,6 +644,12 @@ carnx_set_sex_scene_player_attitude_effect = {
 			modifier = {
 				scope:carn_sex_player = {
 					has_trait = chaste
+				}
+				add = 10
+			}
+			modifier = {
+				scope:carn_sex_player = {
+					carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_target }
 				}
 				add = 10
 			}
@@ -583,6 +689,7 @@ carnx_set_sex_scene_player_attitude_effect = {
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_player = {
 					NOT = { is_attracted_to_gender_of = scope:carn_sex_target }
 					opinion = { target = scope:carn_sex_target value >= 0 }
@@ -598,10 +705,20 @@ carnx_set_sex_scene_player_attitude_effect = {
 				ai_compassion = 0.05
 				ai_sociability = 0.05
 			}
+			modifier = {
+				scope:carn_sex_player = {
+					OR = {
+						carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_target }
+						carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_target }
+					}
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_player_attitude value = flag:accommodating }
 		}
 		10 = {
 			trigger = {
+				carn_sex_scene_was_consensual = no
 				scope:carn_sex_player = {
 					NOT = { is_attracted_to_gender_of = scope:carn_sex_target }
 					opinion = { target = scope:carn_sex_target value < 0 }
@@ -616,6 +733,12 @@ carnx_set_sex_scene_player_attitude_effect = {
 				who = scope:carn_sex_player
 				ai_compassion = -0.05
 				ai_sociability = -0.05
+			}
+			modifier = {
+				scope:carn_sex_player = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_target }
+				}
+				add = 10
 			}
 			save_scope_value_as = { name = sex_scene_player_attitude value = flag:disgusted }
 		}
@@ -640,6 +763,15 @@ carnx_set_sex_scene_player_attitude_effect = {
 				who = scope:carn_sex_player
 				ai_honor = 0.1
 			}
+			modifier = {
+				scope:carn_sex_player = {
+					OR = {
+						carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_target }
+						carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_target }
+					}
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_player_attitude value = flag:faithful }
 		}
 		10 = {
@@ -662,6 +794,12 @@ carnx_set_sex_scene_player_attitude_effect = {
 			ai_value_modifier = {
 				who = scope:carn_sex_player
 				ai_honor = -0.1
+			}
+			modifier = {
+				scope:carn_sex_player = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_target }
+				}
+				add = 10
 			}
 			save_scope_value_as = { name = sex_scene_player_attitude value = flag:deceitful }
 		}
@@ -689,6 +827,15 @@ carnx_set_sex_scene_player_attitude_effect = {
 				who = scope:carn_sex_player
 				ai_compassion = 0.1
 			}
+			modifier = {
+				scope:carn_sex_player = {
+					OR = {
+						carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_target }
+						carnx_is_friend_trigger = { CHARACTER = scope:carn_sex_target }
+					}
+				}
+				add = 10
+			}
 			save_scope_value_as = { name = sex_scene_player_attitude value = flag:gentle }
 		}
 		10 = {
@@ -714,6 +861,12 @@ carnx_set_sex_scene_player_attitude_effect = {
 			ai_value_modifier = {
 				who = scope:carn_sex_player
 				ai_compassion = -0.1
+			}
+			modifier = {
+				scope:carn_sex_player = {
+					carnx_is_rival_trigger = { CHARACTER = scope:carn_sex_target }
+				}
+				add = 10
 			}
 			save_scope_value_as = { name = sex_scene_player_attitude value = flag:dominating }
 		}

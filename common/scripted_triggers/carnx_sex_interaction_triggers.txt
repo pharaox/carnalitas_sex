@@ -65,10 +65,7 @@ carnx_is_attracted_player_happy_with_sex_trigger = {
 }
 
 carnx_is_sex_with_character_crime_trigger = {
-	NOR = {
-		has_relation_lover = $CHARACTER$
-		has_relation_soulmate = $CHARACTER$
-	}
+	NOT = { carnx_is_lover_trigger = { CHARACTER = $CHARACTER$ } }
 	OR = {
 		carnx_is_sex_with_character_sin_crime_trigger = { SIN = adultery CHARACTER = $CHARACTER$ }
 		carnx_is_sex_with_character_sin_crime_trigger = { SIN = sodomy CHARACTER = $CHARACTER$ }
@@ -78,10 +75,7 @@ carnx_is_sex_with_character_crime_trigger = {
 }
 
 carnx_is_sex_with_character_shunned_trigger = {
-	NOR = {
-		has_relation_lover = $CHARACTER$
-		has_relation_soulmate = $CHARACTER$
-	}
+	NOT = { carnx_is_lover_trigger = { CHARACTER = $CHARACTER$ } }
 	OR = {
 		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = adultery CHARACTER = $CHARACTER$ }
 		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = sodomy CHARACTER = $CHARACTER$ }
