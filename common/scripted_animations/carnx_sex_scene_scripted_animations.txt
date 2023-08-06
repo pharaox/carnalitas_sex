@@ -66,7 +66,7 @@ carnx_sex_scene_target_animation = {
 	triggered_animation = {
 		trigger = {
 			carn_sex_scene_was_bdsm = yes
-			scope:sex_scene_location = flag:dungeon
+			scope:sex_scene_location ?= flag:dungeon
 		}
 		animation = { prisondungeon }
 	}
