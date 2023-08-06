@@ -57,6 +57,27 @@ carnx_sex_scene_target_attitude_4_trigger = {
 	}
 }
 
+carnx_sex_scene_target_attitude_5_trigger = {
+	OR = {
+		var:sex_scene_target_attitude = $F1$
+		var:sex_scene_target_attitude = $F2$
+		var:sex_scene_target_attitude = $F3$
+		var:sex_scene_target_attitude = $F4$
+		var:sex_scene_target_attitude = $F5$
+	}
+}
+
+carnx_sex_scene_target_attitude_6_trigger = {
+	OR = {
+		var:sex_scene_target_attitude = $F1$
+		var:sex_scene_target_attitude = $F2$
+		var:sex_scene_target_attitude = $F3$
+		var:sex_scene_target_attitude = $F4$
+		var:sex_scene_target_attitude = $F5$
+		var:sex_scene_target_attitude = $F6$
+	}
+}
+
 carnx_sex_scene_player_attitude_1_trigger = {
 	var:sex_scene_player_attitude = $F1$
 }
@@ -82,6 +103,27 @@ carnx_sex_scene_player_attitude_4_trigger = {
 		var:sex_scene_player_attitude = $F2$
 		var:sex_scene_player_attitude = $F3$
 		var:sex_scene_player_attitude = $F4$
+	}
+}
+
+carnx_sex_scene_player_attitude_5_trigger = {
+	OR = {
+		var:sex_scene_player_attitude = $F1$
+		var:sex_scene_player_attitude = $F2$
+		var:sex_scene_player_attitude = $F3$
+		var:sex_scene_player_attitude = $F4$
+		var:sex_scene_player_attitude = $F5$
+	}
+}
+
+carnx_sex_scene_player_attitude_6_trigger = {
+	OR = {
+		var:sex_scene_player_attitude = $F1$
+		var:sex_scene_player_attitude = $F2$
+		var:sex_scene_player_attitude = $F3$
+		var:sex_scene_player_attitude = $F4$
+		var:sex_scene_player_attitude = $F5$
+		var:sex_scene_player_attitude = $F6$
 	}
 }
 
