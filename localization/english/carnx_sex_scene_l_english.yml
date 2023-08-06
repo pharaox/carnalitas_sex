@@ -20,9 +20,9 @@
  carnx_sex_scene_dubcon_dom_first_target_04: "[second.GetSheHe|U] turns around and lets [second.GetHerHis] clothes fall down, revealing [second.GetHerHis] naked buttocks" # hedonistic, flirtatious, !bdsm
  carnx_sex_scene_dubcon_dom_first_target_05: "[second.GetSheHe|U] greets me courteously with a ringing voice" # respectful, faithful
  carnx_sex_scene_dubcon_dom_first_target_06: "[second.GetSheHe|U] seems overjoyed to see me and eager to please me" # respectful, faithful
- carnx_sex_scene_dubcon_dom_first_target_07: "[second.GetSheHe|U] seems reluctant to be the object of my affections" # reserved, resisting
- carnx_sex_scene_dubcon_dom_first_target_08: "[second.GetSheHe|U] keeps silent and avoids meeting my eyes" # reserved, resisting
- carnx_sex_scene_dubcon_dom_first_target_09: "[second.GetSheHe|U] greets me courteously but coldly" # reserved, resisting
+ carnx_sex_scene_dubcon_dom_first_target_07: "[second.GetSheHe|U] seems reluctant to be the object of my affections" # reserved, disgusted, resisting
+ carnx_sex_scene_dubcon_dom_first_target_08: "[second.GetSheHe|U] keeps silent and avoids meeting my eyes" # reserved, disgusted, resisting
+ carnx_sex_scene_dubcon_dom_first_target_09: "[second.GetSheHe|U] greets me courteously but coldly" # reserved, disgusted, resisting
  carnx_sex_scene_dubcon_dom_first_target_10: "[second.GetSheHe|U] seems quite eager to please me, perhaps too much so" # deceitful, calculating
  carnx_sex_scene_dubcon_dom_first_target_11: "[second.GetSheHe|U] greets me merrily, though I sense duplicity in [second.GetHerHis] smile" # deceitful, calculating
  carnx_sex_scene_dubcon_dom_first_target_12: "[second.GetSheHe|U] stands before me timid and obedient" # obedient, intimidated
@@ -41,7 +41,7 @@
  carnx_sex_scene_dubcon_dom_first_player_07: "and instead of being inflamed with passion, I feel repulsed" # disgusted
  carnx_sex_scene_dubcon_dom_first_player_08: "while I caress [second.GetHerHim] gently and whisper words of passion into [second.GetHerHis] ear" # faithful, gentle
  carnx_sex_scene_dubcon_dom_first_player_09: "while I look at [second.GetHerHim] suspiciously, with a feigned smile" # deceitful
- carnx_sex_scene_dubcon_dom_first_player_10: "and I offer [second.GetHerHim] her the sight of my erect cock" # male, hedonistic, dominating
+ carnx_sex_scene_dubcon_dom_first_player_10: "and I offer [second.GetHerHim] the sight of my erect cock" # male, hedonistic, dominating
  carnx_sex_scene_dubcon_dom_first_player_f:  "while I am myself rather unsure of my true feelings" # fallback
 
  carnx_sex_scene_dubcon_sub_text: "$carnx_sex_scene_dubcon_sub_opening$$carnx_sex_scene_dubcon_sub_first$\n\n[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_quote', SCOPE.sC('second'))]"
