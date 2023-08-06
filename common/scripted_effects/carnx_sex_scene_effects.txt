@@ -395,7 +395,10 @@ carnx_set_sex_scene_target_attitude_effect = {
 				scope:carn_sex_target = {
 					has_relation_slave_owner = scope:carn_sex_player
 					NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:carn_sex_player } }
-					opinion = { target = scope:carn_sex_player value >= 0 }
+					OR = {
+						opinion = { target = scope:carn_sex_player value >= 0 }
+						has_dread_level_towards = { target = scope:carn_sex_player level >= 1 }
+					}
 				}
 			}
 			opinion_modifier = {
@@ -406,9 +409,14 @@ carnx_set_sex_scene_target_attitude_effect = {
 			ai_value_modifier = {
 				who = scope:carn_sex_target
 				ai_boldness = -0.05
-				ai_compassion = 0.05
 				ai_rationality = 0.05
 				ai_vengefulness = -0.05
+			}
+			modifier = {
+				scope:carn_sex_target = {
+					has_dread_level_towards = { target = scope:carn_sex_player level >= 2 }
+				}
+				add = 10
 			}
 			modifier = {
 				scope:carn_sex_target = {
@@ -428,6 +436,7 @@ carnx_set_sex_scene_target_attitude_effect = {
 					has_relation_slave_owner = scope:carn_sex_player
 					NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:carn_sex_player } }
 					opinion = { target = scope:carn_sex_player value < 0 }
+					has_dread_level_towards = { target = scope:carn_sex_player level < 1 }
 				}
 			}
 			opinion_modifier = {
@@ -438,7 +447,6 @@ carnx_set_sex_scene_target_attitude_effect = {
 			ai_value_modifier = {
 				who = scope:carn_sex_target
 				ai_boldness = 0.05
-				ai_compassion = -0.05
 				ai_rationality = -0.05
 				ai_vengefulness = 0.05
 			}
@@ -502,34 +510,6 @@ carnx_set_sex_scene_target_attitude_effect = {
 				add = 10
 			}
 			save_scope_value_as = { name = sex_scene_target_attitude value = flag:calculating }
-		}
-		10 = {
-			trigger = {
-				carn_sex_scene_was_consensual = no
-				scope:carn_sex_target = {
-					has_dread_level_towards = { target = scope:carn_sex_player level >= 1 }
-					opinion = { target = scope:carn_sex_player value < 0 }
-				}
-			}
-			ai_value_modifier = {
-				who = scope:carn_sex_target
-				ai_boldness = -0.1
-			}
-			save_scope_value_as = { name = sex_scene_target_attitude value = flag:intimidated }
-		}
-		10 = {
-			trigger = {
-				carn_sex_scene_was_consensual = no
-				scope:carn_sex_target = {
-					has_dread_level_towards = { target = scope:carn_sex_player level < 1 }
-					opinion = { target = scope:carn_sex_player value < 0 }
-				}
-			}
-			ai_value_modifier = {
-				who = scope:carn_sex_target
-				ai_boldness = 0.1
-			}
-			save_scope_value_as = { name = sex_scene_target_attitude value = flag:defiant }
 		}
 	}
 	if = {

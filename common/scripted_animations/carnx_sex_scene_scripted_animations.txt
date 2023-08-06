@@ -148,17 +148,5 @@ carnx_sex_scene_target_animation = {
 		}
 		animation = { scheme personality_greedy }
 	}
-	triggered_animation = {
-		trigger = {
-			scope:sex_scene_target_attitude = flag:intimidated
-		}
-		animation = { personality_coward }
-	}
-	triggered_animation = {
-		trigger = {
-			scope:sex_scene_target_attitude = flag:defiant
-		}
-		animation = { personality_bold }
-	}
 	animation = idle
 }

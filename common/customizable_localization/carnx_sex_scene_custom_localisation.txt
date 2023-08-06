@@ -132,19 +132,13 @@ carnx_sex_scene_dubcon_dom_first_target = {
 	}
 	text = {
 		trigger = {
-			carnx_sex_scene_target_attitude_2_trigger = { F1 = flag:obedient F2 = flag:intimidated }
+			carnx_sex_scene_target_attitude_1_trigger = { F1 = flag:obedient }
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_12
 	}
 	text = {
 		trigger = {
-			carnx_sex_scene_target_attitude_1_trigger = { F1 = flag:intimidated }
-		}
-		localization_key = carnx_sex_scene_dubcon_dom_first_target_13
-	}
-	text = {
-		trigger = {
-			carnx_sex_scene_target_attitude_1_trigger = { F1 = flag:defiant }
+			carnx_sex_scene_target_attitude_1_trigger = { F1 = flag:resisting }
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_14
 	}
@@ -1025,14 +1019,6 @@ carnx_sex_scene_target_attitude = {
 	text = {
 		trigger = { var:sex_scene_target_attitude = flag:calculating }
 		localization_key = carnx_sex_scene_attitude_calculating
-	}
-	text = {
-		trigger = { var:sex_scene_target_attitude = flag:intimidated }
-		localization_key = carnx_sex_scene_attitude_intimidated
-	}
-	text = {
-		trigger = { var:sex_scene_target_attitude = flag:defiant }
-		localization_key = carnx_sex_scene_attitude_defiant
 	}
 	text = {
 		localization_key = carnx_sex_scene_attitude_unknown

@@ -64,12 +64,10 @@ The [sex scene events](#sex-scene-events) described above randomly select *attit
 | disgusted* | negative | not attracted |  opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
 | faithful | positive | consort | opinion (+), ai_honor (+), lover / friend (+) |
 | deceitful | negative | consort | opinion (-), ai_honor (-), rival (+) |
-| obedient | positive | slave | opinion (+), ai_boldness (-), ai_compassion (+), ai_rationality (+), ai_vengefulness (-), lover / friend (+) |
-| resisting* | negative | slave | opinion (-), ai_boldness (+), ai_compassion (-), ai_rationality (-), ai_vengefulness (+), rival (+) |
+| obedient | positive | slave | opinion (+), ai_boldness (-), ai_rationality (+), ai_vengefulness (-), lover / friend (+) |
+| resisting* | negative | slave | opinion (-), ai_boldness (+), ai_rationality (-), ai_vengefulness (+), rival (+) |
 | flirtatious | positive | prostitute | opinion (+), ai_greed (-), ai_rationality (-), lover / friend (+) |
 | calculating | negative | prostitute | opinion (-), ai_greed (+), ai_rationality (+), rival (+) |
-| intimidated* | negative | intimidated or cowed | ai_boldness (-) |
-| defiant* | negative | not intimidated or cowed | ai_boldness (+) |
 
 ##### Player Attitudes
 

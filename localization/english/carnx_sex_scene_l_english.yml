@@ -25,9 +25,8 @@
  carnx_sex_scene_dubcon_dom_first_target_09: "[second.GetSheHe|U] greets me courteously but coldly" # reserved, disgusted, resisting
  carnx_sex_scene_dubcon_dom_first_target_10: "[second.GetSheHe|U] seems quite eager to please me, perhaps too much so" # deceitful, calculating
  carnx_sex_scene_dubcon_dom_first_target_11: "[second.GetSheHe|U] greets me merrily, though I sense duplicity in [second.GetHerHis] smile" # deceitful, calculating
- carnx_sex_scene_dubcon_dom_first_target_12: "[second.GetSheHe|U] stands before me timid and obedient" # obedient, intimidated
- carnx_sex_scene_dubcon_dom_first_target_13: "Trembling with fear, tears in [second.GetHerHis] eyes, [second.GetSheHe] begs me for mercy" # intimidated
- carnx_sex_scene_dubcon_dom_first_target_14: "[second.GetSheHe|U] stares at me defiantly" # defiant
+ carnx_sex_scene_dubcon_dom_first_target_12: "[second.GetSheHe|U] stands before me timid and obedient" # obedient
+ carnx_sex_scene_dubcon_dom_first_target_14: "[second.GetSheHe|U] stares at me defiantly" # resisting
  carnx_sex_scene_dubcon_dom_first_target_15: "[second.GetSheHe|U] breathes heavily, shaken with lust" # amorous, flirtatious
  carnx_sex_scene_dubcon_dom_first_target_16: "[second.GetSheHe|U] stares at me, [second.GetHerHis] eyes burning with lust" # amorous, flirtatious
  carnx_sex_scene_dubcon_dom_first_target_f:  "[second.GetSheHe|U] greets me courteously, though [second.GetHerHis] true feelings are not easy to read" # fallback
@@ -81,8 +80,6 @@
  carnx_sex_scene_attitude_resisting: "#N resisting#!"
  carnx_sex_scene_attitude_flirtatious: "#P flirtatious#!"
  carnx_sex_scene_attitude_calculating: "#color_yellow calculating#!"
- carnx_sex_scene_attitude_intimidated: "#color_yellow intimidated#!"
- carnx_sex_scene_attitude_defiant: "#N defiant#!"
  carnx_sex_scene_attitude_gentle: "#P gentle#!"
  carnx_sex_scene_attitude_dominating: "#color_yellow dominating#!"
  carnx_sex_scene_attitude_unknown: "#color_yellow unknown#!"
