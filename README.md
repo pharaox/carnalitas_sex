@@ -12,7 +12,7 @@ By default, *Make Love* uses the vanilla sex scene generator originally used for
 
 As can be seen in the [Carnalitas code](), originally the authors intended to have 3 different types of sex scenes: "consensual", "dubcon", and "noncon", and there is logic to select the appropriate type based on the recipient's opinion of the actor and the actor's attraction. Unfortunately, this logic is [buggy]() and never produces any other result but "consensual". Fixing the bug would not make things much better, as there are actually no events in Carnalitas or other mods that would satisfy the "dubcon" or "noncon" condition - the event used in the *Rape Prisoner* interaction is an exception but it's clearly not at all appropriate for *Make Love*.
 
-Even the name *Make Love* itself is not appropriate when demanding sex from a slave who is neither a lover nor an official consort. While such acts would historically usually not be seen as "rape", they were often condemned by religion as adulterous or worse, and should have all sorts of consequences in the game, ranging from stress impact to piety loss and opinion loss with the victim. For this reason, the [Carnalitas Slavery Expansion](https://www.loverslab.com/files/file/21651-carnalitas-slavery-expansion/) mod introduces the *Demand Sex* interaction that partially addresses some of these points, adding however its own fanciful quirks that don't make sense in general, and copy-pasting the bugs from Carnalitas so that slaves, while losing 20 opinion, are still acting in the sex scene as if enamoured with the player.
+Even the name *Make Love* itself is not appropriate when demanding sex from a slave who is neither a lover nor an official consort. While such acts were historically usually not seen as "rape", they were often condemned by religion as adulterous or worse, and should have all sorts of consequences in the game, ranging from stress impact to piety loss and opinion loss with the victim. For this reason, the [Carnalitas Slavery Expansion](https://www.loverslab.com/files/file/21651-carnalitas-slavery-expansion/) mod introduces the *Demand Sex* interaction that partially addresses some of these points, adding however its own fanciful quirks that don't make sense in general, and copy-pasting the bugs from Carnalitas so that slaves, while losing 20 opinion, are still acting in the sex scene as if enamoured with the player.
 
 This mod improves and expands the *Make Love* interaction in order to properly address these limitations. It does this by adding a new sex scene generator that generates animations, backgrounds, and texts appropriate to many different attitudes and their combinations in both "consensual" and "dubcon" situations. It also re-introduces the *Demand Sex* interaction with its negative consequences, fully integrated with the new generator, and makes a number of other changes to make *Make Love* more immersive and enjoyable.
 
@@ -52,26 +52,39 @@ The above events, including the first one, differ from the Carnalitas event in a
 
 The [sex scene events](#sex-scene-events) described above randomly select *attitudes* for both the player and the target depending on a number of circumstances. These attitudes are then used by the generator to create an appropriate introductory sentence and select an appropriate quote for the sex scene text.
 
-**Target Attitudes**
+##### Target Attitudes
 
-| **Attitude** | **Condition** | **Factors** |
-|---|---|---|
-| amorous | | |
-| reserved | | |
-| respectful | | |
-| hedonistic | | |
-| accommodating | | |
-| disgusted | | |
-| faithful | | |
-| deceitful | | |
-| obedient | | |
-| resisting | | |
-| flirtatious | | |
-| calculating | | |
-| intimidated | | |
-| defiant | | |
+| **Attitude** | **Opinion** | **Other Conditions** | **Factors** |
+|---|---|---|---|
+| amorous | positive | attraction > 0 | opinion (+), attraction (+), lustful / chaste (+/-), lover (+) |
+| reserved* | negative | attraction < 0 | opinion (-), attraction (-), lustful / chaste (-/+), rival (+) |
+| respectful | positive | attraction < 0 | opinion (+), attraction (-), lustful / chaste (-/+), friend (+) |
+| hedonistic | negative | attraction > 0 | opinion (-), attraction (+), lustful / chaste (+/-) |
+| accommodating* | positive | not attracted | opinion (+), ai_compassion (+),  ai_sociability (+), lover / friend (+) |
+| disgusted* | negative | not attracted |  opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
+| faithful | positive | consort | opinion (+), ai_honor (+), lover / friend (+) |
+| deceitful | negative | consort | opinion (-), ai_honor (-), rival (+) |
+| obedient | positive | slave | opinion (+), ai_boldness (-), ai_compassion (+), ai_rationality (+), ai_vengefulness (-), lover / friend (+) |
+| resisting* | negative | slave | opinion (-), ai_boldness (+), ai_compassion (-), ai_rationality (-), ai_vengefulness (+), rival (+) |
+| flirtatious | positive | prostitute | opinion (+), ai_greed (-), ai_rationality (-), lover / friend (+) |
+| calculating | negative | prostitute | opinion (-), ai_greed (+), ai_rationality (+), rival (+) |
+| intimidated* | negative | intimidated or cowed | ai_boldness (-) |
+| defiant* | negative | not intimidated or cowed | ai_boldness (+) |
 
-**Player Attitudes**
+##### Player Attitudes
+
+| **Attitude** | **Opinion** | **Other Conditions** | **Factors** |
+|---|---|---|---|
+| amorous | positive | attraction > 0 | opinion (+), attraction (+), lustful / chaste (+/-), lover (+) |
+| reserved* | negative | attraction < 0 | opinion (-), attraction (-), lustful / chaste (-/+), rival (+) |
+| respectful | positive | attraction < 0 | opinion (+), attraction (-), lustful / chaste (-/+), friend (+) |
+| hedonistic | negative | attraction > 0 | opinion (-), attraction (+), lustful / chaste (+/-) |
+| accommodating* | positive | not attracted | opinion (+), ai_compassion (+),  ai_sociability (+), lover / friend (+) |
+| disgusted* | negative | not attracted |  opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
+| faithful | positive | consort | opinion (+), ai_honor (+), lover / friend (+) |
+| deceitful | negative | consort | opinion (-), ai_honor (-), rival (+) |
+| gentle | positive | owner / client | opinion (+), ai_compassion (+), lover / friend (+) |
+| dominating | negative | owner / client | opinion (-), ai_compassion (-), rival (+) |
 
 ### Bug Fixes
 
