@@ -4,9 +4,6 @@
  carnx_sex_scene_dubcon_dom_opening: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_location', SCOPE.sC('second'))]. "
  carnx_sex_scene_dubcon_dom_first: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
 
- carnx_sex_scene_dubcon_dom_generic_quote: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_generic_quote', SCOPE.sC('second'))]"
- carnx_sex_scene_dubcon_dom_bdsm_quote: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_bdsm_quote', SCOPE.sC('second'))]"
-
  carnx_sex_scene_dubcon_dom_opening_f: "I find my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]"
 
  carnx_sex_scene_dubcon_dom_location_private_chambers_1: "reclining on a sofa in my private chambers"

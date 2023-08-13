@@ -30,124 +30,124 @@ carnx_sex_scene_supports_requested_location_trigger = {
 }
 
 carnx_sex_scene_target_attitude_1_trigger = {
-	var:sex_scene_target_attitude = $F1$
+	scope:sex_scene_target_attitude = $F1$
 }
 
 carnx_sex_scene_target_attitude_2_trigger = {
 	OR = {
-		var:sex_scene_target_attitude = $F1$
-		var:sex_scene_target_attitude = $F2$
+		scope:sex_scene_target_attitude = $F1$
+		scope:sex_scene_target_attitude = $F2$
 	}
 }
 
 carnx_sex_scene_target_attitude_3_trigger = {
 	OR = {
-		var:sex_scene_target_attitude = $F1$
-		var:sex_scene_target_attitude = $F2$
-		var:sex_scene_target_attitude = $F3$
+		scope:sex_scene_target_attitude = $F1$
+		scope:sex_scene_target_attitude = $F2$
+		scope:sex_scene_target_attitude = $F3$
 	}
 }
 
 carnx_sex_scene_target_attitude_4_trigger = {
 	OR = {
-		var:sex_scene_target_attitude = $F1$
-		var:sex_scene_target_attitude = $F2$
-		var:sex_scene_target_attitude = $F3$
-		var:sex_scene_target_attitude = $F4$
+		scope:sex_scene_target_attitude = $F1$
+		scope:sex_scene_target_attitude = $F2$
+		scope:sex_scene_target_attitude = $F3$
+		scope:sex_scene_target_attitude = $F4$
 	}
 }
 
 carnx_sex_scene_target_attitude_5_trigger = {
 	OR = {
-		var:sex_scene_target_attitude = $F1$
-		var:sex_scene_target_attitude = $F2$
-		var:sex_scene_target_attitude = $F3$
-		var:sex_scene_target_attitude = $F4$
-		var:sex_scene_target_attitude = $F5$
+		scope:sex_scene_target_attitude = $F1$
+		scope:sex_scene_target_attitude = $F2$
+		scope:sex_scene_target_attitude = $F3$
+		scope:sex_scene_target_attitude = $F4$
+		scope:sex_scene_target_attitude = $F5$
 	}
 }
 
 carnx_sex_scene_target_attitude_6_trigger = {
 	OR = {
-		var:sex_scene_target_attitude = $F1$
-		var:sex_scene_target_attitude = $F2$
-		var:sex_scene_target_attitude = $F3$
-		var:sex_scene_target_attitude = $F4$
-		var:sex_scene_target_attitude = $F5$
-		var:sex_scene_target_attitude = $F6$
+		scope:sex_scene_target_attitude = $F1$
+		scope:sex_scene_target_attitude = $F2$
+		scope:sex_scene_target_attitude = $F3$
+		scope:sex_scene_target_attitude = $F4$
+		scope:sex_scene_target_attitude = $F5$
+		scope:sex_scene_target_attitude = $F6$
 	}
 }
 
 carnx_sex_scene_target_attitude_7_trigger = {
 	OR = {
-		var:sex_scene_target_attitude = $F1$
-		var:sex_scene_target_attitude = $F2$
-		var:sex_scene_target_attitude = $F3$
-		var:sex_scene_target_attitude = $F4$
-		var:sex_scene_target_attitude = $F5$
-		var:sex_scene_target_attitude = $F6$
-		var:sex_scene_target_attitude = $F7$
+		scope:sex_scene_target_attitude = $F1$
+		scope:sex_scene_target_attitude = $F2$
+		scope:sex_scene_target_attitude = $F3$
+		scope:sex_scene_target_attitude = $F4$
+		scope:sex_scene_target_attitude = $F5$
+		scope:sex_scene_target_attitude = $F6$
+		scope:sex_scene_target_attitude = $F7$
 	}
 }
 
 carnx_sex_scene_player_attitude_1_trigger = {
-	var:sex_scene_player_attitude = $F1$
+	scope:sex_scene_player_attitude = $F1$
 }
 
 carnx_sex_scene_player_attitude_2_trigger = {
 	OR = {
-		var:sex_scene_player_attitude = $F1$
-		var:sex_scene_player_attitude = $F2$
+		scope:sex_scene_player_attitude = $F1$
+		scope:sex_scene_player_attitude = $F2$
 	}
 }
 
 carnx_sex_scene_player_attitude_3_trigger = {
 	OR = {
-		var:sex_scene_player_attitude = $F1$
-		var:sex_scene_player_attitude = $F2$
-		var:sex_scene_player_attitude = $F3$
+		scope:sex_scene_player_attitude = $F1$
+		scope:sex_scene_player_attitude = $F2$
+		scope:sex_scene_player_attitude = $F3$
 	}
 }
 
 carnx_sex_scene_player_attitude_4_trigger = {
 	OR = {
-		var:sex_scene_player_attitude = $F1$
-		var:sex_scene_player_attitude = $F2$
-		var:sex_scene_player_attitude = $F3$
-		var:sex_scene_player_attitude = $F4$
+		scope:sex_scene_player_attitude = $F1$
+		scope:sex_scene_player_attitude = $F2$
+		scope:sex_scene_player_attitude = $F3$
+		scope:sex_scene_player_attitude = $F4$
 	}
 }
 
 carnx_sex_scene_player_attitude_5_trigger = {
 	OR = {
-		var:sex_scene_player_attitude = $F1$
-		var:sex_scene_player_attitude = $F2$
-		var:sex_scene_player_attitude = $F3$
-		var:sex_scene_player_attitude = $F4$
-		var:sex_scene_player_attitude = $F5$
+		scope:sex_scene_player_attitude = $F1$
+		scope:sex_scene_player_attitude = $F2$
+		scope:sex_scene_player_attitude = $F3$
+		scope:sex_scene_player_attitude = $F4$
+		scope:sex_scene_player_attitude = $F5$
 	}
 }
 
 carnx_sex_scene_player_attitude_6_trigger = {
 	OR = {
-		var:sex_scene_player_attitude = $F1$
-		var:sex_scene_player_attitude = $F2$
-		var:sex_scene_player_attitude = $F3$
-		var:sex_scene_player_attitude = $F4$
-		var:sex_scene_player_attitude = $F5$
-		var:sex_scene_player_attitude = $F6$
+		scope:sex_scene_player_attitude = $F1$
+		scope:sex_scene_player_attitude = $F2$
+		scope:sex_scene_player_attitude = $F3$
+		scope:sex_scene_player_attitude = $F4$
+		scope:sex_scene_player_attitude = $F5$
+		scope:sex_scene_player_attitude = $F6$
 	}
 }
 
 carnx_sex_scene_player_attitude_7_trigger = {
 	OR = {
-		var:sex_scene_player_attitude = $F1$
-		var:sex_scene_player_attitude = $F2$
-		var:sex_scene_player_attitude = $F3$
-		var:sex_scene_player_attitude = $F4$
-		var:sex_scene_player_attitude = $F5$
-		var:sex_scene_player_attitude = $F6$
-		var:sex_scene_player_attitude = $F7$
+		scope:sex_scene_player_attitude = $F1$
+		scope:sex_scene_player_attitude = $F2$
+		scope:sex_scene_player_attitude = $F3$
+		scope:sex_scene_player_attitude = $F4$
+		scope:sex_scene_player_attitude = $F5$
+		scope:sex_scene_player_attitude = $F6$
+		scope:sex_scene_player_attitude = $F7$
 	}
 }
 

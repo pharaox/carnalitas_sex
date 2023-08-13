@@ -314,24 +314,21 @@
  carnx_sex_scene_quote_55d: "Bad also are those women who mind people's affairs; those who are always complaining; those who steal things belonging to their husbands; those of a disagreeable and imperious temper; those who are not grateful for kindnesses received; those that will not share the conjugal couch, or who incommode their husbands by the uncomfortable positions they take in it; those who are inclined to deceit, treachery, calumny and ruse."
  carnx_sex_scene_quote_55e: "Then there are still women who are unlucky in whatever they undertake; those who are always inclined to blame and censure; those who invite their husbands to fulfil their conjugal duty only when it is convenient for them; those that make noises in bed; and lastly those who are shameless, without intelligence, tattlers and curious."
 
- # Fallback
- carnx_sex_scene_quote_f: "#EMP <fallback quote>#!\n\n#weak ― Anonymous#!"
-
  # Marquis de Sade, The 120 Days of Sodom
  # Sources:
  # * odaha.com, https://www.odaha.com/sites/default/files/120_days_of_sodom.pdf
  # * Internet Archive, https://archive.org/details/the120daysofsodom/
  # * Wikisource, https://fr.wikisource.org/wiki/Les_120_Journ%C3%A9es_de_Sodome
  # Target: female; Player: reserved, hedonistic, deceitful, dominating
- carnx_sex_scene_bdsm_quote_01a: "#EMP She is bound hand and foot to the wall. Facing her, and also attached to the wall, is a blade of steel adjusted to the height of her belly. If she strives to avoid a blow, it is forward she must lunge; she cuts herself. If she wishes to avoid the blade, she must fling herself backward toward the lash.#!\n\n#weak ― Marquis de Sade, The 120 Days of Sodom, Translated by Richard Seaver and Austryn Wainhouse#!"
+ carnx_sex_scene_bdsm_quote_01: "#EMP She is bound hand and foot to the wall. Facing her, and also attached to the wall, is a blade of steel adjusted to the height of her belly. If she strives to avoid a blow, it is forward she must lunge; she cuts herself. If she wishes to avoid the blade, she must fling herself backward toward the lash.#!\n\n#weak ― Marquis de Sade, The 120 Days of Sodom, Translated by Richard Seaver and Austryn Wainhouse#!"
 
  # John Cleland, Memoirs of Fanny Hill
  # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/25305
  # Target: female; Player: male, amorous, respectful, faithful, gentle
- carnx_sex_scene_bdsm_quote_02a: "#EMP Then, springing eagerly towards me, he covered all those naked parts with a fond profusion of kisses; and now, taking hold of the rod, rather wantoned with me, in gentle inflictions on those tender trembling masses of my flesh behind, than in any way hurt them, till by degrees, he began to tingle them with smarter lashes, so as to provoke a red colour into them, which I knew, as well by the flagrant glow I felt there, as by his telling me, they now emulated the native roses of my other cheeks. When he had thus amused himself with admiring, and toying with them, he went on to strike harder, and more hard, so that I needed all my patience not to cry out, or complain at least.#!\n\n#weak ― John Cleland, Memoirs of Fanny Hill#!"
+ carnx_sex_scene_bdsm_quote_02: "#EMP Then, springing eagerly towards me, he covered all those naked parts with a fond profusion of kisses; and now, taking hold of the rod, rather wantoned with me, in gentle inflictions on those tender trembling masses of my flesh behind, than in any way hurt them, till by degrees, he began to tingle them with smarter lashes, so as to provoke a red colour into them, which I knew, as well by the flagrant glow I felt there, as by his telling me, they now emulated the native roses of my other cheeks. When he had thus amused himself with admiring, and toying with them, he went on to strike harder, and more hard, so that I needed all my patience not to cry out, or complain at least.#!\n\n#weak ― John Cleland, Memoirs of Fanny Hill#!"
 
  # Fallback
- carnx_sex_scene_bdsm_quote_f: "#EMP <fallback quote>#!\n\n#weak ― Anonymous#!"
+ carnx_sex_scene_quote_f: "#EMP <fallback quote>#!\n\n#weak ― Anonymous#!"
 
  # Casanova, The Memoirs of Jacques Casanova de Seingalt
  # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/2981

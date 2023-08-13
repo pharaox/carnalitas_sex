@@ -79,6 +79,10 @@ carnx_clear_sex_scene_variables_effect = {
 		limit = { has_variable = sex_scene_target_attitude }
 		remove_variable = sex_scene_target_attitude
 	}
+	if = {
+		limit = { has_variable = sex_scene_quote }
+		remove_variable = sex_scene_quote
+	}
 }
 
 carnx_set_sex_scene_target_effect = {
