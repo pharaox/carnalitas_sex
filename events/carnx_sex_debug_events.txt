@@ -1,0 +1,80 @@
+﻿namespace = carnx_sex_debug
+
+scripted_trigger carnx_sex_debug_0001_valid_liege_trigger = {
+	is_adult = yes
+	carnx_is_sex_interaction_blocked_trigger = no
+	carn_can_have_sex_trigger = yes
+}
+
+scripted_trigger carnx_sex_debug_0001_valid_target_trigger = {
+	is_adult = yes
+	carnx_is_sex_interaction_blocked_trigger = no
+	carn_can_have_sex_trigger = yes
+	is_at_same_location = root
+	OR = {
+		root = {
+			carn_relationship_allows_free_sex_trigger = { PARTNER = prev }
+		}
+		root = {
+			carnx_relationship_allows_demand_sex_trigger = { PARTNER = prev }
+		}
+		carn_is_working_as_prostitute_trigger = yes
+	}
+}
+
+carnx_sex_debug.0001 = {
+	type = character_event
+	title = carnx_sex_debug.0001.t
+	desc = carnx_sex_debug.0001.desc
+	hidden = yes
+
+	theme = seduction
+	left_portrait = {
+		character = scope:target
+		animation = flirtation
+	}
+
+	trigger = {
+		debug_only = yes
+		NOT = { has_game_rule = carn_sex_interaction_disabled }
+		is_ai = yes
+		carnx_sex_debug_0001_valid_liege_trigger = yes
+		any_courtier = {
+			carnx_sex_debug_0001_valid_target_trigger = yes
+		}
+	}
+
+	immediate = {
+		# Find a valid target to have sex with
+		random_courtier = {
+			limit = {
+				carnx_sex_debug_0001_valid_target_trigger = yes
+			}
+			save_scope_as = target
+		}
+
+		if = {
+			limit = { exists = scope:target }
+
+			# Request sex scene flags
+			carnx_request_sex_scene_flags_effect = { TARGET = scope:target }
+
+			# Request sex scene locations
+			carnx_request_sex_scene_locations_effect = { TARGET = scope:target }
+
+			# Actually fire the sex scene
+			carn_sex_scene_effect = {
+				PLAYER = root
+				TARGET = scope:target
+				STRESS_EFFECTS = no
+				DRAMA = no
+			}
+
+			#carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_debug_0001_fired }
+		}
+	}
+
+	option = {
+		name = carnx_sex_debug.0001.a
+	}
+}

@@ -26,6 +26,6 @@ carnx_on_sex = {
 			add_to_list = debug_sex_scene_locations
 		}
 
-		carnx_debug_log_effect = { MSG = carnx_debug_msg_character_had_sex }
+		#carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_character_had_sex }
 	}
 }

@@ -45,6 +45,8 @@ carnx_sex_scene.0001 = {
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
 
+		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0001_fired }
+
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
@@ -112,6 +114,8 @@ carnx_sex_scene.0002 = {
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
 		carnx_set_sex_scene_quote_effect = yes
+
+		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0002_fired }
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
@@ -183,6 +187,8 @@ carnx_sex_scene.0003 = {
 		carnx_set_sex_scene_target_attitude_effect = yes
 		carnx_set_sex_scene_quote_effect = yes
 
+		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0003_fired }
+
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
@@ -251,6 +257,8 @@ carnx_sex_scene.0004 = {
 		carnx_set_sex_scene_target_effect = yes
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
+
+		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0004_fired }
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
@@ -323,6 +331,8 @@ carnx_sex_scene.0005 = {
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
 		carnx_set_sex_scene_quote_effect = yes
+
+		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0005_fired }
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
