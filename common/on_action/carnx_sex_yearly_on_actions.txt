@@ -13,6 +13,6 @@ carnx_sex_yearly_playable_pulse = {
 	}
 
 	events = {
-		carnx_sex_debug.0001 # Sex Debug
+		#carnx_sex_debug.0001 # Sex Debug
 	}
 }

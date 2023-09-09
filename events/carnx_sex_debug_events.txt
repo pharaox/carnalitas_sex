@@ -70,7 +70,7 @@ carnx_sex_debug.0001 = {
 				DRAMA = no
 			}
 
-			#carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_debug_0001_fired }
+			carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_debug_0001_fired }
 		}
 	}
 
