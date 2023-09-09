@@ -1,13 +1,15 @@
 ﻿l_english:
- carnx_sex_debug_msg_character_had_sex: "Character had sex"
+ carnx_sex_debug_prefix: "[THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID])"
 
- carnx_sex_debug_msg_debug_0001_fired: "Debug Sex event fired"
+ carnx_sex_debug_msg_character_had_sex: "$carnx_sex_debug_prefix$: Character had sex"
 
- carnx_sex_debug_msg_sex_scene_0001_fired: "Sex Scene 1 event fired"
- carnx_sex_debug_msg_sex_scene_0002_fired: "Sex Scene 2 event fired"
- carnx_sex_debug_msg_sex_scene_0003_fired: "Sex Scene 3 event fired"
- carnx_sex_debug_msg_sex_scene_0004_fired: "Sex Scene 4 event fired"
- carnx_sex_debug_msg_sex_scene_0005_fired: "Sex Scene 5 event fired"
+ carnx_sex_debug_msg_debug_0001_fired: "$carnx_sex_debug_prefix$: Debug Sex event fired"
+
+ carnx_sex_debug_msg_sex_scene_0001_fired: "$carnx_sex_debug_prefix$: Sex Scene 1 event fired"
+ carnx_sex_debug_msg_sex_scene_0002_fired: "$carnx_sex_debug_prefix$: Sex Scene 2 event fired"
+ carnx_sex_debug_msg_sex_scene_0003_fired: "$carnx_sex_debug_prefix$: Sex Scene 3 event fired"
+ carnx_sex_debug_msg_sex_scene_0004_fired: "$carnx_sex_debug_prefix$: Sex Scene 4 event fired"
+ carnx_sex_debug_msg_sex_scene_0005_fired: "$carnx_sex_debug_prefix$: Sex Scene 5 event fired"
 
  carnx_sex_debug.0001.t: "Debug Sex"
  carnx_sex_debug.0001.desc: "I just had sex with [target.GetFirstNameNoTooltip]."
