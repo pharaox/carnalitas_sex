@@ -2,7 +2,7 @@
 	category = interaction_category_friendly
 	desc = carn_sex_interaction_desc
 	interface_priority = 40
-	icon = icon_scheme_seduce
+	icon = carn_icon
 
 	is_shown = {
 		NOR = {

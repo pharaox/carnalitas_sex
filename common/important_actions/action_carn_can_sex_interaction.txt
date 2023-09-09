@@ -1,0 +1,59 @@
+﻿action_carn_can_sex_interaction = {
+	combine_into_one = yes
+
+	check_create_action = {
+		if = {
+			limit = {
+				NOR = {
+					has_game_rule = carn_sex_interaction_disabled
+					has_character_flag = carn_sex_interaction_effect_cd
+				}
+				is_adult = yes
+				carnx_is_sex_interaction_blocked_trigger = no
+				carn_can_have_sex_trigger = yes
+			}
+
+			every_consort = {
+				add_to_list = potential_partners
+			}
+			every_relation = {
+				type = lover
+				add_to_list = potential_partners
+			}
+			every_relation = {
+				type = slave
+				limit = {
+					carnx_is_slave_consort_of_trigger = { CHARACTER = root }
+				}
+				add_to_list = potential_partners
+			}
+
+			every_in_list = {
+				list = potential_partners
+				limit = {
+					root = {
+						is_character_interaction_valid = {
+							interaction = carn_sex_interaction
+							recipient = prev
+						}
+						is_attracted_to_gender_of = prev
+						NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = prev } }
+					}
+				}
+				try_create_important_action = {
+					important_action_type = action_carn_can_sex_interaction
+					actor = root
+					recipient = this
+				}
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = carn_sex_interaction
+			actor = scope:actor
+			recipient = scope:recipient
+		}
+	}
+}

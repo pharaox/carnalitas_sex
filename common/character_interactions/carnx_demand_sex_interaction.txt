@@ -2,7 +2,7 @@
 	category = interaction_category_friendly
 	desc = carnx_demand_sex_interaction_desc
 	interface_priority = 40
-	icon = icon_scheme_seduce
+	icon = carn_icon
 
 	is_shown = {
 		NOR = {
@@ -30,9 +30,6 @@
 		scope:recipient = {
 			carn_can_have_sex_trigger = yes
 			is_at_same_location = scope:actor
-		}
-		scope:actor = {
-			has_usable_hook = scope:recipient
 		}
 	}
 
