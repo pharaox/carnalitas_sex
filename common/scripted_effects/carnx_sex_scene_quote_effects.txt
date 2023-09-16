@@ -129,23 +129,127 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
-				scope:carn_sex_target = { is_female = yes }
-				scope:carn_sex_target = { age <= 18 }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				scope:carn_sex_target = { is_male = yes }
+				carnx_sex_scene_player_attitude_6_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:gentle F6 = flag:dominating }
 			}
-			save_scope_value_as = { name = sex_scene_quote value = flag:quote_20 } # The Memoirs of Jacques Casanova
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_18 } # Anthologica Rarissima
 		}
 		10 = {
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				scope:carn_sex_target = { age <= 18 }
+				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:reserved F2 = flag:disgusted F3 = flag:deceitful }
+				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:reserved F2 = flag:disgusted F3 = flag:deceitful F4 = flag:dominating  }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_19 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_target = { age <= 20 }
+				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
+				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_20 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_target = { age <= 20 }
 				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
 				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_21 } # The Decameron
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:reserved F2 = flag:deceitful F3 = flag:resisting F4 = flag:calculating }
+				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_22 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_female = yes
+				scope:carn_sex_target = { is_male = yes }
+				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:reserved F2 = flag:deceitful F3 = flag:resisting F4 = flag:calculating }
+				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_23 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				age <= 25
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_target = { age <= 20 }
+				carnx_sex_scene_target_attitude_2_trigger = { F1 = flag:deceitful F2 = flag:resisting }
+				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:hedonistic F2 = flag:dominating }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_24 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_target = { age <= 20 }
+				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
+				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_25 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:calculating }
+				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:respectful F2 = flag:faithful F3 = flag:gentle }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_26 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_target = { age <= 20 }
+				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:reserved F2 = flag:disgusted F3 = flag:resisting }
+				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:dominating }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_27 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
+				carnx_sex_scene_player_attitude_1_trigger = { F1 = flag:reserved }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_28 } # Anthologica Rarissima
+		}
+		10 = {
+			trigger = {
+				carn_sex_scene_was_bdsm = no
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_target = { age <= 20 }
+				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
+				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:quote_29 } # Anthologica Rarissima
 		}
 		10 = {
 			trigger = {

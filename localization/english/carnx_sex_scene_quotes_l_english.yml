@@ -81,15 +81,86 @@
  carnx_sex_scene_quote_17a: "My rewards will be commensurate with your gifts\nif only you give me the one that lifts\nme laughing...\n\nAnd though it costs you nothing,\nstill it is of immense value to me.\n\nYour reward will be\nnot just to fly\nbut to soar, so high\nthat your joys vastly exceed your desires.\n\nAnd my beauty, to which your heart aspires\nand which you never tire of praising,\nI will employ for the raising\nof your spirits."
  carnx_sex_scene_quote_17b: "... Then, lying sweetly at your side,\nI will shower you with all the delights of a bride,\nwhich I have more expertly learned.\n\nThen you who so fervently burned\nwill at last rest, fully content,\nfallen even more deeply in love, spent\nat my comfortable bosom.\n\nWhen I am in bed with a man I blossom,\nbecoming completely free\nwith the man who loves and enjoys me."
 
+ # Tale of Kamar Al-Zaman, The Thousand Nights and a Night, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: male, Player: male, amorous, respectful, hedonistic, accommodating, gentle, dominating
+ carnx_sex_scene_quote_18: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_18')]#!\n\n#weak ― Tale of Kamar Al-Zaman, The Thousand Nights and a Night, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_18a: "My prickle is big and the little one said, 'Thrust boldly in vitals with lion-like stroke!'\n\nThen I, 'Tis a sin!'; and he, 'No sin to me!' So I had him at once with a counterfeit poke."
+ carnx_sex_scene_quote_18b: "So leave arguing and listen to what the poet saith:\n\nSeest not the bazaar with its fruit in rows? These men are for figs and for sycamore those!\n\nAnd what another saith:\n\nO beauty's Union! love for thee's my creed; free choice of Faith and eke my best desire:\n\nWomen I have forsworn for thee; so may deem me all men this day a shaveling friar."
+ carnx_sex_scene_quote_18c: "And yet another:\n\nA boy of twice ten is fit for a King!\n\nAnd yet another:\n\nThe penis smooth and round was made with anus best to match it: Had it been made for cunnus' sake it had been formed like hatchet!\n\nAnd yet another said:\n\nMy soul thy sacrifice! I chose thee out who art not menstruous or oviparous:\n\nDid I with women mell, I should beget brats till the wide wide world grew strait for us."
+
+ # Tale of Kamar Al-Zaman, The Thousand Nights and a Night, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: female, reserved, disgusted, deceitful; Player: male, reserved, disgusted, deceitful, dominating
+ carnx_sex_scene_quote_19: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_19')]#!\n\n#weak ― Tale of Kamar Al-Zaman, The Thousand Nights and a Night, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_19a: "And yet another:\n\nShe saith (sore hurt in sense the most acute, for she had proffered what did not besuit):\n\n'Unless thou stroke as man should swive his wife, blame not when horns thy brow shall incornute!\n\n'Thy wand seems waxen, to a limpo grown: and more I palm it, softer grows the brute!'"
+ carnx_sex_scene_quote_19b: "And yet another:\n\nQuoth she (for I to lie with her forbore), 'O folly-following fool, O fool to core:\n\n'If thou my coynte for Kiblah to thy coigne reject, we'll show thee what shall please thee more.'"
+ carnx_sex_scene_quote_19c: "And yet another:\n\nShe proffered me a tender coynte: Quoth I, 'I will not roger thee!'\n\nShe drew back, saying, 'From the Faith he turns, who's turned by Heaven's decree!\n\n'And front-wise futtering, in one day, is obsolete persistency!'\n\nThen swung she round and shining rump like silvern lump she showed me!\n\nI cried: 'Well done, O mistress mine! No more am I in pain for thee;\n\n'O thou of all that Allah oped showest me fairest victory!'"
+ carnx_sex_scene_quote_19d: "And yet another:\n\nMen craving pardon will uphold their hands; women pray pardon with their legs on high:\n\nOut on it for a pious, prayerful work! The Lord shall raise it in the depths to lie."
+
  # Casanova, The Memoirs of Jacques Casanova, Anthologica Rarissima
  # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
- # Target: female, virgin, amorous, hedonistic, faithful, obedient; Player: male, amorous, hedonistic, faithful, gentle
- carnx_sex_scene_quote_20: "#EMP We were lavish with our kisses on whatever part took our fancy, and just as Hedvige applied her lips to the mouth of the pistol, it went off and the discharge inundated her face and her bosom. She was delighted, and studied the eruption to an end with all the curiosity of a physician.#!\n\n#weak ― Casanova, The Memoirs of Jacques Casanova, Anthologica Rarissima"
+ # Target: female, young, amorous, hedonistic, faithful, obedient; Player: male, amorous, hedonistic, faithful, gentle
+ carnx_sex_scene_quote_20: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_20')]#!\n\n#weak ― Casanova, The Memoirs of Jacques Casanova, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_20a: "We were lavish with our kisses on whatever part took our fancy, and just as Hedvige applied her lips to the mouth of the pistol, it went off and the discharge inundated her face and her bosom. She was delighted, and studied the eruption to an end with all the curiosity of a physician."
+ carnx_sex_scene_quote_20b: "Taking hold of her through the wretched grating, against which she placed her pretty body, I showed her how I assured myself of the fact, and the little one found such pleasure in the game that, so far from feeling any suffering, she twice swooned away in ecstacy, all the while pressing my hand to the spot. Then she gave me her hand that she might afford me the pleasure I had given her."
 
  # Giovanni Boccaccio, The Decameron
  # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/3726
  # Target: female, virgin, amorous, hedonistic, faithful, obedient; Player: male, amorous, hedonistic, faithful, gentle
  carnx_sex_scene_quote_21: "#EMP Which said, he took the girl to one of the beds and taught her the posture in which she must lie in order to incarcerate this spirit accursed of God. The girl, having never before put any devil in hell, felt on this first occasion a twinge of pain: wherefore she said to Rustico:--"Of a surety, my father, he must be a wicked fellow, this devil, and in very truth a foe to God; for there is sorrow even in hell--not to speak of other places--when he is put there." "Daughter," said Rustico, "'twill not be always so." And for better assurance thereof they put him there six times before they quitted the bed; whereby they so thoroughly abased his pride that he was fain to be quiet.#!\n\n#weak ― Giovanni Boccaccio, The Decameron#!"
+
+ # Tale of Kamar Al-Zaman, The Thousand Nights and a Night, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: female, reserved, deceitful, resisting, calculating; Player: male, amorous, hedonistic, faithful, gentle
+ carnx_sex_scene_quote_22: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_22')]#!\n\n#weak ― Tale of Kamar Al-Zaman, The Thousand Nights and a Night, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_22a: "So saying, he put out his hand, turning her over, loosed the collar of her chemise; then arose before his sight her bosom, with its breasts like double globes of ivory; whereat his inclination for her redoubled and he desired her with exceeding hot desire. He would have awakened her but she would not awake, for Dahnash had made her sleep heavy; so he shook her and moved her, saying:\n\n'O my beloved, awake and look on me; I am Kamar al-Zaman.'\n\nBut she awoke not, neither moved her head;"
+ carnx_sex_scene_quote_22b: "So he put out his hand, with vitals afire for confusion, and found her thighs cooler than cream and softer than silk. The touching of them pleasured him and he moved his hand hither and thither, till it came to a dome abounding in good gifts and movements and shifts..."
+
+ # Tale of Kamar Al-Zaman, The Thousand Nights and a Night, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: male, reserved, deceitful, resisting, calculating; Player: female, amorous, hedonistic, faithful, gentle
+ carnx_sex_scene_quote_23: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_23')]#!\n\n#weak ― Tale of Kamar Al-Zaman, The Thousand Nights and a Night, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_23a: "'My life on thee, hearken to me; awake and up from thy sleep and look on the narcissus and the tender down thereon, and enjoy the sight of naked waist and navel; and touzle me and tumble me from this moment till break of day! Allah upon thee, O my lord, sit up and prop thee against the pillow and slumber not!'\n\nStill Kamar al-Zaman made her no reply but breathed hard in his sleep."
+ carnx_sex_scene_quote_23b: "Then she thrust her hand into his breast and, because of the smoothness of his body, it slipped down to his waist and thence to his navel and thence to his yard, whereupon her heart ached and her vitals quivered and lust was sore upon her, for that the desire of women is fiercer than the desire of men,[56] and she was ashamed of her own shamelessness."
+
+ # The Pike's Head, Kruptadia: Secret Stories from the Russian, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: female, young, deceitful, resisting; Player: male, young, hedonistic, dominating
+ carnx_sex_scene_quote_24: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_24')]#!\n\n#weak ― The Pike's Head, Kruptadia: Secret Stories from the Russian, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_24a: "The lad stood near; he looked and laughed.\n\n'I will aid thee an thou wilt,' said he, 'but only if thou dost permit me....'\n\nThe maid was cunning.\n\n'Willingly,' said she.\n\nAnd she armed herself with the head of an old pike, which lay about the garden, its jaws open. Picking it up, she thrust it in her sleeve and said to the lad:\n\n'I do not wish to come to thy side of the hedge, nor do I wish thee to come to mine, lest any see thee. Do it through the hedge. Pass me thy yard and I will put it in.'\n\nThe youth drew out his yard and passed it through the hedge. The girl took the pike's head, opened it, and put it 'twixt her thighs. When the youth rubbed, he scratched his yard so that it bled. Taking it in his hands, he ran to the house, sat down in a corner, and was very silent.\n\n'Ah! woe is me!' thought he to himself. 'How her coynte biteth! If only my yard will heal, for the rest of my life I will never address another girl!'"
+ carnx_sex_scene_quote_24b: "And desire took the youth, and he tucked up his robe, saying:\n\n'Wait--I am about to bind thy legs, and if thy coynte biteth, I shall be able to leap to earth and save myself.'\n\nHe let go of the reins and bound the two naked thighs of his young wife. His instrument was now of sufficient magnitude. When he rammed the girl, she cried with a loud voice; the horse, which was young, took fright and began to run away; the sleigh was thrown from side to side; the peasant fell out; and his young wife, her thighs naked, was dragged into the courtyard of the mother-in-law."
+
+ # John and Joan, Merry Songs and Ballads, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: female, young, amorous, hedonistic, faithful, obedient; Player: male, amorous, hedonistic, faithful, gentle
+ carnx_sex_scene_quote_25: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_25')]#!\n\n#weak ― John and Joan, Merry Songs and Ballads, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_25a: "And then he took her by the Hand;\nHe led her into a Room,\nWhere they cou'd see neither Sun nor Moon:\nTogether John the Door did clap,\nHe laid the Steel into her Lap:\nWith that Joan began to feel,\nCuts Foot, quoth she, 'tis a dainty Steel:\nI prithee tell me, and do not lye,\nWhat are the two Things hang thereby?\nThey be the two odd Shillings, quoth John,\nThat you put last into my Hand:\nIf I had known so much before,\nI wou'd have giv'n thee two Shillings more."
+
+ # The Husband As Doctor, Les Cent Nouvelles Nouvelles, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: female, hedonistic, deceitful, calculating; Player: respectful, faithful, gentle
+ carnx_sex_scene_quote_26: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_26')]#!\n\n#weak ― The Husband As Doctor, Les Cent Nouvelles Nouvelles, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_26a: "And, as he spoke, he fell to undressing, and lay down beside his wife, and began to execute in clumsy fashion the orders he had received from the physician.\n\n'What dost thou?' asked his wife. 'Wouldst kill me?'\n\n'Nay, I am about to cure thee,' said he. 'The physician hath assured me.'\n\nAnd Nature instructing and the patient assisting, he performed upon her twice or thrice. When resting from his labours, much astonished at what had befallen, he asked his wife how she was.\n\n'I am a little better than I was hitherto,' she replied.\n\n'God be praised,' quoth he. 'I hope thou wilt get well and that the physician hath spoken truly.'\n\nAnd with that he fell to again.\n\nTo cut matters short, he performed so well that his wife was cured in a few days, whereat he was very joyful, as was the mother when she knew of it."
+
+ # The Burning Yard, Kruptadia: Secret Stories from the Russian, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: female, young, reserved, disgusted, resisting; Player: male, hedonistic, deceitful, dominating
+ carnx_sex_scene_quote_27: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_27')]#!\n\n#weak ― The Burning Yard, Kruptadia: Secret Stories from the Russian, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_27a: "A peasant had a daughter who said unto him: 'Little father, Vannka would fain futter me.' 'Ah! thou fool!' quoth the peasant. 'Why give thyself to a stranger? We will futter thee right well ourselves.'\n\nHe took an iron stud, warmed it in the stove, and planted it right in her coynte, in such fashion that she could not piss for three months."
+ carnx_sex_scene_quote_27b: "Vannka encountered the young girl and again made his proposal.\n\n'Permit me to futter thee,' said he.\n\nQuoth she:\n\n'Thou ravest, Vannka, who art sprung from the devil. My little father hath futtered me, and he hath so scorched my coynte that for three months I have not been able to piss.'\n\n'Fear not, simpleton. My yard is cold.'\n\n'Thou liest, Vannka, devil's offspring. Let me touch it.'\n\n'Take it, then.'\n\nShe took his yard in her hand and cried:\n\n'Ah! wretched devil! thou seest well 'tis warm! Dip it in the water!'\n\nVannka dipped his yard in the water and whistled with pain.\n\n'See!' quoth the girl. 'It hisseth! I told thee 'twas burning, and thou didst deceive me, thief!'\n\nAnd she would not let herself be futtered by Vannka."
+
+ # Take Time by the Forelock, Les Faceties de Pogge (Poggio) Florentin, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: female, amorous, hedonistic, faithful, obedient; Player: reserved
+ carnx_sex_scene_quote_28: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_28')]#!\n\n#weak ― Take Time by the Forelock, Les Faceties de Pogge (Poggio) Florentin, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_28a: "'Pierre the Red, wrapped in his bed-clothes, felt himself stimulated by the burning flame of the god of love, and he invited his wife to come straightway to his arms. It chanced that she was praying, and she made reply: 'Wait a while.' And whilst her Paters and her Agnus' and her Aves were accomplished, Pierre's ardour had had time to grow cold. She entered the bed, but the chilled husband maintained his pretence. She drew near him; he did not budge. 'Beloved, what dost wish? I have said my prayers.'--'Good,' quoth Pierre the Red. 'But I have grown soft.'"
+
+ # The Breaker of Eggs, Béroalde de Verville: Le Moyen de Parvenir, Anthologica Rarissima
+ # Source: Project Gutenberg, https://www.gutenberg.org/ebooks/52059
+ # Target: female, young, amorous, hedonistic, faithful, obedient; Player: male, amorous, hedonistic, faithful, gentle
+ carnx_sex_scene_quote_29: "#EMP [ROOT.Char.Custom('carnx_sex_scene_quote_29')]#!\n\n#weak ― The Breaker of Eggs, Béroalde de Verville: Le Moyen de Parvenir, Anthologica Rarissima#!"
+ carnx_sex_scene_quote_29a: "'Alas! sir! what wouldst do?' she cried.\n\n'I shall do thee no ill; I would break an egg which is fast hardening.'\n\nShe let him do it, and he did it so well that he put live flesh in live flesh. So he finished as soon as he had begun, and she found the business so much to her liking, although he had cooked her somewhat, that she came back again and again to have the eggs broken; in sooth, she had wished for a belly in which one might break eggs for an hundred years without doing aught else."
 
  # Muhammad al-Nefzawi, The Perfumed Garden
  # Source: https://sacred-texts.com/sex/garden

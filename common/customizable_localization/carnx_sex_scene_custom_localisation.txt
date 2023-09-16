@@ -369,12 +369,52 @@ carnx_sex_scene_dubcon_dom_quote = {
 		localization_key = carnx_sex_scene_quote_17 # Capitolo 19: A Courtesan's Love Lyric
 	}
 	text = {
+		trigger = { var:sex_scene_quote = flag:quote_18 }
+		localization_key = carnx_sex_scene_quote_18 # Anthologica Rarissima
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_19 }
+		localization_key = carnx_sex_scene_quote_19 # Anthologica Rarissima
+	}
+	text = {
 		trigger = { var:sex_scene_quote = flag:quote_20 }
-		localization_key = carnx_sex_scene_quote_20 # The Memoirs of Jacques Casanova
+		localization_key = carnx_sex_scene_quote_20 # Anthologica Rarissima
 	}
 	text = {
 		trigger = { var:sex_scene_quote = flag:quote_21 }
 		localization_key = carnx_sex_scene_quote_21 # The Decameron
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_22 }
+		localization_key = carnx_sex_scene_quote_22 # Anthologica Rarissima
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_23 }
+		localization_key = carnx_sex_scene_quote_23 # Anthologica Rarissima
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_24 }
+		localization_key = carnx_sex_scene_quote_24 # Anthologica Rarissima
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_25 }
+		localization_key = carnx_sex_scene_quote_25 # Anthologica Rarissima
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_26 }
+		localization_key = carnx_sex_scene_quote_26 # Anthologica Rarissima
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_27 }
+		localization_key = carnx_sex_scene_quote_27 # Anthologica Rarissima
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_28 }
+		localization_key = carnx_sex_scene_quote_28 # Anthologica Rarissima
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:quote_29 }
+		localization_key = carnx_sex_scene_quote_29 # Anthologica Rarissima
 	}
 	text = {
 		trigger = { var:sex_scene_quote = flag:quote_30 }
@@ -526,6 +566,93 @@ carnx_sex_scene_quote_17 = {
 
 	text = { localization_key = carnx_sex_scene_quote_17a }
 	text = { localization_key = carnx_sex_scene_quote_17b }
+}
+
+carnx_sex_scene_quote_18 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_18a }
+	text = { localization_key = carnx_sex_scene_quote_18b }
+	text = { localization_key = carnx_sex_scene_quote_18c }
+}
+
+carnx_sex_scene_quote_19 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_19a }
+	text = { localization_key = carnx_sex_scene_quote_19b }
+	text = { localization_key = carnx_sex_scene_quote_19c }
+	text = { localization_key = carnx_sex_scene_quote_19d }
+}
+
+carnx_sex_scene_quote_20 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_20a }
+	text = { localization_key = carnx_sex_scene_quote_20b }
+}
+
+carnx_sex_scene_quote_22 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_22a }
+	text = { localization_key = carnx_sex_scene_quote_22b }
+}
+
+carnx_sex_scene_quote_23 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_23a }
+	text = { localization_key = carnx_sex_scene_quote_23b }
+}
+
+carnx_sex_scene_quote_24 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_24a }
+	text = { localization_key = carnx_sex_scene_quote_24b }
+}
+
+carnx_sex_scene_quote_25 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_25a }
+}
+
+carnx_sex_scene_quote_26 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_26a }
+}
+
+carnx_sex_scene_quote_27 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_27a }
+	text = { localization_key = carnx_sex_scene_quote_27b }
+}
+
+carnx_sex_scene_quote_28 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_28a }
+}
+
+carnx_sex_scene_quote_29 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_quote_29a }
 }
 
 carnx_sex_scene_quote_30 = {
