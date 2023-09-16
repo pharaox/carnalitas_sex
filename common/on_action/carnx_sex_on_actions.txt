@@ -26,6 +26,12 @@ carnx_on_sex = {
 			add_to_list = debug_sex_scene_locations
 		}
 
-		#carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_character_had_sex }
+		#carnx_sex_debug_log_4_effect = {
+			MSG = carnx_sex_debug_msg_character_had_sex
+			NAME1 = carn_sex_partner TYPE1 = flag:character
+			NAME2 = carn_sex_pregnancy_chance TYPE2 = flag:value
+			NAME3 = carn_sex_could_be_impregnated TYPE3 = flag:boolean
+			NAME4 = carn_sex_impregnated TYPE4 = flag:boolean
+		}
 	}
 }

@@ -1,0 +1,90 @@
+﻿carnx_sex_debug_log_effect = {
+	if = {
+		limit = { debug_only = yes }
+		debug_log = $MSG$
+	}
+}
+
+carnx_sex_debug_log_4_effect = {
+	if = {
+		limit = { debug_only = yes }
+
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME3$ TYPE = $TYPE3$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME4$ TYPE = $TYPE4$ }
+
+		debug_log = $MSG$
+
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME3$ TYPE = $TYPE3$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME4$ TYPE = $TYPE4$ }
+	}
+}
+
+carnx_sex_debug_log_5_effect = {
+	if = {
+		limit = { debug_only = yes }
+
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME3$ TYPE = $TYPE3$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME4$ TYPE = $TYPE4$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME5$ TYPE = $TYPE5$ }
+
+		debug_log = $MSG$
+
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME3$ TYPE = $TYPE3$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME4$ TYPE = $TYPE4$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME5$ TYPE = $TYPE5$ }
+	}
+}
+
+carnx_sex_debug_log_6_effect = {
+	if = {
+		limit = { debug_only = yes }
+
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME3$ TYPE = $TYPE3$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME4$ TYPE = $TYPE4$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME5$ TYPE = $TYPE5$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME6$ TYPE = $TYPE6$ }
+
+		debug_log = $MSG$
+
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME3$ TYPE = $TYPE3$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME4$ TYPE = $TYPE4$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME5$ TYPE = $TYPE5$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME6$ TYPE = $TYPE6$ }
+	}
+}
+
+carnx_sex_debug_set_scope_variable_effect = {
+	if = {
+		limit = {
+			NOT = { $TYPE$ = flag:variable }
+			exists = scope:$NAME$
+			trigger_if = {
+				limit = { $TYPE$ = flag:boolean }
+				scope:$NAME$ = yes
+			}
+		}
+		set_variable = { name = $NAME$ value = scope:$NAME$ }
+	}
+}
+
+carnx_sex_debug_remove_scope_variable_effect = {
+	if = {
+		limit = {
+			NOT = { $TYPE$ = flag:variable }
+			has_variable = $NAME$
+		}
+		remove_variable = $NAME$
+	}
+}

@@ -92,7 +92,7 @@ carnx_set_sex_scene_target_effect = {
 				carnx_is_lover_trigger = { CHARACTER = scope:carn_sex_target }
 			}
 		}
-		save_scope_value_as = { name = sex_scene_target value = flag:lover }
+		save_scope_value_as = { name = sex_scene_target value = flag:_lover }
 	}
 	else_if = {
 		limit = {
@@ -100,7 +100,7 @@ carnx_set_sex_scene_target_effect = {
 				is_consort_of = scope:carn_sex_player
 			}
 		}
-		save_scope_value_as = { name = sex_scene_target value = flag:consort }
+		save_scope_value_as = { name = sex_scene_target value = flag:_consort }
 	}
 	else_if = {
 		limit = {
@@ -108,7 +108,7 @@ carnx_set_sex_scene_target_effect = {
 				carnx_is_slave_consort_of_trigger = { CHARACTER = scope:carn_sex_player }
 			}
 		}
-		save_scope_value_as = { name = sex_scene_target value = flag:slave_consort }
+		save_scope_value_as = { name = sex_scene_target value = flag:_slave_consort }
 	}
 	else_if = {
 		limit = {
@@ -117,7 +117,7 @@ carnx_set_sex_scene_target_effect = {
 				NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:carn_sex_player } }
 			}
 		}
-		save_scope_value_as = { name = sex_scene_target value = flag:slave }
+		save_scope_value_as = { name = sex_scene_target value = flag:_slave }
 	}
 	else_if = {
 		limit = {
@@ -125,7 +125,7 @@ carnx_set_sex_scene_target_effect = {
 				carn_is_working_as_prostitute_trigger = yes
 			}
 		}
-		save_scope_value_as = { name = sex_scene_target value = flag:prostitute }
+		save_scope_value_as = { name = sex_scene_target value = flag:_prostitute }
 	}
 	if = {
 		limit = { exists = scope:sex_scene_target }
@@ -175,7 +175,6 @@ carnx_set_sex_scene_target_attitude_effect = {
 		}
 		10 = {
 			trigger = {
-				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					is_attracted_to_gender_of = scope:carn_sex_player
 					opinion = { target = scope:carn_sex_player value < 0 }
@@ -284,7 +283,6 @@ carnx_set_sex_scene_target_attitude_effect = {
 		}
 		10 = {
 			trigger = {
-				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					NOT = { is_attracted_to_gender_of = scope:carn_sex_player }
 					opinion = { target = scope:carn_sex_player value >= 0 }
@@ -313,7 +311,6 @@ carnx_set_sex_scene_target_attitude_effect = {
 		}
 		10 = {
 			trigger = {
-				carn_sex_scene_was_consensual = no
 				scope:carn_sex_target = {
 					NOT = { is_attracted_to_gender_of = scope:carn_sex_player }
 					opinion = { target = scope:carn_sex_player value < 0 }
@@ -564,7 +561,6 @@ carnx_set_sex_scene_player_attitude_effect = {
 		}
 		10 = {
 			trigger = {
-				carn_sex_scene_was_consensual = no
 				scope:carn_sex_player = {
 					is_attracted_to_gender_of = scope:carn_sex_target
 					opinion = { target = scope:carn_sex_target value < 0 }
@@ -673,7 +669,6 @@ carnx_set_sex_scene_player_attitude_effect = {
 		}
 		10 = {
 			trigger = {
-				carn_sex_scene_was_consensual = no
 				scope:carn_sex_player = {
 					NOT = { is_attracted_to_gender_of = scope:carn_sex_target }
 					opinion = { target = scope:carn_sex_target value >= 0 }
@@ -702,7 +697,6 @@ carnx_set_sex_scene_player_attitude_effect = {
 		}
 		10 = {
 			trigger = {
-				carn_sex_scene_was_consensual = no
 				scope:carn_sex_player = {
 					NOT = { is_attracted_to_gender_of = scope:carn_sex_target }
 					opinion = { target = scope:carn_sex_target value < 0 }

@@ -45,13 +45,20 @@ carnx_sex_scene.0001 = {
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
 
-		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0001_fired }
+		carnx_sex_debug_log_5_effect = {
+			MSG = carnx_sex_debug_msg_sex_scene_0001_fired
+			NAME1 = carn_sex_target TYPE1 = flag:character
+			NAME2 = sex_scene_location TYPE2 = flag:variable
+			NAME3 = sex_scene_target TYPE3 = flag:variable
+			NAME4 = sex_scene_player_attitude TYPE4 = flag:variable
+			NAME5 = sex_scene_target_attitude TYPE5 = flag:variable
+		}
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
+			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
 			STRESS_EFFECTS = scope:carn_sex_stress_effects
 			DRAMA = scope:carn_sex_drama
 		}
@@ -115,13 +122,21 @@ carnx_sex_scene.0002 = {
 		carnx_set_sex_scene_target_attitude_effect = yes
 		carnx_set_sex_scene_quote_effect = yes
 
-		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0002_fired }
+		carnx_sex_debug_log_6_effect = {
+			MSG = carnx_sex_debug_msg_sex_scene_0002_fired
+			NAME1 = carn_sex_target TYPE1 = flag:character
+			NAME2 = sex_scene_location TYPE2 = flag:variable
+			NAME3 = sex_scene_target TYPE3 = flag:variable
+			NAME4 = sex_scene_player_attitude TYPE4 = flag:variable
+			NAME5 = sex_scene_target_attitude TYPE5 = flag:variable
+			NAME6 = sex_scene_quote TYPE6 = flag:variable
+		}
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
+			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
 			STRESS_EFFECTS = scope:carn_sex_stress_effects
 			DRAMA = scope:carn_sex_drama
 		}
@@ -187,13 +202,21 @@ carnx_sex_scene.0003 = {
 		carnx_set_sex_scene_target_attitude_effect = yes
 		carnx_set_sex_scene_quote_effect = yes
 
-		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0003_fired }
+		carnx_sex_debug_log_6_effect = {
+			MSG = carnx_sex_debug_msg_sex_scene_0003_fired
+			NAME1 = carn_sex_target TYPE1 = flag:character
+			NAME2 = sex_scene_location TYPE2 = flag:variable
+			NAME3 = sex_scene_target TYPE3 = flag:variable
+			NAME4 = sex_scene_player_attitude TYPE4 = flag:variable
+			NAME5 = sex_scene_target_attitude TYPE5 = flag:variable
+			NAME6 = sex_scene_quote TYPE6 = flag:variable
+		}
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
+			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
 			STRESS_EFFECTS = scope:carn_sex_stress_effects
 			DRAMA = scope:carn_sex_drama
 		}
@@ -258,13 +281,21 @@ carnx_sex_scene.0004 = {
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
 
-		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0004_fired }
+		carnx_sex_debug_log_6_effect = {
+			MSG = carnx_sex_debug_msg_sex_scene_0004_fired
+			NAME1 = carn_sex_target TYPE1 = flag:character
+			NAME2 = sex_scene_location TYPE2 = flag:variable
+			NAME3 = sex_scene_target TYPE3 = flag:variable
+			NAME4 = sex_scene_player_attitude TYPE4 = flag:variable
+			NAME5 = sex_scene_target_attitude TYPE5 = flag:variable
+			NAME6 = sex_scene_quote TYPE6 = flag:variable
+		}
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
+			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
 			STRESS_EFFECTS = scope:carn_sex_stress_effects
 			DRAMA = scope:carn_sex_drama
 		}
@@ -332,13 +363,21 @@ carnx_sex_scene.0005 = {
 		carnx_set_sex_scene_target_attitude_effect = yes
 		carnx_set_sex_scene_quote_effect = yes
 
-		carnx_debug_log_effect = { MSG = carnx_sex_debug_msg_sex_scene_0005_fired }
+		carnx_sex_debug_log_6_effect = {
+			MSG = carnx_sex_debug_msg_sex_scene_0005_fired
+			NAME1 = carn_sex_target TYPE1 = flag:character
+			NAME2 = sex_scene_location TYPE2 = flag:variable
+			NAME3 = sex_scene_target TYPE3 = flag:variable
+			NAME4 = sex_scene_player_attitude TYPE4 = flag:variable
+			NAME5 = sex_scene_target_attitude TYPE5 = flag:variable
+			NAME6 = sex_scene_quote TYPE6 = flag:variable
+		}
 
 		carn_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
+			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
 			STRESS_EFFECTS = scope:carn_sex_stress_effects
 			DRAMA = scope:carn_sex_drama
 		}

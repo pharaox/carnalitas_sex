@@ -1,0 +1,50 @@
+﻿carnx_pregnancy_chance_value = {
+	value = scope:had_sex_root_character.fertility
+	add = {
+		value = scope:had_sex_with_effect_partner.fertility
+		multiply = scope:had_sex_with_effect_partner.carnx_partner_fertility_muliplier
+	}
+	divide = 2
+	multiply = 50
+	floor = yes
+	min = 0
+}
+
+carnx_partner_fertility_muliplier = {
+	if = { # Primary spouse
+		limit = {
+			this = scope:had_sex_root_character.primary_spouse
+		}
+		value = define:NChildbirth|PRIMARY_SPOUSE_FERTILITY_MULTIPLIER
+	}
+	else_if = { # Secondary spouse
+		limit = {
+			is_spouse_of = scope:had_sex_root_character
+		}
+		value = define:NChildbirth|SECONDARY_SPOUSE_FERTILITY_MULTIPLIER
+	}
+	else_if = { # Concubine or slave concubine
+		limit = {
+			OR = {
+				is_consort_of = scope:had_sex_root_character
+				carnx_is_slave_consort_of_trigger = { CHARACTER = scope:had_sex_root_character }
+			}
+		}
+		value = define:NChildbirth|CONCUBINE_FERTILITY_MULTIPLIER
+	}
+	else_if = { # Slave who is not a concubine
+		limit = {
+			has_relation_slave_owner = scope:had_sex_root_character
+		}
+		value = define:NChildbirth|CONCUBINE_FERTILITY_MULTIPLIER
+	}
+	else_if = { # Prostitute
+		limit = {
+			carn_is_working_as_prostitute_trigger = yes
+		}
+		value = 0
+	}
+	else = { # Everyone else, including lovers
+		value = define:NChildbirth|NOT_SPOUSE_FERTILITY_MULTIPLIER
+	}
+}
