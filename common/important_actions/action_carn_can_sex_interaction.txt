@@ -20,8 +20,7 @@
 				type = lover
 				add_to_list = potential_partners
 			}
-			every_relation = {
-				type = slave
+			every_courtier = {
 				limit = {
 					carnx_is_slave_consort_of_trigger = { CHARACTER = root }
 				}
