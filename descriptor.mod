@@ -4,5 +4,5 @@ tags={
 	"Character Interactions"
 	"Events"
 }
-name="Carnalitas Sex Reimagined"
-supported_version="1.9.*"
+name="Carnalitas Love Reimagined"
+supported_version="1.10.*"
