@@ -195,6 +195,13 @@ carnx_sex_interaction_stress_impact_effect = {
 		custom_tooltip = carnx_sex_interaction_not_attracted_to_warning_tt
 		add_stress = minor_stress_impact_gain
 	}
+	# Lose stress if attracted to the gender of partner and lustful or rakish
+	else = {
+		stress_impact = {
+			lustful = minor_stress_impact_loss
+			rakish = minor_stress_impact_loss
+		}
+	}
 
 	# Gain / lose stress if sex with partner is crime or shunned and zealous / cynical
 	if = {
@@ -214,11 +221,5 @@ carnx_sex_interaction_stress_impact_effect = {
 			zealous = miniscule_stress_impact_gain
 			cynical = miniscule_stress_impact_loss
 		}
-	}
-
-	# Lose stress if lustful or rakish
-	stress_impact = {
-		lustful = minor_stress_impact_loss
-		rakish = minor_stress_impact_loss
 	}
 }
