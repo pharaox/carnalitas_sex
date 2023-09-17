@@ -1,4 +1,4 @@
-﻿action_carn_can_demand_sex_interaction = {
+﻿dsi_demand_sex_important_interaction = {
 	combine_into_one = yes
 
 	check_create_action = {
@@ -35,7 +35,7 @@
 					}
 				}
 				try_create_important_action = {
-					important_action_type = action_carn_can_demand_sex_interaction
+					important_action_type = dsi_demand_sex_important_interaction
 					actor = root
 					recipient = this
 				}

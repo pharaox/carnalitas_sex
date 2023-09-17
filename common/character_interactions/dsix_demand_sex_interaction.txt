@@ -26,6 +26,7 @@
 	is_valid_showing_failures_only = {
 		scope:actor = {
 			carn_can_have_sex_trigger = yes
+			has_usable_hook = scope:recipient
 		}
 		scope:recipient = {
 			carn_can_have_sex_trigger = yes
@@ -37,6 +38,14 @@
 
 	on_accept = {
 		scope:actor = {
+			# Use the hook on the recipient
+			if = {
+				limit = {
+					has_usable_hook = scope:recipient
+				}
+				use_hook = scope:recipient
+			}
+
 			# If not on cooldown, show the effect and add the cooldown flag
 			if = {
 				limit = {
