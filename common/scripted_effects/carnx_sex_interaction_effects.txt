@@ -10,92 +10,28 @@ carnx_request_sex_scene_flags_effect = {
 		}
 		carn_sex_scene_request_consensual = yes
 	}
-	# Consorts (spouses, concubines, and slave consorts): consensual or dubcon depending on opinion and attraction
-	else_if = {
-		limit = {
-			$TARGET$ = {
-				OR = {
-					is_consort_of = scope:character
-					carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character }
-				}
-			}
-		}
-		if = {
-			limit = {
-				$TARGET$ = {
-					is_attracted_to_gender_of = scope:character
-					carnx_is_attracted_consort_happy_with_sex_trigger = { CHARACTER = scope:character }
-				}
-				is_attracted_to_gender_of = $TARGET$
-				carnx_is_attracted_player_happy_with_sex_trigger = { CHARACTER = $TARGET$ }
-			}
-			carn_sex_scene_request_consensual = yes
-		}
-		else = {
-			carn_sex_scene_request_dubcon = yes
-			carn_sex_scene_request_dom_player = yes
-
-			# Request special dubcon scene flags, e.g. bdsm for sadistic characters
-			carnx_request_special_dubcon_sex_scene_flags_effect = { TARGET = $TARGET$ }
-		}
-	}
-	# Slaves that are not consorts: consensual or dubcon depending on opinion and attraction
-	else_if = {
-		limit = {
-			has_relation_slave = $TARGET$
-			$TARGET$ = {
-				NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character } }
-			}
-		}
-		if = {
-			limit = {
-				$TARGET$ = {
-					is_attracted_to_gender_of = scope:character
-					carnx_is_attracted_slave_happy_with_sex_trigger = { CHARACTER = scope:character }
-				}
-				is_attracted_to_gender_of = $TARGET$
-				carnx_is_attracted_player_happy_with_sex_trigger = { CHARACTER = $TARGET$ }
-			}
-			carn_sex_scene_request_consensual = yes
-		}
-		else = {
-			carn_sex_scene_request_dubcon = yes
-			carn_sex_scene_request_dom_player = yes
-
-			# Request special dubcon scene flags, e.g. bdsm for sadistic characters
-			carnx_request_special_dubcon_sex_scene_flags_effect = { TARGET = $TARGET$ }
-		}
-	}
-	# Prostitutes: consensual or dubcon depending on opinion and attraction
-	else_if = {
-		limit = {
-			$TARGET$ = {
-				carn_is_working_as_prostitute_trigger = yes
-			}
-		}
-		if = {
-			limit = {
-				$TARGET$ = {
-					is_attracted_to_gender_of = scope:character
-					carnx_is_attracted_prostitute_happy_with_sex_trigger = { CHARACTER = scope:character }
-				}
-				is_attracted_to_gender_of = $TARGET$
-				carnx_is_attracted_player_happy_with_sex_trigger = { CHARACTER = $TARGET$ }
-			}
-			carn_sex_scene_request_consensual = yes
-		}
-		else = {
-			carn_sex_scene_request_dubcon = yes
-			carn_sex_scene_request_dom_player = yes
-
-			# Request special dubcon scene flags, e.g. bdsm for sadistic characters
-			carnx_request_special_dubcon_sex_scene_flags_effect = { TARGET = $TARGET$ }
-		}
-	}
-	# Others: consensual
+	# Others: consensual or dubcon depending on opinion, attraction, and options
 	else = {
-		carn_sex_scene_request_consensual = yes
+		if = {
+			limit = {
+				$TARGET$ = {
+					is_attracted_to_gender_of = scope:character
+					carnx_is_attracted_target_happy_with_sex_trigger = { CHARACTER = scope:character }
+				}
+				is_attracted_to_gender_of = $TARGET$
+				carnx_is_attracted_player_happy_with_sex_trigger = { CHARACTER = $TARGET$ }
+				scope:bdsm = no
+			}
+			carn_sex_scene_request_consensual = yes
+		}
+		else = {
+			carn_sex_scene_request_dubcon = yes
+			carn_sex_scene_request_dom_player = yes
+		}
 	}
+
+	# Request optional scene flags, e.g. bdsm or orgy
+	carnx_request_optional_sex_scene_flags_effect = yes
 
 	# Randomly request "giving player" to give the default events chance to fire
 	random = {
@@ -104,20 +40,14 @@ carnx_request_sex_scene_flags_effect = {
 	}
 }
 
-carnx_request_special_dubcon_sex_scene_flags_effect = {
-	# Request bdsm for sadistic characters
+carnx_request_optional_sex_scene_flags_effect = {
 	if = {
-		limit = {
-			has_trait = sadistic
-			OR = {
-				has_relation_slave = $TARGET$
-				$TARGET$ = { carn_is_working_as_prostitute_trigger = yes }
-			}
-		}
-		carn_sex_scene_request_bdsm = yes
+		limit = { scope:orgy = yes }
+		carn_sex_scene_request_orgy = yes
 	}
-	else = {
-		carn_sex_scene_exclude_bdsm = yes
+	if = {
+		limit = { scope:bdsm = yes }
+		carn_sex_scene_request_bdsm = yes
 	}
 }
 
@@ -220,6 +150,27 @@ carnx_sex_interaction_stress_impact_effect = {
 		stress_impact = {
 			zealous = miniscule_stress_impact_gain
 			cynical = miniscule_stress_impact_loss
+		}
+	}
+}
+
+carnx_demand_sex_interaction_opinion_impact_effect = {
+	if = {
+		limit = {
+			carnx_is_sex_with_character_crime_trigger = { CHARACTER = $PARTNER$ }
+		}
+		add_opinion = {
+			target = $PARTNER$
+			modifier = carnx_demanded_sex_crime_opinion
+		}
+	}
+	else_if = {
+		limit = {
+			carnx_is_sex_with_character_shunned_trigger = { CHARACTER = $PARTNER$ }
+		}
+		add_opinion = {
+			target = $PARTNER$
+			modifier = carnx_demanded_sex_shunned_opinion
 		}
 	}
 }

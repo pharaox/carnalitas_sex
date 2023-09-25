@@ -9,9 +9,8 @@ carn_sex_scene = {
 		# CSR: Replace default Carnalitas sex scenes
 		100 = carnx_sex_scene.0001 # Generic consensual scene, using the PDX sex scene generator
 		100 = carnx_sex_scene.0002 # Generic consensual scene
-		100 = carnx_sex_scene.0003 # Generic dubcon scene (dom)
-		100 = carnx_sex_scene.0004 # Generic dubcon scene (sub)
-		100 = carnx_sex_scene.0005 # Bdsm dubcon scene (dom)
+		100 = carnx_sex_scene.0003 # Generic dubcon scene (dom), supports orgy
+		100 = carnx_sex_scene.0004 # Generic dubcon scene (sub), supports orgy and bdsm
 		100 = carn_sex_scene.0003 # Rape prisoner noncon scene (dom)
 		100 = carn_sex_scene.0004 # Rape prisoner noncon scene (sub)
 	}

@@ -1,4 +1,25 @@
-﻿carnx_request_sex_scene_location_effect = {
+﻿carnx_sex_scene_effect = {
+	$PLAYER$ = { save_scope_as = carn_sex_player }
+	$TARGET$ = { save_scope_as = carn_sex_target }
+	$TARGET2$ = { save_scope_as = carn_sex_target2 }
+	save_scope_value_as = {
+		name = carn_sex_stress_effects
+		value = $STRESS_EFFECTS$
+	}
+	save_scope_value_as = {
+		name = carn_sex_drama
+		value = $DRAMA$
+	}
+	scope:carn_sex_player = {
+		clear_global_variable_list = carn_sex_scene_flags
+		trigger_event = {
+			on_action = carn_sex_scene
+		}
+	}
+	carn_clear_sex_scene_flags_effect = yes
+}
+
+carnx_request_sex_scene_location_effect = {
 	add_to_global_variable_list = {
 		name = carnx_requested_sex_scene_locations
 		target = flag:$LOCATION$

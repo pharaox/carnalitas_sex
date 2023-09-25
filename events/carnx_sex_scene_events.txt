@@ -1,10 +1,9 @@
 ﻿namespace = carnx_sex_scene
 
 # 0001. Generic consensual scene (Paradox)
-# 0002. Generic consensual scene
-# 0003. Generic dubcon (dom)
+# 0002. Generic consensual scene, supports orgy
+# 0003. Generic dubcon (dom), supports orgy and bdsm
 # 0004. Generic dubcon (sub)
-# 0005. Bdsm dubcon (dom)
 
 carnx_sex_scene.0001 = {
 	type = character_event
@@ -90,8 +89,15 @@ carnx_sex_scene.0001 = {
 
 carnx_sex_scene.0002 = {
 	type = character_event
-	title = carnx_sex_scene.0002.t
-	desc = carnx_sex_scene.0002.desc
+	title = carnx_sex_scene.t
+	desc = {
+		desc = carnx_sex_scene.desc
+		triggered_desc = {
+			trigger = { exists = scope:carn_sex_target2 }
+			desc = carnx_sex_scene.desc2
+		}
+		desc = carnx_sex_scene.quote
+	}
 
 	theme = carnx_sex_scene
 
@@ -103,15 +109,25 @@ carnx_sex_scene.0002 = {
 		character = scope:carn_sex_target
 		scripted_animation = carnx_sex_scene_target_animation
 	}
+	lower_right_portrait = {
+		trigger = { exists = scope:carn_sex_target2 }
+		character = scope:carn_sex_target2
+		animation = flirtation
+	}
 
 	trigger = {
 		carn_sex_scene_is_consensual = yes
+		carn_sex_scene_is_orgy = yes
 		carn_sex_scene_is_giving_player = yes
 		carn_sex_scene_matches_requested_flags_trigger = yes
 	}
 
 	immediate = {
 		carn_sex_scene_is_consensual = yes
+		if = {
+			limit = { carnx_sex_scene_flag_requested_trigger = { FLAG = orgy } }
+			carn_sex_scene_is_orgy = yes
+		}
 
 		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_add_sex_scene_location_effect = { LOCATION = garden }
@@ -140,11 +156,25 @@ carnx_sex_scene.0002 = {
 			STRESS_EFFECTS = scope:carn_sex_stress_effects
 			DRAMA = scope:carn_sex_drama
 		}
+		if = {
+			limit = { exists = scope:carn_sex_target2 }
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:carn_sex_player
+				CHARACTER_2 = scope:carn_sex_target2
+				C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+				C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+				STRESS_EFFECTS = scope:carn_sex_stress_effects
+				DRAMA = scope:carn_sex_drama
+			}
+		}
 
 		scope:carn_sex_player = {
 			carn_undress_character_effect = yes
 		}
 		scope:carn_sex_target = {
+			carn_undress_character_effect = yes
+		}
+		scope:carn_sex_target2 ?= {
 			carn_undress_character_effect = yes
 		}
 	}
@@ -156,20 +186,30 @@ carnx_sex_scene.0002 = {
 		scope:carn_sex_target = {
 			carn_dress_character_effect = yes
 		}
+		scope:carn_sex_target2 ?= {
+			carn_dress_character_effect = yes
+		}
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
 	}
 
 	option = {
-		name = carnx_sex_scene.0002.a
+		name = carnx_sex_scene.a
 	}
 }
 
 carnx_sex_scene.0003 = {
 	type = character_event
-	title = carnx_sex_scene.0003.t
-	desc = carnx_sex_scene.0003.desc
+	title = carnx_sex_scene.t
+	desc = {
+		desc = carnx_sex_scene.desc
+		triggered_desc = {
+			trigger = { exists = scope:carn_sex_target2 }
+			desc = carnx_sex_scene.desc2
+		}
+		desc = carnx_sex_scene.quote
+	}
 
 	theme = carnx_sex_scene
 
@@ -181,10 +221,17 @@ carnx_sex_scene.0003 = {
 		character = scope:carn_sex_target
 		scripted_animation = carnx_sex_scene_target_animation
 	}
+	lower_right_portrait = {
+		trigger = { exists = scope:carn_sex_target2 }
+		character = scope:carn_sex_target2
+		animation = flirtation
+	}
 
 	trigger = {
 		carn_sex_scene_is_dubcon = yes
 		carn_sex_scene_is_dom_player = yes
+		carn_sex_scene_is_orgy = yes
+		carn_sex_scene_is_bdsm = yes
 		carn_sex_scene_is_giving_player = yes
 		carn_sex_scene_matches_requested_flags_trigger = yes
 	}
@@ -192,9 +239,18 @@ carnx_sex_scene.0003 = {
 	immediate = {
 		carn_sex_scene_is_dubcon = yes
 		carn_sex_scene_is_dom_player = yes
+		if = {
+			limit = { carnx_sex_scene_flag_requested_trigger = { FLAG = orgy } }
+			carn_sex_scene_is_orgy = yes
+		}
+		if = {
+			limit = { carnx_sex_scene_flag_requested_trigger = { FLAG = bdsm } }
+			carn_sex_scene_is_bdsm = yes
+		}
 
 		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_add_sex_scene_location_effect = { LOCATION = garden }
+		carnx_add_sex_scene_location_effect = { LOCATION = dungeon }
 
 		carnx_set_sex_scene_location_effect = yes
 		carnx_set_sex_scene_target_effect = yes
@@ -220,11 +276,25 @@ carnx_sex_scene.0003 = {
 			STRESS_EFFECTS = scope:carn_sex_stress_effects
 			DRAMA = scope:carn_sex_drama
 		}
+		if = {
+			limit = { exists = scope:carn_sex_target2 }
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:carn_sex_player
+				CHARACTER_2 = scope:carn_sex_target2
+				C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+				C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+				STRESS_EFFECTS = scope:carn_sex_stress_effects
+				DRAMA = scope:carn_sex_drama
+			}
+		}
 
 		scope:carn_sex_player = {
 			carn_undress_character_effect = yes
 		}
 		scope:carn_sex_target = {
+			carn_undress_character_effect = yes
+		}
+		scope:carn_sex_target2 ?= {
 			carn_undress_character_effect = yes
 		}
 	}
@@ -236,20 +306,26 @@ carnx_sex_scene.0003 = {
 		scope:carn_sex_target = {
 			carn_dress_character_effect = yes
 		}
+		scope:carn_sex_target2 ?= {
+			carn_dress_character_effect = yes
+		}
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
 	}
 
 	option = {
-		name = carnx_sex_scene.0003.a
+		name = carnx_sex_scene.a
 	}
 }
 
 carnx_sex_scene.0004 = {
 	type = character_event
-	title = carnx_sex_scene.0004.t
-	desc = carnx_sex_scene.0004.desc
+	title = carnx_sex_scene.t
+	desc = {
+		desc = carnx_sex_scene.desc
+		desc = carnx_sex_scene.quote
+	}
 
 	theme = carnx_sex_scene
 
@@ -321,88 +397,6 @@ carnx_sex_scene.0004 = {
 	}
 
 	option = {
-		name = carnx_sex_scene.0004.a
-	}
-}
-
-carnx_sex_scene.0005 = {
-	type = character_event
-	title = carnx_sex_scene.0005.t
-	desc = carnx_sex_scene.0005.desc
-
-	theme = carnx_sex_scene
-
-	left_portrait = {
-		character = scope:carn_sex_player
-		scripted_animation = carnx_sex_scene_player_animation
-	}
-	right_portrait = {
-		character = scope:carn_sex_target
-		scripted_animation = carnx_sex_scene_target_animation
-	}
-
-	trigger = {
-		carn_sex_scene_is_dubcon = yes
-		carn_sex_scene_is_dom_player = yes
-		carn_sex_scene_is_bdsm = yes
-		carn_sex_scene_is_giving_player = yes
-		carn_sex_scene_matches_requested_flags_trigger = yes
-	}
-
-	immediate = {
-		carn_sex_scene_is_dubcon = yes
-		carn_sex_scene_is_dom_player = yes
-		carn_sex_scene_is_bdsm = yes
-
-		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
-		carnx_add_sex_scene_location_effect = { LOCATION = dungeon }
-
-		carnx_set_sex_scene_target_effect = yes
-		carnx_set_sex_scene_location_effect = yes
-		carnx_set_sex_scene_player_attitude_effect = yes
-		carnx_set_sex_scene_target_attitude_effect = yes
-		carnx_set_sex_scene_quote_effect = yes
-
-		carnx_sex_debug_log_6_effect = {
-			MSG = carnx_sex_debug_msg_sex_scene_0005_fired
-			NAME1 = carn_sex_target TYPE1 = flag:character
-			NAME2 = sex_scene_location TYPE2 = flag:variable
-			NAME3 = sex_scene_target TYPE3 = flag:variable
-			NAME4 = sex_scene_player_attitude TYPE4 = flag:variable
-			NAME5 = sex_scene_target_attitude TYPE5 = flag:variable
-			NAME6 = sex_scene_quote TYPE6 = flag:variable
-		}
-
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:carn_sex_player
-			CHARACTER_2 = scope:carn_sex_target
-			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
-			C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
-			STRESS_EFFECTS = scope:carn_sex_stress_effects
-			DRAMA = scope:carn_sex_drama
-		}
-
-		scope:carn_sex_player = {
-			carn_undress_character_effect = yes
-		}
-		scope:carn_sex_target = {
-			carn_undress_character_effect = yes
-		}
-	}
-
-	after = {
-		scope:carn_sex_player = {
-			carn_dress_character_effect = yes
-		}
-		scope:carn_sex_target = {
-			carn_dress_character_effect = yes
-		}
-
-		carnx_clear_sex_scene_variables_effect = yes
-		carnx_clear_sex_scene_locations_effect = yes
-	}
-
-	option = {
-		name = carnx_sex_scene.0005.a
+		name = carnx_sex_scene.a
 	}
 }

@@ -4,6 +4,32 @@
 	interface_priority = 40
 	icon = carn_icon
 
+	redirect = {
+		scope:recipient = {
+			save_scope_as = secondary_recipient
+		}
+	}
+
+	populate_recipient_list = {
+		scope:recipient = {
+			add_to_list = characters
+		}
+		scope:actor = {
+			if = {
+				limit = {
+					carnx_can_do_orgy_trigger = yes
+				}
+				every_courtier = {
+					limit = {
+						NOT = { this = scope:recipient }
+						carnx_is_eligible_sex_secondary_target_trigger = { PLAYER = scope:actor }
+					}
+					add_to_list = characters
+				}
+			}
+		}
+	}
+
 	is_shown = {
 		NOR = {
 			has_game_rule = carn_sex_interaction_disabled
@@ -52,6 +78,58 @@
 
 	cooldown = { months = carn_sex_interaction_cooldown }
 
+	# Orgy
+	send_option = {
+		is_shown = {
+			scope:actor = {
+				carnx_can_do_orgy_trigger = yes
+				custom_tooltip = {
+					text = "carnx_has_eligible_sex_secondary_target_tt"
+					any_courtier = {
+						NOT = { this = scope:recipient }
+						carnx_is_eligible_sex_secondary_target_trigger = { PLAYER = scope:actor }
+					}
+				}
+			}
+		}
+		is_valid = {
+			NOT = { scope:recipient = scope:secondary_recipient }
+		}
+		flag = orgy
+		localization = "carnx_sex_orgy_option"
+		current_description = {
+			desc = "carnx_sex_orgy_option_desc"
+		}
+	}
+
+	# BDSM
+	send_option = {
+		is_shown = {
+			scope:actor = {
+				carnx_can_do_bdsm_trigger = yes
+			}
+			scope:recipient = {
+				carnx_is_eligible_bdsm_target_trigger = { PLAYER = scope:actor }
+			}
+		}
+		is_valid = {
+			OR = {
+				NOT = { exists = scope:secondary_recipient }
+				scope:recipient = scope:secondary_recipient
+				scope:secondary_recipient = {
+					carnx_is_eligible_bdsm_target_trigger = { PLAYER = scope:actor }
+				}
+			}
+		}
+		flag = bdsm
+		localization = "carnx_sex_bdsm_option"
+		current_description = {
+			desc = "carnx_sex_bdsm_option_desc"
+		}
+	}
+
+	send_options_exclusive = no
+
 	on_accept = {
 		scope:actor = {
 			# If the recpient is a prostitute, pay the price
@@ -89,6 +167,20 @@
 					}
 				}
 
+				if = {
+					limit = { scope:orgy = yes }
+					show_as_tooltip = {
+						carn_had_sex_with_effect = {
+							CHARACTER_1 = scope:actor
+							CHARACTER_2 = scope:secondary_recipient
+							C1_PREGNANCY_CHANCE = pregnancy_chance
+							C2_PREGNANCY_CHANCE = pregnancy_chance
+							STRESS_EFFECTS = no
+							DRAMA = yes
+						}
+					}
+				}
+
 				# Piety impact
 				carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:recipient }
 
@@ -114,6 +206,18 @@
 					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
 				}
 
+				# Effects for secondary recipient
+				if = {
+					limit = { scope:orgy = yes }
+					scope:secondary_recipient = {
+						# Piety impact
+						carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:actor }
+
+						# Stress impact
+						carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
+					}
+				}
+
 				add_character_flag = {
 					flag = carn_sex_interaction_effect_cd
 					months = carn_sex_interaction_cooldown_base
@@ -132,11 +236,23 @@
 				carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
 
 				# Actually fire the sex scene
-				carn_sex_scene_effect = {
-					PLAYER = scope:actor
-					TARGET = scope:recipient
-					STRESS_EFFECTS = no
-					DRAMA = yes
+				if = {
+					limit = { scope:orgy = yes }
+					carnx_sex_scene_effect = {
+						PLAYER = scope:actor
+						TARGET = scope:recipient
+						TARGET2 = scope:secondary_recipient
+						STRESS_EFFECTS = no
+						DRAMA = yes
+					}
+				}
+				else = {
+					carn_sex_scene_effect = {
+						PLAYER = scope:actor
+						TARGET = scope:recipient
+						STRESS_EFFECTS = no
+						DRAMA = yes
+					}
 				}
 			}
 		}

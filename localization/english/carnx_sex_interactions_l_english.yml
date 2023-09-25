@@ -3,6 +3,9 @@
  carnx_demand_sex_interaction: "$dsi_demand_sex_interaction$"
  carnx_demand_sex_interaction_desc: "Demand sex from your slave [recipient.GetShortUINameNoTooltip]"
 
+ recipient_secondary_carn_sex_interaction: "Partner"
+ recipient_secondary_dsi_demand_sex_interaction: "Partner"
+
  carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip] is not attracted to [partner.GetShortUINameNoTooltip]#!"
 
  carnx_sex_interaction_sodomy_crime_warning_tt: "#X Sodomy is illegal in [character.GetFaith.GetName]#!"
@@ -13,3 +16,11 @@
  carnx_sex_interaction_incest_shunned_warning_tt: "#X Incest is shunned in [character.GetFaith.GetName]#!"
  carnx_sex_interaction_prostitution_crime_warning_tt: "#X Prostitution is illegal in [character.GetFaith.GetName]#!"
  carnx_sex_interaction_prostitution_shunned_warning_tt: "#X Prostitution is shunned in [character.GetFaith.GetName]#!"
+
+ carnx_sex_orgy_option: "Include a second partner"
+ carnx_sex_orgy_option_desc: "Include a second partner in your lovemaking. This option is available because you are $trait_lustful$ or $trait_rakish$ and there are eligible partners."
+ carnx_sex_bdsm_option: "Indulge your darker self"
+ carnx_sex_bdsm_option_desc: "Indulge your darker self by engaging in BDSM. This option is available because you are $trait_sadistic$ and [recipient.GetShortUINameNoTooltip] is your slave."
+
+ carnx_has_eligible_sex_secondary_target_tt: "You have a consort who is an eligible secondary partner"
+ carnx_has_eligible_demand_sex_secondary_target_tt: "You have a slave who is an eligible secondary partner"

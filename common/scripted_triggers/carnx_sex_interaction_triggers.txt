@@ -36,6 +36,100 @@ carnx_is_sex_interaction_blocked_trigger = {
 	}
 }
 
+carnx_is_eligible_sex_target_trigger = {
+	save_temporary_scope_as = target
+	is_adult = yes
+	carnx_is_sex_interaction_blocked_trigger = no
+	carn_can_have_sex_trigger = yes
+	is_at_same_location = $PLAYER$
+	$PLAYER$ = {
+		carn_relationship_allows_free_sex_trigger = { PARTNER = scope:target }
+		is_attracted_to_gender_of = scope:target
+		NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
+	}
+}
+
+carnx_is_eligible_demand_sex_target_trigger = {
+	save_temporary_scope_as = target
+	is_adult = yes
+	carnx_is_sex_interaction_blocked_trigger = no
+	carn_can_have_sex_trigger = yes
+	is_at_same_location = $PLAYER$
+	$PLAYER$ = {
+		carnx_relationship_allows_demand_sex_trigger = { PARTNER = scope:target }
+		has_usable_hook = scope:target
+		is_attracted_to_gender_of = scope:target
+		NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
+	}
+}
+
+carnx_is_eligible_sex_secondary_target_trigger = {
+	carnx_is_eligible_sex_target_trigger = { PLAYER = $PLAYER$ }
+	OR = {
+		is_consort_of = $PLAYER$
+		carnx_is_slave_consort_of_trigger = { CHARACTER = $PLAYER$ }
+	}
+	trigger_if = {
+		limit = { is_spouse_of = $PLAYER$ }
+		has_trait = lustful
+	}
+	trigger_else = {
+		NOT = { has_trait = chaste }
+	}
+}
+
+carnx_is_eligible_bdsm_target_trigger = {
+	OR = {
+		has_relation_slave_owner = $PLAYER$
+		carn_is_working_as_prostitute_trigger = yes
+	}
+}
+
+carnx_can_do_orgy_trigger = {
+	OR = {
+		has_trait = lustful
+		has_trait = rakish
+	}
+}
+
+carnx_can_do_bdsm_trigger = {
+	has_trait = sadistic
+}
+
+# Checks if an attracted target is happy to have sex with $CHARACTER$,
+# and therefore a consensual scene would be appropriate.
+carnx_is_attracted_target_happy_with_sex_trigger = {
+	# Consorts
+	trigger_if = {
+		limit = {
+			OR = {
+				is_consort_of = $CHARACTER$
+				carnx_is_slave_consort_of_trigger = { CHARACTER = $CHARACTER$ }
+			}
+		}
+		carnx_is_attracted_consort_happy_with_sex_trigger = { CHARACTER = $CHARACTER$ }
+	}
+	# Slaves that are not consorts
+	trigger_else_if = {
+		limit = {
+			has_relation_slave_owner = $CHARACTER$
+			NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = $CHARACTER$ } }
+		}
+		carnx_is_attracted_slave_happy_with_sex_trigger = { CHARACTER = $CHARACTER$ }
+	}
+	# Prostitutes
+	trigger_else_if = {
+		limit = {
+			carn_is_working_as_prostitute_trigger = yes
+		}
+		carnx_is_attracted_prostitute_happy_with_sex_trigger = { CHARACTER = $CHARACTER$ }
+	}
+	# Others
+	trigger_else = {
+		always = yes
+	}
+}
+
 # Checks if an attracted consort is happy to have sex with $CHARACTER$,
 # and therefore a consensual scene would be appropriate.
 carnx_is_attracted_consort_happy_with_sex_trigger = {

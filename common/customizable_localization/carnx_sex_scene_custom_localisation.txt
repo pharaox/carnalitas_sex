@@ -25,6 +25,48 @@
 	}
 }
 
+carnx_sex_scene_text2 = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { carn_sex_scene_was_orgy = yes }
+		localization_key = carnx_sex_scene_text2_orgy_1
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = carnx_sex_scene_text2_f
+	}
+}
+
+carnx_sex_scene_quote = {
+	type = character
+
+	text = {
+		trigger = {
+			OR = {
+				carn_sex_scene_was_consensual = yes
+				AND = {
+					carn_sex_scene_was_dubcon = yes
+					carn_sex_scene_was_dom_player = yes
+				}
+			}
+		}
+		localization_key = carnx_sex_scene_dubcon_dom_quote
+	}
+	text = {
+		trigger = {
+			carn_sex_scene_was_dubcon = yes
+			carn_sex_scene_was_sub_player = yes
+		}
+		localization_key = carnx_sex_scene_dubcon_sub_quote
+	}
+	text = {
+		localization_key = carnx_sex_scene_quote_f
+	}
+}
+
 carnx_sex_scene_dubcon_dom_opening = {
 	type = character
 
@@ -913,6 +955,10 @@ carnx_sex_scene_title = {
 	type = character
 
 	text = {
+		trigger = { carn_sex_scene_was_consensual = yes }
+		localization_key = carnx_sex_scene_consensual_title
+	}
+	text = {
 		trigger = { carn_sex_scene_was_dubcon = yes }
 		localization_key = carnx_sex_scene_dubcon_title
 	}
@@ -921,12 +967,35 @@ carnx_sex_scene_title = {
 	}
 }
 
+carnx_sex_scene_consensual_title = {
+	type = character
+
+	text = {
+		trigger = { carn_sex_scene_was_orgy = yes }
+		localization_key = carnx_sex_scene_consensual_title_1
+	}
+	text = {
+		localization_key = carnx_sex_scene_consensual_title_f
+	}
+}
+
 carnx_sex_scene_dubcon_title = {
 	type = character
 
 	text = {
-		trigger = { carn_sex_scene_was_bdsm = yes }
+		trigger = {
+			carn_sex_scene_was_bdsm = yes
+			carn_sex_scene_was_orgy = yes
+		}
 		localization_key = carnx_sex_scene_dubcon_title_1
+	}
+	text = {
+		trigger = { carn_sex_scene_was_bdsm = yes }
+		localization_key = carnx_sex_scene_dubcon_title_2
+	}
+	text = {
+		trigger = { carn_sex_scene_was_orgy = yes }
+		localization_key = carnx_sex_scene_dubcon_title_3
 	}
 	text = {
 		localization_key = carnx_sex_scene_dubcon_title_f
@@ -937,11 +1006,23 @@ carnx_sex_scene_option = {
 	type = character
 
 	text = {
+		trigger = { carn_sex_scene_was_consensual = yes }
+		localization_key = carnx_sex_scene_consensual_option
+	}
+	text = {
 		trigger = { carn_sex_scene_was_dubcon = yes }
 		localization_key = carnx_sex_scene_dubcon_option
 	}
 	text = {
 		localization_key = carn_sex_scene.0001.a
+	}
+}
+
+carnx_sex_scene_consensual_option = {
+	type = character
+
+	text = {
+		localization_key = carnx_sex_scene_consensual_option_f
 	}
 }
 
