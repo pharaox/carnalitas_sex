@@ -13,7 +13,7 @@ scripted_trigger carnx_sex_debug_0001_valid_target_trigger = {
 	is_at_same_location = root
 	OR = {
 		root = {
-			carn_relationship_allows_free_sex_trigger = { PARTNER = prev }
+			carnx_relationship_allows_free_sex_trigger = { PARTNER = prev }
 		}
 		root = {
 			carnx_relationship_allows_demand_sex_trigger = { PARTNER = prev }

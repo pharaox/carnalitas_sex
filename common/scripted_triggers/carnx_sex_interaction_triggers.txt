@@ -1,4 +1,4 @@
-﻿carn_relationship_allows_free_sex_trigger = {
+﻿carnx_relationship_allows_free_sex_trigger = {
 	save_temporary_scope_as = character
 
 	OR = {
@@ -43,7 +43,7 @@ carnx_is_eligible_sex_target_trigger = {
 	carn_can_have_sex_trigger = yes
 	is_at_same_location = $PLAYER$
 	$PLAYER$ = {
-		carn_relationship_allows_free_sex_trigger = { PARTNER = scope:target }
+		carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:target }
 		is_attracted_to_gender_of = scope:target
 		NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
 	}
@@ -212,7 +212,7 @@ carnx_is_sex_with_character_incest_trigger = {
 
 carnx_is_sex_with_character_prostitution_trigger = {
 	$CHARACTER$ = { carn_is_working_as_prostitute_trigger = yes }
-	NOT = { carn_relationship_allows_free_sex_trigger = { PARTNER = $CHARACTER$ } }
+	NOT = { carnx_relationship_allows_free_sex_trigger = { PARTNER = $CHARACTER$ } }
 }
 
 carnx_is_adultery_crime_trigger = {

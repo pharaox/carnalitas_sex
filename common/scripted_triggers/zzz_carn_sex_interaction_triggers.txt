@@ -1,0 +1,19 @@
+﻿# Modified to allow free sex with "slave consorts"
+# Used by the original Carnalitas and CBO interactions
+# Overridden from Carnalitas
+carn_relationship_allows_free_sex_trigger = {
+	OR = {
+		is_consort_of = $PARTNER$
+		carnx_is_slave_consort_of_trigger = { CHARACTER = $PARTNER$ }
+		has_relation_lover = $PARTNER$
+		has_relation_soulmate = $PARTNER$
+		AND = {
+			has_relation_slave = $PARTNER$
+			NOT = {
+				relation_with_character_is_incestuous_in_my_faith_trigger = {
+					CHARACTER = $PARTNER$
+				}
+			}
+		}
+	}
+}

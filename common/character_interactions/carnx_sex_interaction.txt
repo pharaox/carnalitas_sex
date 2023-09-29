@@ -45,7 +45,7 @@
 		}
 		OR = {
 			scope:actor = {
-				carn_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient }
+				carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient }
 			}
 			scope:recipient = {
 				carn_is_working_as_prostitute_trigger = yes
@@ -69,7 +69,7 @@
 					carn_is_working_as_prostitute_trigger = yes
 				}
 				scope:actor = {
-					NOT = { carn_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient } }
+					NOT = { carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient } }
 				}
 			}
 			scope:actor.gold >= scope:recipient.carn_prostitute_sex_interaction_price_value
@@ -139,7 +139,7 @@
 						carn_is_working_as_prostitute_trigger = yes
 					}
 					scope:actor = {
-						NOT = { carn_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient } }
+						NOT = { carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient } }
 					}
 				}
 
