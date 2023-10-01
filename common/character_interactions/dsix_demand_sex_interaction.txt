@@ -79,7 +79,10 @@
 			}
 		}
 		is_valid = {
-			NOT = { scope:recipient = scope:secondary_recipient }
+			custom_tooltip = {
+				text = "carnx_secondary_target_same_as_primary_target_tt"
+				NOT = { scope:recipient = scope:secondary_recipient }
+			}
 		}
 		flag = orgy
 		localization = "carnx_sex_orgy_option"
@@ -99,11 +102,14 @@
 			}
 		}
 		is_valid = {
-			OR = {
-				NOT = { exists = scope:secondary_recipient }
-				scope:recipient = scope:secondary_recipient
-				scope:secondary_recipient = {
-					carnx_is_eligible_bdsm_target_trigger = { PLAYER = scope:actor }
+			custom_tooltip = {
+				text = "carnx_secondary_target_not_eligible_bdsm_target_tt"
+				OR = {
+					NOT = { exists = scope:secondary_recipient }
+					scope:recipient = scope:secondary_recipient
+					scope:secondary_recipient = {
+						carnx_is_eligible_bdsm_target_trigger = { PLAYER = scope:actor }
+					}
 				}
 			}
 		}
