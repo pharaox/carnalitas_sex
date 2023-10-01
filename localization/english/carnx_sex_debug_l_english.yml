@@ -12,6 +12,8 @@
  carnx_sex_debug_msg_sex_scene_0004_fired: "$carnx_sex_debug_prefix_2$: Sex Scene 4 event fired: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
  carnx_sex_debug_msg_sex_scene_0005_fired: "$carnx_sex_debug_prefix_2$: Sex Scene 5 event fired: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
 
+ carnx_sex_debug_msg_carnal_court_sex_scene_requested: "$carnx_sex_debug_prefix$: Carnal Court sex scene requested but CBO mod is not available"
+
  carnx_carn_sex_target: "carn_sex_target: [THIS.Var('carn_sex_target').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_target').Char.GetID], [Select_CString(THIS.Var('carn_sex_target').Char.IsFemale, 'female', 'male')])"
  carnx_sex_scene_location: "sex_scene_location: [THIS.Var('sex_scene_location').GetFlagName]"
  carnx_sex_scene_target: "sex_scene_target: [THIS.Var('sex_scene_target').GetFlagName]"
