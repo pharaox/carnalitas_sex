@@ -109,7 +109,7 @@ carnx_sex_scene.0002 = {
 		character = scope:carn_sex_target
 		scripted_animation = carnx_sex_scene_target_animation
 	}
-	lower_right_portrait = {
+	lower_center_portrait = {
 		trigger = { exists = scope:carn_sex_target2 }
 		character = scope:carn_sex_target2
 		animation = flirtation
@@ -221,7 +221,7 @@ carnx_sex_scene.0003 = {
 		character = scope:carn_sex_target
 		scripted_animation = carnx_sex_scene_target_animation
 	}
-	lower_right_portrait = {
+	lower_center_portrait = {
 		trigger = { exists = scope:carn_sex_target2 }
 		character = scope:carn_sex_target2
 		animation = flirtation
