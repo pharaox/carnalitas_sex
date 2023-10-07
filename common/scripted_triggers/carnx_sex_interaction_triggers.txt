@@ -89,11 +89,15 @@ carnx_can_do_orgy_trigger = {
 	OR = {
 		has_trait = lustful
 		has_trait = rakish
+		has_trait = seducer
 	}
 }
 
 carnx_can_do_bdsm_trigger = {
-	has_trait = sadistic
+	OR = {
+		has_trait = sadistic
+		has_trait = torturer
+	}
 }
 
 # Checks if an attracted target is happy to have sex with $CHARACTER$,

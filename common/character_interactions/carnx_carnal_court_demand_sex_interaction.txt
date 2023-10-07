@@ -84,17 +84,14 @@
 
 				# Additional stress impact of demanding sex
 				stress_impact = {
-					compassionate = minor_stress_impact_gain
-					sadistic = minor_stress_impact_loss
+					compassionate = miniscule_stress_impact_gain
+					sadistic = miniscule_stress_impact_loss
 					callous = miniscule_stress_impact_loss
 					# TODO More traits causing stress impact?
 				}
 
 				# Effects for recipient
 				scope:recipient = {
-					# Piety impact
-					carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:actor }
-
 					# Stress impact
 					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
 

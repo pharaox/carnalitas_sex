@@ -203,6 +203,12 @@
 				# Stress impact
 				carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:recipient }
 
+				# Additional piety and stress impact for BDSM
+				if = {
+					limit = { scope:bdsm = yes }
+					carnx_sex_interaction_bdsm_player_effect = { PARTNER = scope:recipient }
+				}
+
 				# Effects for recipient
 				scope:recipient = {
 					# Piety impact
@@ -210,6 +216,12 @@
 
 					# Stress impact
 					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
+
+					# Additional stress and opinion impact for BDSM
+					if = {
+						limit = { scope:bdsm = yes }
+						carnx_sex_interaction_bdsm_target_effect = { PARTNER = scope:actor }
+					}
 				}
 
 				# Effects for secondary recipient
@@ -221,6 +233,12 @@
 
 						# Stress impact
 						carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
+
+						# Additional stress and opinion impact for BDSM
+						if = {
+							limit = { scope:bdsm = yes }
+							carnx_sex_interaction_bdsm_target_effect = { PARTNER = scope:actor }
+						}
 					}
 				}
 

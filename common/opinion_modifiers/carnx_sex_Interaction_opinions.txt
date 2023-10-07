@@ -9,3 +9,9 @@ carnx_demanded_sex_shunned_opinion = {
 	decaying = yes
 	years = 3
 }
+
+carnx_forced_me_into_bdsm_opinion = {
+	opinion = -25
+	decaying = yes
+	years = 10
+}

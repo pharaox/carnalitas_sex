@@ -192,36 +192,48 @@
 
 				# Additional stress impact of demanding sex
 				stress_impact = {
-					compassionate = minor_stress_impact_gain
-					sadistic = minor_stress_impact_loss
+					compassionate = miniscule_stress_impact_gain
+					sadistic = miniscule_stress_impact_loss
 					callous = miniscule_stress_impact_loss
 					# TODO More traits causing stress impact?
 				}
 
+				# Additional piety and stress impact for BDSM
+				if = {
+					limit = { scope:bdsm = yes }
+					carnx_sex_interaction_bdsm_player_effect = { PARTNER = scope:recipient }
+				}
+
 				# Effects for recipient
 				scope:recipient = {
-					# Piety impact
-					carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:actor }
-
 					# Stress impact
 					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
 
 					# Opinion effects of being demanded sex
 					carnx_demand_sex_interaction_opinion_impact_effect = { PARTNER = scope:actor }
+
+					# Additional stress and opinion impact for BDSM
+					if = {
+						limit = { scope:bdsm = yes }
+						carnx_sex_interaction_bdsm_target_effect = { PARTNER = scope:actor }
+					}
 				}
 
 				# Effects for secondary recipient
 				if = {
 					limit = { scope:orgy = yes }
 					scope:secondary_recipient = {
-						# Piety impact
-						carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:actor }
-
 						# Stress impact
 						carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
 
 						# Opinion effects of being demanded sex
 						carnx_demand_sex_interaction_opinion_impact_effect = { PARTNER = scope:actor }
+
+						# Additional stress and opinion impact for BDSM
+						if = {
+							limit = { scope:bdsm = yes }
+							carnx_sex_interaction_bdsm_target_effect = { PARTNER = scope:actor }
+						}
 					}
 				}
 

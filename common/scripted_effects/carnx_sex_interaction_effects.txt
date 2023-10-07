@@ -174,3 +174,73 @@ carnx_demand_sex_interaction_opinion_impact_effect = {
 		}
 	}
 }
+
+carnx_sex_interaction_bdsm_player_effect = {
+	custom_tooltip = carnx_sex_interaction_bdsm_warning_tt
+
+	# Piety impact
+	if = {
+		limit = {
+			NOT = { has_perk = divine_retribution_perk }
+		}
+		add_piety = minor_piety_loss
+	}
+
+	# Stress impact
+	if = {
+		limit = { has_relation_rival = $PARTNER$ }
+
+		if = {
+			limit = {
+				NOR = {
+					has_trait = sadistic
+					has_trait = vengeful
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+			}
+			add_stress = minor_stress_impact_loss
+		}
+		else = {
+			stress_impact = {
+				sadistic = medium_stress_impact_loss
+				vengeful = medium_stress_impact_loss
+				compassionate = miniscule_stress_impact_gain
+				forgiving = miniscule_stress_impact_gain
+			}
+		}
+	}
+	else = {
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+			vengeful = minor_stress_impact_loss
+		}
+	}
+}
+
+carnx_sex_interaction_bdsm_target_effect = {
+	custom_tooltip = carnx_sex_interaction_bdsm_warning_tt
+
+	# Stress impact
+	if = {
+		limit = {
+			NOR = {
+				has_trait = craven
+				has_trait = brave
+			}
+		}
+		add_stress = minor_stress_impact_gain
+	}
+	else = {
+		stress_impact = {
+			craven = medium_stress_impact_gain
+			brave = miniscule_stress_impact_gain
+		}
+	}
+
+	# Opinion effects
+	add_opinion = {
+		target = $PARTNER$
+		modifier = carnx_forced_me_into_bdsm_opinion
+	}
+}
