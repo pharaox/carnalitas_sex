@@ -144,7 +144,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_19 } # Anthologica Rarissima
 		}
-		20 = {
+		200 = { # x10
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
@@ -155,7 +155,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_20 } # Anthologica Rarissima
 		}
-		10 = {
+		100 = { # x10
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
@@ -186,7 +186,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_23 } # Anthologica Rarissima
 		}
-		20 = {
+		200 = { # x10
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
@@ -198,7 +198,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_24 } # Anthologica Rarissima
 		}
-		10 = {
+		100 = { # x10
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
@@ -219,7 +219,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_26 } # Anthologica Rarissima
 		}
-		20 = {
+		200 = { # x10
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
@@ -240,7 +240,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_28 } # Anthologica Rarissima
 		}
-		10 = {
+		100 = { # x10
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
@@ -260,8 +260,8 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_30 } # The Perfumed Garden
 		}
-		10 = {
-			trigger = {
+		100 = {
+			trigger = { # x10
 				carn_sex_scene_was_bdsm = no
 				is_female = yes
 				scope:carn_sex_target = { is_male = yes }
@@ -280,7 +280,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_32 } # The Perfumed Garden
 		}
-		10 = {
+		20 = { # x2
 			trigger = {
 				is_male = yes
 				any_consort = { count > 1 }
@@ -308,7 +308,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_35 } # The Perfumed Garden
 		}
-		20 = {
+		200 = { # x100
 			trigger = {
 				is_female = yes
 				scope:carn_sex_target = { is_male = yes }
@@ -337,7 +337,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_38 } # The Perfumed Garden
 		}
-		55 = { # Reduced
+		55 = { # x0.5
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
@@ -347,7 +347,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_39 } # The Perfumed Garden
 		}
-		130 = { # Reduced
+		130 = { # x0.5
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
@@ -356,7 +356,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_40 } # The Perfumed Garden
 		}
-		30 = { # Reduced
+		30 = { # x0.5
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
@@ -391,7 +391,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_44 } # The Perfumed Garden
 		}
-		10 = {
+		100 = { # x10
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
@@ -408,7 +408,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_47 } # The Perfumed Garden
 		}
-		120 = { # Reduced
+		120 = { # x0.5
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_female = yes
@@ -418,7 +418,7 @@
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_48 } # The Perfumed Garden
 		}
-		155 = { # Reduced
+		155 = { # x0.5
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
@@ -477,13 +477,34 @@
 		}
 
 		# Bdsm quotes
-		100 = {
+		1900 = { # x50
 			trigger = {
 				carn_sex_scene_was_bdsm = yes
+				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_01 } # Marquis de Sade, The 120 Days of Sodom
+		}
+		2000 = { # x100
+			trigger = {
+				carn_sex_scene_was_bdsm = yes
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				scope:carn_sex_target = { is_pregnant = yes }
+				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_02 } # Marquis de Sade, The 120 Days of Sodom
+		}
+		4000 = { # x100
+			trigger = {
+				carn_sex_scene_was_bdsm = yes
+				carn_sex_scene_was_orgy = yes
+				is_male = yes
+				scope:carn_sex_target = { is_female = yes }
+				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating }
+			}
+			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_03 } # Marquis de Sade, The 120 Days of Sodom
 		}
 		100 = {
 			trigger = {

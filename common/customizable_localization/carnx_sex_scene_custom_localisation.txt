@@ -560,7 +560,15 @@ carnx_sex_scene_dubcon_dom_quote = {
 	}
 	text = {
 		trigger = { var:sex_scene_quote = flag:bdsm_quote_02 }
-		localization_key = carnx_sex_scene_bdsm_quote_02 # John Cleland, Memoirs of Fanny Hill
+		localization_key = carnx_sex_scene_bdsm_quote_02 # Marquis de Sade, The 120 Days of Sodom
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:bdsm_quote_03 }
+		localization_key = carnx_sex_scene_bdsm_quote_03 # Marquis de Sade, The 120 Days of Sodom
+	}
+	text = {
+		trigger = { var:sex_scene_quote = flag:bdsm_quote_10 }
+		localization_key = carnx_sex_scene_bdsm_quote_10 # John Cleland, Memoirs of Fanny Hill
 	}
 	text = {
 		trigger = { var:sex_scene_quote = flag:quote_f }
@@ -898,6 +906,68 @@ carnx_sex_scene_quote_55 = {
 	text = { localization_key = carnx_sex_scene_quote_55c }
 	text = { localization_key = carnx_sex_scene_quote_55d }
 	text = { localization_key = carnx_sex_scene_quote_55e }
+}
+
+carnx_sex_scene_bdsm_quote_01 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01a }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01b }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01c }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01d }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01e }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01f }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01g }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01h }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01i }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01j }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01k }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01l }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01m }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01n }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01o }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01p }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01q }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01r }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01s }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01t }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01u }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01v }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01w }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01x }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01y }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01z }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01aa }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01ab }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01ac }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01ad }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01ae }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01af }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01ag }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01ah }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01ai }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01aj }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01ak }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01al }
+}
+
+carnx_sex_scene_bdsm_quote_02 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01a }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_01b }
+}
+
+carnx_sex_scene_bdsm_quote_03 = {
+	type = character
+	random_valid = yes
+
+	text = { localization_key = carnx_sex_scene_bdsm_quote_03a }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_03b }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_03c }
+	text = { localization_key = carnx_sex_scene_bdsm_quote_03d }
 }
 
 carnx_sex_scene_dubcon_sub_opening = {
