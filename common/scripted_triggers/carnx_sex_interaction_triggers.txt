@@ -89,14 +89,12 @@ carnx_can_do_orgy_trigger = {
 	OR = {
 		has_trait = lustful
 		has_trait = rakish
-		has_trait = seducer
 	}
 }
 
 carnx_can_do_bdsm_trigger = {
 	OR = {
 		has_trait = sadistic
-		has_trait = torturer
 	}
 }
 
