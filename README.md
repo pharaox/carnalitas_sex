@@ -2,7 +2,7 @@
 
 A rework of the Carnalitas *Make Love* interaction and its related effects aiming at better realism and immersion, more variety, and improved player experience.
 
-The latest version is compatible with CK3 1.10.x and Carnalitas 2.1.
+The latest version is compatible with CK3 1.11.x and Carnalitas 2.2.
 
 ## Overview
 
