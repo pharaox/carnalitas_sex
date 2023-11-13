@@ -2,7 +2,7 @@
 
 A rework of the Carnalitas *Make Love* interaction and its related effects aiming at better realism and immersion, more variety, and improved player experience.
 
-The latest version is compatible with CK3 1.11.x and Carnalitas 2.2.
+The latest version is compatible with CK3 1.11.x and Carnalitas 2.2. If you are still on CK3 1.10.x, download version 0.2.x instead, and use it with Carnalitas 2.1.
 
 ## Overview
 
@@ -30,8 +30,9 @@ The other changes to *Make Love* (and *Demand Sex*) introduced by this mod inclu
 
 If you like this mod, you may also consider my other mods:
 
-* [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/). This mod and CSR have been designed to complement each other, but could be used independently as well.
-* [Search & Trade Artifacts](https://steamcommunity.com/sharedfiles/filedetails/?id=2962238514)
+* [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/), a comprehensive rework of the Carnalitas slavery system.
+* [Search & Trade Artifacts](https://steamcommunity.com/sharedfiles/filedetails/?id=2962238514), search for artifacts, buy them from other characters, and sell them to other characters.
+* [Travelers](https://steamcommunity.com/sharedfiles/filedetails/?id=3082182371), characters always travel to their home when it changes instead of teleporting.
 
 ## Features
 
