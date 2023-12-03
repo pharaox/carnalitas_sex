@@ -1,5 +1,22 @@
 # Changelog
 
+## Version 0.3.1
+
+### Game Rules
+
+* Added *Sex Requires Same Location* game rule to enable or disable the requirement for both characters to be at the same location in order to have sex.
+* Added *Demand Sex from Hooked Characters* game rule to specify if sex can be demanded from hooked characters.
+* Added *Demand Sex Consumes Slave Hooks* game rule to specify if demanding sex from a slave consumes their slave hook.
+
+### Miscellaneous
+
+* Characters with the *Seducer* can demand sex from characters they have a strong hook on even if the *Demand Sex from Hooked Characters* game rule is set to *Disabled*.
+
+### Compatibility
+
+* Improved compatibility with latest CBO 1.8.1
+  * *Carnal Court Make Love* fires the original CBO sex scene event for characters without a royal court
+
 ## Version 0.3.0
 
 ### Compatibility

@@ -21,6 +21,18 @@
 				}
 				add_to_list = potential_partners
 			}
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = carnx_sex_demand_sex_from_hooked_characters_all_hooks
+						has_game_rule = carnx_sex_demand_sex_from_hooked_characters_strong_hooks
+						has_trait = seducer
+					}
+				}
+				every_hooked_character = {
+					add_to_list = potential_partners
+				}
+			}
 
 			every_in_list = {
 				list = potential_partners

@@ -20,7 +20,7 @@ Since I am not a good writer myself, I opted for not generating the sex scene te
 
 The other changes to *Make Love* (and *Demand Sex*) introduced by this mod include:
 
-* You can only make love to someone who is currently at the same location as you.
+* You can only make love to someone who is currently at the same location as you (can be disabled via a game rule).
 * Both you and the target may lose (or gain) additional stress and piety depending on your traits and faith.
 * You can choose additional options in sex interactions to request "orgy" or "bdsm" sex scenes depending on your traits and other conditions.
 * The pregnancy chance is dynamic instead of hardcoded.
@@ -44,7 +44,7 @@ The *Make Love* interaction works similarly to its Carnalitas counterpart. You h
 
 There are however some differences in how this interaction works in this mod, aiming at better realism and immersion:
 
-* You can only make love to someone who is currently at the same location as you. If you are traveling or leading an army, your options might be limited.
+* You can only make love to someone who is currently at the same location as you. If you are traveling or leading an army, your options might be limited. This is enabled by default, but can be disabled via the *Sex Requires Same Location* game rule.
 * You lose the usual amount of stress (15 before modifiers) from the interaction itself only if the *Arousal Causes Stress* Carnalitas game rule is enabled, for a better game balance.
 * You may lose (or gain) additional [stress and piety](#stress-and-piety-impact) depending on your traits and faith.
 * The target may similarly lose (or gain) stress and piety, depending on their traits and faith.
@@ -66,11 +66,15 @@ The *Make Love* interaction has the following options that are only available if
 
 #### Demand Sex
 
-The *Demand Sex* interaction is similar to *[Make Love](#make-love)* in most respects, but is available on different targets - you coerce into having sex with you someone who is not an official consort, a lover, or a prostitute. Currently this means that they are your slave who is not a "slave consort". You may get "slave consorts" from other mods based on Carnalitas, such as the *Slave Concubine* court position from the [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) mod.
+The *Demand Sex* interaction is similar to *[Make Love](#make-love)* in most respects, but is available on different targets - you coerce into having sex with you someone who is not an official consort, a lover, or a prostitute. Currently this means that they must be any of the following:
+
+* Your slave who is not a "slave consort". You may get "slave consorts" from other mods based on Carnalitas, such as the *Slave Concubine* court position from the [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) mod.
+* A character on whom you have a strong hook, and you are either a *Seducer*, or the game rule *Demand Sex from Hooked Characters* is set to at least *Strong Hooks*.
+* A character on whom you have any hook, and the game rule *Demand Sex from Hooked Characters* is set to  *All Hooks*.
 
 There are also a few other differences:
 
-* Demanding a sex from a slave both requires a usable hook and consumes the hook.
+* Demanding a sex from a character both requires a usable hook and consumes the hook. By default, slave hooks are also consumed, but this can be disabled via the *Demand Sex Consumes Slave Hooks* game rule.
 * You may lose or gain additional stress if you are *Compassionate*, *Sadistic*, or *Callous*.
 * The target may get a negative opinion modifier on you if having sex with you is sinful (adultery, sodomy, or incest) according to their faith.
 

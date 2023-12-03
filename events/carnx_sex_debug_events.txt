@@ -10,7 +10,10 @@ scripted_trigger carnx_sex_debug_0001_valid_target_trigger = {
 	is_adult = yes
 	carnx_is_sex_interaction_blocked_trigger = no
 	carn_can_have_sex_trigger = yes
-	is_at_same_location = root
+	trigger_if = {
+		limit = { has_game_rule = carnx_sex_requires_same_location_enabled }
+		is_at_same_location = root
+	}
 	OR = {
 		root = {
 			carnx_relationship_allows_free_sex_trigger = { PARTNER = prev }

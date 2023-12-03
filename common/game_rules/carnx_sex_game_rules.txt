@@ -1,0 +1,18 @@
+﻿carnx_sex_requires_same_location = {
+	default = carnx_sex_requires_same_location_enabled
+	carnx_sex_requires_same_location_disabled = {}
+	carnx_sex_requires_same_location_enabled = {}
+}
+
+carnx_sex_demand_sex_from_hooked_characters = {
+	default = carnx_sex_demand_sex_from_hooked_characters_disabled
+	carnx_sex_demand_sex_from_hooked_characters_disabled = {}
+	carnx_sex_demand_sex_from_hooked_characters_strong_hooks = {}
+	carnx_sex_demand_sex_from_hooked_characters_all_hooks = {}
+}
+
+carnx_sex_demand_sex_consumes_slave_hooks = {
+	default = carnx_sex_demand_sex_consumes_slave_hooks_enabled
+	carnx_sex_demand_sex_consumes_slave_hooks_disabled = {}
+	carnx_sex_demand_sex_consumes_slave_hooks_enabled = {}
+}

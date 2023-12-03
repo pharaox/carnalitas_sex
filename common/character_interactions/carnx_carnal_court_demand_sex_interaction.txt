@@ -34,7 +34,10 @@
 		}
 		scope:recipient = {
 			carn_can_have_sex_trigger = yes
-			is_at_same_location = scope:actor
+			trigger_if = {
+				limit = { has_game_rule = carnx_sex_requires_same_location_enabled }
+				is_at_same_location = scope:actor
+			}
 		}
 	}
 
@@ -46,6 +49,10 @@
 			if = {
 				limit = {
 					has_usable_hook = scope:recipient
+					trigger_if = {
+						limit = { has_game_rule = carnx_sex_demand_sex_consumes_slave_hooks_disabled }
+						NOT = { has_relation_slave = scope:recipient }
+					}
 				}
 				use_hook = scope:recipient
 			}
