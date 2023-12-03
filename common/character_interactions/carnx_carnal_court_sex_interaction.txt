@@ -8,6 +8,7 @@
 		NOR = {
 			has_game_rule = carn_sex_interaction_disabled
 			scope:actor = scope:recipient
+			cbo_body_active = no
 			has_game_rule = carnal_court_make_love_disabled
 		}
 		scope:actor = {
@@ -129,11 +130,22 @@
 
 			hidden_effect = {
 				# Actually fire the sex scene
-				carnal_court_sex_scene_effect = {
-					PLAYER = scope:actor
-					TARGET = scope:recipient
-					STRESS_EFFECTS = no
-					DRAMA = yes
+				if = {
+					limit = { has_royal_court = yes }
+					carnal_court_sex_scene_effect = {
+						PLAYER = scope:actor
+						TARGET = scope:recipient
+						STRESS_EFFECTS = no
+						DRAMA = yes
+					}
+				}
+				else = {
+					carnx_original_sex_scene_effect = {
+						PLAYER = scope:actor
+						TARGET = scope:recipient
+						STRESS_EFFECTS = no
+						DRAMA = yes
+					}
 				}
 			}
 		}

@@ -17,6 +17,15 @@ carn_sex_scene = {
 	fallback = carn_sex_scene_fallback
 }
 
+carnx_original_sex_scene = {
+	random_events = {
+		100 = carn_sex_scene.0001 # use the PDX sex scene generator
+		#100 = carn_sex_scene.0003 # example noncon scene (dom)
+		#100 = carn_sex_scene.0004 # example noncon scene (sub)
+	}
+	fallback = carn_sex_scene_fallback
+}
+
 carn_sex_scene_fallback = {
 	events = {
 		carn_sex_scene.0002 # fallback to PDX sex scene

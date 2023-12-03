@@ -1,0 +1,3 @@
+﻿cbo_body_active = {
+	always = no
+}

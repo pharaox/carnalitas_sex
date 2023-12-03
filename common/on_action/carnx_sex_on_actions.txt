@@ -35,3 +35,7 @@ carnx_on_sex = {
 		#}
 	}
 }
+
+# Dummy, overridden by CBO
+carnal_court_sex_scene = {
+}
