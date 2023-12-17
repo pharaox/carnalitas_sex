@@ -1,4 +1,6 @@
 ﻿l_english:
+ game_rule_category_carnx_carnalitas_sex: "Carnalitas Love Reimagined"
+
  rule_carnx_sex_requires_same_location: "#X CLR:#! Sex Requires Same Location"
  setting_carnx_sex_requires_same_location_disabled: "#high Disabled#!"
  setting_carnx_sex_requires_same_location_disabled_desc: "Sex interactions don't require both characters to be at the same location."
