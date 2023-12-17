@@ -1,0 +1,20 @@
+﻿l_simp_chinese:
+ rule_carnx_sex_requires_same_location: "#X CLR:#! Sex Requires Same Location"
+ setting_carnx_sex_requires_same_location_disabled: "#high Disabled#!"
+ setting_carnx_sex_requires_same_location_disabled_desc: "Sex interactions don't require both characters to be at the same location."
+ setting_carnx_sex_requires_same_location_enabled: "Enabled"
+ setting_carnx_sex_requires_same_location_enabled_desc: "Sex interactions require both characters to be at the same location."
+
+ rule_carnx_sex_demand_sex_from_hooked_characters: "#X CLR:#! Demand Sex from Hooked Characters"
+ setting_carnx_sex_demand_sex_from_hooked_characters_disabled: "Disabled"
+ setting_carnx_sex_demand_sex_from_hooked_characters_disabled_desc: "You can't Demand Sex from a hooked character (unless you are Seducer and have a strong hook on them)."
+ setting_carnx_sex_demand_sex_from_hooked_characters_strong_hooks: "#high Strong Hooks Only#!"
+ setting_carnx_sex_demand_sex_from_hooked_characters_strong_hooks_desc: "You can Demand Sex from a hooked character only if you have a strong hook on them."
+ setting_carnx_sex_demand_sex_from_hooked_characters_all_hooks: "#high All Hooks#!"
+ setting_carnx_sex_demand_sex_from_hooked_characters_all_hooks_desc: "You can always Demand Sex from a hooked character."
+
+ rule_carnx_sex_demand_sex_consumes_slave_hooks: "#X CLR:#! Demand Sex Consumes Slave Hooks"
+ setting_carnx_sex_demand_sex_consumes_slave_hooks_disabled: "#high Disabled#!"
+ setting_carnx_sex_demand_sex_consumes_slave_hooks_disabled_desc: "Demanding sex from a slave doesn't consume their slave hook."
+ setting_carnx_sex_demand_sex_consumes_slave_hooks_enabled: "Enabled"
+ setting_carnx_sex_demand_sex_consumes_slave_hooks_enabled_desc: "Demanding sex from a slave consumes their slave hook."
