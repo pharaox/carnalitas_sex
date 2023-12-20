@@ -1,0 +1,5 @@
+﻿l_korean:
+ action_carn_can_sex_interaction: "@carn_icon! You can $carn_sex_interaction$"
+ action_carn_can_sex_interaction_label: "$action_carn_can_sex_interaction$ to your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ action_carn_can_sex_interaction_desc: "You can make love to [recipient.GetUIName] to reduce [stress|E] or try for a baby, among other effects."
+ action_carn_can_sex_interaction_click: "#I Click to $carn_sex_interaction$#!"

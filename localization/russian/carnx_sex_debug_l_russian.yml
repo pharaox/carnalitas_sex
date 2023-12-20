@@ -1,0 +1,24 @@
+﻿l_russian:
+ carnx_sex_debug_prefix: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID])"
+ carnx_sex_debug_prefix_2: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID], [Select_CString(THIS.Char.IsFemale, 'female', 'male')])"
+
+ carnx_sex_debug_msg_character_had_sex: "$carnx_sex_debug_prefix_2$: Character had sex (carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')]), carn_sex_pregnancy_chance: [THIS.Var('carn_sex_pregnancy_chance').GetValue], carn_sex_could_be_impregnated: [Select_CString(THIS.Var('carn_sex_could_be_impregnated').IsSet, 'yes', 'no')], carn_sex_impregnated: [Select_CString(THIS.Var('carn_sex_impregnated').IsSet, 'yes', 'no')])"
+
+ carnx_sex_debug_msg_debug_0001_fired: "$carnx_sex_debug_prefix$: Debug Sex event fired"
+
+ carnx_sex_debug_msg_sex_scene_0001_fired: "$carnx_sex_debug_prefix_2$: Sex Scene 1 event fired: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$)"
+ carnx_sex_debug_msg_sex_scene_0002_fired: "$carnx_sex_debug_prefix_2$: Sex Scene 2 event fired: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
+ carnx_sex_debug_msg_sex_scene_0003_fired: "$carnx_sex_debug_prefix_2$: Sex Scene 3 event fired: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
+ carnx_sex_debug_msg_sex_scene_0004_fired: "$carnx_sex_debug_prefix_2$: Sex Scene 4 event fired: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
+ carnx_sex_debug_msg_sex_scene_0005_fired: "$carnx_sex_debug_prefix_2$: Sex Scene 5 event fired: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
+
+ carnx_carn_sex_target: "carn_sex_target: [THIS.Var('carn_sex_target').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_target').Char.GetID], [Select_CString(THIS.Var('carn_sex_target').Char.IsFemale, 'female', 'male')])"
+ carnx_sex_scene_location: "sex_scene_location: [THIS.Var('sex_scene_location').GetFlagName]"
+ carnx_sex_scene_target: "sex_scene_target: [THIS.Var('sex_scene_target').GetFlagName]"
+ carnx_sex_scene_player_attitude: "sex_scene_player_attitude: [THIS.Var('sex_scene_player_attitude').GetFlagName]"
+ carnx_sex_scene_target_attitude: "sex_scene_target_attitude: [THIS.Var('sex_scene_target_attitude').GetFlagName]"
+ carnx_sex_scene_quote: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
+
+ carnx_sex_debug.0001.t: "Debug Sex"
+ carnx_sex_debug.0001.desc: "I just had sex with [target.GetFirstNameNoTooltip]."
+ carnx_sex_debug.0001.a: "OK"

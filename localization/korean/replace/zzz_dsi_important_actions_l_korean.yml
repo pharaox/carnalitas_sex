@@ -1,0 +1,5 @@
+﻿l_korean:
+ dsi_demand_sex_important_interaction: "@carn_icon! You can $dsi_demand_sex_interaction$"
+ dsi_demand_sex_important_interaction_label: "$dsi_demand_sex_important_interaction$ from your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ dsi_demand_sex_important_interaction_desc: "You can demand sex from [recipient.GetUIName] to reduce [stress|E] or try for a baby, among other effects."
+ dsi_demand_sex_important_interaction_click: "#I Click to $dsi_demand_sex_interaction$#!"
