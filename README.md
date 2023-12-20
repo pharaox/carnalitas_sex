@@ -1,5 +1,7 @@
 # Carnalitas Love Reimagined
 
+[Download from LoversLab](https://www.loverslab.com/files/file/29200-carnalitas-love-reimagined/)
+
 A rework of the Carnalitas *Make Love* interaction and its related effects aiming at better realism and immersion, more variety, and improved player experience.
 
 The latest version is compatible with CK3 1.11.x and Carnalitas 2.2. If you are still on CK3 1.10.x, download version 0.2.x instead, and use it with Carnalitas 2.1.
@@ -27,6 +29,31 @@ The other changes to *Make Love* (and *Demand Sex*) introduced by this mod inclu
 * Important actions such as *Can Make Love* list all characters that can be targeted.
 * Carnalitas DT traits (*Voluptuous*, etc.) have attraction opinion.
 * *Carnal Court Make Love* and *Carnal Court Demand Sex* have conditions and effects consistent with *Make Love* and *Demand Sex* if CBO is installed.
+
+## Compatibility
+
+This mod requires [Carnalitas](https://www.loverslab.com/files/file/14207-carnalitas-unified-sex-mod-framework-for-ck3/) as a prerequisite (obviously). While it modifies the *Make Love* interaction and its related effects in a substantial way, it doesn't touch other Carnalitas features and should be compatible with all of them.
+
+This mod also supports changing its game rules mid-game with the [Gamerule Gadget](https://steamcommunity.com/sharedfiles/filedetails/?id=2826829936) mod.
+
+### Compatibility with Mods Based on Carnalitas
+
+This mod should be compatible with all mods based on Carnalitas that don't modify the *Make Love* interaction. Enhancing it in a way that is supported by Carnalitas, e.g. adding additional sex scene events, is fully supported.
+
+This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/), so you are encouraged to use them both. If you do this, put this mod after Carnalitas but before the CSR mod in the load order.
+
+This mod has also been designed to be compatible with [Character Body Overhaul](https://www.loverslab.com/files/file/16683-character-body-overhaul/). If CBO is installed, it adds *Carnal Court Make Love* and *Carnal Court Demand Sex* interactions that have conditions and effects consistent with *Make Love* and *Demand Sex*, but use CBO animations.
+
+This mod conflicts with [Carnalitas Slavery Expansion](https://www.loverslab.com/files/file/21651-carnalitas-slavery-expansion/) since both introduce *Demand Sex* interactions that are similar, but differ in important details so that making the one compatible with the other would be impossible. However, if you like both CSE and this mod and insist on using them both, you can still do this. The CSE *Demand Sex* interaction will be overridden by this mod's one, causing minor changes to it that can be adjusted via game rules. Other CSE features are not changed by this mod.
+
+## Localization
+
+This mod is currently available in English and Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)). For other languages, it uses the original English text as a placeholder.
+
+## Links
+
+* [LoversLab](https://www.loverslab.com/files/file/29200-carnalitas-love-reimagined/)
+* [GitHub Repository](https://github.com/pharaox/carnalitas_sex)
 
 If you like this mod, you may also consider my other mods:
 
@@ -228,27 +255,6 @@ The sex scene quotes used by the generator are from the sources listed below. Th
 ### DT Traits
 
 This mod adds attraction opinion to the Carnalitas DT traits. The added attraction opinion is 5 per trait level, positive or negative depending on whether the trait is good or bad. For example, the `tits_big_good_3` trait (green *Voluptuous*) has 15 attraction opinion. This makes DT traits influence [player and target attitudes](#player-and-target-attitudes) in sex scenes, among other effects.
-
-## Compatibility
-
-This mod requires [Carnalitas](https://www.loverslab.com/files/file/14207-carnalitas-unified-sex-mod-framework-for-ck3/) as a prerequisite (obviously). While it modifies the *Make Love* interaction and its related effects in a substantial way, it doesn't touch other Carnalitas features and should be compatible with all of them.
-
-### Compatibility with Mods Based on Carnalitas
-
-This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/), so you are encouraged to use them both. If you do this, put this mod after Carnalitas but before the CSR mod in the load order.
-
-This mod should be compatible with all mods based on Carnalitas that don't modify the *Make Love* interaction. Enhancing it in a way that is supported by Carnalitas, e.g. adding additional sex scene events, is fully supported. Compatibility with the following mods has been explicitly verified, but most others should work as well:
-
-* [Character Body Overhaul](https://www.loverslab.com/files/file/16683-character-body-overhaul/), see also [CBO Interactions](#cbo-interactions).
-* [Intimate Stories](https://www.loverslab.com/files/file/27533-intimate-stories/)
-
-This mod conflicts with [Carnalitas Slavery Expansion](https://www.loverslab.com/files/file/21651-carnalitas-slavery-expansion/) since both introduce *Demand Sex* interactions that are similar, but differ in important details so that making the one compatible with the other would be impossible. However, if you like both CSE and this mod and insist on using them both, you can still do this. The CSE *Demand Sex* will be overridden by this mod's one, with the following impact:
-
-* You will no longer be able to demand sex from any character you have a hook on, just from slaves.
-* When demanding sex, CSE "sex slaves" will be treated similarly to other slaves, i.e. their hook will be consumed.
-* The stress, piety, and opinion impact from demanding sex will be as described above, instead of the ones from CSE.
-
-The above differences are rather minor, and would not affect the gameplay significantly. Other CSE features are not changed by this mod.
 
 ## Changes to Carnalitas
 

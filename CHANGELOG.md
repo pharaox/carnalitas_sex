@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 0.3.2
+
+### Game Rules
+
+* Added the `GG_can_change_rule` flag to all game rules so they could be changed mid-game with the Gamerule Gadget mod.
+
+### Localization
+
+* Added Chinese translation by **@Dark_Crow**
+* Added English localization for all remaining languages.
+
 ## Version 0.3.1
 
 ### Game Rules
