@@ -1,5 +1,5 @@
 ﻿l_french:
- dsi_demand_sex_important_interaction: "@carn_icon! You can $dsi_demand_sex_interaction$"
- dsi_demand_sex_important_interaction_label: "$dsi_demand_sex_important_interaction$ from your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
- dsi_demand_sex_important_interaction_desc: "You can demand sex from [recipient.GetUIName] to reduce [stress|E] or try for a baby, among other effects."
- dsi_demand_sex_important_interaction_click: "#I Click to $dsi_demand_sex_interaction$#!"
+ dsi_demand_sex_important_interaction: "@carn_icon! Vous pouvez $dsi_demand_sex_interaction$"
+ dsi_demand_sex_important_interaction_label: "$dsi_demand_sex_important_interaction$ de votre [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ dsi_demand_sex_important_interaction_desc: "Vous pouvez exiger du sexe de [recipient.GetUIName] pour réduire votre [stress|El] ou tenter de concevoir un bébé, entre autres."
+ dsi_demand_sex_important_interaction_click: "#I Cliquer pour $dsi_demand_sex_interaction$#!"
