@@ -1,10 +1,10 @@
 ﻿l_french:
- action_carn_can_sex_interaction_combined_label: "To your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ action_carn_can_sex_interaction_combined_label: "À votre [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
  action_carn_can_sex_interaction_combined_group_label: "$action_carn_can_sex_interaction$"
  action_carn_can_sex_interaction_combined_group_name: "$action_carn_can_sex_interaction$"
- action_carn_can_sex_interaction_combined_group_description: "You can make love to one of your consorts or lovers to reduce [stress|E] or try for a baby, among other effects."
+ action_carn_can_sex_interaction_combined_group_description: "Vous pouvez faire l'amour avec l'un de vos consorts ou amants pour réduire votre [stress|El] ou tenter de concevoir un bébé, entre autres."
 
- dsi_demand_sex_important_interaction_combined_label: "From your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ dsi_demand_sex_important_interaction_combined_label: "De votre [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
  dsi_demand_sex_important_interaction_combined_group_label: "$dsi_demand_sex_important_interaction$"
  dsi_demand_sex_important_interaction_combined_group_name: "$dsi_demand_sex_important_interaction$"
- dsi_demand_sex_important_interaction_combined_group_description: "You can demand sex from one of your slaves to reduce [stress|E] or try for a baby, among other effects."
+ dsi_demand_sex_important_interaction_combined_group_description: "Vous pouvez exiger des relations sexuelles d'un de vos esclaves pour réduire votre [stress|El] ou tenter de concevoir un bébé, entre autres."
