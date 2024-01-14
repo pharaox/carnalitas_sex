@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.3.3
+
+### Localization
+
+* Added French translation by **@don-vip**
+
 ## Version 0.3.2
 
 ### Game Rules
