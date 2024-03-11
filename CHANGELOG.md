@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.4.0
+
+### Localization
+
+* Adapted to Carnalitas 2.4.
+
 ## Version 0.3.3
 
 ### Localization
