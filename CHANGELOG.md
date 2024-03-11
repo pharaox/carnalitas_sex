@@ -1,8 +1,14 @@
 # Changelog
 
+## Version 0.4.1
+
+### Bug Fixes
+
+* Fixed an issue with Carnalitas 2.4 compatibility.
+
 ## Version 0.4.0
 
-### Localization
+### Compatibility
 
 * Adapted to Carnalitas 2.4.
 
