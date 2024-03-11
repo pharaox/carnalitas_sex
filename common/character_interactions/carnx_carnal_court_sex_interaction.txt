@@ -143,12 +143,13 @@
 					}
 				}
 				else = {
-					carnx_original_sex_scene_effect = {
-						PLAYER = scope:actor
-						TARGET = scope:recipient
-						STRESS_EFFECTS = no
-						DRAMA = yes
-					}
+					# TODO Fix once CBO adapts to the new Carnalitas
+					#carnx_original_sex_scene_effect = {
+					#	PLAYER = scope:actor
+					#	TARGET = scope:recipient
+					#	STRESS_EFFECTS = no
+					#	DRAMA = yes
+					#}
 				}
 			}
 		}

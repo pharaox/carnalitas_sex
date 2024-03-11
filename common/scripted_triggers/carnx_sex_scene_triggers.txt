@@ -1,21 +1,5 @@
-﻿carn_sex_scene_matches_requested_flags_trigger = {
-	NOR = {
-		any_in_global_list = {
-			variable = carn_sex_scene_requested_flags
-			NOT = { is_in_list = carn_sex_scene_flags }
-		}
-		any_in_global_list = {
-			variable = carn_sex_scene_excluded_flags
-			is_in_list = carn_sex_scene_flags
-		}
-	}
-}
-
-carnx_sex_scene_flag_requested_trigger = {
-	is_target_in_global_variable_list = {
-		name = carn_sex_scene_requested_flags
-		target = title:d_carn_$FLAG$
-	}
+﻿carnx_sex_scene_flag_requested_trigger = {
+	carn_sex_scene_is_$FLAG$_trigger = yes
 }
 
 carnx_sex_scene_supports_requested_location_trigger = {

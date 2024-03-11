@@ -5,6 +5,48 @@
 	}
 }
 
+carnx_sex_debug_log_1_effect = {
+	if = {
+		limit = { debug_only = yes }
+
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+
+		debug_log = $MSG$
+
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+	}
+}
+
+carnx_sex_debug_log_2_effect = {
+	if = {
+		limit = { debug_only = yes }
+
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+
+		debug_log = $MSG$
+
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+	}
+}
+
+carnx_sex_debug_log_3_effect = {
+	if = {
+		limit = { debug_only = yes }
+
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+		carnx_sex_debug_set_scope_variable_effect = { NAME = $NAME3$ TYPE = $TYPE3$ }
+
+		debug_log = $MSG$
+
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME1$ TYPE = $TYPE1$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME2$ TYPE = $TYPE2$ }
+		carnx_sex_debug_remove_scope_variable_effect = { NAME = $NAME3$ TYPE = $TYPE3$ }
+	}
+}
+
 carnx_sex_debug_log_4_effect = {
 	if = {
 		limit = { debug_only = yes }

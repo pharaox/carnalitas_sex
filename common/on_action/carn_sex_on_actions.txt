@@ -1,4 +1,21 @@
 ﻿##################################################################################
+# carn_on_sex_v2
+##################################################################################
+
+# Triggers whenever a character has sex via event or decision, in the scope of that character.
+
+# root = the character that sees the sex scene event
+# scope:carn_sex_partner = the other partner in the sex effect
+
+# Unlike carn_on_sex, it triggers just once for both partners,
+# instead of once for each of the partners
+
+carn_on_sex_v2 = {
+	events = {
+	}
+}
+
+##################################################################################
 # carn_sex_scene
 ##################################################################################
 # Empty list of sex interactions. Modders should add their own scenes to this as random_events.
@@ -6,29 +23,19 @@
 
 carn_sex_scene = {
 	random_events = {
-		# CSR: Replace default Carnalitas sex scenes
-		100 = carnx_sex_scene.0001 # Generic consensual scene, using the PDX sex scene generator
+		# CSR: Replace default Carnalitas sex scene
+		#100 = carnx_sex_scene.0001 # Generic consensual scene, using the PDX sex scene generator
 		100 = carnx_sex_scene.0002 # Generic consensual scene
 		100 = carnx_sex_scene.0003 # Generic dubcon scene (dom), supports orgy
 		100 = carnx_sex_scene.0004 # Generic dubcon scene (sub), supports orgy and bdsm
-		100 = carn_sex_scene.0003 # Rape prisoner noncon scene (dom)
-		100 = carn_sex_scene.0004 # Rape prisoner noncon scene (sub)
 	}
 	fallback = carn_sex_scene_fallback
 }
 
-carnx_original_sex_scene = {
-	random_events = {
-		100 = carn_sex_scene.0001 # use the PDX sex scene generator
-		#100 = carn_sex_scene.0003 # example noncon scene (dom)
-		#100 = carn_sex_scene.0004 # example noncon scene (sub)
-	}
-	fallback = carn_sex_scene_fallback
-}
 
 carn_sex_scene_fallback = {
 	events = {
-		carn_sex_scene.0002 # fallback to PDX sex scene
+		carn_sex_scene.001 # Fallback to default Carnalitas scene
 	}
 }
 
@@ -54,6 +61,21 @@ carn_sex_scene_fallback = {
 # scope:carn_sex_partner = the other partner in the sex effect
 
 carn_on_sex = {
+	events = {
+	}
+}
+
+##################################################################################
+# carn_on_pregnancy
+##################################################################################
+
+# Triggers whenever a character gets pregnant due to carn_had_sex_with_effect
+# or carn_had_sex_with_effect_v2, in the scope of that character.
+
+# scope:mother = the character that got pregnant (same as root)
+# scope:father = the character responsible for the pregnancy
+
+carn_on_pregnancy = {
 	events = {
 	}
 }

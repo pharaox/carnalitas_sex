@@ -4,34 +4,55 @@
 
 carnx_on_sex = {
 	effect = {
-		# Save requested, excluded, and scene flags
-		every_in_global_list = {
-			variable = carn_sex_scene_requested_flags
-			add_to_list = debug_sex_scene_requested_flags
-		}
-		every_in_global_list = {
-			variable = carn_sex_scene_excluded_flags
-			add_to_list = debug_sex_scene_excluded_flags
-		}
-		every_in_global_list = {
-			variable = carn_sex_scene_flags
-			add_to_list = debug_sex_scene_flags
-		}
-		every_in_global_list = {
-			variable = carnx_requested_sex_scene_locations
-			add_to_list = debug_requested_sex_scene_locations
-		}
-		every_in_global_list = {
-			variable = carnx_sex_scene_locations
-			add_to_list = debug_sex_scene_locations
-		}
+		if = {
+			limit = { debug_only = yes }
 
-		#carnx_sex_debug_log_4_effect = {
-		#	MSG = carnx_sex_debug_msg_character_had_sex
-		#	NAME1 = carn_sex_partner TYPE1 = flag:character
-		#	NAME2 = carn_sex_pregnancy_chance TYPE2 = flag:value
-		#	NAME3 = carn_sex_could_be_impregnated TYPE3 = flag:boolean
-		#	NAME4 = carn_sex_impregnated TYPE4 = flag:boolean
+			# Save requested, excluded, and scene flags
+			every_in_list = {
+				variable = carn_sex_scene_character_flag_list
+				add_to_list = debug_sex_scene_character_flags
+			}
+			every_in_list = {
+				variable = carn_sex_scene_character_excluded_flag_list
+				add_to_list = debug_sex_scene_character_excluded_flags
+			}
+			every_in_list = {
+				variable = carn_sex_scene_flag_list
+				add_to_list = debug_sex_scene_flags
+			}
+			every_in_list = {
+				variable = carn_sex_scene_excluded_flag_list
+				add_to_list = debug_sex_scene_excluded_flags
+			}
+			every_in_list = {
+				variable = carn_sex_scene_option_flag_list
+				add_to_list = debug_sex_scene_option_flags
+			}
+			every_in_global_list = {
+				variable = carnx_requested_sex_scene_locations
+				add_to_list = debug_requested_sex_scene_locations
+			}
+			every_in_global_list = {
+				variable = carnx_sex_scene_locations
+				add_to_list = debug_sex_scene_locations
+			}
+
+			#carnx_sex_debug_log_2_effect = {
+			#	MSG = carnx_sex_debug_msg_character_had_sex
+			#	NAME1 = carn_sex_partner TYPE1 = flag:character
+			#	NAME2 = carn_pregnancy_chance TYPE2 = flag:value
+			#}
+			#debug_log_scopes = yes
+		}
+	}
+}
+
+carn_on_pregnancy = {
+	effect = {
+		#carnx_sex_debug_log_2_effect = {
+		#	MSG = carnx_sex_debug_msg_character_got_pregnant
+		#	NAME1 = father TYPE1 = flag:character
+		#	NAME2 = carn_pregnancy_chance TYPE2 = flag:value
 		#}
 	}
 }
