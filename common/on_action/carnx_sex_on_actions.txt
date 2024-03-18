@@ -1,8 +1,8 @@
-﻿carn_on_sex = {
-	on_actions = { carnx_on_sex }
+﻿carn_on_sex_v2 = {
+	on_actions = { carnx_on_sex_v2 }
 }
 
-carnx_on_sex = {
+carnx_on_sex_v2 = {
 	effect = {
 		if = {
 			limit = { debug_only = yes }

@@ -42,12 +42,32 @@ carnx_request_sex_scene_flags_effect = {
 
 carnx_request_optional_sex_scene_flags_effect = {
 	if = {
-		limit = { scope:orgy = yes }
+		limit = { scope:orgy ?= yes }
 		carn_sex_scene_request_orgy = yes
 	}
 	if = {
-		limit = { scope:bdsm = yes }
+		limit = { scope:bdsm ?= yes }
 		carn_sex_scene_request_bdsm = yes
+	}
+}
+
+carnx_add_random_sex_scene_flags_effect = {
+	carn_sex_scene_character_is_giving_player_effect = yes
+	random_list = {
+		60 = {
+			carn_sex_scene_is_vaginal_effect = yes
+			carn_sex_scene_is_cum_inside_effect = yes
+		}
+		20 = {
+			carn_sex_scene_is_vaginal_effect = yes
+			carn_sex_scene_is_cum_outside_effect = yes
+		}
+		10 = {
+			carn_sex_scene_is_anal_effect = yes
+		}
+		10 = {
+			carn_sex_scene_is_oral_effect = yes
+		}
 	}
 }
 

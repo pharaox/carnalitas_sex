@@ -135,7 +135,7 @@
 				# Actually fire the sex scene
 				if = {
 					limit = { has_royal_court = yes }
-					carnal_court_sex_scene_effect = {
+					carnx_carnal_court_sex_scene_effect = {
 						PLAYER = scope:actor
 						TARGET = scope:recipient
 						STRESS_EFFECTS = no
@@ -143,13 +143,16 @@
 					}
 				}
 				else = {
-					# TODO Fix once CBO adapts to the new Carnalitas
-					#carnx_original_sex_scene_effect = {
-					#	PLAYER = scope:actor
-					#	TARGET = scope:recipient
-					#	STRESS_EFFECTS = no
-					#	DRAMA = yes
-					#}
+					# Request sex scene flags
+					carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
+					carnx_add_random_sex_scene_flags_effect = yes
+
+					carnx_original_sex_scene_effect = {
+						PLAYER = scope:actor
+						TARGET = scope:recipient
+						STRESS_EFFECTS = no
+						DRAMA = yes
+					}
 				}
 			}
 		}

@@ -8,6 +8,61 @@
 	}
 }
 
+carnx_carnal_court_sex_scene_effect = {
+	$PLAYER$ = {
+		# Set stress and drama
+		if = {
+			limit = { $STRESS_EFFECTS$ = no }
+			carn_sex_scene_no_stress_effect = yes
+		}
+		if = {
+			limit = { $DRAMA$ = no }
+			carn_sex_scene_no_drama_effect = yes
+		}
+
+		# Save player and partner scopes
+		save_scope_as = carn_sex_player
+		$TARGET$ = {
+			save_scope_as = carn_sex_partner
+			save_scope_as = carn_sex_target
+		}
+
+		# Trigger carnal_court_sex_scene
+		trigger_event = {
+			on_action = carnal_court_sex_scene
+		}
+
+		# Open Royal Court view
+		carnal_court_enter_court_effect = yes
+	}
+}
+
+carnx_original_sex_scene_effect = {
+	$PLAYER$ = {
+		# Set stress and drama
+		if = {
+			limit = { $STRESS_EFFECTS$ = no }
+			carn_sex_scene_no_stress_effect = yes
+		}
+		if = {
+			limit = { $DRAMA$ = no }
+			carn_sex_scene_no_drama_effect = yes
+		}
+
+		# Save player and partner scopes
+		save_scope_as = carn_sex_player
+		$TARGET$ = {
+			save_scope_as = carn_sex_partner
+			save_scope_as = carn_sex_target
+		}
+
+		# Trigger carn_sex_scene_fallback to use the original Carnalitas scene
+		trigger_event = {
+			on_action = carn_sex_scene_fallback
+		}
+	}
+}
+
 carnx_request_sex_scene_location_effect = {
 	add_to_global_variable_list = {
 		name = carnx_requested_sex_scene_locations
