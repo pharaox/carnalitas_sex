@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.4.2
+
+### Compatibility
+
+* Adapted to CBO 1.8.4 and CBO 1.12 Unofficial fix.
+
 ## Version 0.4.1
 
 ### Bug Fixes
