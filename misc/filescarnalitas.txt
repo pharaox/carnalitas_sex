@@ -1,0 +1,5 @@
+common/character_interactions/carn_sex_interaction.txt
+common/important_actions/action_carn_can_sex_interaction.txt
+common/on_action/carn_sex_on_actions.txt
+common/scripted_triggers/carn_sex_interaction_triggers.txt
+common/traits/carn_traits.txt
