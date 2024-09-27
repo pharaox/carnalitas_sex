@@ -4,11 +4,11 @@
 
 A rework of the Carnalitas *Make Love* interaction and its related effects aiming at better realism and immersion, more variety, and improved player experience.
 
-The latest version is compatible with CK3 1.12.x and Carnalitas 2.5 (and 2.4). If you are still on CK3 1.11.x, download [version 0.3.3](https://github.com/pharaox/carnalitas_sex/releases/download/0.3.3/carnalitas_love_reimagined-0.3.3.zip) instead, and use it with Carnalitas 2.2.
+The latest version is compatible with CK3 1.13.x and Carnalitas 2.7. If you are still on CK3 1.12.x, download [version 0.4.2](https://github.com/pharaox/carnalitas_sex/releases/download/0.4.2/carnalitas_love_reimagined-0.4.2.zip) instead, and use it with Carnalitas 2.6.
 
 **Note:** Don't use Carnalitas 2.3 as it introduces incompatible changes that break most existing mods based on it. This has been fixed in Carnalitas 2.4.
 
-**Note:** Since an official CBO version compatible with CK3 1.12.x and Carnalitas 2.5 is not yet released, if you use CBO you should also use the [CBO 1.12 Unofficial fix](https://mega.nz/file/VktBjJDD#rcNVUtMPfTrqH-tPBFXmnfqAa18STA6SV18maWlkGYU). The current CLR version has only been tested with CBO 1.8.4 and this unofficial fix and may not be fully compatible with the new CBO version after it is released.
+**Note:** Since an official CBO version compatible with CK3 1.13.x and Carnalitas 2.7 is not yet released, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/).
 
 ## Overview
 
@@ -276,11 +276,6 @@ The sections below list the changes made to existing Carnalitas objects in somew
 ### Triggers (`scripted_triggers`)
 
 * `carn_relationship_allows_free_sex_trigger`: Modified to allow free sex with "slave consorts" (e.g. CSR *Slave Concubines*).
-* `carn_sex_scene_matches_requested_flags_trigger`: Fixed a bug related to checking `carn_sex_scene_excluded_flags`.
-
-### Effects (`scripted_effects`)
-
-* `carn_had_sex_with_effect`: Moved the pregnancy chances to modifiers to avoid a vanilla bug that prevents passing scripted values for these chances. Also added relevant conditions for the `could_be_impregnated` scopes and saved some additional scope values used for debugging.
 
 ### Traits (`traits`)
 

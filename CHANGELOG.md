@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 0.5.0
+
+### Compatibility
+
+* Adapted to CK3 1.13 and Carnalitas 2.7.
+
+## Bug Fixes
+
+* Fixed a few minor issues reported by ck3-tiger.
+
 ## Version 0.4.2
 
 ### Compatibility
