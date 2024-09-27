@@ -1,4 +1,13 @@
-﻿futa = {
+﻿# Standard Values
+@pos_compat_high = 30
+@pos_compat_medium = 15
+@pos_compat_low = 5
+
+@neg_compat_high = -30
+@neg_compat_medium = -15
+@neg_compat_low = -5
+
+futa = {
 	name = {
 		first_valid = {
 			triggered_desc = {
@@ -1190,7 +1199,7 @@ slave = { # Chattel Slave
 	general_opinion = -10
 	same_opinion = 10
 	monthly_prestige_gain_mult = -0.75
-	hostile_scheme_power_mult = -0.2
+	hostile_scheme_phase_duration_add = minor_scheme_phase_duration_malus_value
 
 	flag = can_not_marry
 	flag = can_not_be_granted_titles
@@ -1269,7 +1278,7 @@ lifestyle_prostitute = {
 
 	# Modifiers
 	intrigue = 1
-	flag = carn_no_consequences_for_extramarital_sex_with_other
+	flag = carn_no_consequences_for_extramarital_sex_with_others
 	triggered_opinion = {
 		parameter = carn_prostitution_illegal
 		opinion_modifier = carn_prostitution_crime_opinion
@@ -1287,13 +1296,13 @@ lifestyle_prostitute = {
 			diplomacy = 1
 			intrigue = 2
 			attraction_opinion = 10
-			seduce_scheme_power_add = 10
+			seduce_scheme_phase_duration_add = 10
 		}
 		100 = {
 			diplomacy = 2
 			intrigue = 3
 			attraction_opinion = 20
-			seduce_scheme_power_add = 20
+			seduce_scheme_phase_duration_add = 20
 		}
 	}
 

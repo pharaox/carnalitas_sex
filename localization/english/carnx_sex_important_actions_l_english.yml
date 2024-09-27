@@ -1,8 +1,8 @@
 ﻿l_english:
- action_carn_can_sex_interaction_combined_label: "To your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
- action_carn_can_sex_interaction_combined_group_label: "$action_carn_can_sex_interaction$"
- action_carn_can_sex_interaction_combined_group_name: "$action_carn_can_sex_interaction$"
- action_carn_can_sex_interaction_combined_group_description: "You can make love to one of your consorts or lovers to reduce [stress|E] or try for a baby, among other effects."
+ #action_carn_can_sex_interaction_combined_label: "To your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ #action_carn_can_sex_interaction_combined_group_label: "$action_carn_can_sex_interaction$"
+ #action_carn_can_sex_interaction_combined_group_name: "$action_carn_can_sex_interaction$"
+ #action_carn_can_sex_interaction_combined_group_description: "You can make love to one of your consorts or lovers to reduce [stress|E] or try for a baby, among other effects."
 
  dsi_demand_sex_important_interaction_combined_label: "From your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
  dsi_demand_sex_important_interaction_combined_group_label: "$dsi_demand_sex_important_interaction$"
