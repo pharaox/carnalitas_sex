@@ -20,7 +20,10 @@ carnx_request_sex_scene_flags_effect = {
 				}
 				is_attracted_to_gender_of = $TARGET$
 				carnx_is_attracted_player_happy_with_sex_trigger = { CHARACTER = $TARGET$ }
-				scope:bdsm = no
+				trigger_if = {
+					limit = { exists = scope:bdsm }
+					scope:bdsm = no
+				}
 			}
 			carn_sex_scene_request_consensual = yes
 		}

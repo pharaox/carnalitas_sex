@@ -45,9 +45,12 @@ carnx_is_slave_consort_of_trigger = {
 carnx_is_sex_interaction_blocked_trigger = {
 	has_trait_with_flag = carn_block_send_sex_interaction
 	has_character_flag = carn_block_send_sex_interaction
-	has_opinion_modifier = {
-		target = scope:recipient
-		modifier = carn_block_sex_interaction_to_opinion
+	trigger_if = {
+		limit = { exists = scope:recipient }
+		has_opinion_modifier = {
+			target = scope:recipient
+			modifier = carn_block_sex_interaction_to_opinion
+		}
 	}
 }
 

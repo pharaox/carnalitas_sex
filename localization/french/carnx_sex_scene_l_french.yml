@@ -6,9 +6,9 @@
 
  carnx_sex_scene_dubcon_dom_opening_f: "Je trouve m[second.Custom('FR_OnA')] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]"
 
- carnx_sex_scene_dubcon_dom_location_private_chambers_1: "allongé[second.Custom('FR_e')] sur un canapé dans mes quartiers privés"
+ carnx_sex_scene_dubcon_dom_location_private_chambers_1: "allongé[second.Custom('FR_E')] sur un canapé dans mes quartiers privés"
  carnx_sex_scene_dubcon_dom_location_garden_1: "se promenant sur un sentier dans une partie isolée de mon jardin"
- carnx_sex_scene_dubcon_dom_location_dungeon_1: "solidement enchaîné[second.Custom('FR_e')] au mur de mon donjon"
+ carnx_sex_scene_dubcon_dom_location_dungeon_1: "solidement enchaîné[second.Custom('FR_E')] au mur de mon donjon"
  carnx_sex_scene_dubcon_dom_location_f: "qui m'attend"
 
  carnx_sex_scene_dubcon_dom_first_target_01: "[second.GetSheHe|U] me regarde avec curiosité, essayant d’anticiper mes souhaits" # respectful, accommodating, faithful, obedient
@@ -16,15 +16,15 @@
  carnx_sex_scene_dubcon_dom_first_target_03: "[second.GetSheHe|U] dénude lentement ses seins" # female, hedonistic, flirtatious, !bdsm
  carnx_sex_scene_dubcon_dom_first_target_04: "[second.GetSheHe|U] se retourne et laisse tomber ses vêtements, dévoilant ses fesses nues" # hedonistic, flirtatious, !bdsm
  carnx_sex_scene_dubcon_dom_first_target_05: "[second.GetSheHe|U] me salue courtoisement d’une voix sonnante" # respectful, faithful
- carnx_sex_scene_dubcon_dom_first_target_06: "[second.GetSheHe|U] semble ravi[second.Custom('FR_e')] de me voir et désireu[second.Custom('FR_XSe')] de me faire plaisir" # respectful, faithful
- carnx_sex_scene_dubcon_dom_first_target_07: "[second.GetSheHe|U] semble réticent[second.Custom('FR_e')] à être l’objet de mon affection" # reserved, disgusted, resisting
+ carnx_sex_scene_dubcon_dom_first_target_06: "[second.GetSheHe|U] semble ravi[second.Custom('FR_E')] de me voir et désireu[second.Custom('FR_XSe')] de me faire plaisir" # respectful, faithful
+ carnx_sex_scene_dubcon_dom_first_target_07: "[second.GetSheHe|U] semble réticent[second.Custom('FR_E')] à être l’objet de mon affection" # reserved, disgusted, resisting
  carnx_sex_scene_dubcon_dom_first_target_08: "[second.GetSheHe|U] se tait et évite de croiser mon regard" # reserved, disgusted, resisting
  carnx_sex_scene_dubcon_dom_first_target_09: "[second.GetSheHe|U] me salue courtoisement mais froidement" # reserved, disgusted, resisting
  carnx_sex_scene_dubcon_dom_first_target_10: "[second.GetSheHe|U] semble très avide de me faire plaisir, peut-être même un peu trop" # deceitful, calculating
  carnx_sex_scene_dubcon_dom_first_target_11: "[second.GetSheHe|U] me salue joyeusement, bien que je sente de la duplicité dans son sourire" # deceitful, calculating
- carnx_sex_scene_dubcon_dom_first_target_12: "[second.GetSheHe|U] se tient devant moi, timide et obéissant[second.Custom('FR_e')]" # obedient
+ carnx_sex_scene_dubcon_dom_first_target_12: "[second.GetSheHe|U] se tient devant moi, timide et obéissant[second.Custom('FR_E')]" # obedient
  carnx_sex_scene_dubcon_dom_first_target_14: "[second.GetSheHe|U] me fixe d’un air de défi" # resisting
- carnx_sex_scene_dubcon_dom_first_target_15: "[second.GetSheHe|U] respire difficilement, tremblant[second.Custom('FR_e')] de passion" # amorous, flirtatious
+ carnx_sex_scene_dubcon_dom_first_target_15: "[second.GetSheHe|U] respire difficilement, tremblant[second.Custom('FR_E')] de passion" # amorous, flirtatious
  carnx_sex_scene_dubcon_dom_first_target_16: "[second.GetSheHe|U] me regarde fixement, ses yeux brûlant de convoitise" # amorous, flirtatious
  carnx_sex_scene_dubcon_dom_first_target_f:  "[second.GetSheHe|U] me salue avec courtoisie, bien que ses véritables sentiments ne soient pas faciles à lire" # fallback
 
@@ -47,7 +47,7 @@
 
  carnx_sex_scene_dubcon_sub_opening_f: "M[second.Custom('FR_OnA')] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] me trouve"
 
- carnx_sex_scene_dubcon_sub_location_private_chambers_1: "allongé[ROOT.Char.Custom('FR_e')] sur un canapé dans ses quartiers privés"
+ carnx_sex_scene_dubcon_sub_location_private_chambers_1: "allongé[ROOT.Char.Custom('FR_E')] sur un canapé dans ses quartiers privés"
  carnx_sex_scene_dubcon_sub_location_garden_1: "me promenant sur un sentier dans une partie isolée de son jardin"
  carnx_sex_scene_dubcon_sub_location_f: "qui l'attend"
 
