@@ -41,7 +41,7 @@
 		}
 	}
 
-	cooldown = { months = carn_sex_interaction_cooldown }
+	#cooldown = { months = carn_sex_interaction_cooldown }
 
 	on_accept = {
 		scope:actor = {
