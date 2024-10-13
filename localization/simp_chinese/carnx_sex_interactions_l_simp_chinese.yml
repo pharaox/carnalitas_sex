@@ -24,6 +24,9 @@
  carnx_sex_bdsm_option: "放纵你阴暗的激情"
  carnx_sex_bdsm_option_desc: "与你的伴侣尽情释放你阴暗的激情。此选项可用，因为你是 $trait_sadistic$，且 [recipient.GetShortUINameNoTooltip] 是您的奴隶或妓女。"
 
+ carnx_sex_carnal_court_option: "Carnal Court sex scenes"
+ carnx_sex_carnal_court_option_desc: "Show Carnal Court sex scenes."
+
  carnx_has_eligible_sex_secondary_target_tt: "你的妃子是符合条件的第二伴侣"
  carnx_has_eligible_demand_sex_secondary_target_tt: "你的奴隶是符合条件的第二伴侣"
  carnx_secondary_target_same_as_primary_target_tt: "第二个伴侣与第一个伴侣相同"

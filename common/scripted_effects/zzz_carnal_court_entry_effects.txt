@@ -1,3 +1,0 @@
-﻿
-carnal_court_leave_court_effect = {
-}

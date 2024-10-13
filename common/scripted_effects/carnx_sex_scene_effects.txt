@@ -27,13 +27,13 @@ carnx_carnal_court_sex_scene_effect = {
 			save_scope_as = carn_sex_target
 		}
 
+		# Open Royal Court view
+		carnal_court_enter_court_effect = yes
+
 		# Trigger carnal_court_sex_scene
 		trigger_event = {
 			on_action = carnal_court_sex_scene
 		}
-
-		# Open Royal Court view
-		carnal_court_enter_court_effect = yes
 	}
 }
 

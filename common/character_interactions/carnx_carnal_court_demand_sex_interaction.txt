@@ -43,6 +43,24 @@
 
 	#cooldown = { months = carn_sex_interaction_cooldown }
 
+	# Carnal Court
+	send_option = {
+		is_valid = {
+			#scope:actor = { has_royal_court = yes }
+			always = yes
+		}
+		starts_enabled = {
+			scope:actor = { has_royal_court = yes }
+		}
+		flag = carnal_court
+		localization = "carnx_sex_carnal_court_option"
+		current_description = {
+			desc = "carnx_sex_carnal_court_option_desc"
+		}
+	}
+
+	send_options_exclusive = no
+
 	on_accept = {
 		scope:actor = {
 			# Use the hook on the recipient
@@ -120,7 +138,7 @@
 			hidden_effect = {
 				# Actually fire the sex scene
 				if = {
-					limit = { has_royal_court = yes }
+					limit = { scope:carnal_court = yes }
 					carnx_carnal_court_sex_scene_effect = {
 						PLAYER = scope:actor
 						TARGET = scope:recipient

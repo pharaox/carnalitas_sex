@@ -24,6 +24,9 @@
  carnx_sex_bdsm_option: "Indulge your darker passions"
  carnx_sex_bdsm_option_desc: "Indulge your darker passions with your partner. This option is available because you are $trait_sadistic$ and [recipient.GetShortUINameNoTooltip] is your slave or a prostitute."
 
+ carnx_sex_carnal_court_option: "Carnal Court sex scenes"
+ carnx_sex_carnal_court_option_desc: "Show Carnal Court sex scenes."
+
  carnx_has_eligible_sex_secondary_target_tt: "You have a consort who is an eligible second partner"
  carnx_has_eligible_demand_sex_secondary_target_tt: "You have a slave who is an eligible second partner"
  carnx_secondary_target_same_as_primary_target_tt: "The second partner is the same as the primary one"

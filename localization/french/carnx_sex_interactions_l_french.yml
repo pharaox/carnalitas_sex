@@ -24,6 +24,9 @@
  carnx_sex_bdsm_option: "Assouvir vos passions les plus sombres"
  carnx_sex_bdsm_option_desc: "Assouvir vos passions les plus sombres avec votre partenaire. Cette option est disponible parce que vous êtes $trait_sadistic$ et que [recipient.GetShortUINameNoTooltip] est votre esclave ou une prostituée."
 
+ carnx_sex_carnal_court_option: "Carnal Court sex scenes"
+ carnx_sex_carnal_court_option_desc: "Show Carnal Court sex scenes."
+
  carnx_has_eligible_sex_secondary_target_tt: "Vous avez un consort qui est un second partenaire éligible"
  carnx_has_eligible_demand_sex_secondary_target_tt: "Vous avez un esclave qui est un second partenaire éligible"
  carnx_secondary_target_same_as_primary_target_tt: "Le deuxième partenaire est le même que le premier"
