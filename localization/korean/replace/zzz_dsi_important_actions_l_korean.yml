@@ -1,5 +1,5 @@
 ﻿l_korean:
- dsi_demand_sex_important_interaction: "@carn_icon! You can $dsi_demand_sex_interaction$"
- dsi_demand_sex_important_interaction_label: "$dsi_demand_sex_important_interaction$ from your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
- dsi_demand_sex_important_interaction_desc: "You can demand sex from [recipient.GetUIName] to reduce [stress|E] or try for a baby, among other effects."
- dsi_demand_sex_important_interaction_click: "#I Click to $dsi_demand_sex_interaction$#!"
+ dsi_demand_sex_important_interaction: "@carn_icon! 당신은 $dsi_demand_sex_interaction$(을)를 할 수 있습니다"
+ dsi_demand_sex_important_interaction_label: "당신의 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip]에게 $dsi_demand_sex_important_interaction$ ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ dsi_demand_sex_important_interaction_desc: "[recipient.GetUIName]에게 성관계를 요구하여 [stress|E]를 줄이거나 아이를 가지려 시도하는 등의 효과를 얻을 수 있습니다."
+ dsi_demand_sex_important_interaction_click: "#I 클릭하여 $dsi_demand_sex_interaction$(을)를 하세요#!"

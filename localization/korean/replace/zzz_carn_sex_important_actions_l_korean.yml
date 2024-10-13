@@ -1,5 +1,5 @@
 ﻿l_korean:
- action_carn_can_sex_interaction: "@carn_icon! You can $carn_sex_interaction$"
- action_carn_can_sex_interaction_label: "$action_carn_can_sex_interaction$ to your [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
- action_carn_can_sex_interaction_desc: "You can make love to [recipient.GetUIName] to reduce [stress|E] or try for a baby, among other effects."
- action_carn_can_sex_interaction_click: "#I Click to $carn_sex_interaction$#!"
+ action_carn_can_sex_interaction: "@carn_icon! 당신은 $carn_sex_interaction$(을)를 할 수 있습니다"
+ action_carn_can_sex_interaction_label: "당신의 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip]에게 $action_carn_can_sex_interaction$ ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ action_carn_can_sex_interaction_desc: "[recipient.GetUIName]와(과) 사랑을 나누어 [stress|E]를 줄이거나 아이를 가지려 시도하는 등의 효과를 얻을 수 있습니다."
+ action_carn_can_sex_interaction_click: "#I 클릭하여 $carn_sex_interaction$(을)를 하세요#!"
