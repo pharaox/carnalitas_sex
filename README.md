@@ -6,7 +6,7 @@ A rework of the Carnalitas *Make Love* interaction and its related effects aimin
 
 The latest version is compatible with CK3 1.13.x and Carnalitas 2.7. If you are still on CK3 1.12.x, download [version 0.4.2](https://github.com/pharaox/carnalitas_sex/releases/download/0.4.2/carnalitas_love_reimagined-0.4.2.zip) instead, and use it with Carnalitas 2.6.
 
-**Note:** Since an official CBO version compatible with CK3 1.13.x and Carnalitas 2.7 is not yet released, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/).
+**Note:** Since an official CBO version compatible with CK3 1.13.x and Carnalitas 2.7 is not yet released, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/). The latest version of this mod is compatible with CBO Unofficial 1.3, if you use an older version of CBO Unofficial download [version 0.5.0](https://github.com/pharaox/carnalitas_sex/releases/download/0.5.0/carnalitas_love_reimagined-0.5.0.zip) instead.
 
 ## Overview
 
@@ -50,7 +50,7 @@ This mod conflicts with [Carnalitas Slavery Expansion](https://www.loverslab.com
 
 ## Localization
 
-This mod is currently available in English, Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)), and French (translated by [@don-vip](https://github.com/don-vip)). For other languages, it uses the original English text as a placeholder.
+This mod is currently available in English, Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)), French (translated by [@don-vip](https://github.com/don-vip)), and Korean (translated by [@ipni20](https://www.loverslab.com/profile/4890252-ipni20/)). For other languages, it uses the original English text as a placeholder.
 
 ## Links
 
@@ -290,7 +290,3 @@ The sections below list the changes made to existing CBO objects in somewhat mor
 ### Interactions (`character_interactions`)
 
 * *Carnal Court Make Love* (`carnal_court_sex_interaction`): Modified as described in [CBO Interactions](#cbo-interactions).
-
-### Effects (`scripted_effects`)
-
-* `carnal_court_leave_court_effect`: Replaced with an empty effect as it should not do anything.

@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 0.5.1
+
+### Compatibility
+
+* Adapted to CBO Unofficial 1.3.
+
+### Interactions
+
+* It is now possible to choose the sex scene type (Carnal Court or original) in CBO interactions.
+
+### Localization
+
+* Added Korean translation by **@ipni20**.
+
 ## Version 0.5.0
 
 ### Compatibility
