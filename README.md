@@ -4,9 +4,9 @@
 
 A rework of the Carnalitas *Make Love* interaction and its related effects aiming at better realism and immersion, more variety, and improved player experience.
 
-The latest version is compatible with CK3 1.13.x and Carnalitas 2.7. If you are still on CK3 1.12.x, download [version 0.4.2](https://github.com/pharaox/carnalitas_sex/releases/download/0.4.2/carnalitas_love_reimagined-0.4.2.zip) instead, and use it with Carnalitas 2.6.
+The latest version is compatible with CK3 1.14.x and Carnalitas 2.7. If you are still on CK3 1.13.x, download [version 0.5.1](https://github.com/pharaox/carnalitas_sex/releases/download/0.5.1/carnalitas_love_reimagined-0.5.1.zip) instead, and use it with Carnalitas 2.7.
 
-**Note:** Since an official CBO version compatible with CK3 1.13.x and Carnalitas 2.7 is not yet released, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/). The latest version of this mod is compatible with CBO Unofficial 1.3, if you use an older version of CBO Unofficial download [version 0.5.0](https://github.com/pharaox/carnalitas_sex/releases/download/0.5.0/carnalitas_love_reimagined-0.5.0.zip) instead.
+**Note:** Since an official CBO version compatible with CK3 1.14.x (or CK3 1.13.x) and Carnalitas 2.7 is not available, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/). The latest version of this mod is compatible with CBO Unofficial 1.3 (and higher), if you use an older version of CBO Unofficial download [version 0.5.0](https://github.com/pharaox/carnalitas_sex/releases/download/0.5.0/carnalitas_love_reimagined-0.5.0.zip) instead.
 
 ## Overview
 
