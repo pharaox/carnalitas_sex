@@ -1,8 +1,8 @@
-version="0.5.1"
+version="0.5.2"
 tags={
 	"Gameplay"
 	"Character Interactions"
 	"Events"
 }
 name="Carnalitas Love Reimagined"
-supported_version="1.13.*"
+supported_version="1.14.*"
