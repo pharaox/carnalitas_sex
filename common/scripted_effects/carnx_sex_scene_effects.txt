@@ -123,7 +123,10 @@ carnx_set_sex_scene_location_effect = {
 				save_scope_value_as = { name = sex_scene_location value = flag:dungeon }
 			}
 		}
-		set_variable = { name = sex_scene_location value = scope:sex_scene_location }
+		if = {
+			limit = { exists = scope:sex_scene_location }
+			set_variable = { name = sex_scene_location value = scope:sex_scene_location }
+		}
 	}
 }
 
@@ -191,6 +194,14 @@ carnx_set_sex_scene_target_effect = {
 			}
 		}
 		save_scope_value_as = { name = sex_scene_target value = flag:_prostitute }
+	}
+	else_if = {
+		limit = {
+			scope:carn_sex_player = {
+				carn_is_working_as_prostitute_trigger = yes
+			}
+		}
+		save_scope_value_as = { name = sex_scene_target value = flag:_client }
 	}
 	if = {
 		limit = { exists = scope:sex_scene_target }
