@@ -64,7 +64,12 @@ carnx_is_eligible_sex_target_trigger = {
 		is_at_same_location = $PLAYER$
 	}
 	$PLAYER$ = {
-		carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:target }
+		OR = {
+			carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:target }
+			scope:target = {
+				carn_is_working_as_prostitute_trigger = yes
+			}
+		}
 		is_attracted_to_gender_of = scope:target
 		NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
 	}

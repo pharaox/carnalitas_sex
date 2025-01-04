@@ -26,6 +26,14 @@
 				}
 				add_to_list = potential_partners
 			}
+			location = {
+				every_character_in_location = {
+					limit = {
+						carn_is_working_as_prostitute_trigger = yes
+					}
+					add_to_list = potential_partners
+				}
+			}
 
 			every_in_list = {
 				list = potential_partners
