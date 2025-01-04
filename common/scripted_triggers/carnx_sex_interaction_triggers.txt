@@ -190,7 +190,6 @@ carnx_is_sex_with_character_crime_trigger = {
 		carnx_is_sex_with_character_sin_crime_trigger = { SIN = adultery CHARACTER = $CHARACTER$ }
 		carnx_is_sex_with_character_sin_crime_trigger = { SIN = sodomy CHARACTER = $CHARACTER$ }
 		carnx_is_sex_with_character_sin_crime_trigger = { SIN = incest CHARACTER = $CHARACTER$ }
-		carnx_is_sex_with_character_sin_crime_trigger = { SIN = prostitution CHARACTER = $CHARACTER$ }
 	}
 }
 
@@ -200,7 +199,6 @@ carnx_is_sex_with_character_shunned_trigger = {
 		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = adultery CHARACTER = $CHARACTER$ }
 		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = sodomy CHARACTER = $CHARACTER$ }
 		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = incest CHARACTER = $CHARACTER$ }
-		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = prostitution CHARACTER = $CHARACTER$ }
 	}
 }
 
@@ -234,11 +232,6 @@ carnx_is_sex_with_character_sodomy_trigger = {
 
 carnx_is_sex_with_character_incest_trigger = {
 	relation_with_character_is_incestuous_in_my_faith_trigger = { CHARACTER = $CHARACTER$ }
-}
-
-carnx_is_sex_with_character_prostitution_trigger = {
-	$CHARACTER$ = { carn_is_working_as_prostitute_trigger = yes }
-	NOT = { carnx_relationship_allows_free_sex_trigger = { PARTNER = $CHARACTER$ } }
 }
 
 carnx_is_adultery_crime_trigger = {
@@ -283,12 +276,4 @@ carnx_is_incest_crime_trigger = {
 
 carnx_is_incest_shunned_trigger = {
 	NOT = { faith = { has_doctrine_parameter = allows_unrestricted_marriage } }
-}
-
-carnx_is_prostitution_crime_trigger = {
-	faith = { has_doctrine_parameter = carn_prostitution_illegal }
-}
-
-carnx_is_prostitution_shunned_trigger = {
-	faith = { has_doctrine_parameter = carn_prostitution_shunned }
 }

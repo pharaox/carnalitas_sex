@@ -16,8 +16,6 @@
  carnx_sex_interaction_adultery_shunned_warning_tt: "#X L’adultère est mal vu en [character.GetFaith.GetName]#!"
  carnx_sex_interaction_incest_crime_warning_tt: "#X L’inceste est illégal en [character.GetFaith.GetName]#!"
  carnx_sex_interaction_incest_shunned_warning_tt: "#X L’inceste est mal vu en [character.GetFaith.GetName]#!"
- carnx_sex_interaction_prostitution_crime_warning_tt: "#X La prostitution est illégale en [character.GetFaith.GetName]#!"
- carnx_sex_interaction_prostitution_shunned_warning_tt: "#X La prostitution est mal vue en [character.GetFaith.GetName]#!"
 
  carnx_sex_orgy_option: "Inclure un deuxième partenaire"
  carnx_sex_orgy_option_desc: "Inclure un deuxième partenaire dans vos ébats. Cette option est disponible parce que vous êtes $trait_lustful$ ou $trait_rakish$ et qu’il y a des partenaires éligibles."

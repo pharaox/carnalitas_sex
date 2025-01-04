@@ -107,7 +107,6 @@ carnx_sex_interaction_piety_impact_effect = {
 	carnx_sin_piety_impact_effect = { SIN = adultery PARTNER = $PARTNER$ }
 	carnx_sin_piety_impact_effect = { SIN = sodomy PARTNER = $PARTNER$ }
 	carnx_sin_piety_impact_effect = { SIN = incest PARTNER = $PARTNER$ }
-	carnx_sin_piety_impact_effect = { SIN = prostitution PARTNER = $PARTNER$ }
 }
 
 carnx_sin_piety_impact_effect = {
