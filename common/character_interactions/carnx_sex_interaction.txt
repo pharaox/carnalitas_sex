@@ -191,7 +191,7 @@
 				}
 
 				# Piety impact
-				carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:recipient }
+				carnx_sex_interaction_piety_impact_effect = { PARTNER = scope:recipient }
 
 				# Lose stress if arousal stress is enabled
 				if = {
@@ -200,7 +200,7 @@
 						is_attracted_to_gender_of = scope:recipient
 						NOT = { has_trait = chaste }
 					}
-					add_stress = minor_stress_impact_loss
+					add_stress = carnx_sex_interaction_stress_loss_value
 				}
 
 				# Stress impact
@@ -215,7 +215,7 @@
 				# Effects for recipient
 				scope:recipient = {
 					# Piety impact
-					carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:actor }
+					carnx_sex_interaction_piety_impact_effect = { PARTNER = scope:actor }
 
 					# Stress impact
 					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
@@ -232,7 +232,7 @@
 					limit = { scope:orgy = yes }
 					scope:secondary_recipient = {
 						# Piety impact
-						carnx_sex_iteraction_piety_impact_effect = { PARTNER = scope:actor }
+						carnx_sex_interaction_piety_impact_effect = { PARTNER = scope:actor }
 
 						# Stress impact
 						carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }

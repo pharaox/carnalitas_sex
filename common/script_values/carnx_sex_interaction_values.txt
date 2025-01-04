@@ -5,3 +5,7 @@
 		multiply = 2
 	}
 }
+
+carnx_sex_interaction_stress_loss_value = {
+	value = minor_stress_impact_loss
+}

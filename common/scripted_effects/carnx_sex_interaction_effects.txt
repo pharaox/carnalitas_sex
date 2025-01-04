@@ -103,7 +103,7 @@ carnx_request_sex_scene_locations_effect = {
 	}
 }
 
-carnx_sex_iteraction_piety_impact_effect = {
+carnx_sex_interaction_piety_impact_effect = {
 	carnx_sin_piety_impact_effect = { SIN = adultery PARTNER = $PARTNER$ }
 	carnx_sin_piety_impact_effect = { SIN = sodomy PARTNER = $PARTNER$ }
 	carnx_sin_piety_impact_effect = { SIN = incest PARTNER = $PARTNER$ }
