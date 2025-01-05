@@ -1,0 +1,32 @@
+﻿carnx_had_sex_with_effect = {
+	if = {
+		limit = { has_character_flag = carn_block_next_had_sex_with_effect }
+		show_as_tooltip = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = $CHARACTER_1$
+				CHARACTER_2 = $CHARACTER_2$
+				C1_PREGNANCY_CHANCE = $C1_PREGNANCY_CHANCE$
+				C2_PREGNANCY_CHANCE = $C2_PREGNANCY_CHANCE$
+				STRESS_EFFECTS = $STRESS_EFFECTS$
+				DRAMA = $DRAMA$
+			}
+		}
+	}
+	else = {
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = $CHARACTER_1$
+			CHARACTER_2 = $CHARACTER_2$
+			C1_PREGNANCY_CHANCE = $C1_PREGNANCY_CHANCE$
+			C2_PREGNANCY_CHANCE = $C2_PREGNANCY_CHANCE$
+			STRESS_EFFECTS = $STRESS_EFFECTS$
+			DRAMA = $DRAMA$
+		}
+	}
+}
+
+carnx_clear_sex_interaction_flags_effect = {
+	if = {
+		limit = { has_character_flag = carn_block_next_had_sex_with_effect }
+		remove_character_flag = carn_block_next_had_sex_with_effect
+	}
+}

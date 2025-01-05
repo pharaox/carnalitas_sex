@@ -53,7 +53,7 @@ carnx_sex_scene.0001 = {
 			NAME5 = sex_scene_target_attitude TYPE5 = flag:variable
 		}
 
-		carn_had_sex_with_effect = {
+		carnx_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
 			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
@@ -80,6 +80,7 @@ carnx_sex_scene.0001 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
 	option = {
@@ -148,7 +149,7 @@ carnx_sex_scene.0002 = {
 			NAME6 = sex_scene_quote TYPE6 = flag:variable
 		}
 
-		carn_had_sex_with_effect = {
+		carnx_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
 			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
@@ -158,7 +159,7 @@ carnx_sex_scene.0002 = {
 		}
 		if = {
 			limit = { exists = scope:carn_sex_target2 }
-			carn_had_sex_with_effect = {
+			carnx_had_sex_with_effect = {
 				CHARACTER_1 = scope:carn_sex_player
 				CHARACTER_2 = scope:carn_sex_target2
 				C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
@@ -192,6 +193,7 @@ carnx_sex_scene.0002 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
 	option = {
@@ -268,7 +270,7 @@ carnx_sex_scene.0003 = {
 			NAME6 = sex_scene_quote TYPE6 = flag:variable
 		}
 
-		carn_had_sex_with_effect = {
+		carnx_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
 			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
@@ -278,7 +280,7 @@ carnx_sex_scene.0003 = {
 		}
 		if = {
 			limit = { exists = scope:carn_sex_target2 }
-			carn_had_sex_with_effect = {
+			carnx_had_sex_with_effect = {
 				CHARACTER_1 = scope:carn_sex_player
 				CHARACTER_2 = scope:carn_sex_target2
 				C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
@@ -312,6 +314,7 @@ carnx_sex_scene.0003 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
 	option = {
@@ -367,7 +370,7 @@ carnx_sex_scene.0004 = {
 			NAME6 = sex_scene_quote TYPE6 = flag:variable
 		}
 
-		carn_had_sex_with_effect = {
+		carnx_had_sex_with_effect = {
 			CHARACTER_1 = scope:carn_sex_player
 			CHARACTER_2 = scope:carn_sex_target
 			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
@@ -394,6 +397,7 @@ carnx_sex_scene.0004 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
 	option = {
