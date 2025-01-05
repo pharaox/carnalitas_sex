@@ -31,11 +31,14 @@ carn_sex_scene_no_drama_trigger = {
 }
 
 carn_sex_scene_no_memory_trigger = {
-	OR = {
-		is_target_in_variable_list = {
-			name = carn_sex_scene_option_flag_list
-			target = flag:no_memory
+	trigger_if = {
+		limit = { always = no } # TODO Add game rule
+		OR = {
+			is_target_in_variable_list = {
+				name = carn_sex_scene_option_flag_list
+				target = flag:no_memory
+			}
+			exists = scope:carn_sex_no_memory
 		}
-		exists = scope:carn_sex_no_memory
 	}
 }
