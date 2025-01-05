@@ -1,0 +1,44 @@
+﻿# TODO Move these to Carnalitas
+
+carn_sex_scene_no_pregnancy_effect = {
+	add_to_variable_list = {
+		name = carn_sex_scene_option_flag_list
+		target = flag:no_pregnancy
+	}
+	save_scope_as = carn_sex_no_pregnancy
+}
+
+carn_sex_scene_no_stress_effect = {
+	add_to_variable_list = {
+		name = carn_sex_scene_option_flag_list
+		target = flag:no_stress
+	}
+	save_scope_as = carn_sex_no_stress
+}
+
+carn_sex_scene_no_drama_effect = {
+	add_to_variable_list = {
+		name = carn_sex_scene_option_flag_list
+		target = flag:no_drama
+	}
+	save_scope_as = carn_sex_no_drama
+}
+
+carn_sex_scene_no_memory_effect = {
+	add_to_variable_list = {
+		name = carn_sex_scene_option_flag_list
+		target = flag:no_memory
+	}
+	save_scope_as = carn_sex_no_memory
+}
+
+carn_sex_scene_clean_up_flags_effect = {
+	clear_variable_list = carn_sex_scene_flag_list
+	clear_variable_list = carn_sex_scene_excluded_flag_list
+	clear_variable_list = carn_sex_scene_option_flag_list
+
+	clear_saved_scope = carn_sex_no_pregnancy
+	clear_saved_scope = carn_sex_no_stress
+	clear_saved_scope = carn_sex_no_drama
+	clear_saved_scope = carn_sex_no_memory
+}
