@@ -29,3 +29,5 @@
  carnx_has_eligible_demand_sex_secondary_target_tt: "Vous avez un esclave qui est un second partenaire éligible"
  carnx_secondary_target_same_as_primary_target_tt: "Le deuxième partenaire est le même que le premier"
  carnx_secondary_target_not_eligible_bdsm_target_tt: "Le deuxième partenaire n’est pas votre esclave ou une prostituée"
+
+ carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U] is too far away for you to have sex with"

@@ -29,3 +29,5 @@
  carnx_has_eligible_demand_sex_secondary_target_tt: "You have a slave who is an eligible second partner"
  carnx_secondary_target_same_as_primary_target_tt: "The second partner is the same as the primary one"
  carnx_secondary_target_not_eligible_bdsm_target_tt: "The second partner is not your slave or a prostitute"
+
+ carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U] is too far away for you to have sex with"

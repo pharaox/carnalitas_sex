@@ -29,3 +29,5 @@
  carnx_has_eligible_demand_sex_secondary_target_tt: "당신은 적합한 두 번째 파트너가 될 수 있는 노예를 가지고 있습니다"
  carnx_secondary_target_same_as_primary_target_tt: "두 번째 파트너가 첫 번째 파트너와 동일합니다"
  carnx_secondary_target_not_eligible_bdsm_target_tt: "두 번째 파트너는 당신의 노예나 매춘부가 아닙니다"
+
+ carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U] is too far away for you to have sex with"

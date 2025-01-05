@@ -37,6 +37,16 @@ carnx_relationship_allows_demand_sex_trigger = {
 	}
 }
 
+carnx_is_sex_target_at_valid_location_trigger = {
+	trigger_if = {
+		limit = { has_game_rule = carnx_sex_requires_same_location_enabled }
+		OR = {
+			is_at_same_location = $PARTNER$
+			is_in_pool_at = $PARTNER$.location
+		}
+	}
+}
+
 carnx_is_slave_consort_of_trigger = {
 	exists = $CHARACTER$
 	always = no
@@ -59,10 +69,7 @@ carnx_is_eligible_sex_target_trigger = {
 	is_adult = yes
 	carnx_is_sex_interaction_blocked_trigger = no
 	carn_can_have_sex_trigger = yes
-	trigger_if = {
-		limit = { has_game_rule = carnx_sex_requires_same_location_enabled }
-		is_at_same_location = $PLAYER$
-	}
+	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = $PLAYER$ }
 	$PLAYER$ = {
 		OR = {
 			carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:target }
@@ -80,10 +87,7 @@ carnx_is_eligible_demand_sex_target_trigger = {
 	is_adult = yes
 	carnx_is_sex_interaction_blocked_trigger = no
 	carn_can_have_sex_trigger = yes
-	trigger_if = {
-		limit = { has_game_rule = carnx_sex_requires_same_location_enabled }
-		is_at_same_location = $PLAYER$
-	}
+	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = $PLAYER$ }
 	$PLAYER$ = {
 		carnx_relationship_allows_demand_sex_trigger = { PARTNER = scope:target }
 		has_usable_hook = scope:target

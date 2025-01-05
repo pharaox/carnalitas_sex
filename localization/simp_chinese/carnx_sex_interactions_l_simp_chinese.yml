@@ -29,3 +29,5 @@
  carnx_has_eligible_demand_sex_secondary_target_tt: "你的奴隶是符合条件的第二伴侣"
  carnx_secondary_target_same_as_primary_target_tt: "第二个伴侣与第一个伴侣相同"
  carnx_secondary_target_not_eligible_bdsm_target_tt: "第二个伴侣不是你的奴隶或妓女"
+
+ carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U] is too far away for you to have sex with"
