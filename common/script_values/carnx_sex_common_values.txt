@@ -1,9 +1,7 @@
 ﻿carnx_pregnancy_chance_value = {
 	value = scope:had_sex_root_character.fertility
-	add = {
-		value = scope:had_sex_with_effect_partner.fertility
-		multiply = scope:had_sex_with_effect_partner.carnx_partner_fertility_muliplier
-	}
+	add = scope:had_sex_with_effect_partner.fertility
+	multiply = scope:had_sex_with_effect_partner.carnx_partner_fertility_muliplier
 	divide = 2
 	multiply = 50
 	floor = yes
@@ -40,11 +38,20 @@ carnx_partner_fertility_muliplier = {
 	}
 	else_if = { # Prostitute
 		limit = {
-			carn_is_working_as_prostitute_trigger = yes
+			OR = {
+				carn_is_working_as_prostitute_trigger = yes
+				scope:had_sex_root_character = {
+					carn_is_working_as_prostitute_trigger = yes
+				}
+			}
 		}
-		value = 0
+		value = carnx_prostitute_fertility_multiplier
 	}
 	else = { # Everyone else, including lovers
 		value = define:NChildbirth|NOT_SPOUSE_FERTILITY_MULTIPLIER
 	}
+}
+
+carnx_prostitute_fertility_multiplier = {
+	value = 0.2
 }

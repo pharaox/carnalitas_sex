@@ -165,7 +165,7 @@ In Carnalitas, the pregnancy chance of *Make Love* is hardcoded at 30%. This is 
 In this mod, the pregnancy chance is calculated using the following formula that is based on the vanilla formula for calculating the pregnancy chance with a consort on a monthly basis:
 
 ```text
-((player_fertility + target_fertility * target_fertility_multiplier) / 2) * 50%
+((player_fertility + target_fertility) * target_fertility_multiplier / 2) * 50%
 ```
 
 Above, `target_fertility_multiplier` is one of the multipliers from `00_defines.txt`, depending on the relationship with the target:
@@ -173,7 +173,7 @@ Above, `target_fertility_multiplier` is one of the multipliers from `00_defines.
 * Primary spouse: `PRIMARY_SPOUSE_FERTILITY_MULTIPLIER` (defaults to 1)
 * Secondary spouse: `SECONDARY_SPOUSE_FERTILITY_MULTIPLIER` (defaults to 0.5)
 * Concubine or slave: `CONCUBINE_FERTILITY_MULTIPLIER` (defaults to 0.5)
-* Prostitute: 0
+* Prostitute: 0.2
 * Everyone else, including lovers: `NOT_SPOUSE_FERTILITY_MULTIPLIER` (defaults to 1)
 
 Statistically, the above formula produces a distribution that has a mean value around 25, but individual values may be as low as 10 or as high as 40. Note that the pregnancy chance only matters if both partners are fertile in the first place - have fertility higher than 0.1, an appropriate age (females older than 45 are not fertile), and the female is not already pregnant.
