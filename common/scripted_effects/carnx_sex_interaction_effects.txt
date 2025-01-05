@@ -123,14 +123,14 @@ carnx_sin_piety_impact_effect = {
 				carnx_is_$SIN$_crime_trigger = yes
 			}
 			custom_tooltip = carnx_sex_interaction_$SIN$_crime_warning_tt
-			add_piety = minor_piety_loss
+			#add_piety = minor_piety_loss
 		}
 		else_if = {
 			limit = {
 				carnx_is_$SIN$_shunned_trigger = yes
 			}
 			custom_tooltip = carnx_sex_interaction_$SIN$_shunned_warning_tt
-			add_piety = miniscule_piety_loss
+			#add_piety = miniscule_piety_loss
 		}
 	}
 }
