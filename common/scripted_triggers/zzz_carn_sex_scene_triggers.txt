@@ -42,3 +42,13 @@ carn_sex_scene_no_memory_trigger = {
 		}
 	}
 }
+
+carn_sex_scene_no_std_trigger = {
+	OR = {
+		is_target_in_variable_list = {
+			name = carn_sex_scene_option_flag_list
+			target = flag:no_std
+		}
+		exists = scope:carn_sex_no_std
+	}
+}

@@ -32,6 +32,14 @@ carn_sex_scene_no_memory_effect = {
 	save_scope_as = carn_sex_no_memory
 }
 
+carn_sex_scene_no_std_effect = {
+	add_to_variable_list = {
+		name = carn_sex_scene_option_flag_list
+		target = flag:no_std
+	}
+	save_scope_as = carn_sex_no_std
+}
+
 carn_sex_scene_clean_up_flags_effect = {
 	clear_variable_list = carn_sex_scene_flag_list
 	clear_variable_list = carn_sex_scene_excluded_flag_list
@@ -41,4 +49,5 @@ carn_sex_scene_clean_up_flags_effect = {
 	clear_saved_scope = carn_sex_no_stress
 	clear_saved_scope = carn_sex_no_drama
 	clear_saved_scope = carn_sex_no_memory
+	clear_saved_scope = carn_sex_no_std
 }
