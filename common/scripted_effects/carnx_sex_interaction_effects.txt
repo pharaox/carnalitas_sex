@@ -176,6 +176,10 @@ carnx_sex_interaction_stress_impact_effect = {
 	}
 }
 
+carnx_sex_interaction_other_impact_effect = {
+	$PARTNER$ = {}
+}
+
 carnx_demand_sex_interaction_opinion_impact_effect = {
 	if = {
 		limit = {

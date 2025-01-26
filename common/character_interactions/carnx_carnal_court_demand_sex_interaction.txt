@@ -108,6 +108,9 @@
 				# Stress impact
 				carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:recipient }
 
+				# Other impact
+				carnx_sex_interaction_other_impact_effect = { PARTNER = scope:recipient }
+
 				# Additional stress impact of demanding sex
 				stress_impact = {
 					compassionate = miniscule_stress_impact_gain
@@ -123,6 +126,9 @@
 
 					# Opinion effects of being demanded sex
 					carnx_demand_sex_interaction_opinion_impact_effect = { PARTNER = scope:actor }
+
+					# Other impact
+					carnx_sex_interaction_other_impact_effect = { PARTNER = scope:actor }
 				}
 
 				add_character_flag = {

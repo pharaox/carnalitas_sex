@@ -212,6 +212,9 @@
 					carnx_sex_interaction_bdsm_player_effect = { PARTNER = scope:recipient }
 				}
 
+				# Other impact
+				carnx_sex_interaction_other_impact_effect = { PARTNER = scope:recipient }
+
 				# Effects for recipient
 				scope:recipient = {
 					# Piety impact
@@ -225,6 +228,9 @@
 						limit = { scope:bdsm = yes }
 						carnx_sex_interaction_bdsm_target_effect = { PARTNER = scope:actor }
 					}
+
+					# Other impact
+					carnx_sex_interaction_other_impact_effect = { PARTNER = scope:actor }
 				}
 
 				# Effects for secondary recipient
@@ -242,6 +248,9 @@
 							limit = { scope:bdsm = yes }
 							carnx_sex_interaction_bdsm_target_effect = { PARTNER = scope:actor }
 						}
+
+						# Other impact
+						carnx_sex_interaction_other_impact_effect = { PARTNER = scope:actor }
 					}
 				}
 

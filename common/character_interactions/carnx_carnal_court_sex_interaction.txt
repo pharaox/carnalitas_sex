@@ -130,6 +130,9 @@
 				# Stress impact
 				carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:recipient }
 
+				# Other impact
+				carnx_sex_interaction_other_impact_effect = { PARTNER = scope:recipient }
+
 				# Effects for recipient
 				scope:recipient = {
 					# Piety impact
@@ -137,6 +140,9 @@
 
 					# Stress impact
 					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
+
+					# Other impact
+					carnx_sex_interaction_other_impact_effect = { PARTNER = scope:actor }
 				}
 
 				add_character_flag = {
