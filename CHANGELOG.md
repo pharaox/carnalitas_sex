@@ -1,5 +1,29 @@
 # Changelog
 
+## Version 0.5.3
+
+### Interactions
+
+* Sex interactions no longer have any piety impact from being sinful (adulterous, incestuous, etc.). They may still have additional stress impact in such cases.
+* Having sex with a prostitute is no longer considered sinful under any doctrine.
+* Wandering (pool) characters are now considered to be in the same location for having sex if they are in that province's pool.
+* Reworked the pregnancy chance calculation to better match vanilla.
+* Disabled all memories from having sex.
+* The *You can Make Love* important action now also includes local prostitutes.
+
+### Compatibility
+
+* Enabled overriding sex interaction stress loss in submods (e.g. CPR).
+* Enabled disabling STD in sex scenes and effects for use in submods (e.g. CPR).
+* Enabled adding additional sex interaction effects in submods (e.g. CPR)
+
+### Bug Fixes
+
+* Fixed sex interaction tooltips showing incorrect stress loss (Carnalitas issue).
+* Fixed sex interactions actually having some game effects during cooldown, contrary to the tooltip (Carnalitas issue).
+* Fixed *Prostitute* trait increasing rather than reducing *Seduce* scheme phase duration (Carnalitas issue).
+* Fixed scope issues in sex scenes.
+
 ## Version 0.5.2
 
 ### Compatibility
@@ -26,7 +50,7 @@
 
 * Adapted to CK3 1.13 and Carnalitas 2.7.
 
-## Bug Fixes
+### Bug Fixes
 
 * Fixed a few minor issues reported by ck3-tiger.
 

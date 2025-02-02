@@ -16,7 +16,7 @@ By default, *Make Love* uses the vanilla sex scene generator originally used for
 
 Originally, Carnalitas intended to support 3 different types of sex scenes: "consensual", "dubcon", and "noncon". Unfortunately, the logic to select the appropriate type never produces any other result but "consensual". Furthermore, there are actually no events in Carnalitas or other mods that would satisfy the "dubcon" or "noncon" condition.
 
-Even the name *Make Love* itself may not be appropriate when demanding sex from a slave who is neither a lover nor an official consort. Historically such acts were often condemned by religion as adulterous or worse, and should have all sorts of consequences in the game, ranging from stress impact to piety loss and opinion loss with the victim. For this reason, the [Carnalitas Slavery Expansion](https://www.loverslab.com/files/file/21651-carnalitas-slavery-expansion/) mod introduced the *Demand Sex* interaction, without addressing the above issues however, so that slaves, while losing 20 opinion, are still acting in the sex scene as if enamoured with the player.
+Even the name *Make Love* itself may not be appropriate when demanding sex from a slave who is neither a lover nor an official consort. Historically such acts were often condemned by religion as adulterous or worse, and should have all sorts of consequences in the game, ranging from stress impact to opinion loss with the victim. For this reason, the [Carnalitas Slavery Expansion](https://www.loverslab.com/files/file/21651-carnalitas-slavery-expansion/) mod introduced the *Demand Sex* interaction, without addressing the above issues however, so that slaves, while losing 20 opinion, are still acting in the sex scene as if enamoured with the player.
 
 This mod improves and expands the *Make Love* interaction in order to properly address these limitations. It does this by adding a new sex scene generator that generates animations, backgrounds, and texts appropriate to many different attitudes and their combinations in both "consensual" and "dubcon" situations. It also re-introduces the *Demand Sex* interaction with its negative consequences, fully integrated with the new generator, and makes a number of other changes to make *Make Love* more immersive and enjoyable.
 
@@ -25,7 +25,7 @@ Since I am not a good writer myself, I opted for not generating the sex scene te
 The other changes to *Make Love* (and *Demand Sex*) introduced by this mod include:
 
 * You can only make love to someone who is currently at the same location as you (can be disabled via a game rule).
-* Both you and the target may lose (or gain) additional stress and piety depending on your traits and faith.
+* Both you and the target may lose (or gain) additional stress depending on your traits and faith.
 * You can choose additional options in sex interactions to request "orgy" or "bdsm" sex scenes depending on your traits and other conditions.
 * The pregnancy chance is dynamic instead of hardcoded.
 * Important actions such as *Can Make Love* list all characters that can be targeted.
@@ -42,7 +42,7 @@ This mod also supports changing its game rules mid-game with the [Gamerule Gadge
 
 This mod should be compatible with all mods based on Carnalitas that don't modify the *Make Love* interaction. Enhancing it in a way that is supported by Carnalitas, e.g. adding additional sex scene events, is fully supported.
 
-This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/), so you are encouraged to use them both. If you do this, put this mod after Carnalitas but before the CSR mod in the load order.
+This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) and and [Carnalitas Prostitution Reimagined](?), so you are encouraged to use all of them. If you do this, put this mod after Carnalitas but before the CSR and CPR in the load order.
 
 This mod has also been designed to be compatible with [Character Body Overhaul](https://www.loverslab.com/files/file/16683-character-body-overhaul/). If CBO is installed, it adds *Carnal Court Make Love* and *Carnal Court Demand Sex* interactions that have conditions and effects consistent with *Make Love* and *Demand Sex*, but use CBO animations.
 
@@ -60,6 +60,7 @@ This mod is currently available in English, Chinese (translated by [@Dark_Crow](
 If you like this mod, you may also consider my other mods:
 
 * [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/), a comprehensive rework of the Carnalitas slavery system.
+* [Carnalitas Prostitution Reimagined](?), a comprehensive rework of the Carnalitas prostitution system.
 * [Search & Trade Artifacts](https://steamcommunity.com/sharedfiles/filedetails/?id=2962238514), search for artifacts, buy them from other characters, and sell them to other characters.
 * [Travelers](https://steamcommunity.com/sharedfiles/filedetails/?id=3082182371), characters always travel to their home when it changes instead of teleporting.
 * [Active Courtiers](https://steamcommunity.com/sharedfiles/filedetails/?id=3157170996), courtiers search for spouses themselves for less micromanagement, stronger AI, and immersion.
@@ -76,8 +77,8 @@ There are however some differences in how this interaction works in this mod, ai
 
 * You can only make love to someone who is currently at the same location as you. If you are traveling or leading an army, your options might be limited. This is enabled by default, but can be disabled via the *Sex Requires Same Location* game rule.
 * You lose the usual amount of stress (15 before modifiers) from the interaction itself only if the *Arousal Causes Stress* Carnalitas game rule is enabled, for a better game balance.
-* You may lose (or gain) additional [stress and piety](#stress-and-piety-impact) depending on your traits and faith.
-* The target may similarly lose (or gain) stress and piety, depending on their traits and faith.
+* You may lose (or gain) additional [stress](#stress-impact) depending on your traits and faith.
+* The target may similarly lose (or gain) additional stress, depending on their traits and faith.
 * Either "consensual" or "dubcon" / "dominant player" Carnalitas [sex scene flags](#sex-scene-flags) are requested, depending on your relationship with the target, your mutual opinion, and how much you are attracted to each other. Only  [sex scene events](#sex-scene-events) that support the requested flags may fire as a result.
 * In addition to sex scene flags, [location flags](#location-flags) are also requested, depending on your relationship with the target.
 * The [pregnancy chance](#pregnancy-chances) is dynamic instead of hardcoded, and depends on the fertility of the partners and their relationship with each other.
@@ -90,7 +91,7 @@ As in Carnalitas, there is a cooldown of 1 year before the interaction is availa
 The *Make Love* interaction has the following options that are only available if specific conditions are fulfilled:
 
 * *Include a second partner* allows you to include a second partner in your lovemaking. This option is available if you are *Lustful* or *Rakish* and there are eligible partners. A spouse is considered eligible if they are *Lustful*, and any other consort if they are not *Chaste*. Choosing this option causes the "orgy" [sex scene flag](#sex-scene-flags) to be requested.
-* *Indulge your darker passions* allows you to request somewhat darker sex scenes. This option is available if you are *Sadistic* and the recipient (or both recipients) is your slave or a prostitute. Choosing this option causes the "bdsm" [sex scene flag](#sex-scene-flags) to be requested, and may also have additional stress and piety impact on you and your target.
+* *Indulge your darker passions* allows you to request somewhat darker sex scenes. This option is available if you are *Sadistic* and the recipient (or both recipients) is your slave or a prostitute. Choosing this option causes the "bdsm" [sex scene flag](#sex-scene-flags) to be requested, and may also have additional stress impact on you and your target.
 
 **Note**: Due to modding limitations, a "partner" is always selected, even if the *Include a second partner* option is not available at all, and set by default to your primary partner. If the option is available, you need to select a second partner different from the primary before you can choose it.
 
@@ -108,7 +109,7 @@ There are also a few other differences:
 * You may lose or gain additional stress if you are *Compassionate*, *Sadistic*, or *Callous*.
 * The target may get a negative opinion modifier on you if having sex with you is sinful (adultery, sodomy, or incest) according to their faith.
 
-All other conditions and effects are generally the same as in *Make Love*. Since the target is not your official consort, you are more likely to get negative [stress or piety impact](#stress-and-piety-impact) from having sex with them. Also, there is a higher chance of the "dubcon" / "dominant player" [sex scene flags](#sex-scene-flags) being requested.
+All other conditions and effects are generally the same as in *Make Love*. Since the target is not your official consort, you are more likely to get negative [stress impact](#stress-impact) from having sex with them. Also, there is a higher chance of the "dubcon" / "dominant player" [sex scene flags](#sex-scene-flags) being requested.
 
 The [*Make Love* options](#make-love-options) are also available in *Demand Sex*, subject to the same conditions. All valid *Demand Sex* partners are eligible for *Include a second partner*.
 
@@ -116,23 +117,13 @@ The [*Make Love* options](#make-love-options) are also available in *Demand Sex*
 
 The popular [Character Body Overhaul](https://www.loverslab.com/files/file/16683-character-body-overhaul/) mod adds an additional *Carnal Court Make Love* interaction that is similar to *Make Love*, but fires the CBO animated sex scene events. With this mod, this interaction has conditions and effects consistent with *Make Love*, and there is also an additional *Carnal Court Demand Sex* interaction consistent with *Demand Sex*. The CBO interactions don't use the new sex scene events and generator in any way, and also don't have the additional [*Make Love* options](#make-love-options), since they are not supported by CBO.
 
-#### Stress and Piety Impact
+#### Stress Impact
 
-Both you and the target may lose (or gain) stress and lose piety as a result of the sex interactions.
-
-##### Stress
+Both you and the target may lose (or gain) stress as a result of the sex interactions.
 
 * Gain stress if not attracted to the partner's gender.
 * Lose stress if attracted to the partner's gender and *Lustful* or *Rakish*.
 * Gain / lose stress if having sex with that partner is sinful (adultery, sodomy, or incest) according to their faith and *Zealous* or *Cynical*.
-
-##### Piety
-
-* Lose piety if having sex with that partner is sinful (adultery, sodomy, or incest) according to their faith.
-* Lose more piety if the corresponding sin is considered illegal instead of merely shunned by their faith.
-* Lose even more piety if multiple sins are being committed at the same time.
-
-Note that lovers are exempt from the above piety effects, since either your *Lover* relationship is still a secret (and so are your sins), or it has been exposed and you have been already punished (by losing a level of devotion, getting negative traits, etc). Also, you are unlikely to commit any sins by having sex with an official consort, since they usually could not have become your consort in the first place. Therefore, the above piety effects mostly apply if the target is a slave or a prostitute.
 
 #### Sex Scene Flags
 
