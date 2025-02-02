@@ -42,7 +42,7 @@ This mod also supports changing its game rules mid-game with the [Gamerule Gadge
 
 This mod should be compatible with all mods based on Carnalitas that don't modify the *Make Love* interaction. Enhancing it in a way that is supported by Carnalitas, e.g. adding additional sex scene events, is fully supported.
 
-This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) and and [Carnalitas Prostitution Reimagined](?), so you are encouraged to use all of them. If you do this, put this mod after Carnalitas but before the CSR and CPR in the load order.
+This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) and [Carnalitas Prostitution Reimagined](?), so you are encouraged to use all of them. If you do this, put this mod after Carnalitas, but before CSR and CPR in the load order.
 
 This mod has also been designed to be compatible with [Character Body Overhaul](https://www.loverslab.com/files/file/16683-character-body-overhaul/). If CBO is installed, it adds *Carnal Court Make Love* and *Carnal Court Demand Sex* interactions that have conditions and effects consistent with *Make Love* and *Demand Sex*, but use CBO animations.
 
