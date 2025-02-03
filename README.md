@@ -42,7 +42,7 @@ This mod also supports changing its game rules mid-game with the [Gamerule Gadge
 
 This mod should be compatible with all mods based on Carnalitas that don't modify the *Make Love* interaction. Enhancing it in a way that is supported by Carnalitas, e.g. adding additional sex scene events, is fully supported.
 
-This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) and [Carnalitas Prostitution Reimagined](?), so you are encouraged to use all of them. If you do this, put this mod after Carnalitas, but before CSR and CPR in the load order.
+This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) and [Carnalitas Prostitution Reimagined](https://www.loverslab.com/files/file/39623-carnalitas-prostitution-reimagined/), so you are encouraged to use all of them. If you do this, put this mod after Carnalitas, but before CSR and CPR in the load order.
 
 This mod has also been designed to be compatible with [Character Body Overhaul](https://www.loverslab.com/files/file/16683-character-body-overhaul/). If CBO is installed, it adds *Carnal Court Make Love* and *Carnal Court Demand Sex* interactions that have conditions and effects consistent with *Make Love* and *Demand Sex*, but use CBO animations.
 
@@ -60,7 +60,7 @@ This mod is currently available in English, Chinese (translated by [@Dark_Crow](
 If you like this mod, you may also consider my other mods:
 
 * [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/), a comprehensive rework of the Carnalitas slavery system.
-* [Carnalitas Prostitution Reimagined](?), a comprehensive rework of the Carnalitas prostitution system.
+* [Carnalitas Prostitution Reimagined](https://www.loverslab.com/files/file/39623-carnalitas-prostitution-reimagined/), a comprehensive rework of the Carnalitas prostitution system.
 * [Search & Trade Artifacts](https://steamcommunity.com/sharedfiles/filedetails/?id=2962238514), search for artifacts, buy them from other characters, and sell them to other characters.
 * [Travelers](https://steamcommunity.com/sharedfiles/filedetails/?id=3082182371), characters always travel to their home when it changes instead of teleporting.
 * [Active Courtiers](https://steamcommunity.com/sharedfiles/filedetails/?id=3157170996), courtiers search for spouses themselves for less micromanagement, stronger AI, and immersion.
