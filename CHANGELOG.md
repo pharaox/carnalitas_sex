@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.5.4
+
+### Bug Fixes
+
+* Fixed "You can Make Love to your you" sometimes being shown for player prostitutes.
+
 ## Version 0.5.3
 
 ### Interactions
