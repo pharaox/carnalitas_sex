@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
- action_carn_can_sex_interaction: "@carn_icon! 您可以 $carn_sex_interaction$"
- action_carn_can_sex_interaction_label: "将 $action_carn_can_sex_interaction$ 发送给您的 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
- action_carn_can_sex_interaction_desc: "您可以与 [recipient.GetUIName] 做爱，以减轻 [stress|E] 或尝试怀孕等效果。"
- action_carn_can_sex_interaction_click: "#点击  to $carn_sex_interaction$#!"
+ action_carn_can_sex_interaction: "@carn_icon! 你可以 $carn_sex_interaction$"
+ action_carn_can_sex_interaction_label: "$action_carn_can_sex_interaction$ 与[actor.Custom2('RelationToMe', recipient)][recipient.GetUINameNoTooltip]([recipient.GetOpinionOf(GetPlayer)|+=])"
+ action_carn_can_sex_interaction_desc: "你可以与[recipient.GetUIName]做爱，以缓解[stress|E]或尝试怀孕等效果。"
+ action_carn_can_sex_interaction_click: "#I 点击$carn_sex_interaction$#!"

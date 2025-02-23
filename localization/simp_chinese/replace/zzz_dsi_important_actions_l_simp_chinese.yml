@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
- dsi_demand_sex_important_interaction: "@carn_icon! 你可以 $dsi_demand_sex_interaction$\" $dsi_demand_sex_interaction$"
- dsi_demand_sex_important_interaction_label: "$dsi_demand_sex_important_interaction$ 来自你的 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
- dsi_demand_sex_important_interaction_desc: "你可以向 [recipient.GetUIName] 要求性行为，以减轻 [stress|E] 或尝试怀孕，以及其他效果。"
- dsi_demand_sex_important_interaction_click: "#点击 $dsi_demand_sex_interaction$#!"
+ dsi_demand_sex_important_interaction: "@carn_icon! 你可以 $dsi_demand_sex_interaction$"
+ dsi_demand_sex_important_interaction_label: "$dsi_demand_sex_important_interaction$ 来自你的[actor.Custom2('RelationToMe', recipient)][recipient.GetUINameNoTooltip]([recipient.GetOpinionOf(GetPlayer)|+=])"
+ dsi_demand_sex_important_interaction_desc: "你可以向[recipient.GetUIName]要求性行为，以缓解[stress|E]或尝试怀孕，以及其他效果。"
+ dsi_demand_sex_important_interaction_click: "#I 点击以$dsi_demand_sex_interaction$#!"

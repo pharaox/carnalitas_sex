@@ -1,10 +1,7 @@
 ﻿l_simp_chinese:
- action_carn_can_sex_interaction_combined_label: "给你的 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
- action_carn_can_sex_interaction_combined_group_label: "$action_carn_can_sex_interaction$"
  action_carn_can_sex_interaction_combined_group_name: "$action_carn_can_sex_interaction$"
  action_carn_can_sex_interaction_combined_group_description: "您可以与您的夫人或情人做爱，以减轻 [stress|E] 或尝试生孩子，以及其他效果."
-
- dsi_demand_sex_important_interaction_combined_label: "来自您的  [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip] ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ dsi_demand_sex_important_interaction_combined_label: "来自你的[actor.Custom2('RelationToMe', recipient)][recipient.GetUINameNoTooltip]([recipient.GetOpinionOf(GetPlayer)|+=])"
  dsi_demand_sex_important_interaction_combined_group_label: "$dsi_demand_sex_important_interaction$"
  dsi_demand_sex_important_interaction_combined_group_name: "$dsi_demand_sex_important_interaction$"
- dsi_demand_sex_important_interaction_combined_group_description: "您可以强迫您的一个奴隶进行性行为，以减轻 [stress|E] 或尝试生孩子，以及其他效果."
+ dsi_demand_sex_important_interaction_combined_group_description: "你可以强迫你的一个奴隶进行性行为，以缓解[stress|E]或尝试生孩子，以及其他效果."

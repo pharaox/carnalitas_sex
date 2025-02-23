@@ -1,33 +1,26 @@
 ﻿l_simp_chinese:
- dsi_demand_sex_interaction: "性需求"
- carnal_court_demand_sex_interaction: "卡纳宫廷要求做爱"
+ dsi_demand_sex_interaction: "性要求"
+ carnal_court_demand_sex_interaction: "宫廷性要求"
  carnx_demand_sex_interaction: "$dsi_demand_sex_interaction$"
- carnx_demand_sex_interaction_desc: "向您的奴隶 [recipient.GetShortUINameNoTooltip]提出性要求"
-
+ carnx_demand_sex_interaction_desc: "向奴隶[recipient.GetShortUINameNoTooltip]提出性要求"
  recipient_secondary_carn_sex_interaction: "伴侣"
  recipient_secondary_dsi_demand_sex_interaction: "伴侣"
-
- carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip] is 不被 [partner.GetShortUINameNoTooltip]吸引#!"
- carnx_sex_interaction_bdsm_warning_tt: "#X 放纵你的阴暗激情#!"
-
- carnx_sex_interaction_sodomy_crime_warning_tt: "#X 鸡奸是非法的在 [character.GetFaith.GetName]#!"
- carnx_sex_interaction_sodomy_shunned_warning_tt: "#X 鸡奸是被忌讳在 [character.GetFaith.GetName]#!"
- carnx_sex_interaction_adultery_crime_warning_tt: "#X 通奸是非法的在 [character.GetFaith.GetName]#!"
- carnx_sex_interaction_adultery_shunned_warning_tt: "#X 通奸在被忌讳在 [character.GetFaith.GetName]#!"
- carnx_sex_interaction_incest_crime_warning_tt: "#X 乱伦是非法的在 [character.GetFaith.GetName]#!"
+ carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip]不被[partner.GetShortUINameNoTooltip]吸引#!"
+ carnx_sex_interaction_bdsm_warning_tt: "#X 放纵你阴暗的激情#!"
+ carnx_sex_interaction_sodomy_crime_warning_tt: "#X  鸡奸在[character.GetFaith.GetName]中是违法的#!"
+ carnx_sex_interaction_sodomy_shunned_warning_tt: "#X 鸡奸是被忌讳在[character.GetFaith.GetName]#!"
+ carnx_sex_interaction_adultery_crime_warning_tt: "#X  通奸在[character.GetFaith.GetName]中是违法的#!"
+ carnx_sex_interaction_adultery_shunned_warning_tt: "#X 通奸在[character.GetFaith.GetName]中是被忌讳的#!"
+ carnx_sex_interaction_incest_crime_warning_tt: "#X 乱伦在[character.GetFaith.GetName]是违法的#!"
  carnx_sex_interaction_incest_shunned_warning_tt: "#X 乱伦是被忌讳的在[character.GetFaith.GetName]#!"
-
  carnx_sex_orgy_option: "包括第二个伴侣"
- carnx_sex_orgy_option_desc: "让第二位伴侣参与您的性爱。此选项可用，因为您是 $trait_lustful$ 或 $trait_rakish$ 并且有符合条件的伴侣。"
+ carnx_sex_orgy_option_desc: "让第二位伴侣参与你的性爱。此选项可用，因为你是 $trait_lustful$ 或 $trait_rakish$ 并且有符合条件的伴侣。"
  carnx_sex_bdsm_option: "放纵你阴暗的激情"
- carnx_sex_bdsm_option_desc: "与你的伴侣尽情释放你阴暗的激情。此选项可用，因为你是 $trait_sadistic$，且 [recipient.GetShortUINameNoTooltip] 是您的奴隶或妓女。"
-
- carnx_sex_carnal_court_option: "Carnal Court sex scenes"
- carnx_sex_carnal_court_option_desc: "Show Carnal Court sex scenes."
-
+ carnx_sex_bdsm_option_desc: "与你的伴侣尽情释放你阴暗的激情。此选项可用，因为你是 $trait_sadistic$，且[recipient.GetShortUINameNoTooltip]是你的奴隶或妓女。"
  carnx_has_eligible_sex_secondary_target_tt: "你的妃子是符合条件的第二伴侣"
  carnx_has_eligible_demand_sex_secondary_target_tt: "你的奴隶是符合条件的第二伴侣"
  carnx_secondary_target_same_as_primary_target_tt: "第二个伴侣与第一个伴侣相同"
  carnx_secondary_target_not_eligible_bdsm_target_tt: "第二个伴侣不是你的奴隶或妓女"
-
- carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U] is too far away for you to have sex with"
+ carnx_sex_carnal_court_option: "宫廷性爱场景"
+ carnx_sex_carnal_court_option_desc: "展示宫廷性爱场景"
+ carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U]距离太远，无法与你共赴巫山。"
