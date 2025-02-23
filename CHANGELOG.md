@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.5.5
+
+### Localization
+
+* Updated Chinese translation by **@Dark_Crow**.
+
 ## Version 0.5.4
 
 ### Bug Fixes
