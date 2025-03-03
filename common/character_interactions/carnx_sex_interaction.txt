@@ -54,9 +54,18 @@
 		}
 		scope:recipient = {
 			carn_can_have_sex_trigger = yes
-			custom_tooltip = {
-				text = "carnx_sex_target_too_far_away"
-				carnx_is_sex_target_at_valid_location_trigger = { PARTNER = scope:actor }
+		}
+		trigger_if = {
+			limit = {
+				scope:actor = {
+					is_available = no
+				}
+			}
+			scope:recipient = {
+				custom_tooltip = {
+					text = "carnx_sex_target_too_far_away"
+					carnx_is_sex_target_at_valid_location_trigger = { PARTNER = scope:actor }
+				}
 			}
 		}
 
@@ -86,6 +95,9 @@
 					}
 				}
 			}
+			scope:recipient = {
+				carnx_is_sex_target_at_valid_location_trigger = { PARTNER = scope:actor }
+			}
 		}
 		is_valid = {
 			custom_tooltip = {
@@ -108,6 +120,7 @@
 			}
 			scope:recipient = {
 				carnx_is_eligible_bdsm_target_trigger = { PLAYER = scope:actor }
+				carnx_is_sex_target_at_valid_location_trigger = { PARTNER = scope:actor }
 			}
 		}
 		is_valid = {
@@ -129,16 +142,77 @@
 		}
 	}
 
+	# Travel
+	send_option = {
+		is_shown = {
+			scope:recipient = {
+				NOT = { carnx_is_sex_target_at_valid_location_trigger = { PARTNER = scope:actor } }
+			}
+		}
+		flag = travel
+		localization = "carnx_sex_travel_option"
+		current_description = {
+			desc = "carnx_sex_travel_option_desc"
+		}
+	}
+
+	should_use_extra_icon = {
+		scope:actor = {
+			is_available = yes
+		}
+		scope:recipient = {
+			NOT = { carnx_is_sex_target_at_valid_location_trigger = { PARTNER = scope:actor } }
+		}
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/travel_mixed.dds"
+
 	send_options_exclusive = no
+
+	can_send = {
+		trigger_if = {
+			limit = { scope:travel = no }
+			scope:recipient = {
+				custom_tooltip = {
+					text = "carnx_sex_target_too_far_away"
+					carnx_is_sex_target_at_valid_location_trigger = { PARTNER = scope:actor }
+				}
+			}
+		}
+	}
 
 	on_accept = {
 		save_temporary_scope_value_as = { name = demand_sex value = no }
 		scope:actor = {
-			carnx_pay_prostitution_price_effect = yes
-			carnx_sex_interaction_main_effect = yes
+			if = {
+				limit = { scope:travel = yes }
 
-			hidden_effect = {
-				carnx_sex_interaction_sex_scene_effect = yes
+				# Show effect as tooltip
+				custom_tooltip = carnx_sex_travel_warning_tt
+				show_as_tooltip = {
+					carnx_pay_prostitution_price_effect = yes
+					carnx_sex_interaction_main_effect = yes
+				}
+
+				# Set travel variables
+				set_variable = { name = carnx_travel_sex_interaction value = flag:sex }
+				set_variable = { name = carnx_travel_sex_recipient value = scope:recipient }
+
+				# Start travel to recipient location
+				start_travel_plan = {
+					destination = scope:recipient.location
+					return_trip = yes
+					on_arrival_on_action = carnx_on_sex_interaction_arrival
+					on_arrival_destinations = all_but_last
+					on_travel_planner_cancel_on_action = carnx_on_sex_interaction_cancel
+				}
+			}
+			else = {
+				carnx_pay_prostitution_price_effect = yes
+				carnx_sex_interaction_main_effect = yes
+
+				hidden_effect = {
+					carnx_sex_interaction_sex_scene_effect = yes
+				}
 			}
 		}
 	}

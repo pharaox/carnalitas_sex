@@ -477,3 +477,37 @@ carnx_sex_interaction_bdsm_target_effect = {
 		modifier = carnx_forced_me_into_bdsm_opinion
 	}
 }
+
+canrx_remove_sex_interaction_cooldown_effect = {
+	switch = {
+		trigger = $INTERACTION$
+		flag:sex = {
+			remove_interaction_cooldown = carn_sex_interaction
+		}
+		flag:demand_sex = {
+			remove_interaction_cooldown = dsi_demand_sex_interaction
+		}
+	}
+}
+
+carnx_run_sex_interaction_effect = {
+	switch = {
+		trigger = $INTERACTION$
+		flag:sex = {
+			run_interaction = {
+				interaction = carn_sex_interaction
+				actor = this
+				recipient = $RECIPIENT$
+				send_threshold = accept
+			}
+		}
+		flag:demand_sex = {
+			run_interaction = {
+				interaction = dsi_demand_sex_interaction
+				actor = this
+				recipient = $RECIPIENT$
+				send_threshold = accept
+			}
+		}
+	}
+}

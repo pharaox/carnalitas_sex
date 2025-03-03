@@ -20,6 +20,13 @@
  carnx_sex_scene_target_attitude: "sex_scene_target_attitude: [THIS.Var('sex_scene_target_attitude').GetFlagName]"
  carnx_sex_scene_quote: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
 
+ carnx_sex_debug_msg_travel_arrived: "$carnx_sex_debug_prefix$: Travel to $carnx_travel_sex_recipient$'s location arrived at destination"
+ carnx_sex_debug_msg_travel_moved: "$carnx_sex_debug_prefix$: Travel to $carnx_travel_sex_recipient$'s location moved"
+ carnx_sex_debug_msg_travel_aborted_or_cancelled: "$carnx_sex_debug_prefix$: Travel to $carnx_travel_sex_recipient$'s location aborted or cancelled"
+ carnx_sex_debug_msg_travel_0001_event_fired: "$carnx_sex_debug_prefix$: Event $carnx_sex_travel.0001.t$ fired"
+
  carnx_sex_debug.0001.t: "Debug Sex"
  carnx_sex_debug.0001.desc: "I just had sex with [target.GetFirstNameNoTooltip]."
  carnx_sex_debug.0001.a: "OK"
+
+ carnx_travel_sex_recipient: "[THIS.Var('carnx_travel_sex_recipient').Char.GetFullNameNoTooltip]"

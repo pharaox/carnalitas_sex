@@ -307,3 +307,39 @@ carnx_is_incest_crime_trigger = {
 carnx_is_incest_shunned_trigger = {
 	NOT = { faith = { has_doctrine_parameter = allows_unrestricted_marriage } }
 }
+
+carnx_is_sex_interaction_shown_trigger = {
+	switch = {
+		trigger = $INTERACTION$
+		flag:sex = {
+			is_character_interaction_shown = {
+				interaction = carn_sex_interaction
+				recipient = $RECIPIENT$
+			}
+		}
+		flag:demand_sex = {
+			is_character_interaction_shown = {
+				interaction = dsi_demand_sex_interaction
+				recipient = $RECIPIENT$
+			}
+		}
+	}
+}
+
+carnx_is_sex_interaction_valid_trigger = {
+	switch = {
+		trigger = $INTERACTION$
+		flag:sex = {
+			is_character_interaction_valid = {
+				interaction = carn_sex_interaction
+				recipient = $RECIPIENT$
+			}
+		}
+		flag:demand_sex = {
+			is_character_interaction_valid = {
+				interaction = dsi_demand_sex_interaction
+				recipient = $RECIPIENT$
+			}
+		}
+	}
+}

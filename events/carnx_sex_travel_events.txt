@@ -1,0 +1,110 @@
+﻿namespace = carnx_sex_travel
+
+carnx_sex_travel.0001 = {
+	type = character_event
+	title = carnx_sex_travel.0001.t
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					carnx_is_sex_interaction_valid_trigger = {
+						INTERACTION = scope:interaction
+						RECIPIENT = scope:recipient
+					}
+				}
+				desc = carnx_sex_travel.0001.desc.start_valid
+			}
+			desc = carnx_sex_travel.0001.desc.start_invalid
+		}
+	}
+
+	theme = seduction
+	override_background = { reference = terrain }
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				carnx_is_sex_interaction_valid_trigger = {
+					INTERACTION = scope:interaction
+					RECIPIENT = scope:recipient
+				}
+			}
+			animation = flirtation
+		}
+		animation = disappointed
+	}
+	right_portrait = {
+		character = scope:recipient
+		triggered_animation = {
+			trigger = {
+				carnx_is_sex_interaction_valid_trigger = {
+					INTERACTION = scope:interaction
+					RECIPIENT = scope:recipient
+				}
+			}
+			animation = flirtation
+		}
+	}
+
+	trigger = {
+		is_travelling = yes
+	}
+
+	immediate = {
+		#carnx_sex_debug_log_effect = { MSG = carnx_sex_debug_msg_travel_0001_event_fired }
+
+		hidden_effect = {
+			canrx_remove_sex_interaction_cooldown_effect = {
+				INTERACTION = scope:interaction
+			}
+		}
+
+		current_travel_plan = {
+			reroute_to_home = yes
+			pause_travel_plan = yes
+		}
+
+		location = { save_scope_as = current_location }
+	}
+
+	# Get on with it, then return home
+	option = {
+		name = carnx_sex_travel.0001.a
+		trigger = {
+			carnx_is_sex_interaction_valid_trigger = {
+				INTERACTION = scope:interaction
+				RECIPIENT = scope:recipient
+			}
+		}
+		carnx_run_sex_interaction_effect = {
+			INTERACTION = scope:interaction
+			RECIPIENT = scope:recipient
+		}
+		current_travel_plan = {
+			resume_travel_plan = yes
+		}
+	}
+
+	# Return home
+	option = {
+		name = carnx_sex_travel.0001.b
+		trigger = {
+			NOT = {
+				carnx_is_sex_interaction_valid_trigger = {
+					INTERACTION = scope:interaction
+					RECIPIENT = scope:recipient
+				}
+			}
+		}
+		current_travel_plan = {
+			resume_travel_plan = yes
+		}
+	}
+
+	# Stay here and look around
+	option = {
+		name = carnx_sex_travel.0001.c
+	}
+}

@@ -1,0 +1,100 @@
+﻿carnx_on_sex_interaction_arrival = {
+	effect = {
+		#carnx_sex_debug_log_effect = { MSG = carnx_sex_debug_msg_travel_arrived }
+
+		# Determine interaction (recipient is saved by start_travel_plan)
+		var:carnx_travel_sex_interaction = { save_scope_as = interaction }
+
+		# Trigger completion event
+		trigger_event = {
+			id = carnx_sex_travel.0001
+		}
+
+		# Remove travel variables
+		remove_variable = carnx_travel_sex_interaction
+		remove_variable = carnx_travel_sex_recipient
+	}
+}
+
+carnx_on_sex_interaction_cancel = {
+	on_actions = { carnx_on_travel_plan_abort_or_cancel }
+}
+
+# Arrival in any province during travel
+on_travel_plan_movement = {
+	on_actions = { carnx_on_travel_plan_movement }
+}
+
+carnx_on_travel_plan_movement = {
+	trigger = {
+		has_variable = carnx_travel_sex_interaction
+		has_variable = carnx_travel_sex_recipient
+	}
+
+	effect = {
+		#carnx_sex_debug_log_effect = { MSG = carnx_sex_debug_msg_travel_moved }
+
+		# Determine interaction and recipient
+		var:carnx_travel_sex_interaction = { save_scope_as = interaction }
+		var:carnx_travel_sex_recipient = { save_scope_as = recipient }
+
+		# Ensure that the interaction is still shown
+		# If not, trigger the completion event
+		if = {
+			limit = {
+				NOT = {
+					carnx_is_sex_interaction_shown_trigger = {
+						INTERACTION = scope:interaction
+						RECIPIENT = scope:recipient
+					}
+				}
+			}
+
+			# Trigger completion event
+			trigger_event = {
+				id = carnx_sex_travel.0001
+			}
+
+			# Remove travel variables
+			remove_variable = carnx_travel_sex_interaction
+			remove_variable = carnx_travel_sex_recipient
+		}
+	}
+}
+
+# Cancelled a travel plan. Travel plan was cancelled by player interaction, and has
+# been rerouted back home. (the travel plan doesn't end yet until they arrive home)
+# People in the travel plan were removed from associated activities.
+on_travel_plan_cancel = {
+	on_actions = { carnx_on_travel_plan_abort_or_cancel }
+}
+
+# Aborted a travel plan (travel plan was not completed, or aborted through script)
+# A travel plan ends either via 'on_travel_plan_complete' or 'on_travel_plan_abort'
+# This usually means everyone gets teleported to their default location after this.
+on_travel_plan_abort = {
+	on_actions = { carnx_on_travel_plan_abort_or_cancel }
+}
+
+carnx_on_travel_plan_abort_or_cancel = {
+	trigger = {
+		has_variable = carnx_travel_sex_interaction
+		has_variable = carnx_travel_sex_recipient
+	}
+
+	effect = {
+		carnx_sex_debug_log_effect = { MSG = carnx_sex_debug_msg_travel_aborted_or_cancelled }
+
+		# Determine interaction
+		var:carnx_travel_sex_interaction = { save_scope_as = interaction }
+
+		# Remove interaction cooldown
+		canrx_remove_sex_interaction_cooldown_effect = {
+			INTERACTION = scope:interaction
+		}
+
+		# Remove travel variables
+		remove_variable = carnx_travel_sex_interaction
+		remove_variable = carnx_travel_sex_recipient
+	}
+}
