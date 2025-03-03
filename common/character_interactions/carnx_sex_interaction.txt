@@ -43,13 +43,8 @@
 			is_adult = yes
 			carnx_is_sex_interaction_blocked_trigger = no
 		}
-		OR = {
-			scope:actor = {
-				carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient }
-			}
-			scope:recipient = {
-				carn_is_working_as_prostitute_trigger = yes
-			}
+		scope:actor = {
+			carnx_can_have_sex_with_trigger = { PARTNER = scope:recipient }
 		}
 	}
 
@@ -68,11 +63,8 @@
 		# If the recipient is a prostitute, check if actor has enough gold
 		trigger_if = {
 			limit = {
-				scope:recipient = {
-					carn_is_working_as_prostitute_trigger = yes
-				}
 				scope:actor = {
-					NOT = { carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient } }
+					carnx_should_pay_prostitution_price_trigger = { PARTNER = scope:recipient }
 				}
 			}
 			scope:actor.gold >= scope:recipient.carn_prostitute_sex_interaction_price_value
@@ -140,156 +132,13 @@
 	send_options_exclusive = no
 
 	on_accept = {
+		save_temporary_scope_value_as = { name = demand_sex value = no }
 		scope:actor = {
-			# If the recpient is a prostitute, pay the price
-			if = {
-				limit = {
-					scope:recipient = {
-						carn_is_working_as_prostitute_trigger = yes
-					}
-					scope:actor = {
-						NOT = { carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:recipient } }
-					}
-				}
-
-				# Pay prostitution price
-				pay_short_term_gold = {
-					target = scope:recipient
-					gold = scope:recipient.carn_prostitute_sex_interaction_price_value
-				}
-			}
-
-			# If not on cooldown, show the effect and add the cooldown flag
-			if = {
-				limit = {
-					NOT = { has_character_flag = carn_sex_interaction_effect_cd }
-				}
-
-				show_as_tooltip = {
-					carn_had_sex_with_effect = {
-						CHARACTER_1 = scope:actor
-						CHARACTER_2 = scope:recipient
-						C1_PREGNANCY_CHANCE = pregnancy_chance
-						C2_PREGNANCY_CHANCE = pregnancy_chance
-						STRESS_EFFECTS = no
-						DRAMA = yes
-					}
-				}
-
-				if = {
-					limit = { scope:orgy = yes }
-					show_as_tooltip = {
-						carn_had_sex_with_effect = {
-							CHARACTER_1 = scope:actor
-							CHARACTER_2 = scope:secondary_recipient
-							C1_PREGNANCY_CHANCE = pregnancy_chance
-							C2_PREGNANCY_CHANCE = pregnancy_chance
-							STRESS_EFFECTS = no
-							DRAMA = yes
-						}
-					}
-				}
-
-				# Piety impact
-				carnx_sex_interaction_piety_impact_effect = { PARTNER = scope:recipient }
-
-				# Lose stress if arousal stress is enabled
-				if = {
-					limit = {
-						has_game_rule = carn_arousal_stress_enabled
-						is_attracted_to_gender_of = scope:recipient
-						NOT = { has_trait = chaste }
-					}
-					add_stress = carnx_sex_interaction_stress_loss_value
-				}
-
-				# Stress impact
-				carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:recipient }
-
-				# Additional piety and stress impact for BDSM
-				if = {
-					limit = { scope:bdsm = yes }
-					carnx_sex_interaction_bdsm_player_effect = { PARTNER = scope:recipient }
-				}
-
-				# Other impact
-				carnx_sex_interaction_other_impact_effect = { PARTNER = scope:recipient }
-
-				# Effects for recipient
-				scope:recipient = {
-					# Piety impact
-					carnx_sex_interaction_piety_impact_effect = { PARTNER = scope:actor }
-
-					# Stress impact
-					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
-
-					# Additional stress and opinion impact for BDSM
-					if = {
-						limit = { scope:bdsm = yes }
-						carnx_sex_interaction_bdsm_target_effect = { PARTNER = scope:actor }
-					}
-
-					# Other impact
-					carnx_sex_interaction_other_impact_effect = { PARTNER = scope:actor }
-				}
-
-				# Effects for secondary recipient
-				if = {
-					limit = { scope:orgy = yes }
-					scope:secondary_recipient = {
-						# Piety impact
-						carnx_sex_interaction_piety_impact_effect = { PARTNER = scope:actor }
-
-						# Stress impact
-						carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
-
-						# Additional stress and opinion impact for BDSM
-						if = {
-							limit = { scope:bdsm = yes }
-							carnx_sex_interaction_bdsm_target_effect = { PARTNER = scope:actor }
-						}
-
-						# Other impact
-						carnx_sex_interaction_other_impact_effect = { PARTNER = scope:actor }
-					}
-				}
-
-				add_character_flag = {
-					flag = carn_sex_interaction_effect_cd
-					months = carn_sex_interaction_cooldown_base
-				}
-			}
-			else = {
-				custom_tooltip = carn_sex_interaction_effect_cd_tt
-				add_character_flag = carn_block_next_had_sex_with_effect
-			}
+			carnx_pay_prostitution_price_effect = yes
+			carnx_sex_interaction_main_effect = yes
 
 			hidden_effect = {
-				# Request sex scene flags
-				carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
-
-				# Request sex scene locations
-				carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
-
-				# Actually fire the sex scene
-				if = {
-					limit = { scope:orgy = yes }
-					carnx_sex_scene_effect = {
-						PLAYER = scope:actor
-						TARGET = scope:recipient
-						TARGET2 = scope:secondary_recipient
-						STRESS_EFFECTS = no
-						DRAMA = yes
-					}
-				}
-				else = {
-					carn_sex_scene_effect = {
-						PLAYER = scope:actor
-						TARGET = scope:recipient
-						STRESS_EFFECTS = no
-						DRAMA = yes
-					}
-				}
+				carnx_sex_interaction_sex_scene_effect = yes
 			}
 		}
 	}

@@ -23,7 +23,7 @@
 			carnx_is_sex_interaction_blocked_trigger = no
 		}
 		scope:actor = {
-			carnx_relationship_allows_demand_sex_trigger = { PARTNER = scope:recipient }
+			carnx_can_demand_sex_from_trigger = { PARTNER = scope:recipient }
 		}
 	}
 
@@ -62,108 +62,15 @@
 	send_options_exclusive = no
 
 	on_accept = {
+		save_temporary_scope_value_as = { name = orgy value = no }
+		save_temporary_scope_value_as = { name = bdsm value = no }
+		save_temporary_scope_value_as = { name = demand_sex value = yes }
 		scope:actor = {
-			# Use the hook on the recipient
-			if = {
-				limit = {
-					has_usable_hook = scope:recipient
-					trigger_if = {
-						limit = { has_game_rule = carnx_sex_demand_sex_consumes_slave_hooks_disabled }
-						NOT = { has_relation_slave = scope:recipient }
-					}
-				}
-				use_hook = scope:recipient
-			}
-
-			# If not on cooldown, show the effect and add the cooldown flag
-			if = {
-				limit = {
-					NOT = { has_character_flag = carn_sex_interaction_effect_cd }
-				}
-
-				show_as_tooltip = {
-					carn_had_sex_with_effect = {
-						CHARACTER_1 = scope:actor
-						CHARACTER_2 = scope:recipient
-						C1_PREGNANCY_CHANCE = pregnancy_chance
-						C2_PREGNANCY_CHANCE = pregnancy_chance
-						STRESS_EFFECTS = no
-						DRAMA = yes
-					}
-				}
-
-				# Piety impact
-				carnx_sex_interaction_piety_impact_effect = { PARTNER = scope:recipient }
-
-				# Lose stress if arousal stress is enabled
-				if = {
-					limit = {
-						has_game_rule = carn_arousal_stress_enabled
-						is_attracted_to_gender_of = scope:recipient
-						NOT = { has_trait = chaste }
-					}
-					add_stress = carnx_sex_interaction_stress_loss_value
-				}
-
-				# Stress impact
-				carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:recipient }
-
-				# Other impact
-				carnx_sex_interaction_other_impact_effect = { PARTNER = scope:recipient }
-
-				# Additional stress impact of demanding sex
-				stress_impact = {
-					compassionate = miniscule_stress_impact_gain
-					sadistic = miniscule_stress_impact_loss
-					callous = miniscule_stress_impact_loss
-					# TODO More traits causing stress impact?
-				}
-
-				# Effects for recipient
-				scope:recipient = {
-					# Stress impact
-					carnx_sex_interaction_stress_impact_effect = { PARTNER = scope:actor }
-
-					# Opinion effects of being demanded sex
-					carnx_demand_sex_interaction_opinion_impact_effect = { PARTNER = scope:actor }
-
-					# Other impact
-					carnx_sex_interaction_other_impact_effect = { PARTNER = scope:actor }
-				}
-
-				add_character_flag = {
-					flag = carn_sex_interaction_effect_cd
-					months = carn_sex_interaction_cooldown_base
-				}
-			}
-			else = {
-				custom_tooltip = carn_sex_interaction_effect_cd_tt
-				add_character_flag = carn_block_next_had_sex_with_effect
-			}
+			carnx_demand_sex_consume_hooks_effect = yes
+			carnx_sex_interaction_main_effect = yes
 
 			hidden_effect = {
-				# Actually fire the sex scene
-				if = {
-					limit = { scope:carnal_court = yes }
-					carnx_carnal_court_sex_scene_effect = {
-						PLAYER = scope:actor
-						TARGET = scope:recipient
-						STRESS_EFFECTS = no
-						DRAMA = yes
-					}
-				}
-				else = {
-					# Request sex scene flags
-					carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
-					carnx_add_random_sex_scene_flags_effect = yes
-
-					carnx_original_sex_scene_effect = {
-						PLAYER = scope:actor
-						TARGET = scope:recipient
-						STRESS_EFFECTS = no
-						DRAMA = yes
-					}
-				}
+				carnx_carnal_court_sex_interaction_sex_scene_effect = yes
 			}
 		}
 	}

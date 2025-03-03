@@ -71,12 +71,7 @@ carnx_is_eligible_sex_target_trigger = {
 	carn_can_have_sex_trigger = yes
 	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = $PLAYER$ }
 	$PLAYER$ = {
-		OR = {
-			carnx_relationship_allows_free_sex_trigger = { PARTNER = scope:target }
-			scope:target = {
-				carn_is_working_as_prostitute_trigger = yes
-			}
-		}
+		carnx_can_have_sex_with_trigger = { PARTNER = scope:target }
 		is_attracted_to_gender_of = scope:target
 		NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
 	}
@@ -89,7 +84,7 @@ carnx_is_eligible_demand_sex_target_trigger = {
 	carn_can_have_sex_trigger = yes
 	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = $PLAYER$ }
 	$PLAYER$ = {
-		carnx_relationship_allows_demand_sex_trigger = { PARTNER = scope:target }
+		carnx_can_demand_sex_from_trigger = { PARTNER = scope:target }
 		has_usable_hook = scope:target
 		is_attracted_to_gender_of = scope:target
 		NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
@@ -111,10 +106,36 @@ carnx_is_eligible_sex_secondary_target_trigger = {
 	}
 }
 
+carnx_is_eligible_demand_sex_secondary_target_trigger = {
+	carnx_is_eligible_demand_sex_target_trigger = { PLAYER = $PLAYER$ }
+}
+
 carnx_is_eligible_bdsm_target_trigger = {
 	OR = {
 		has_relation_slave_owner = $PLAYER$
 		carn_is_working_as_prostitute_trigger = yes
+	}
+}
+
+carnx_can_have_sex_with_trigger = {
+	OR = {
+		carnx_relationship_allows_free_sex_trigger = { PARTNER = $PARTNER$ }
+		$PARTNER$ = {
+			carn_is_working_as_prostitute_trigger = yes
+		}
+	}
+}
+
+carnx_can_demand_sex_from_trigger = {
+	carnx_relationship_allows_demand_sex_trigger = { PARTNER = $PARTNER$ }
+}
+
+carnx_should_pay_prostitution_price_trigger = {
+	$PARTNER$ = {
+		carn_is_working_as_prostitute_trigger = yes
+	}
+	NOT = {
+		carnx_relationship_allows_free_sex_trigger = { PARTNER = $PARTNER$ }
 	}
 }
 

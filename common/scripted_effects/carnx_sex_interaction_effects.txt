@@ -1,4 +1,211 @@
-﻿# Request sex scene flags, either consensual or dubcon
+﻿# Apply sex interaction effects on all participants if not on cooldown
+carnx_sex_interaction_main_effect = {
+	# If not on cooldown, show the effect and add the cooldown flag
+	if = {
+		limit = {
+			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+		}
+
+		show_as_tooltip = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:actor
+				CHARACTER_2 = scope:recipient
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = no
+				DRAMA = yes
+			}
+		}
+
+		if = {
+			limit = { scope:orgy = yes }
+			show_as_tooltip = {
+				carn_had_sex_with_effect = {
+					CHARACTER_1 = scope:actor
+					CHARACTER_2 = scope:secondary_recipient
+					C1_PREGNANCY_CHANCE = pregnancy_chance
+					C2_PREGNANCY_CHANCE = pregnancy_chance
+					STRESS_EFFECTS = no
+					DRAMA = yes
+				}
+			}
+		}
+
+		# Effects for actor and recipient
+		carnx_sex_interaction_impact_effect = { PARTNER = scope:recipient }
+		scope:recipient = {
+			carnx_sex_interaction_impact_effect = { PARTNER = scope:actor }
+		}
+
+		# Effects for secondary recipient
+		if = {
+			limit = { scope:orgy = yes }
+			scope:secondary_recipient = {
+				carnx_sex_interaction_impact_effect = { PARTNER = scope:actor }
+			}
+		}
+
+		add_character_flag = {
+			flag = carn_sex_interaction_effect_cd
+			months = carn_sex_interaction_cooldown_base
+		}
+	}
+	else = {
+		custom_tooltip = carn_sex_interaction_effect_cd_tt
+		add_character_flag = carn_block_next_had_sex_with_effect
+	}
+}
+
+# Pay prostitution price if the recipient is a prostitute
+carnx_pay_prostitution_price_effect = {
+	# If the recpient is a prostitute, pay the price
+	if = {
+		limit = {
+			carnx_should_pay_prostitution_price_trigger = { PARTNER = scope:recipient }
+		}
+
+		# Pay prostitution price
+		pay_short_term_gold = {
+			target = scope:recipient
+			gold = scope:recipient.carn_prostitute_sex_interaction_price_value
+		}
+	}
+}
+
+# Consume hooks on all recipients
+carnx_demand_sex_consume_hooks_effect = {
+	# Use the hook on the recipient
+	carnx_demand_sex_consume_hook_effect = { PARTNER = scope:recipient }
+
+	# Use the hook on the secondary recipient
+	if = {
+		limit = { scope:orgy = yes }
+		carnx_demand_sex_consume_hook_effect = { PARTNER = scope:secondary_recipient }
+	}
+}
+
+# Fire Carnalitas sex interaction sex scene
+carnx_sex_interaction_sex_scene_effect = {
+	# Request sex scene flags
+	carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
+
+	# Request sex scene locations
+	carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
+
+	# Actually fire the sex scene
+	if = {
+		limit = { scope:orgy = yes }
+		carnx_sex_scene_effect = {
+			PLAYER = scope:actor
+			TARGET = scope:recipient
+			TARGET2 = scope:secondary_recipient
+			STRESS_EFFECTS = no
+			DRAMA = yes
+		}
+	}
+	else = {
+		carn_sex_scene_effect = {
+			PLAYER = scope:actor
+			TARGET = scope:recipient
+			STRESS_EFFECTS = no
+			DRAMA = yes
+		}
+	}
+}
+
+# Fire Carnal Court sex interaction sex scene
+carnx_carnal_court_sex_interaction_sex_scene_effect = {
+	# Actually fire the sex scene
+	if = {
+		limit = { scope:carnal_court = yes }
+		carnx_carnal_court_sex_scene_effect = {
+			PLAYER = scope:actor
+			TARGET = scope:recipient
+			STRESS_EFFECTS = no
+			DRAMA = yes
+		}
+	}
+	else = {
+		# Request sex scene flags
+		carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
+		carnx_add_random_sex_scene_flags_effect = yes
+
+		carnx_original_sex_scene_effect = {
+			PLAYER = scope:actor
+			TARGET = scope:recipient
+			STRESS_EFFECTS = no
+			DRAMA = yes
+		}
+	}
+}
+
+# Apply sex interaction effects on a single participant
+carnx_sex_interaction_impact_effect = {
+	# Piety and stress impact of sinful actions
+	carnx_sex_interaction_piety_impact_effect = { PARTNER = $PARTNER$ }
+
+	# Lose stress if arousal stress is enabled (player only)
+	if = {
+		limit = {
+			is_ai = no
+			has_game_rule = carn_arousal_stress_enabled
+			is_attracted_to_gender_of = $PARTNER$
+			NOT = { has_trait = chaste }
+		}
+		add_stress = carnx_sex_interaction_stress_loss_value
+	}
+
+	# Stress impact
+	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
+
+	# Additional stress and opinion impact of demanding sex
+	if = {
+		limit = { scope:demand_sex = yes }
+		if = {
+			limit = { is_ai = no }
+			stress_impact = {
+				compassionate = miniscule_stress_impact_gain
+				sadistic = miniscule_stress_impact_loss
+				callous = miniscule_stress_impact_loss
+				# TODO More traits causing stress impact?
+			}
+		}
+		else = {
+			carnx_demand_sex_interaction_opinion_impact_effect = { PARTNER = $PARTNER$ }
+		}
+	}
+
+	# Additional piety and stress impact for BDSM
+	if = {
+		limit = { scope:bdsm = yes }
+		if = {
+			limit = { is_ai = no }
+			carnx_sex_interaction_bdsm_player_effect = { PARTNER = $PARTNER$ }
+		}
+		else = {
+			carnx_sex_interaction_bdsm_target_effect = { PARTNER = $PARTNER$ }
+		}
+	}
+
+	# Other impact
+	carnx_sex_interaction_other_impact_effect = { PARTNER = $PARTNER$ }
+}
+
+# Consume hooks on a single participant
+carnx_demand_sex_consume_hook_effect = {
+	if = {
+		limit = {
+			has_usable_hook = $PARTNER$
+			trigger_if = {
+				limit = { has_game_rule = carnx_sex_demand_sex_consumes_slave_hooks_disabled }
+				NOT = { has_relation_slave = $PARTNER$ }
+			}
+		}
+		use_hook = $PARTNER$
+	}
+}
+
+# Request sex scene flags, either consensual or dubcon
 # Noncon is reserved for raping prisoners, so we don't request it here
 carnx_request_sex_scene_flags_effect = {
 	save_temporary_scope_as = character
