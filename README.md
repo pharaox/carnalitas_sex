@@ -4,9 +4,9 @@
 
 A rework of the Carnalitas *Make Love* interaction and its related effects aiming at better realism and immersion, more variety, and improved player experience.
 
-The latest version is compatible with CK3 1.14.x and Carnalitas 2.8. If you are still on CK3 1.13.x, download [version 0.5.1](https://github.com/pharaox/carnalitas_sex/releases/download/0.5.1/carnalitas_love_reimagined-0.5.1.zip) instead, and use it with Carnalitas 2.7.
+The latest version is compatible with CK3 1.15.x and Carnalitas 2.9. If you are still on CK3 1.14.x, download [version 0.5.5](https://github.com/pharaox/carnalitas_sex/releases/download/0.5.5/carnalitas_love_reimagined-0.5.5.zip) instead, and use it with Carnalitas 2.8.
 
-**Note:** Since an official CBO version compatible with CK3 1.14.x (or CK3 1.13.x) and Carnalitas 2.8 is not available, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/). The latest version of this mod is compatible with CBO Unofficial 1.3 (and higher), if you use an older version of CBO Unofficial download [version 0.5.0](https://github.com/pharaox/carnalitas_sex/releases/download/0.5.0/carnalitas_love_reimagined-0.5.0.zip) instead.
+**Note:** Since an official CBO version compatible with the latest CK3 and Carnalitas versions is not available, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/).
 
 ## Overview
 
@@ -76,6 +76,7 @@ The *Make Love* interaction works similarly to its Carnalitas counterpart. You h
 There are however some differences in how this interaction works in this mod, aiming at better realism and immersion:
 
 * You can only make love to someone who is currently at the same location as you. If you are traveling or leading an army, your options might be limited. This is enabled by default, but can be disabled via the *Sex Requires Same Location* game rule.
+* If the partner is not at the same location and the above game rule is enabled, you can start travel to their location and have sex upon arrival.
 * You lose the usual amount of stress (15 before modifiers) from the interaction itself only if the *Arousal Causes Stress* Carnalitas game rule is enabled, for a better game balance.
 * You may lose (or gain) additional [stress](#stress-impact) depending on your traits and faith.
 * The target may similarly lose (or gain) additional stress, depending on their traits and faith.

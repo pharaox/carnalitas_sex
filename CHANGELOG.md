@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 0.6.0
+
+### Compatibility
+
+* Adapted to CK3 1.15.0 and Carnalitas 2.9.
+
+### Interactions
+
+* Added travel option to sex interactions if *Sex Requires Same Location* game rule is enabled and the partner is not in the same location.
+
 ## Version 0.5.5
 
 ### Localization
