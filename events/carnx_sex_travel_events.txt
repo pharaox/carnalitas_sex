@@ -61,8 +61,8 @@ carnx_sex_travel.0001 = {
 			}
 		}
 
+		return_home = yes
 		current_travel_plan = {
-			reroute_to_home = yes
 			pause_travel_plan = yes
 		}
 
