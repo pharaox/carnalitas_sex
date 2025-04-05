@@ -73,7 +73,7 @@ carnx_is_eligible_sex_target_trigger = {
 	$PLAYER$ = {
 		carnx_can_have_sex_with_trigger = { PARTNER = scope:target }
 		is_attracted_to_gender_of = scope:target
-		NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
+		#NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
 	}
 }
 
@@ -87,7 +87,7 @@ carnx_is_eligible_demand_sex_target_trigger = {
 		carnx_can_demand_sex_from_trigger = { PARTNER = scope:target }
 		has_usable_hook = scope:target
 		is_attracted_to_gender_of = scope:target
-		NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
+		#NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
 	}
 }
 
