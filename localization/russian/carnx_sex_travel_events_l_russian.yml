@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_russian:
  carnx_sex_travel.0001.t: "$travel_completion_event.1000.t$"
  carnx_sex_travel.0001.desc.start_valid: "Мой путь в [current_location.GetName] наконец-то подошёл к концу. Теперь я могу $carnx_sex_travel_interaction$ [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName] и решить иные вопросы, пока я здесь."
  carnx_sex_travel.0001.desc.start_invalid: "По прибытии в [current_location.GetName] выяснилось, что $carnx_sex_travel_interaction$ [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName] уже невозможно. Я могу сразу отправиться обратно или задержаться и осмотреться перед уходом."
