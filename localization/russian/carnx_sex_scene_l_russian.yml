@@ -4,58 +4,58 @@
  carnx_sex_scene_dubcon_dom_opening: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_location', SCOPE.sC('second'))]. "
  carnx_sex_scene_dubcon_dom_first: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
 
- carnx_sex_scene_dubcon_dom_opening_f: "I find my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]"
+ carnx_sex_scene_dubcon_dom_opening_f: "[Select_CString(second.IsFemale, 'Моя', 'Мой' )] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]"
 
- carnx_sex_scene_dubcon_dom_location_private_chambers_1: "reclining on a sofa in my private chambers"
- carnx_sex_scene_dubcon_dom_location_garden_1: "strolling down a path in a secluded part of my garden"
- carnx_sex_scene_dubcon_dom_location_dungeon_1: "securely chained to the wall of my dungeon"
- carnx_sex_scene_dubcon_dom_location_f: "waiting for me"
+ carnx_sex_scene_dubcon_dom_location_private_chambers_1: "лежит, откинувшись на диване в моих личных покоях"
+ carnx_sex_scene_dubcon_dom_location_garden_1: "прогуливается по тропинке в укромном уголке моего сада"
+ carnx_sex_scene_dubcon_dom_location_dungeon_1: "надежно прикован[Select_CString(recepient.IsFemale, 'а', '' )] к стене моей темницы"
+ carnx_sex_scene_dubcon_dom_location_f: "ожидает меня"
 
- carnx_sex_scene_dubcon_dom_first_target_01: "[second.GetSheHe|U] looks at me inquiringly, trying to anticipate my wishes" # respectful, accommodating, faithful, obedient
- carnx_sex_scene_dubcon_dom_first_target_02: "[second.GetSheHe|U] smiles at me coquettishly" # female, hedonistic, flirtatious
- carnx_sex_scene_dubcon_dom_first_target_03: "[second.GetSheHe|U] slowly bares [second.GetHerHis] breasts" # female, hedonistic, flirtatious, !bdsm
- carnx_sex_scene_dubcon_dom_first_target_04: "[second.GetSheHe|U] turns around and lets [second.GetHerHis] clothes fall down, revealing [second.GetHerHis] naked buttocks" # hedonistic, flirtatious, !bdsm
- carnx_sex_scene_dubcon_dom_first_target_05: "[second.GetSheHe|U] greets me courteously with a ringing voice" # respectful, faithful
- carnx_sex_scene_dubcon_dom_first_target_06: "[second.GetSheHe|U] seems overjoyed to see me and eager to please me" # respectful, faithful
- carnx_sex_scene_dubcon_dom_first_target_07: "[second.GetSheHe|U] seems reluctant to be the object of my affections" # reserved, disgusted, resisting
- carnx_sex_scene_dubcon_dom_first_target_08: "[second.GetSheHe|U] keeps silent and avoids meeting my eyes" # reserved, disgusted, resisting
- carnx_sex_scene_dubcon_dom_first_target_09: "[second.GetSheHe|U] greets me courteously but coldly" # reserved, disgusted, resisting
- carnx_sex_scene_dubcon_dom_first_target_10: "[second.GetSheHe|U] seems quite eager to please me, perhaps too much so" # deceitful, calculating
- carnx_sex_scene_dubcon_dom_first_target_11: "[second.GetSheHe|U] greets me merrily, though I sense duplicity in [second.GetHerHis] smile" # deceitful, calculating
- carnx_sex_scene_dubcon_dom_first_target_12: "[second.GetSheHe|U] stands before me timid and obedient" # obedient
- carnx_sex_scene_dubcon_dom_first_target_14: "[second.GetSheHe|U] stares at me defiantly" # resisting
- carnx_sex_scene_dubcon_dom_first_target_15: "[second.GetSheHe|U] breathes heavily, shaken with lust" # amorous, flirtatious
- carnx_sex_scene_dubcon_dom_first_target_16: "[second.GetSheHe|U] stares at me, [second.GetHerHis] eyes burning with lust" # amorous, flirtatious
- carnx_sex_scene_dubcon_dom_first_target_f:  "[second.GetSheHe|U] greets me courteously, though [second.GetHerHis] true feelings are not easy to read" # fallback
+ carnx_sex_scene_dubcon_dom_first_target_01: "[second.GetSheHe|U] пытливо смотрит на меня, пытаясь предугадать мои желания," # respectful, accommodating, faithful, obedient
+ carnx_sex_scene_dubcon_dom_first_target_02: "[second.GetSheHe|U] кокетливо улыбается мне," # female, hedonistic, flirtatious
+ carnx_sex_scene_dubcon_dom_first_target_03: "[second.GetSheHe|U] медленно обнажает [second.GetHerHis] грудь," # female, hedonistic, flirtatious, !bdsm
+ carnx_sex_scene_dubcon_dom_first_target_04: "[second.GetSheHe|U] оборачивается и даёт [second.GetHerHis] одежде упасть, обнажая [second.GetHerHis] обнаженные ягодицы," # hedonistic, flirtatious, !bdsm
+ carnx_sex_scene_dubcon_dom_first_target_05: "[second.GetSheHe|U] вежливо приветствует меня звонким голосом," # respectful, faithful
+ carnx_sex_scene_dubcon_dom_first_target_06: "[second.GetSheHe|U] с особой радостью встречает меня, явно желая мне угодить," # respectful, faithful
+ carnx_sex_scene_dubcon_dom_first_target_07: "[second.GetSheHe|U] кажется, не хочет быть целью моего влечения," # reserved, disgusted, resisting
+ carnx_sex_scene_dubcon_dom_first_target_08: "[second.GetSheHe|U] молчит и избегает встречаться с моими глазами," # reserved, disgusted, resisting
+ carnx_sex_scene_dubcon_dom_first_target_09: "[second.GetSheHe|U] приветствует меня вежливо, но холодно," # reserved, disgusted, resisting
+ carnx_sex_scene_dubcon_dom_first_target_10: "[second.GetSheHe|U] по своему виду явно хочет мне угодить, возможно даже слишком сильно," # deceitful, calculating
+ carnx_sex_scene_dubcon_dom_first_target_11: "[second.GetSheHe|U] радостно приветствует меня, хотя я чувствую двойственность в [second.GetHerHis] улыбке," # deceitful, calculating
+ carnx_sex_scene_dubcon_dom_first_target_12: "[second.GetSheHe|U] робко и покорно встает передо мной," # obedient
+ carnx_sex_scene_dubcon_dom_first_target_14: "[second.GetSheHe|U] вызывающе смотрит на меня," # resisting
+ carnx_sex_scene_dubcon_dom_first_target_15: "[second.GetSheHe|U] тяжело дышит, сотрясаясь вожделением," # amorous, flirtatious
+ carnx_sex_scene_dubcon_dom_first_target_16: "[second.GetSheHe|U] смотрит на меня, [second.GetHerHis] глаза горят вожделением," # amorous, flirtatious
+ carnx_sex_scene_dubcon_dom_first_target_f:  "[second.GetSheHe|U] вежливо приветствует меня, хотя [second.GetHerHis] истинные чувства нелегко прочитать," # fallback
 
- carnx_sex_scene_dubcon_dom_first_player_01: "while I approach [second.GetHerHim] and slowly remove [second.GetHerHis] clothes" # respectful, accommodating, faithful, gentle
- carnx_sex_scene_dubcon_dom_first_player_02: "and [second.GetHerHis] beauty makes me tremble with desire" # amorous, hedonistic
- carnx_sex_scene_dubcon_dom_first_player_03: "and I give [second.GetHerHim] a slap for a taste of what is to come" # dominating
- carnx_sex_scene_dubcon_dom_first_player_04: "while a wave of sudden, strong desire rushes through me" # amorous, hedonistic
- carnx_sex_scene_dubcon_dom_first_player_05: "while I look at [second.GetHerHim] indifferently, trying to gather my strength" # reserved
- carnx_sex_scene_dubcon_dom_first_player_06: "while I am overwhelmed with respect and adoration" # respectful, faithful
- carnx_sex_scene_dubcon_dom_first_player_07: "and instead of being inflamed with passion, I feel repulsed" # disgusted
- carnx_sex_scene_dubcon_dom_first_player_08: "while I caress [second.GetHerHim] gently and whisper words of passion into [second.GetHerHis] ear" # faithful, gentle
- carnx_sex_scene_dubcon_dom_first_player_09: "while I look at [second.GetHerHim] suspiciously, with a feigned smile" # deceitful
- carnx_sex_scene_dubcon_dom_first_player_10: "and I offer [second.GetHerHim] the sight of my erect cock" # male, hedonistic, dominating
- carnx_sex_scene_dubcon_dom_first_player_f:  "while I am myself rather unsure of my true feelings" # fallback
+ carnx_sex_scene_dubcon_dom_first_player_01: "в то время как я приближаюсь к [second.GetHerHim] и медленно снимаю [second.GetHerHis] одежду" # respectful, accommodating, faithful, gentle
+ carnx_sex_scene_dubcon_dom_first_player_02: "и [second.GetHerHis] красота заставляет меня трепетать от желания" # amorous, hedonistic
+ carnx_sex_scene_dubcon_dom_first_player_03: "и я шлепаю [second.GetHerHim], чтобы дать понять, что будет ждать впереди" # dominating
+ carnx_sex_scene_dubcon_dom_first_player_04: "в то время как волна внезапного, сильного желания пробирает меня" # amorous, hedonistic
+ carnx_sex_scene_dubcon_dom_first_player_05: "пока я безучастно смотрю на [second.GetHerHim], пытаясь собраться с силами" # reserved
+ carnx_sex_scene_dubcon_dom_first_player_06: "в то время как я переполнен уважением и обожанием" # respectful, faithful
+ carnx_sex_scene_dubcon_dom_first_player_07: "и вместо того, чтобы воспылать страстью, я чувствую отвращение" # disgusted
+ carnx_sex_scene_dubcon_dom_first_player_08: "пока я нежно ласкаю [second.GetHerHim] и шепчу на [second.GetHerHis] ухо слова страсти" # faithful, gentle
+ carnx_sex_scene_dubcon_dom_first_player_09: "пока я с подозрением смотрю на [second.GetHerHim], притворно улыбаясь" # deceitful
+ carnx_sex_scene_dubcon_dom_first_player_10: "и даю [second.GetHerHim] в полной мере узреть мое окрепшее достоинство" # male, hedonistic, dominating
+ carnx_sex_scene_dubcon_dom_first_player_f:  "пока меня одолевают сомнения в моих истинных чувствах." # fallback
 
  carnx_sex_scene_dubcon_sub_text: "$carnx_sex_scene_dubcon_sub_opening$$carnx_sex_scene_dubcon_sub_first$"
 
  carnx_sex_scene_dubcon_sub_opening: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_location', SCOPE.sC('second'))]. "
  carnx_sex_scene_dubcon_sub_first: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
 
- carnx_sex_scene_dubcon_sub_opening_f: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] finds me"
+ carnx_sex_scene_dubcon_sub_opening_f: "[Select_CString(second.IsFemale, 'Моя', 'Мой' )] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] встречает меня, когда я"
 
- carnx_sex_scene_dubcon_sub_location_private_chambers_1: "reclining on a sofa in [second.GetHerHis] private chambers"
- carnx_sex_scene_dubcon_sub_location_garden_1: "strolling down a path in a secluded part of [second.GetHerHis] garden"
- carnx_sex_scene_dubcon_sub_location_f: "waiting for [second.GetHerHim]"
+ carnx_sex_scene_dubcon_sub_location_private_chambers_1: "лежу, откинувшись на диване в [second.GetHerHis] личных покоях"
+ carnx_sex_scene_dubcon_sub_location_garden_1: "прогуливаюсь по тропинке в укромном уголке [second.GetHerHis] сада"
+ carnx_sex_scene_dubcon_sub_location_f: "ожидаю [second.GetHerHim]"
 
- carnx_sex_scene_dubcon_sub_first_target_f: "<fallback sub first target>"
+ carnx_sex_scene_dubcon_sub_first_target_f: "<запасной текст первая цель>"
 
- carnx_sex_scene_dubcon_sub_first_player_f: "<fallback sub first player>"
+ carnx_sex_scene_dubcon_sub_first_player_f: "<запасной текст первый игрок>"
 
- carnx_sex_scene_text2_orgy_1: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] is also there, waiting to share our pleasures. "
+ carnx_sex_scene_text2_orgy_1: "[Select_CString(second.IsFemale, 'Моя', 'Мой' )] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] тоже здесь, в ожидании разделения наших удовольствий. "
  carnx_sex_scene_text2_f: ""
 
  carnx_sex_scene_dubcon_dom_quote: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_quote', SCOPE.sC('second'))]"
@@ -64,40 +64,40 @@
 
  carnx_sex_scene_consensual_title: "[ROOT.Char.Custom2('carnx_sex_scene_consensual_title', SCOPE.sC('second'))]"
 
- carnx_sex_scene_consensual_title_1: "Throes of Passion Multiplied" # orgy
- carnx_sex_scene_consensual_title_f: "Throes of Passion"
+ carnx_sex_scene_consensual_title_1: "Массовое Пламя Страсти" # orgy
+ carnx_sex_scene_consensual_title_f: "Пламя Страсти"
 
  carnx_sex_scene_dubcon_title: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_title', SCOPE.sC('second'))]"
 
- carnx_sex_scene_dubcon_title_1: "Twisted Pleasures Multiplied" # bdsm & orgy
- carnx_sex_scene_dubcon_title_2: "Twisted Pleasures" # bdsm
- carnx_sex_scene_dubcon_title_3: "Carnal Pleasures Multiplied" # orgy
- carnx_sex_scene_dubcon_title_f: "Carnal Pleasures"
+ carnx_sex_scene_dubcon_title_1: "Массовые Темные Удовольствия" # bdsm & orgy
+ carnx_sex_scene_dubcon_title_2: "Темные Удовольствия" # bdsm
+ carnx_sex_scene_dubcon_title_3: "Массовые Плотские Удовольствия" # orgy
+ carnx_sex_scene_dubcon_title_f: "Плотские Удовольствия"
 
  carnx_sex_scene_consensual_option: "[ROOT.Char.Custom2('carnx_sex_scene_consensual_option', SCOPE.sC('second'))]"
 
- carnx_sex_scene_consensual_option_f: "Wonderful."
+ carnx_sex_scene_consensual_option_f: "Великолепно."
 
  carnx_sex_scene_dubcon_option: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_option', SCOPE.sC('second'))]"
 
- carnx_sex_scene_dubcon_option_1: "Liberating." # bdsm
- carnx_sex_scene_dubcon_option_f: "Wonderful."
+ carnx_sex_scene_dubcon_option_1: "Запах свободы." # bdsm
+ carnx_sex_scene_dubcon_option_f: "Великолепно."
 
- carnx_sex_scene_attitude_amorous: "#P amorous#!"
- carnx_sex_scene_attitude_reserved: "#N reserved#!"
- carnx_sex_scene_attitude_respectful: "#P respectful#!"
- carnx_sex_scene_attitude_hedonistic: "#color_yellow hedonistic#!"
- carnx_sex_scene_attitude_accommodating: "#P accommodating#!"
- carnx_sex_scene_attitude_disgusted: "#N disgusted#!"
- carnx_sex_scene_attitude_faithful: "#P faithful#!"
- carnx_sex_scene_attitude_deceitful: "#color_yellow deceitful#!"
- carnx_sex_scene_attitude_obedient: "#P obedient#!"
- carnx_sex_scene_attitude_resisting: "#N resisting#!"
- carnx_sex_scene_attitude_flirtatious: "#P flirtatious#!"
- carnx_sex_scene_attitude_calculating: "#color_yellow calculating#!"
- carnx_sex_scene_attitude_gentle: "#P gentle#!"
- carnx_sex_scene_attitude_dominating: "#color_yellow dominating#!"
- carnx_sex_scene_attitude_unknown: "#color_yellow unknown#!"
+ carnx_sex_scene_attitude_amorous: "#P влюбленность#!"
+ carnx_sex_scene_attitude_reserved: "#N замкнутость#!"
+ carnx_sex_scene_attitude_respectful: "#P почтительность#!"
+ carnx_sex_scene_attitude_hedonistic: "#color_yellow гедонизм#!"
+ carnx_sex_scene_attitude_accommodating: "#P радушие#!"
+ carnx_sex_scene_attitude_disgusted: "#N отвращение#!"
+ carnx_sex_scene_attitude_faithful: "#P преданность#!"
+ carnx_sex_scene_attitude_deceitful: "#color_yellow коварство#!"
+ carnx_sex_scene_attitude_obedient: "#P покорность#!"
+ carnx_sex_scene_attitude_resisting: "#N сопротивление#!"
+ carnx_sex_scene_attitude_flirtatious: "#P кокетливость#!"
+ carnx_sex_scene_attitude_calculating: "#color_yellow расчётливость#!"
+ carnx_sex_scene_attitude_gentle: "#P вежливость#!"
+ carnx_sex_scene_attitude_dominating: "#color_yellow властность#!"
+ carnx_sex_scene_attitude_unknown: "#color_yellow неизвестно#!"
 
  carnx_sex_scene.t: "[ROOT.Char.Custom2('carnx_sex_scene_title', SCOPE.sC('carn_sex_target'))]"
  carnx_sex_scene.desc: "[ROOT.Char.Custom2('carnx_sex_scene_text', SCOPE.sC('carn_sex_target'))]"
