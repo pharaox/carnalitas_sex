@@ -2,7 +2,8 @@
  carnx_sex_debug_prefix: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID])"
  carnx_sex_debug_prefix_2: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID], [Select_CString(THIS.Char.IsFemale, 'female', 'male')])"
 
- carnx_sex_debug_msg_character_had_sex: "$carnx_sex_debug_prefix_2$: Character had sex (carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')]), carn_sex_pregnancy_chance: [THIS.Var('carn_sex_pregnancy_chance').GetValue], carn_sex_could_be_impregnated: [Select_CString(THIS.Var('carn_sex_could_be_impregnated').IsSet, 'yes', 'no')], carn_sex_impregnated: [Select_CString(THIS.Var('carn_sex_impregnated').IsSet, 'yes', 'no')])"
+ carnx_sex_debug_msg_character_had_sex: "$carnx_sex_debug_prefix_2$: У персонажа был секс (carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')]), carn_sex_pregnancy_chance: [THIS.Var('carn_sex_pregnancy_chance').GetValue], carn_sex_could_be_impregnated: [Select_CString(THIS.Var('carn_sex_could_be_impregnated').IsSet, 'yes', 'no')], carn_sex_impregnated: [Select_CString(THIS.Var('carn_sex_impregnated').IsSet, 'yes', 'no')])"
+ carnx_sex_debug_msg_character_got_pregnant: "$carnx_sex_debug_prefix_2$: Персонаж забеременел (father: [THIS.Var('father').Char.GetFullNameNoTooltip] ([THIS.Var('father').Char.GetID]), carn_pregnancy_chance: [THIS.Var('carn_pregnancy_chance').GetValue])"
 
  carnx_sex_debug_msg_debug_0001_fired: "$carnx_sex_debug_prefix$: Debug Sex event fired"
 
@@ -19,6 +20,13 @@
  carnx_sex_scene_target_attitude: "sex_scene_target_attitude: [THIS.Var('sex_scene_target_attitude').GetFlagName]"
  carnx_sex_scene_quote: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
 
+ carnx_sex_debug_msg_travel_arrived: "$carnx_sex_debug_prefix$: Travel to $carnx_travel_sex_recipient$'s location arrived at destination"
+ carnx_sex_debug_msg_travel_moved: "$carnx_sex_debug_prefix$: Travel to $carnx_travel_sex_recipient$'s location moved"
+ carnx_sex_debug_msg_travel_aborted_or_cancelled: "$carnx_sex_debug_prefix$: Travel to $carnx_travel_sex_recipient$'s location aborted or cancelled"
+ carnx_sex_debug_msg_travel_0001_event_fired: "$carnx_sex_debug_prefix$: Event $carnx_sex_travel.0001.t$ fired"
+
  carnx_sex_debug.0001.t: "Debug Sex"
- carnx_sex_debug.0001.desc: "I just had sex with [target.GetFirstNameNoTooltip]."
+ carnx_sex_debug.0001.desc: "У меня только что был секс с [target.GetFirstNameNoTooltip]."
  carnx_sex_debug.0001.a: "OK"
+
+ carnx_travel_sex_recipient: "[THIS.Var('carnx_travel_sex_recipient').Char.GetFullNameNoTooltip]"
