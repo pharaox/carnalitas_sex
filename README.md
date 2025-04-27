@@ -50,7 +50,7 @@ This mod conflicts with [Carnalitas Slavery Expansion](https://www.loverslab.com
 
 ## Localization
 
-This mod is currently available in English, Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)), French (translated by [@don-vip](https://github.com/don-vip)), and Korean (translated by [@ipni20](https://www.loverslab.com/profile/4890252-ipni20/)). For other languages, it uses the original English text as a placeholder.
+This mod is currently available in English, Chinese (translated by [@Dark_Crow](https://www.loverslab.com/profile/10396935-dark_crow/)), French (translated by [@don-vip](https://github.com/don-vip)), Korean (translated by [@ipni20](https://www.loverslab.com/profile/4890252-ipni20/)), and Russian (translated by [@Kn1MS](https://www.loverslab.com/profile/110498-kn1ms/)). For other languages, it uses the original English text as a placeholder.
 
 ## Links
 
