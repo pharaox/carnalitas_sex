@@ -6,4 +6,4 @@
  carnx_sex_travel.0001.b: "Вернуться домой"
  carnx_sex_travel.0001.c: "Остаться здесь и осмотреться"
 
- carnx_sex_travel_interaction: "[SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')] [Select_CString(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'c [Select_CString(recepient.IsFemale, 'моей', 'моим' )]', 'от [Select_CString(recepient.IsFemale, 'моей', 'моего' )]')]"
+ carnx_sex_travel_interaction: "[SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')] [Select_CString(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), Concatenate('c ', Select_CString(recipient.IsFemale, 'моей', 'моим')), Concatenate('от ', Select_CString(recipient.IsFemale, 'моей', 'моего')))]"

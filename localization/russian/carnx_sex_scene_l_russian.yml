@@ -8,7 +8,7 @@
 
  carnx_sex_scene_dubcon_dom_location_private_chambers_1: "лежит, откинувшись на диване в моих личных покоях"
  carnx_sex_scene_dubcon_dom_location_garden_1: "прогуливается по тропинке в укромном уголке моего сада"
- carnx_sex_scene_dubcon_dom_location_dungeon_1: "надежно прикован[Select_CString(recepient.IsFemale, 'а', '' )] к стене моей темницы"
+ carnx_sex_scene_dubcon_dom_location_dungeon_1: "надежно прикован[Select_CString(recipient.IsFemale, 'а', '' )] к стене моей темницы"
  carnx_sex_scene_dubcon_dom_location_f: "ожидает меня"
 
  carnx_sex_scene_dubcon_dom_first_target_01: "[second.GetSheHe|U] пытливо смотрит на меня, пытаясь предугадать мои желания," # respectful, accommodating, faithful, obedient
