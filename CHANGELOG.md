@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 0.7.0
+
+### Compatibility
+
+* Adapted to CK3 1.16.0.1 and Carnalitas 2.10.
+
+### Localization
+
+* Added Russian translation by **@Kn1MS**.
+
 ## Version 0.6.0
 
 ### Compatibility
