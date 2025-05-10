@@ -5,8 +5,8 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:gentle }
+				carnx_sex_scene_target_theme_1_trigger = { T1 = love }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = love }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_01 } # Sappho, Fragment 22
 		}
@@ -14,16 +14,16 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:accommodating F3 = flag:obedient }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:accommodating F3 = flag:dominating }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = desire T2 = domination }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = domination }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_02 } # Musa Lapidaria
 		}
 		10 = {
 			trigger = {
 				carn_sex_scene_was_bdsm = no
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:gentle }
+				carnx_sex_scene_target_theme_1_trigger = { T1 = love }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = love }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_03 } # Song of Solomon
 		}
@@ -34,8 +34,8 @@
 					is_female = yes
 					scope:carn_sex_target = { is_female = yes }
 				}
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:gentle }
+				carnx_sex_scene_target_theme_1_trigger = { T1 = love }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = love }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_04 } # An Ancient Egyptian Love Lyric
 		}
@@ -46,16 +46,16 @@
 					is_female = yes
 					scope:carn_sex_target = { is_female = yes }
 				}
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:gentle }
+				carnx_sex_scene_target_theme_1_trigger = { T1 = love }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = love }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_05 } # An Ancient Egyptian Love Song
 		}
 		20 = {
 			trigger = {
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:respectful F2 = flag:accommodating F3 = flag:faithful F4 = flag:obedient }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:respectful F2 = flag:accommodating F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_1_trigger = { T1 = respect }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_06 } # Wulf and Eadwacer
 		}
@@ -63,15 +63,14 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_10 } # Upon Julia's Breasts
 		}
 		10 = {
 			trigger = {
 				carn_sex_scene_was_bdsm = no
-				carnx_sex_scene_player_attitude_1_trigger = { F1 = flag:amorous }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_11 } # To Constantia, Singing
 		}
@@ -79,15 +78,15 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:reserved F2 = flag:deceitful F3 = flag:resisting F4 = flag:calculating }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = coldness T2 = deceit }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_12 } # Sweet Rose of Virtue
 		}
 		10 = {
 			trigger = {
 				carn_sex_scene_was_bdsm = no
-				carnx_sex_scene_player_attitude_1_trigger = { F1 = flag:amorous }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_13 } # Sonnet 147
 		}
@@ -95,8 +94,8 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_14 } # To His Mistress Going to Bed
 		}
@@ -104,7 +103,7 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:respectful F2 = flag:accommodating }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_15 } # Whoso list to hunt, I know where is an hind
 		}
@@ -112,7 +111,7 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:reserved F2 = flag:disgusted }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = disgust }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_16 } # By All Love's Soft, Yet Mighty Powers
 		}
@@ -120,8 +119,8 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_17 } # Capitolo 19: A Courtesan's Love Lyric
 		}
@@ -130,7 +129,6 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_male = yes }
-				carnx_sex_scene_player_attitude_6_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:gentle F6 = flag:dominating }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_18 } # Anthologica Rarissima
 		}
@@ -139,8 +137,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:reserved F2 = flag:disgusted F3 = flag:deceitful }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:reserved F2 = flag:disgusted F3 = flag:deceitful F4 = flag:dominating  }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = disgust T2 = deceit }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = disgust T2 = deceit }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_19 } # Anthologica Rarissima
 		}
@@ -150,8 +148,8 @@
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { age <= 20 }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_20 } # Anthologica Rarissima
 		}
@@ -161,8 +159,8 @@
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { age <= 20 }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_21 } # The Decameron
 		}
@@ -171,8 +169,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:reserved F2 = flag:deceitful F3 = flag:resisting F4 = flag:calculating }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_22 } # Anthologica Rarissima
 		}
@@ -181,8 +179,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_female = yes
 				scope:carn_sex_target = { is_male = yes }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:reserved F2 = flag:deceitful F3 = flag:resisting F4 = flag:calculating }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = coldness T2 = deceit }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_23 } # Anthologica Rarissima
 		}
@@ -193,8 +191,8 @@
 				age <= 25
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { age <= 20 }
-				carnx_sex_scene_target_attitude_2_trigger = { F1 = flag:deceitful F2 = flag:resisting }
-				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:hedonistic F2 = flag:dominating }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = coldness T2 = deceit }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = domination }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_24 } # Anthologica Rarissima
 		}
@@ -204,8 +202,8 @@
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { age <= 20 }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_25 } # Anthologica Rarissima
 		}
@@ -214,8 +212,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:calculating }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:respectful F2 = flag:faithful F3 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = desire T2 = deceit }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_26 } # Anthologica Rarissima
 		}
@@ -225,8 +223,8 @@
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { age <= 20 }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:reserved F2 = flag:disgusted F3 = flag:resisting }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:dominating }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = coldness T2 = disgust }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = deceit }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_27 } # Anthologica Rarissima
 		}
@@ -235,8 +233,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
-				carnx_sex_scene_player_attitude_1_trigger = { F1 = flag:reserved }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = coldness }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_28 } # Anthologica Rarissima
 		}
@@ -246,8 +244,8 @@
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { age <= 20 }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:obedient }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_29 } # Anthologica Rarissima
 		}
@@ -255,8 +253,8 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_30 } # The Perfumed Garden
 		}
@@ -266,8 +264,8 @@
 				is_female = yes
 				scope:carn_sex_target = { is_male = yes }
 				scope:carn_sex_target = { age <= 25 }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_31 } # The Perfumed Garden
 		}
@@ -275,8 +273,8 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:accommodating F4 = flag:obedient }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:dominating }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = domination }
+				carnx_sex_scene_player_theme_3_trigger = { T1 = desire T2 = deceit T3 = domination }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_32 } # The Perfumed Garden
 		}
@@ -285,7 +283,7 @@
 				is_male = yes
 				any_consort = { count > 1 }
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:reserved F2 = flag:disgusted }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = disgust }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_33 } # The Perfumed Garden
 		}
@@ -294,8 +292,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_34 } # The Perfumed Garden
 		}
@@ -303,8 +301,8 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = love T2 = desire }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_35 } # The Perfumed Garden
 		}
@@ -313,8 +311,8 @@
 				is_female = yes
 				scope:carn_sex_target = { is_male = yes }
 				scope:carn_sex_target = { age <= 25 }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_36 } # The Perfumed Garden
 		}
@@ -322,8 +320,8 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:calculating }
-				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:reserved F2 = flag:disgusted }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = desire T2 = deceit }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = disgust }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_37 } # The Perfumed Garden
 		}
@@ -332,8 +330,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:respectful F2 = flag:hedonistic F3 = flag:accommodating F4 = flag:faithful F5 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_38 } # The Perfumed Garden
 		}
@@ -342,8 +340,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:respectful F2 = flag:hedonistic F3 = flag:accommodating F4 = flag:faithful F5 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_39 } # The Perfumed Garden
 		}
@@ -351,8 +349,8 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:respectful F2 = flag:hedonistic F3 = flag:accommodating F4 = flag:faithful F5 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_40 } # The Perfumed Garden
 		}
@@ -360,16 +358,16 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:respectful F2 = flag:hedonistic F3 = flag:accommodating F4 = flag:faithful F5 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_41 } # The Perfumed Garden
 		}
 		10 = {
 			trigger = {
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:respectful F2 = flag:hedonistic F3 = flag:accommodating F4 = flag:faithful F5 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_42 } # The Perfumed Garden
 		}
@@ -378,8 +376,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:calculating }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:respectful F2 = flag:accommodating F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = desire T2 = deceit }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_43 } # The Perfumed Garden
 		}
@@ -387,7 +385,7 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:dominating F4 = flag:schadenfreude F5 = flag:vengeful }
+				carnx_sex_scene_player_theme_3_trigger = { T1 = desire T2 = domination T3 = rape }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_44 } # The Perfumed Garden
 		}
@@ -396,7 +394,7 @@
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { age >= 55 }
-				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:reserved F2 = flag:disgusted }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = disgust }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_46 } # The Perfumed Garden
 		}
@@ -404,7 +402,7 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_1_trigger = { F1 = flag:reserved }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = coldness }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_47 } # The Perfumed Garden
 		}
@@ -413,8 +411,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_female = yes
 				scope:carn_sex_target = { is_male = yes }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:respectful F2 = flag:hedonistic F3 = flag:accommodating F4 = flag:faithful F5 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_48 } # The Perfumed Garden
 		}
@@ -423,8 +421,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:respectful F2 = flag:hedonistic F3 = flag:accommodating F4 = flag:faithful F5 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = desire T2 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_49 } # The Perfumed Garden
 		}
@@ -433,8 +431,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_7_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:hedonistic F4 = flag:accommodating F5 = flag:faithful F6 = flag:obedient F7 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:hedonistic F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_target_theme_3_trigger = { T1 = love T2 = desire T3 = respect }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = desire }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_50 } # The Perfumed Garden
 		}
@@ -443,8 +441,8 @@
 				carn_sex_scene_was_bdsm = no
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:gentle }
+				carnx_sex_scene_target_theme_1_trigger = { T1 = love }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = love }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_51 } # The Perfumed Garden
 		}
@@ -452,8 +450,8 @@
 			trigger = {
 				carn_sex_scene_was_bdsm = no
 				carnx_has_different_gender_trigger = { CHARACTER = scope:carn_sex_target }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:flirtatious }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:amorous F2 = flag:faithful F3 = flag:gentle }
+				carnx_sex_scene_target_theme_1_trigger = { T1 = love }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = love }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_52 } # The Perfumed Garden
 		}
@@ -461,8 +459,8 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:calculating }
-				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:reserved F2 = flag:disgusted }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = desire T2 = deceit }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = disgust }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_53 } # The Perfumed Garden
 		}
@@ -470,8 +468,8 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_target_attitude_4_trigger = { F1 = flag:reserved F2 = flag:disgusted F3 = flag:deceitful F4 = flag:calculating }
-				carnx_sex_scene_player_attitude_2_trigger = { F1 = flag:reserved F2 = flag:disgusted }
+				carnx_sex_scene_target_theme_2_trigger = { T1 = disgust T2 = deceit }
+				carnx_sex_scene_player_theme_1_trigger = { T1 = disgust }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_55 } # The Perfumed Garden
 		}
@@ -482,7 +480,7 @@
 				carn_sex_scene_was_bdsm = yes
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_6_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating F5 = flag:schadenfreude F6 = flag:vengeful }
+				carnx_sex_scene_player_theme_3_trigger = { T1 = desire T2 = domination T3 = rape }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_01 } # Marquis de Sade, The 120 Days of Sodom
 		}
@@ -492,7 +490,7 @@
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { is_pregnant = yes }
-				carnx_sex_scene_player_attitude_6_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating F5 = flag:schadenfreude F6 = flag:vengeful }
+				carnx_sex_scene_player_theme_3_trigger = { T1 = desire T2 = domination T3 = rape }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_02 } # Marquis de Sade, The 120 Days of Sodom
 		}
@@ -502,7 +500,7 @@
 				carn_sex_scene_was_orgy = yes
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_6_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating F5 = flag:schadenfreude F6 = flag:vengeful }
+				carnx_sex_scene_player_theme_3_trigger = { T1 = desire T2 = domination T3 = rape }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_03 } # Marquis de Sade, The 120 Days of Sodom
 		}
@@ -511,7 +509,7 @@
 				carn_sex_scene_was_bdsm = yes
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:amorous F2 = flag:respectful F3 = flag:faithful F4 = flag:gentle }
+				carnx_sex_scene_player_theme_2_trigger = { T1 = love T2 = respect }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_02 } # John Cleland, Memoirs of Fanny Hill
 		}

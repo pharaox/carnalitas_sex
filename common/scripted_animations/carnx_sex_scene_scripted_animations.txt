@@ -61,6 +61,30 @@
 	}
 	triggered_animation = {
 		trigger = {
+			scope:sex_scene_player_attitude = flag:flirtatious
+		}
+		animation = { flirtation }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:calculating
+		}
+		animation = { scheme personality_greedy }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:pleasure_seeking
+		}
+		animation = { flirtation }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:status_seeking
+		}
+		animation = { scheme personality_rational }
+	}
+	triggered_animation = {
+		trigger = {
 			scope:sex_scene_player_attitude = flag:schadenfreude
 		}
 		animation = { schadenfreude }
@@ -163,6 +187,18 @@ carnx_sex_scene_target_animation = {
 			scope:sex_scene_target_attitude = flag:calculating
 		}
 		animation = { scheme personality_greedy }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:pleasure_seeking
+		}
+		animation = { flirtation }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:status_seeking
+		}
+		animation = { scheme personality_rational }
 	}
 	triggered_animation = {
 		trigger = {

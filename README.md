@@ -204,10 +204,14 @@ For an attitude to be selected, certain conditions must be fulfilled, and the ch
 | disgusted | negative | not attracted |  opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
 | faithful | positive | consort | opinion (+), ai_honor (+), lover / friend (+) |
 | deceitful | negative | consort | opinion (-), ai_honor (-), rival (+) |
-| obedient | positive | slave | opinion (+), ai_boldness (-), ai_rationality (+), ai_vengefulness (-), lover / friend (+) |
-| resisting | negative | slave | opinion (-), ai_boldness (+), ai_rationality (-), ai_vengefulness (+), rival (+) |
+| obedient | positive | slave | opinion (+), ai_boldness (-), ai_vengefulness (-), lover / friend (+) |
+| resisting | negative | slave | opinion (-), ai_boldness (+), ai_vengefulness (+), rival (+) |
 | flirtatious | positive | prostitute | opinion (+), ai_greed (-), ai_rationality (-), lover / friend (+) |
 | calculating | negative | prostitute | opinion (-), ai_greed (+), ai_rationality (+), rival (+) |
+| pleasure seeking | any | client, attraction > 0 | attraction (+), lustful / chaste (+/-), ai_sociability (+) |
+| status seeking | any | client, not attracted or attraction < 0 | attraction (-), lustful / chaste (-/+), ai_rationality (+) |
+| shocked | positive | prisoner | opinion (+), dread (+), ai_boldness (-), ai_vengefulness (-), lover / friend (+) |
+| angry | negative | prisoner | opinion (-), ai_boldness (+), ai_vengefulness (+), rival (+) |
 
 ##### Player Attitudes
 
@@ -221,8 +225,14 @@ For an attitude to be selected, certain conditions must be fulfilled, and the ch
 | disgusted | negative | not attracted |  opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
 | faithful | positive | consort | opinion (+), ai_honor (+), lover / friend (+) |
 | deceitful | negative | consort | opinion (-), ai_honor (-), rival (+) |
-| gentle | positive | owner / client | opinion (+), ai_compassion (+), lover / friend (+) |
-| dominating | negative | owner / client | opinion (-), ai_compassion (-), rival (+) |
+| gentle | positive | owner | opinion (+), ai_compassion (+), lover / friend (+) |
+| dominating | negative | owner | opinion (-), ai_compassion (-), rival (+) |
+| flirtatious | positive | prostitute | opinion (+), ai_greed (-), ai_rationality (-), lover / friend (+) |
+| calculating | negative | prostitute | opinion (-), ai_greed (+), ai_rationality (+), rival (+) |
+| pleasure seeking | any | client, attraction > 0 | attraction (+), lustful / chaste (+/-), ai_sociability (+) |
+| status seeking | any | client, not attracted or attraction < 0 | attraction (-), lustful / chaste (-/+), ai_rationality (+) |
+| schadenfreude | positive | prisoner | opinion (+), ai_compassion (-), ai_vengefulness (-), lover / friend (+) |
+| vengeful | negative | prisoner | opinion (-), ai_honor (-), ai_vengefulness (+), rival (+) |
 
 #### Sex Scene Quotes
 

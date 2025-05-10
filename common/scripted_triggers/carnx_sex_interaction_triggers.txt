@@ -159,18 +159,14 @@ carnx_is_attracted_target_happy_with_sex_trigger = {
 	# Consorts
 	trigger_if = {
 		limit = {
-			OR = {
-				is_consort_of = $CHARACTER$
-				carnx_is_slave_consort_of_trigger = { CHARACTER = $CHARACTER$ }
-			}
+			is_consort_of = $CHARACTER$
 		}
 		carnx_is_attracted_consort_happy_with_sex_trigger = { CHARACTER = $CHARACTER$ }
 	}
-	# Slaves that are not consorts
+	# Slaves
 	trigger_else_if = {
 		limit = {
 			has_relation_slave_owner = $CHARACTER$
-			NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = $CHARACTER$ } }
 		}
 		carnx_is_attracted_slave_happy_with_sex_trigger = { CHARACTER = $CHARACTER$ }
 	}
@@ -181,9 +177,18 @@ carnx_is_attracted_target_happy_with_sex_trigger = {
 		}
 		carnx_is_attracted_prostitute_happy_with_sex_trigger = { CHARACTER = $CHARACTER$ }
 	}
+	# Clients
+	trigger_else_if = {
+		limit = {
+			$CHARACTER$ = {
+				carn_is_working_as_prostitute_trigger = yes
+			}
+		}
+		always = yes
+	}
 	# Others
 	trigger_else = {
-		always = yes
+		always = no
 	}
 }
 
@@ -198,7 +203,7 @@ carnx_is_attracted_consort_happy_with_sex_trigger = {
 # and therefore a consensual scene would be appropriate.
 carnx_is_attracted_slave_happy_with_sex_trigger = {
 	save_temporary_opinion_value_as = { name = opinion_of_character target = $CHARACTER$ }
-	$CHARACTER$.carnx_opinion_attraction_value >= 60
+	$CHARACTER$.carnx_opinion_attraction_value >= 40
 }
 
 # Checks if an attracted prostitute is happy to have sex with $CHARACTER$,

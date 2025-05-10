@@ -13,6 +13,180 @@ carnx_sex_scene_supports_requested_location_trigger = {
 	}
 }
 
+carnx_sex_scene_player_theme_1_trigger = {
+	carnx_sex_scene_player_theme_$T1$_trigger = yes
+}
+
+carnx_sex_scene_target_theme_1_trigger = {
+	carnx_sex_scene_target_theme_$T1$_trigger = yes
+}
+
+carnx_sex_scene_player_theme_2_trigger = {
+	OR = {
+		carnx_sex_scene_player_theme_$T1$_trigger = yes
+		carnx_sex_scene_player_theme_$T2$_trigger = yes
+	}
+}
+
+carnx_sex_scene_target_theme_2_trigger = {
+	OR = {
+		carnx_sex_scene_target_theme_$T1$_trigger = yes
+		carnx_sex_scene_target_theme_$T2$_trigger = yes
+	}
+}
+
+carnx_sex_scene_player_theme_3_trigger = {
+	OR = {
+		carnx_sex_scene_player_theme_$T1$_trigger = yes
+		carnx_sex_scene_player_theme_$T2$_trigger = yes
+		carnx_sex_scene_player_theme_$T3$_trigger = yes
+	}
+}
+
+carnx_sex_scene_target_theme_3_trigger = {
+	OR = {
+		carnx_sex_scene_target_theme_$T1$_trigger = yes
+		carnx_sex_scene_target_theme_$T2$_trigger = yes
+		carnx_sex_scene_target_theme_$T3$_trigger = yes
+	}
+}
+
+# Love
+
+carnx_sex_scene_player_theme_love_trigger = {
+	OR = {
+		scope:sex_scene_player_attitude = flag:amorous
+		scope:sex_scene_player_attitude = flag:faithful
+		scope:sex_scene_player_attitude = flag:gentle
+		scope:sex_scene_player_attitude = flag:flirtatious
+	}
+}
+
+carnx_sex_scene_target_theme_love_trigger = {
+	OR = {
+		scope:sex_scene_target_attitude = flag:amorous
+		scope:sex_scene_target_attitude = flag:faithful
+		scope:sex_scene_target_attitude = flag:obedient
+		scope:sex_scene_target_attitude = flag:flirtatious
+	}
+}
+
+# Desire
+
+carnx_sex_scene_player_theme_desire_trigger = {
+	OR = {
+		scope:sex_scene_player_attitude = flag:hedonistic
+		scope:sex_scene_player_attitude = flag:pleasure_seeking
+	}
+}
+
+carnx_sex_scene_target_theme_desire_trigger = {
+	OR = {
+		scope:sex_scene_target_attitude = flag:hedonistic
+		scope:sex_scene_player_attitude = flag:pleasure_seeking
+	}
+}
+
+# Respect
+
+carnx_sex_scene_player_theme_respect_trigger = {
+	OR = {
+		scope:sex_scene_player_attitude = flag:respectful
+		scope:sex_scene_target_attitude = flag:accommodating
+		scope:sex_scene_player_attitude = flag:faithful
+		scope:sex_scene_player_attitude = flag:gentle
+	}
+}
+
+carnx_sex_scene_target_theme_respect_trigger = {
+	OR = {
+		scope:sex_scene_target_attitude = flag:respectful
+		scope:sex_scene_target_attitude = flag:accommodating
+		scope:sex_scene_target_attitude = flag:faithful
+		scope:sex_scene_target_attitude = flag:obedient
+	}
+}
+
+# Domination
+
+carnx_sex_scene_player_theme_domination_trigger = {
+	OR = {
+		scope:sex_scene_player_attitude = flag:dominating
+	}
+}
+
+carnx_sex_scene_target_theme_domination_trigger = {
+	OR = {
+		scope:sex_scene_target_attitude = flag:obedient
+		scope:sex_scene_target_attitude = flag:resisting
+	}
+}
+
+# Coldness
+
+carnx_sex_scene_player_theme_coldness_trigger = {
+	OR = {
+		scope:sex_scene_player_attitude = flag:reserved
+		scope:sex_scene_player_attitude = flag:status_seeking
+	}
+}
+
+carnx_sex_scene_target_theme_coldness_trigger = {
+	OR = {
+		scope:sex_scene_target_attitude = flag:reserved
+		scope:sex_scene_target_attitude = flag:resisting
+		scope:sex_scene_player_attitude = flag:status_seeking
+	}
+}
+
+# Disgust
+
+carnx_sex_scene_player_theme_disgust_trigger = {
+	OR = {
+		scope:sex_scene_player_attitude = flag:reserved
+		scope:sex_scene_target_attitude = flag:disgusted
+	}
+}
+
+carnx_sex_scene_target_theme_disgust_trigger = {
+	OR = {
+		scope:sex_scene_target_attitude = flag:reserved
+		scope:sex_scene_target_attitude = flag:disgusted
+	}
+}
+
+# Deceit
+
+carnx_sex_scene_player_theme_deceit_trigger = {
+	OR = {
+		scope:sex_scene_player_attitude = flag:deceitful
+		scope:sex_scene_target_attitude = flag:calculating
+	}
+}
+
+carnx_sex_scene_target_theme_deceit_trigger = {
+	OR = {
+		scope:sex_scene_target_attitude = flag:deceitful
+		scope:sex_scene_target_attitude = flag:calculating
+	}
+}
+
+# Rape
+
+carnx_sex_scene_player_theme_rape_trigger = {
+	OR = {
+		scope:sex_scene_player_attitude = flag:schadenfreude
+		scope:sex_scene_target_attitude = flag:vengeful
+	}
+}
+
+carnx_sex_scene_target_theme_rape_trigger = {
+	OR = {
+		scope:sex_scene_target_attitude = flag:shocked
+		scope:sex_scene_target_attitude = flag:angry
+	}
+}
+
 carnx_sex_scene_target_attitude_1_trigger = {
 	scope:sex_scene_target_attitude = $F1$
 }

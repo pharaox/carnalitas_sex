@@ -179,11 +179,7 @@ carnx_carnal_court_sex_interaction_sex_scene_effect = {
 
 carnx_rape_interaction_sex_scene_effect = {
 	# Request sex scene flags
-	carn_sex_scene_is_noncon_effect = yes
-	carn_sex_scene_character_is_dom_player_effect = yes
-
-	# Request optional scene flags, e.g. bdsm
-	carnx_request_optional_sex_scene_flags_effect = yes
+	carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
 
 	# Request sex scene locations
 	if = {
@@ -273,8 +269,7 @@ carnx_demand_sex_consume_hook_effect = {
 	}
 }
 
-# Request sex scene flags, either consensual or dubcon
-# Noncon is reserved for raping prisoners, so we don't request it here
+# Request sex scene flags, consensual, dubcon, or noncon
 carnx_request_sex_scene_flags_effect = {
 	save_temporary_scope_as = character
 
@@ -284,6 +279,27 @@ carnx_request_sex_scene_flags_effect = {
 			carnx_is_lover_trigger = { CHARACTER = $TARGET$ }
 		}
 		carn_sex_scene_request_consensual = yes
+	}
+	# Slaves who are not consorts: dubcon
+	else_if = {
+		limit = {
+			$TARGET$ = {
+				has_relation_slave_owner = scope:character
+				NOT = { carnx_is_slave_consort_of_trigger = { CHARACTER = scope:character } }
+			}
+		}
+		carn_sex_scene_request_dubcon = yes
+		carn_sex_scene_request_dom_player = yes
+	}
+	# Prisoners: noncon
+	else_if = {
+		limit = {
+			$TARGET$ = {
+				is_imprisoned_by = scope:character
+			}
+		}
+		carn_sex_scene_request_noncon = yes
+		carn_sex_scene_request_dom_player = yes
 	}
 	# Others: consensual or dubcon depending on opinion, attraction, and options
 	else = {

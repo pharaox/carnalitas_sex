@@ -150,6 +150,7 @@ carnx_sex_scene_dubcon_dom_first_target = {
 			OR = {
 				var:sex_scene_target_attitude = flag:hedonistic
 				var:sex_scene_target_attitude = flag:flirtatious
+				var:sex_scene_target_attitude = flag:pleasure_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_02
@@ -159,6 +160,7 @@ carnx_sex_scene_dubcon_dom_first_target = {
 			OR = {
 				var:sex_scene_target_attitude = flag:hedonistic
 				var:sex_scene_target_attitude = flag:flirtatious
+				var:sex_scene_target_attitude = flag:pleasure_seeking
 			}
 			carn_sex_scene_was_bdsm = no
 		}
@@ -170,6 +172,7 @@ carnx_sex_scene_dubcon_dom_first_target = {
 			OR = {
 				var:sex_scene_target_attitude = flag:hedonistic
 				var:sex_scene_target_attitude = flag:flirtatious
+				var:sex_scene_target_attitude = flag:pleasure_seeking
 			}
 			carn_sex_scene_was_bdsm = no
 		}
@@ -219,6 +222,7 @@ carnx_sex_scene_dubcon_dom_first_target = {
 				var:sex_scene_target_attitude = flag:reserved
 				var:sex_scene_target_attitude = flag:disgusted
 				var:sex_scene_target_attitude = flag:resisting
+				var:sex_scene_target_attitude = flag:status_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_09
@@ -237,6 +241,7 @@ carnx_sex_scene_dubcon_dom_first_target = {
 			OR = {
 				var:sex_scene_target_attitude = flag:deceitful
 				var:sex_scene_target_attitude = flag:calculating
+				var:sex_scene_target_attitude = flag:status_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_11
@@ -262,6 +267,7 @@ carnx_sex_scene_dubcon_dom_first_target = {
 			OR = {
 				var:sex_scene_target_attitude = flag:amorous
 				var:sex_scene_target_attitude = flag:flirtatious
+				var:sex_scene_target_attitude = flag:pleasure_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_15
@@ -271,6 +277,7 @@ carnx_sex_scene_dubcon_dom_first_target = {
 			OR = {
 				var:sex_scene_target_attitude = flag:amorous
 				var:sex_scene_target_attitude = flag:flirtatious
+				var:sex_scene_target_attitude = flag:pleasure_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_16
@@ -309,6 +316,8 @@ carnx_sex_scene_dubcon_dom_first_player = {
 				var:sex_scene_player_attitude = flag:accommodating
 				var:sex_scene_player_attitude = flag:faithful
 				var:sex_scene_player_attitude = flag:gentle
+				var:sex_scene_player_attitude = flag:pleasure_seeking
+				var:sex_scene_player_attitude = flag:status_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_player_01
@@ -318,6 +327,7 @@ carnx_sex_scene_dubcon_dom_first_player = {
 			OR = {
 				var:sex_scene_player_attitude = flag:amorous
 				var:sex_scene_player_attitude = flag:hedonistic
+				var:sex_scene_player_attitude = flag:pleasure_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_player_02
@@ -335,6 +345,7 @@ carnx_sex_scene_dubcon_dom_first_player = {
 			OR = {
 				var:sex_scene_player_attitude = flag:amorous
 				var:sex_scene_player_attitude = flag:hedonistic
+				var:sex_scene_player_attitude = flag:pleasure_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_player_04
@@ -387,6 +398,7 @@ carnx_sex_scene_dubcon_dom_first_player = {
 			OR = {
 				var:sex_scene_player_attitude = flag:hedonistic
 				var:sex_scene_player_attitude = flag:dominating
+				var:sex_scene_player_attitude = flag:pleasure_seeking
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_player_10
@@ -406,6 +418,25 @@ carnx_sex_scene_dubcon_dom_first_player = {
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_player_12
+	}
+	text = {
+		trigger = {
+			OR = {
+				var:sex_scene_player_attitude = flag:deceitful
+				var:sex_scene_player_attitude = flag:calculating
+			}
+		}
+		localization_key = carnx_sex_scene_dubcon_dom_first_player_13
+	}
+	text = {
+		trigger = {
+			OR = {
+				var:sex_scene_player_attitude = flag:deceitful
+				var:sex_scene_player_attitude = flag:calculating
+				var:sex_scene_player_attitude = flag:status_seeking
+			}
+		}
+		localization_key = carnx_sex_scene_dubcon_dom_first_player_14
 	}
 	text = {
 		trigger = { always = no }
@@ -1247,6 +1278,14 @@ carnx_sex_scene_target_attitude = {
 		localization_key = carnx_sex_scene_attitude_calculating
 	}
 	text = {
+		trigger = { var:sex_scene_target_attitude = flag:pleasure_seeking }
+		localization_key = carnx_sex_scene_attitude_pleasure_seeking
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:status_seeking }
+		localization_key = carnx_sex_scene_attitude_status_seeking
+	}
+	text = {
 		trigger = { var:sex_scene_target_attitude = flag:shocked }
 		localization_key = carnx_sex_scene_attitude_shocked
 	}
@@ -1301,6 +1340,22 @@ carnx_sex_scene_player_attitude = {
 	text = {
 		trigger = { var:sex_scene_player_attitude = flag:dominating }
 		localization_key = carnx_sex_scene_attitude_dominating
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:flirtatious }
+		localization_key = carnx_sex_scene_attitude_flirtatious
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:calculating }
+		localization_key = carnx_sex_scene_attitude_calculating
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:pleasure_seeking }
+		localization_key = carnx_sex_scene_attitude_pleasure_seeking
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:status_seeking }
+		localization_key = carnx_sex_scene_attitude_status_seeking
 	}
 	text = {
 		trigger = { var:sex_scene_player_attitude = flag:schadenfreude }
