@@ -59,6 +59,18 @@
 		}
 		animation = { personality_callous }
 	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:schadenfreude
+		}
+		animation = { schadenfreude }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_player_attitude = flag:vengeful
+		}
+		animation = { personality_vengeful }
+	}
 	animation = idle
 }
 
@@ -151,6 +163,18 @@ carnx_sex_scene_target_animation = {
 			scope:sex_scene_target_attitude = flag:calculating
 		}
 		animation = { scheme personality_greedy }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:shocked
+		}
+		animation = { shock fear }
+	}
+	triggered_animation = {
+		trigger = {
+			scope:sex_scene_target_attitude = flag:angry
+		}
+		animation = { anger personality_vengeful }
 	}
 	animation = idle
 }

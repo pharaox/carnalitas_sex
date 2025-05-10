@@ -21,6 +21,13 @@
 		localization_key = carnx_sex_scene_dubcon_sub_text
 	}
 	text = {
+		trigger = {
+			carn_sex_scene_was_noncon = yes
+			carn_sex_scene_was_dom_player = yes
+		}
+		localization_key = carnx_sex_scene_noncon_dom_text
+	}
+	text = {
 		localization_key = sex_scene_text
 	}
 }
@@ -47,17 +54,14 @@ carnx_sex_scene_quote = {
 		trigger = {
 			OR = {
 				carn_sex_scene_was_consensual = yes
-				AND = {
-					carn_sex_scene_was_dubcon = yes
-					carn_sex_scene_was_dom_player = yes
-				}
+				carn_sex_scene_was_dom_player = yes
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_quote
 	}
 	text = {
 		trigger = {
-			carn_sex_scene_was_dubcon = yes
+			carn_sex_scene_was_consensual = no
 			carn_sex_scene_was_sub_player = yes
 		}
 		localization_key = carnx_sex_scene_dubcon_sub_quote
@@ -72,6 +76,14 @@ carnx_sex_scene_dubcon_dom_opening = {
 
 	text = {
 		localization_key = carnx_sex_scene_dubcon_dom_opening_f
+	}
+}
+
+carnx_sex_scene_noncon_dom_opening = {
+	type = character
+
+	text = {
+		localization_key = carnx_sex_scene_noncon_dom_opening_f
 	}
 }
 
@@ -95,6 +107,25 @@ carnx_sex_scene_dubcon_dom_location = {
 		trigger = { always = no }
 		fallback = yes
 		localization_key = carnx_sex_scene_dubcon_dom_location_f
+	}
+}
+
+carnx_sex_scene_noncon_dom_location = {
+	type = character
+	random_valid = yes
+
+	text = {
+		trigger = { var:sex_scene_location ?= flag:private_chamber }
+		localization_key = carnx_sex_scene_noncon_dom_location_private_chambers_1
+	}
+	text = {
+		trigger = { var:sex_scene_location ?= flag:dungeon }
+		localization_key = carnx_sex_scene_noncon_dom_location_dungeon_1
+	}
+	text = {
+		trigger = { always = no }
+		fallback = yes
+		localization_key = carnx_sex_scene_noncon_dom_location_f
 	}
 }
 
@@ -245,6 +276,22 @@ carnx_sex_scene_dubcon_dom_first_target = {
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_16
 	}
 	text = {
+		trigger = {
+			OR = {
+				var:sex_scene_target_attitude = flag:shocked
+			}
+		}
+		localization_key = carnx_sex_scene_dubcon_dom_first_target_17
+	}
+	text = {
+		trigger = {
+			OR = {
+				var:sex_scene_target_attitude = flag:angry
+			}
+		}
+		localization_key = carnx_sex_scene_dubcon_dom_first_target_18
+	}
+	text = {
 		trigger = { always = no }
 		fallback = yes
 		localization_key = carnx_sex_scene_dubcon_dom_first_target_f
@@ -343,6 +390,22 @@ carnx_sex_scene_dubcon_dom_first_player = {
 			}
 		}
 		localization_key = carnx_sex_scene_dubcon_dom_first_player_10
+	}
+	text = {
+		trigger = {
+			OR = {
+				var:sex_scene_player_attitude = flag:schadenfreude
+			}
+		}
+		localization_key = carnx_sex_scene_dubcon_dom_first_player_11
+	}
+	text = {
+		trigger = {
+			OR = {
+				var:sex_scene_player_attitude = flag:vengeful
+			}
+		}
+		localization_key = carnx_sex_scene_dubcon_dom_first_player_12
 	}
 	text = {
 		trigger = { always = no }
@@ -1033,6 +1096,10 @@ carnx_sex_scene_title = {
 		localization_key = carnx_sex_scene_dubcon_title
 	}
 	text = {
+		trigger = { carn_sex_scene_was_noncon = yes }
+		localization_key = carnx_sex_scene_noncon_title
+	}
+	text = {
 		localization_key = carn_sex_scene.0001.t
 	}
 }
@@ -1072,6 +1139,14 @@ carnx_sex_scene_dubcon_title = {
 	}
 }
 
+carnx_sex_scene_noncon_title = {
+	type = character
+
+	text = {
+		localization_key = carnx_sex_scene_noncon_title_f
+	}
+}
+
 carnx_sex_scene_option = {
 	type = character
 
@@ -1082,6 +1157,10 @@ carnx_sex_scene_option = {
 	text = {
 		trigger = { carn_sex_scene_was_dubcon = yes }
 		localization_key = carnx_sex_scene_dubcon_option
+	}
+	text = {
+		trigger = { carn_sex_scene_was_noncon = yes }
+		localization_key = carnx_sex_scene_noncon_option
 	}
 	text = {
 		localization_key = carn_sex_scene.0001.a
@@ -1105,6 +1184,14 @@ carnx_sex_scene_dubcon_option = {
 	}
 	text = {
 		localization_key = carnx_sex_scene_dubcon_option_f
+	}
+}
+
+carnx_sex_scene_noncon_option = {
+	type = character
+
+	text = {
+		localization_key = carnx_sex_scene_noncon_option_f
 	}
 }
 
@@ -1160,6 +1247,14 @@ carnx_sex_scene_target_attitude = {
 		localization_key = carnx_sex_scene_attitude_calculating
 	}
 	text = {
+		trigger = { var:sex_scene_target_attitude = flag:shocked }
+		localization_key = carnx_sex_scene_attitude_shocked
+	}
+	text = {
+		trigger = { var:sex_scene_target_attitude = flag:angry }
+		localization_key = carnx_sex_scene_attitude_angry
+	}
+	text = {
 		localization_key = carnx_sex_scene_attitude_unknown
 	}
 }
@@ -1206,6 +1301,14 @@ carnx_sex_scene_player_attitude = {
 	text = {
 		trigger = { var:sex_scene_player_attitude = flag:dominating }
 		localization_key = carnx_sex_scene_attitude_dominating
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:schadenfreude }
+		localization_key = carnx_sex_scene_attitude_schadenfreude
+	}
+	text = {
+		trigger = { var:sex_scene_player_attitude = flag:vengeful }
+		localization_key = carnx_sex_scene_attitude_vengeful
 	}
 	text = {
 		localization_key = carnx_sex_scene_attitude_unknown

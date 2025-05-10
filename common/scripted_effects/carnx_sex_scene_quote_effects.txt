@@ -387,7 +387,7 @@
 			trigger = {
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_3_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:dominating }
+				carnx_sex_scene_player_attitude_5_trigger = { F1 = flag:hedonistic F2 = flag:deceitful F3 = flag:dominating F4 = flag:schadenfreude F5 = flag:vengeful }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:quote_44 } # The Perfumed Garden
 		}
@@ -482,7 +482,7 @@
 				carn_sex_scene_was_bdsm = yes
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating }
+				carnx_sex_scene_player_attitude_6_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating F5 = flag:schadenfreude F6 = flag:vengeful }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_01 } # Marquis de Sade, The 120 Days of Sodom
 		}
@@ -492,7 +492,7 @@
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
 				scope:carn_sex_target = { is_pregnant = yes }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating }
+				carnx_sex_scene_player_attitude_6_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating F5 = flag:schadenfreude F6 = flag:vengeful }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_02 } # Marquis de Sade, The 120 Days of Sodom
 		}
@@ -502,7 +502,7 @@
 				carn_sex_scene_was_orgy = yes
 				is_male = yes
 				scope:carn_sex_target = { is_female = yes }
-				carnx_sex_scene_player_attitude_4_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating }
+				carnx_sex_scene_player_attitude_6_trigger = { F1 = flag:reserved F2 = flag:hedonistic F3 = flag:deceitful F4 = flag:dominating F5 = flag:schadenfreude F6 = flag:vengeful }
 			}
 			save_scope_value_as = { name = sex_scene_quote value = flag:bdsm_quote_03 } # Marquis de Sade, The 120 Days of Sodom
 		}

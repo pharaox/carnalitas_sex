@@ -33,6 +33,7 @@ carn_sex_scene = {
 		100 = carnx_sex_scene.0002 # Generic consensual scene
 		100 = carnx_sex_scene.0003 # Generic dubcon scene (dom), supports orgy
 		100 = carnx_sex_scene.0004 # Generic dubcon scene (sub), supports orgy and bdsm
+		100 = carnx_sex_scene.0005 # Rape prisoner noncon scene (dom), supports bdsm
 	}
 	fallback = carn_sex_scene_fallback
 }

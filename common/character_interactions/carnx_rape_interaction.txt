@@ -1,0 +1,70 @@
+﻿carn_rape_interaction = {
+	category = interaction_category_prison
+	desc = carn_rape_interaction_desc
+	interface_priority = 30
+	icon = carn_icon
+
+	is_shown = {
+		NOT = { has_game_rule = carn_sex_interaction_disabled }
+		has_game_rule = carn_content_consent_noncon
+		scope:actor = {
+			is_adult = yes
+			carnx_is_sex_interaction_blocked_trigger = no
+		}
+		scope:recipient = {
+			is_adult = yes
+			carnx_is_sex_interaction_blocked_trigger = no
+			is_imprisoned_by = scope:actor
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			carn_can_have_sex_trigger = yes
+		}
+		scope:recipient = {
+			carn_can_be_raped_trigger = yes
+		}
+		scope:recipient = {
+			custom_description = {
+				text = "currently_being_tortured"
+				NOT = { has_character_flag = is_being_tortured }
+			}
+		}
+	}
+
+	cooldown = { months = carn_sex_interaction_cooldown }
+
+	# BDSM
+	send_option = {
+		is_shown = {
+			scope:actor = {
+				carnx_can_do_bdsm_trigger = yes
+			}
+		}
+		flag = bdsm
+		localization = "carnx_sex_bdsm_option"
+		current_description = {
+			desc = "carnx_sex_bdsm_option_desc"
+		}
+	}
+
+	send_options_exclusive = no
+
+	on_accept = {
+		# TODO Rape player by AI
+		scope:actor = {
+			carnx_rape_interaction_main_effect = yes
+
+			hidden_effect = {
+				hidden_effect = {
+					carnx_rape_interaction_sex_scene_effect = yes
+				}
+			}
+		}
+	}
+
+	auto_accept = yes
+	
+	# TODO AI
+}

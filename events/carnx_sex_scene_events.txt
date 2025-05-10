@@ -39,7 +39,7 @@ carnx_sex_scene.0001 = {
 		carnx_add_sex_scene_location_effect = { LOCATION = copse }
 		carnx_add_sex_scene_location_effect = { LOCATION = kitchen }
 
-		carnx_set_sex_scene_location_effect = yes
+		carnx_maybe_set_sex_scene_location_effect = yes
 		carnx_set_sex_scene_target_effect = yes
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
@@ -133,7 +133,7 @@ carnx_sex_scene.0002 = {
 		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_add_sex_scene_location_effect = { LOCATION = garden }
 
-		carnx_set_sex_scene_location_effect = yes
+		carnx_maybe_set_sex_scene_location_effect = yes
 		carnx_set_sex_scene_target_effect = yes
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
@@ -254,7 +254,7 @@ carnx_sex_scene.0003 = {
 		carnx_add_sex_scene_location_effect = { LOCATION = garden }
 		carnx_add_sex_scene_location_effect = { LOCATION = dungeon }
 
-		carnx_set_sex_scene_location_effect = yes
+		carnx_maybe_set_sex_scene_location_effect = yes
 		carnx_set_sex_scene_target_effect = yes
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
@@ -344,7 +344,7 @@ carnx_sex_scene.0004 = {
 	trigger = {
 		carn_sex_scene_is_dubcon = yes
 		carn_sex_scene_is_sub_player = yes
-		carn_sex_scene_is_giving_player = yes
+		carn_sex_scene_is_receiving_player = yes
 		carn_sex_scene_matches_requested_flags_trigger = yes
 	}
 
@@ -355,13 +355,102 @@ carnx_sex_scene.0004 = {
 		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_add_sex_scene_location_effect = { LOCATION = garden }
 
-		carnx_set_sex_scene_location_effect = yes
+		carnx_maybe_set_sex_scene_location_effect = yes
 		carnx_set_sex_scene_target_effect = yes
 		carnx_set_sex_scene_player_attitude_effect = yes
 		carnx_set_sex_scene_target_attitude_effect = yes
 
 		carnx_sex_debug_log_6_effect = {
 			MSG = carnx_sex_debug_msg_sex_scene_0004_fired
+			NAME1 = carn_sex_target TYPE1 = flag:character
+			NAME2 = sex_scene_location TYPE2 = flag:variable
+			NAME3 = sex_scene_target TYPE3 = flag:variable
+			NAME4 = sex_scene_player_attitude TYPE4 = flag:variable
+			NAME5 = sex_scene_target_attitude TYPE5 = flag:variable
+			NAME6 = sex_scene_quote TYPE6 = flag:variable
+		}
+
+		carnx_had_sex_with_effect = {
+			CHARACTER_1 = scope:carn_sex_player
+			CHARACTER_2 = scope:carn_sex_target
+			C1_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			C2_PREGNANCY_CHANCE = carnx_pregnancy_chance_value
+			STRESS_EFFECTS = scope:carn_sex_stress_effects
+			DRAMA = scope:carn_sex_drama
+		}
+
+		scope:carn_sex_player = {
+			carn_undress_character_effect = yes
+		}
+		scope:carn_sex_target = {
+			carn_undress_character_effect = yes
+		}
+	}
+
+	after = {
+		scope:carn_sex_player = {
+			carn_dress_character_effect = yes
+		}
+		scope:carn_sex_target = {
+			carn_dress_character_effect = yes
+		}
+
+		carnx_clear_sex_scene_variables_effect = yes
+		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_interaction_flags_effect = yes
+	}
+
+	option = {
+		name = carnx_sex_scene.a
+	}
+}
+
+carnx_sex_scene.0005 = {
+	type = character_event
+	title = carnx_sex_scene.t
+	desc = {
+		desc = carnx_sex_scene.desc
+		desc = carnx_sex_scene.quote
+	}
+
+	theme = carnx_sex_scene
+
+	left_portrait = {
+		character = scope:carn_sex_player
+		scripted_animation = carnx_sex_scene_player_animation
+	}
+	right_portrait = {
+		character = scope:carn_sex_target
+		scripted_animation = carnx_sex_scene_target_animation
+	}
+
+	trigger = {
+		carn_sex_scene_is_noncon = yes
+		carn_sex_scene_is_dom_player = yes
+		carn_sex_scene_is_bdsm = yes
+		carn_sex_scene_is_giving_player = yes
+		carn_sex_scene_matches_requested_flags_trigger = yes
+	}
+
+	immediate = {
+		carn_sex_scene_is_noncon = yes
+		carn_sex_scene_is_dom_player = yes
+		if = {
+			limit = { carnx_sex_scene_flag_requested_trigger = { FLAG = bdsm } }
+			carn_sex_scene_is_bdsm = yes
+		}
+
+		carnx_add_sex_scene_location_effect = { LOCATION = private_chamber }
+		carnx_add_sex_scene_location_effect = { LOCATION = dungeon }
+
+		carnx_set_sex_scene_location_effect = yes
+		carnx_set_sex_scene_target_effect = yes
+		carnx_set_sex_scene_player_attitude_effect = yes
+		carnx_set_sex_scene_target_attitude_effect = yes
+		carnx_set_sex_scene_quote_effect = yes
+
+		carnx_sex_debug_log_6_effect = {
+			MSG = carnx_sex_debug_msg_sex_scene_0005_fired
 			NAME1 = carn_sex_target TYPE1 = flag:character
 			NAME2 = sex_scene_location TYPE2 = flag:variable
 			NAME3 = sex_scene_target TYPE3 = flag:variable

@@ -1,6 +1,22 @@
 ﻿carnx_sex_scene = {
 	icon = {
+		trigger = {
+			scope:carn_sex_target = {
+				is_imprisoned_by = scope:carn_sex_player
+			}
+		}
+		reference = "gfx/interface/icons/event_types/type_prison.dds"
+	}
+	icon = {
 		reference = "gfx/interface/icons/event_types/type_seduction.dds"
+	}
+	sound = {
+		trigger = {
+			scope:carn_sex_target = {
+				is_imprisoned_by = scope:carn_sex_player
+			}
+		}
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_prison"
 	}
 	sound = {
 		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_seduction"

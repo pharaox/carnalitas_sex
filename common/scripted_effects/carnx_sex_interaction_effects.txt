@@ -56,6 +56,44 @@ carnx_sex_interaction_main_effect = {
 	}
 }
 
+carnx_rape_interaction_main_effect = {
+	# If not on cooldown, show the effect and add the cooldown flag
+	if = {
+		limit = {
+			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+		}
+
+		show_as_tooltip = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:actor
+				CHARACTER_2 = scope:recipient
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = no
+				DRAMA = yes
+			}
+		}
+
+		# TODO Improve effects for actor and recipient
+		#carnx_sex_interaction_impact_effect = { PARTNER = scope:recipient }
+		#scope:recipient = {
+		#	carnx_sex_interaction_impact_effect = { PARTNER = scope:actor }
+		#}
+		carn_rape_effect_v2 = {
+			VICTIM = scope:recipient
+		}
+
+		add_character_flag = {
+			flag = carn_sex_interaction_effect_cd
+			months = carn_sex_interaction_cooldown_base
+		}
+	}
+	else = {
+		custom_tooltip = carn_sex_interaction_effect_cd_tt
+		add_character_flag = carn_block_next_had_sex_with_effect
+	}
+}
+
 # Pay prostitution price if the recipient is a prostitute
 carnx_pay_prostitution_price_effect = {
 	# If the recpient is a prostitute, pay the price
@@ -136,6 +174,36 @@ carnx_carnal_court_sex_interaction_sex_scene_effect = {
 			STRESS_EFFECTS = no
 			DRAMA = yes
 		}
+	}
+}
+
+carnx_rape_interaction_sex_scene_effect = {
+	# Request sex scene flags
+	carn_sex_scene_is_noncon_effect = yes
+	carn_sex_scene_character_is_dom_player_effect = yes
+
+	# Request optional scene flags, e.g. bdsm
+	carnx_request_optional_sex_scene_flags_effect = yes
+
+	# Request sex scene locations
+	if = {
+		limit = {
+			scope:recipient = { is_in_prison_type = house_arrest }
+		}
+		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
+	}
+	else_if = {
+		limit = {
+			scope:recipient = { is_in_prison_type = dungeon }
+		}
+		carnx_request_sex_scene_location_effect = { LOCATION = dungeon }
+	}
+
+	carn_sex_scene_effect = {
+		PLAYER = scope:actor
+		TARGET = scope:recipient
+		STRESS_EFFECTS = no
+		DRAMA = yes
 	}
 }
 
@@ -242,12 +310,6 @@ carnx_request_sex_scene_flags_effect = {
 
 	# Request optional scene flags, e.g. bdsm or orgy
 	carnx_request_optional_sex_scene_flags_effect = yes
-
-	# Randomly request "giving player" to give the default events chance to fire
-	random = {
-		chance = 25
-		carn_sex_scene_request_giving_player = yes
-	}
 }
 
 carnx_request_optional_sex_scene_flags_effect = {
@@ -273,6 +335,7 @@ carnx_add_random_sex_scene_flags_effect = {
 			carn_sex_scene_is_cum_outside_effect = yes
 		}
 		10 = {
+			trigger = { has_game_rule = carn_content_anal_enabled }
 			carn_sex_scene_is_anal_effect = yes
 		}
 		10 = {
