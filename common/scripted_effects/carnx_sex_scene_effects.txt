@@ -157,6 +157,17 @@ carnx_clear_sex_scene_variables_effect = {
 	}
 }
 
+carnx_clear_sex_scene_flags_effect = {
+	carn_sex_scene_clean_up_flags_effect = yes
+	carn_sex_scene_clean_up_character_flags_effect = yes
+	scope:carn_sex_target = {
+		carn_sex_scene_clean_up_character_flags_effect = yes
+	}
+	scope:carn_sex_target2 ?= {
+		carn_sex_scene_clean_up_character_flags_effect = yes
+	}
+}
+
 carnx_set_sex_scene_target_effect = {
 	if = {
 		limit = {

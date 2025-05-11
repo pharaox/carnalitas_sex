@@ -80,6 +80,7 @@ carnx_sex_scene.0001 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_scene_flags_effect = yes
 		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
@@ -193,6 +194,7 @@ carnx_sex_scene.0002 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_scene_flags_effect = yes
 		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
@@ -314,6 +316,7 @@ carnx_sex_scene.0003 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_scene_flags_effect = yes
 		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
@@ -397,6 +400,7 @@ carnx_sex_scene.0004 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_scene_flags_effect = yes
 		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
@@ -486,6 +490,7 @@ carnx_sex_scene.0005 = {
 
 		carnx_clear_sex_scene_variables_effect = yes
 		carnx_clear_sex_scene_locations_effect = yes
+		carnx_clear_sex_scene_flags_effect = yes
 		carnx_clear_sex_interaction_flags_effect = yes
 	}
 
