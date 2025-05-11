@@ -57,40 +57,22 @@ carnx_sex_interaction_main_effect = {
 }
 
 carnx_rape_interaction_main_effect = {
-	# If not on cooldown, show the effect and add the cooldown flag
-	if = {
-		limit = {
-			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
-		}
+	# No cooldown for rape, but also no additional stress loss
 
-		show_as_tooltip = {
-			carn_had_sex_with_effect = {
-				CHARACTER_1 = scope:actor
-				CHARACTER_2 = scope:recipient
-				C1_PREGNANCY_CHANCE = pregnancy_chance
-				C2_PREGNANCY_CHANCE = pregnancy_chance
-				STRESS_EFFECTS = no
-				DRAMA = yes
-			}
-		}
-
-		# TODO Improve effects for actor and recipient
-		#carnx_sex_interaction_impact_effect = { PARTNER = scope:recipient }
-		#scope:recipient = {
-		#	carnx_sex_interaction_impact_effect = { PARTNER = scope:actor }
-		#}
-		carn_rape_effect_v2 = {
-			VICTIM = scope:recipient
-		}
-
-		add_character_flag = {
-			flag = carn_sex_interaction_effect_cd
-			months = carn_sex_interaction_cooldown_base
+	show_as_tooltip = {
+		carn_had_sex_with_effect = {
+			CHARACTER_1 = scope:actor
+			CHARACTER_2 = scope:recipient
+			C1_PREGNANCY_CHANCE = pregnancy_chance
+			C2_PREGNANCY_CHANCE = pregnancy_chance
+			STRESS_EFFECTS = no
+			DRAMA = yes
 		}
 	}
-	else = {
-		custom_tooltip = carn_sex_interaction_effect_cd_tt
-		add_character_flag = carn_block_next_had_sex_with_effect
+
+	carnx_rape_interaction_impact_effect = { PARTNER = scope:recipient }
+	scope:recipient = {
+		carnx_rape_interaction_impact_effect = { PARTNER = scope:actor }
 	}
 }
 
@@ -195,8 +177,8 @@ carnx_rape_interaction_sex_scene_effect = {
 
 # Apply sex interaction effects on a single participant
 carnx_sex_interaction_impact_effect = {
-	# Piety and stress impact of sinful actions
-	carnx_sex_interaction_piety_impact_effect = { PARTNER = $PARTNER$ }
+	# Show tooltip for sinful actions
+	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
 
 	# Lose stress if arousal stress is enabled (player only)
 	if = {
@@ -217,16 +199,44 @@ carnx_sex_interaction_impact_effect = {
 		limit = { scope:demand_sex = yes }
 		if = {
 			limit = { is_ai = no }
-			stress_impact = {
-				compassionate = miniscule_stress_impact_gain
-				sadistic = miniscule_stress_impact_loss
-				callous = miniscule_stress_impact_loss
-				# TODO More traits causing stress impact?
-			}
+			carnx_demand_sex_interaction_player_effect = { PARTNER = $PARTNER$ }
 		}
 		else = {
-			carnx_demand_sex_interaction_opinion_impact_effect = { PARTNER = $PARTNER$ }
+			carnx_demand_sex_interaction_target_effect = { PARTNER = $PARTNER$ }
 		}
+	}
+
+	# Additional piety and stress impact for BDSM
+	if = {
+		limit = { scope:bdsm = yes }
+		if = {
+			limit = { is_ai = no }
+			carnx_sex_interaction_bdsm_player_effect = { PARTNER = $PARTNER$ }
+		}
+		else = {
+			carnx_sex_interaction_bdsm_target_effect = { PARTNER = $PARTNER$ }
+		}
+	}
+
+	# Other impact
+	carnx_sex_interaction_other_impact_effect = { PARTNER = $PARTNER$ }
+}
+
+# Apply rape interaction effects on a single participant
+carnx_rape_interaction_impact_effect = {
+	# Show tooltip for sinful actions
+	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
+
+	# Stress impact of having sex
+	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
+
+	# Additional piety, stress, dread, and opinion impact of rape
+	if = {
+		limit = { is_ai = no }
+		carnx_rape_interaction_player_effect = { PARTNER = $PARTNER$ }
+	}
+	else = {
+		carnx_rape_interaction_target_effect = { PARTNER = $PARTNER$ }
 	}
 
 	# Additional piety and stress impact for BDSM
@@ -409,16 +419,16 @@ carnx_request_sex_scene_locations_effect = {
 	}
 }
 
-carnx_sex_interaction_piety_impact_effect = {
-	carnx_sin_piety_impact_effect = { SIN = adultery PARTNER = $PARTNER$ }
-	carnx_sin_piety_impact_effect = { SIN = sodomy PARTNER = $PARTNER$ }
-	carnx_sin_piety_impact_effect = { SIN = incest PARTNER = $PARTNER$ }
+carnx_sex_interaction_sin_tooltip_effect = {
+	carnx_sin_tooltip_effect = { SIN = adultery PARTNER = $PARTNER$ }
+	carnx_sin_tooltip_effect = { SIN = sodomy PARTNER = $PARTNER$ }
+	carnx_sin_tooltip_effect = { SIN = incest PARTNER = $PARTNER$ }
 }
 
-carnx_sin_piety_impact_effect = {
+carnx_sin_tooltip_effect = {
 	save_temporary_scope_as = character
 
-	# Lose piety if $SIN$ is illegal or shunned in this character's faith
+	# Show tooltip if $SIN$ is illegal or shunned in this character's faith
 	if = {
 		limit = {
 			NOT = { carnx_is_lover_trigger = { CHARACTER = $PARTNER$ } }
@@ -429,14 +439,12 @@ carnx_sin_piety_impact_effect = {
 				carnx_is_$SIN$_crime_trigger = yes
 			}
 			custom_tooltip = carnx_sex_interaction_$SIN$_crime_warning_tt
-			#add_piety = minor_piety_loss
 		}
 		else_if = {
 			limit = {
 				carnx_is_$SIN$_shunned_trigger = yes
 			}
 			custom_tooltip = carnx_sex_interaction_$SIN$_shunned_warning_tt
-			#add_piety = miniscule_piety_loss
 		}
 	}
 }
@@ -486,7 +494,17 @@ carnx_sex_interaction_other_impact_effect = {
 	$PARTNER$ = {}
 }
 
-carnx_demand_sex_interaction_opinion_impact_effect = {
+carnx_demand_sex_interaction_player_effect = {
+	stress_impact = {
+		compassionate = miniscule_stress_impact_gain
+		sadistic = miniscule_stress_impact_loss
+		callous = miniscule_stress_impact_loss
+		# TODO More traits causing stress impact?
+	}
+	$PARTNER$ = {}
+}
+
+carnx_demand_sex_interaction_target_effect = {
 	if = {
 		limit = {
 			carnx_is_sex_with_character_crime_trigger = { CHARACTER = $PARTNER$ }
@@ -503,6 +521,202 @@ carnx_demand_sex_interaction_opinion_impact_effect = {
 		add_opinion = {
 			target = $PARTNER$
 			modifier = carnx_demanded_sex_shunned_opinion
+		}
+	}
+}
+
+carnx_rape_interaction_player_effect = {
+	custom_tooltip = carnx_rape_interaction_warning_tt
+
+	# Piety impact
+	if = {
+		limit = {
+			NOT = { has_perk = divine_retribution_perk }
+		}
+		add_piety = medium_piety_loss
+	}
+
+	# Stress impact
+	if = {
+		limit = { has_relation_rival = $PARTNER$ }
+
+		if = {
+			limit = {
+				NOR = {
+					has_trait = sadistic
+					has_trait = vengeful
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+			}
+			add_stress = minor_stress_impact_loss
+		}
+		else = {
+			stress_impact = {
+				sadistic = medium_stress_impact_loss
+				vengeful = medium_stress_impact_loss
+				compassionate = miniscule_stress_impact_loss
+				forgiving = miniscule_stress_impact_loss
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				NOR = {
+					has_trait = sadistic
+					has_trait = vengeful
+					has_trait = compassionate
+					has_trait = forgiving
+				}
+			}
+			add_stress = miniscule_stress_impact_gain
+		}
+		else = {
+			stress_impact = {
+				compassionate = minor_stress_impact_gain
+				forgiving = minor_stress_impact_gain
+			}
+		}
+	}
+
+	# Dread
+	carnx_rape_interaction_player_dread_effect = { PARTNER = $PARTNER$ }
+}
+
+carnx_rape_interaction_player_dread_effect = {
+	save_temporary_scope_as = rapist
+
+	if = {
+		limit = {
+			$PARTNER$ = {
+				OR = {
+					scope:rapist.faith.religious_head = $PARTNER$
+					primary_title ?= { tier >= tier_empire }
+				}
+			}
+		}
+		add_dread = 15
+	}
+	else_if = {
+		limit = {
+			$PARTNER$ = {
+				OR = {
+					is_vassal_of = scope:rapist
+					target_is_vassal_or_below = scope:rapist
+					primary_title ?= { tier >= tier_kingdom }
+				}
+			}
+		}
+		add_dread = 10
+	}
+	else_if = {
+		limit = {
+			$PARTNER$ = {
+				OR = {
+					scope:rapist = {
+						any_vassal = {
+							is_close_family_of = $PARTNER$
+						}
+					}
+					scope:rapist = {
+						any_liege_or_above = {
+							is_close_family_of = $PARTNER$
+						}
+					}
+					AND = {
+						is_ruler = yes
+						liege ?= scope:rapist.liege
+					}
+					primary_title ?= { tier >= tier_duchy }
+				}
+			}
+		}
+		add_dread = 5
+	}
+}
+
+carnx_rape_interaction_target_effect = {
+	custom_tooltip = carnx_rape_interaction_warning_tt
+
+	# Gain recently raped modifier
+	add_character_modifier = {
+		modifier = carn_recently_raped
+		years = 5
+	}
+
+	if = {
+		limit = {
+			NOT = { carn_has_fetish_trigger = { FETISH = being_raped } }
+		}
+
+		# Stress impact
+		if = {
+			limit = {
+				NOR = {
+					has_trait = craven
+					has_trait = brave
+				}
+			}
+			add_stress = medium_stress_impact_gain
+		}
+		else = {
+			stress_impact = {
+				craven = major_stress_impact_gain
+				brave = minor_stress_impact_gain
+			}
+		}
+
+		# Gain depressed trait
+		random = {
+			chance = 10
+			add_trait_force_tooltip = depressed_1
+		}
+	}
+
+	# Opinion effects
+	add_opinion = {
+		target = $PARTNER$
+		modifier = carnx_raped_me_opinion
+	}
+	every_close_family_member = {
+		limit = { NOT = { this = $PARTNER$ } }
+		add_opinion = {
+			target = $PARTNER$
+			modifier = carnx_raped_close_family_opinion
+		}
+	}
+	every_spouse = {
+		limit = { NOT = { this = $PARTNER$ } }
+		add_to_list = spouses
+	}
+	concubinist ?= {
+		if = {
+			limit = { NOT = { this = $PARTNER$ } }
+			add_to_list = spouses
+		}
+	}
+	every_in_list = {
+		list = spouses
+		add_opinion = {
+			target = $PARTNER$
+			modifier = carnx_raped_my_spouse_opinion
+		}
+	}
+	every_relation = {
+		type = friend
+		limit = { NOT = { this = $PARTNER$ } }
+		add_opinion = {
+			target = $PARTNER$
+			modifier = carnx_raped_my_friend_opinion
+		}
+	}
+	every_relation = {
+		type = lover
+		limit = { NOT = { this = $PARTNER$ } }
+		add_opinion = {
+			target = $PARTNER$
+			modifier = carnx_raped_my_lover_opinion
 		}
 	}
 }
@@ -531,21 +745,21 @@ carnx_sex_interaction_bdsm_player_effect = {
 					has_trait = forgiving
 				}
 			}
-			add_stress = minor_stress_impact_loss
+			add_stress = miniscule_stress_impact_loss
 		}
 		else = {
 			stress_impact = {
-				sadistic = medium_stress_impact_loss
-				vengeful = medium_stress_impact_loss
-				compassionate = miniscule_stress_impact_gain
-				forgiving = miniscule_stress_impact_gain
+				sadistic = minor_stress_impact_loss
+				vengeful = minor_stress_impact_loss
 			}
 		}
 	}
 	else = {
 		stress_impact = {
-			sadistic = minor_stress_impact_loss
-			vengeful = minor_stress_impact_loss
+			sadistic = miniscule_stress_impact_loss
+			vengeful = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_gain
+			forgiving = miniscule_stress_impact_gain
 		}
 	}
 }

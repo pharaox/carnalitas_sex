@@ -15,3 +15,39 @@ carnx_forced_me_into_bdsm_opinion = {
 	decaying = yes
 	years = 10
 }
+
+carnx_raped_me_opinion = {
+	opinion = -50
+	decaying = yes
+	years = 20
+	imprisonment_reason = yes
+	execute_reason = yes
+}
+
+carnx_raped_close_family_opinion = {
+	opinion = -20
+	decaying = yes
+	years = 10
+	imprisonment_reason = yes
+}
+
+carnx_raped_my_spouse_opinion = {
+	opinion = -20
+	decaying = yes
+	years = 10
+	imprisonment_reason = yes
+}
+
+carnx_raped_my_friend_opinion = {
+	opinion = -20
+	decaying = yes
+	years = 10
+	imprisonment_reason = yes
+}
+
+carnx_raped_my_lover_opinion = {
+	opinion = -20
+	decaying = yes
+	years = 10
+	imprisonment_reason = yes
+}

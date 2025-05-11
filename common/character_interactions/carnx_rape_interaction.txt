@@ -26,6 +26,10 @@
 			carn_can_be_raped_trigger = yes
 		}
 		scope:recipient = {
+			custom_tooltip = {
+				text = "carnx_sex_target_too_far_away"
+				carnx_is_sex_target_at_valid_location_trigger = { PARTNER = scope:actor }
+			}
 			custom_description = {
 				text = "currently_being_tortured"
 				NOT = { has_character_flag = is_being_tortured }
@@ -33,7 +37,7 @@
 		}
 	}
 
-	cooldown = { months = carn_sex_interaction_cooldown }
+	cooldown_against_recipient = { years = 5 }
 
 	# BDSM
 	send_option = {
@@ -57,9 +61,7 @@
 			carnx_rape_interaction_main_effect = yes
 
 			hidden_effect = {
-				hidden_effect = {
-					carnx_rape_interaction_sex_scene_effect = yes
-				}
+				carnx_rape_interaction_sex_scene_effect = yes
 			}
 		}
 	}
