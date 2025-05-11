@@ -182,19 +182,9 @@ carnx_rape_interaction_sex_scene_effect = {
 	carnx_request_sex_scene_flags_effect = { TARGET = scope:recipient }
 
 	# Request sex scene locations
-	if = {
-		limit = {
-			scope:recipient = { is_in_prison_type = house_arrest }
-		}
-		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
-	}
-	else_if = {
-		limit = {
-			scope:recipient = { is_in_prison_type = dungeon }
-		}
-		carnx_request_sex_scene_location_effect = { LOCATION = dungeon }
-	}
+	carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
 
+	# Actually fire the sex scene
 	carn_sex_scene_effect = {
 		PLAYER = scope:actor
 		TARGET = scope:recipient
@@ -373,6 +363,14 @@ carnx_request_sex_scene_locations_effect = {
 		carnx_request_sex_scene_location_effect = { LOCATION = copse }
 		carnx_request_sex_scene_location_effect = { LOCATION = kitchen }
 	}
+	# Consensual, other: only private_chamber and garden
+	else_if = {
+		limit = {
+			carnx_sex_scene_flag_requested_trigger = { FLAG = consensual }
+		}
+		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
+		carnx_request_sex_scene_location_effect = { LOCATION = garden }
+	}
 	# Dubcon, bdsm: only private_chamber and dungeon
 	else_if = {
 		limit = {
@@ -382,10 +380,32 @@ carnx_request_sex_scene_locations_effect = {
 		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_request_sex_scene_location_effect = { LOCATION = dungeon }
 	}
-	# Others: only private_chamber and garden
-	else = {
+	# Dubcon, other: only private_chamber and garden
+	else_if = {
+		limit = {
+			carnx_sex_scene_flag_requested_trigger = { FLAG = dubcon }
+		}
 		carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
 		carnx_request_sex_scene_location_effect = { LOCATION = garden }
+	}
+	# Noncon, prisoner: either private_chamber or dungeon depending on prison type
+	else_if = {
+		limit = {
+			carnx_sex_scene_flag_requested_trigger = { FLAG = noncon }
+			$TARGET$ = { is_imprisoned_by = prev }
+		}
+		if = {
+			limit = {
+				$TARGET$ = { is_in_prison_type = house_arrest }
+			}
+			carnx_request_sex_scene_location_effect = { LOCATION = private_chamber }
+		}
+		else_if = {
+			limit = {
+				$TARGET$ = { is_in_prison_type = dungeon }
+			}
+			carnx_request_sex_scene_location_effect = { LOCATION = dungeon }
+		}
 	}
 }
 
