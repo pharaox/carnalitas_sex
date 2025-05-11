@@ -22,8 +22,19 @@
  carnx_sex_bdsm_option: "Indulge your darker passions"
  carnx_sex_bdsm_option_desc: "Indulge your darker passions with your partner. This option is available because you are $trait_sadistic$ and [recipient.GetShortUINameNoTooltip] is your slave or a prostitute."
 
+ carnx_sex_travel_option: "Travel to partner location"
+ carnx_sex_travel_option_desc: "Travel to your partner location to make love. This option is available because $carnx_sex_target_too_far_away$."
+
+ carnx_sex_travel_warning_tt: "#X [actor.GetShortUINameNoTooltip|U] will start traveling to [recipient.GetCurrentLocation.GetName] and will $carn_sex_interaction$ to [recipient.GetShortUINameNoTooltip] upon arrival#!"
+ carnx_demand_sex_travel_warning_tt: "#X [actor.GetShortUINameNoTooltip|U] will start traveling to [recipient.GetCurrentLocation.GetName] and will $dsi_demand_sex_interaction$ from [recipient.GetShortUINameNoTooltip] upon arrival#!"
+
  carnx_sex_carnal_court_option: "Carnal Court sex scenes"
  carnx_sex_carnal_court_option_desc: "Show Carnal Court sex scenes."
+
+ # Extra icons
+ carn_sex_interaction_extra_icon: "$carnx_travel_extra_icon$"
+ dsi_demand_sex_interaction_extra_icon: "$carnx_travel_extra_icon$"
+ carnx_travel_extra_icon: "@travel_speed_icon! Requires [travel|E]"
 
  carnx_has_eligible_sex_secondary_target_tt: "You have a consort who is an eligible second partner"
  carnx_has_eligible_demand_sex_secondary_target_tt: "You have a slave who is an eligible second partner"

@@ -1,87 +1,114 @@
 ﻿l_korean:
- carnx_sex_scene_dubcon_dom_text: "$carnx_sex_scene_dubcon_dom_opening$$carnx_sex_scene_dubcon_dom_first$"
+ carnx_sex_scene_consensual_text: "$carnx_sex_scene_consensual_opening$$carnx_sex_scene_giving_first$"
+ carnx_sex_scene_dubcon_dom_text: "$carnx_sex_scene_dubcon_dom_opening$$carnx_sex_scene_giving_first$"
+ carnx_sex_scene_dubcon_sub_text: "$carnx_sex_scene_dubcon_sub_opening$$carnx_sex_scene_receiving_first$"
+ carnx_sex_scene_noncon_dom_text: "$carnx_sex_scene_noncon_dom_opening$$carnx_sex_scene_giving_first$"
 
+ carnx_sex_scene_consensual_opening: "[ROOT.Char.Custom2('carnx_sex_scene_consensual_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_consensual_location', SCOPE.sC('second'))]. "
  carnx_sex_scene_dubcon_dom_opening: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_location', SCOPE.sC('second'))]. "
- carnx_sex_scene_dubcon_dom_first: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
+ carnx_sex_scene_dubcon_sub_opening: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_location', SCOPE.sC('second'))]. "
+ carnx_sex_scene_noncon_dom_opening: "[ROOT.Char.Custom2('carnx_sex_scene_noncon_dom_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_noncon_dom_location', SCOPE.sC('second'))]. "
+
+ carnx_sex_scene_consensual_opening_f: "내 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]을(를) 발견했다"
 
  carnx_sex_scene_dubcon_dom_opening_f: "내 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]을(를) 발견했다"
+
+ carnx_sex_scene_dubcon_sub_opening_f: "내 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]이(가) 나를 발견했다"
+
+ carnx_sex_scene_noncon_dom_opening_f: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] guesses my intentions when I pay [second.GetHerHim] a visit"
+
+ carnx_sex_scene_consensual_location_private_chambers_1: "내 개인 침실의 소파에 기대어 있는"
+ carnx_sex_scene_consensual_location_garden_1: "내 정원의 한적한 곳을 거닐고 있는"
+ carnx_sex_scene_consensual_location_f: "나를 기다리고 있는"
 
  carnx_sex_scene_dubcon_dom_location_private_chambers_1: "내 개인 침실의 소파에 기대어 있는"
  carnx_sex_scene_dubcon_dom_location_garden_1: "내 정원의 한적한 곳을 거닐고 있는"
  carnx_sex_scene_dubcon_dom_location_dungeon_1: "내 지하 감옥의 벽에 단단히 사슬로 묶여 있는"
  carnx_sex_scene_dubcon_dom_location_f: "나를 기다리고 있는"
 
- carnx_sex_scene_dubcon_dom_first_target_01: "[second.GetSheHe|U]은(는) 내 뜻을 예상하려는 듯 의문스럽게 나를 바라본다" # 존중, 순응, 충실, 순종
- carnx_sex_scene_dubcon_dom_first_target_02: "[second.GetSheHe|U]은(는) 나에게 요염하게 미소 짓는다" # 여성, 쾌락주의적, 요염한
- carnx_sex_scene_dubcon_dom_first_target_03: "[second.GetSheHe|U]은(는) 천천히 [second.GetHerHis] 가슴을 드러낸다" # 여성, 쾌락주의적, 요염한, !bdsm
- carnx_sex_scene_dubcon_dom_first_target_04: "[second.GetSheHe|U]은(는) 몸을 돌려 옷을 벗어 [second.GetHerHis] 알몸의 엉덩이를 드러낸다" # 쾌락주의적, 요염한, !bdsm
- carnx_sex_scene_dubcon_dom_first_target_05: "[second.GetSheHe|U]은(는) 맑은 목소리로 정중하게 나를 맞이한다" # 존중, 충실
- carnx_sex_scene_dubcon_dom_first_target_06: "[second.GetSheHe|U]은(는) 나를 보고 매우 기뻐하며 나를 기쁘게 하려 열망하는 것 같다" # 존중, 충실
- carnx_sex_scene_dubcon_dom_first_target_07: "[second.GetSheHe|U]은(는) 내 애정의 대상이 되는 것을 꺼리는 것 같다" # 내성적, 혐오, 저항
- carnx_sex_scene_dubcon_dom_first_target_08: "[second.GetSheHe|U]은(는) 침묵을 지키며 내 눈을 마주치지 않으려 한다" # 내성적, 혐오, 저항
- carnx_sex_scene_dubcon_dom_first_target_09: "[second.GetSheHe|U]은(는) 예의 바르지만 냉담하게 나를 맞이한다" # 내성적, 혐오, 저항
- carnx_sex_scene_dubcon_dom_first_target_10: "[second.GetSheHe|U]은(는) 나를 기쁘게 하려 너무 열심인 것 같다" # 기만적, 계산적
- carnx_sex_scene_dubcon_dom_first_target_11: "[second.GetSheHe|U]은(는) 명랑하게 나를 맞이하지만, 나는 [second.GetHerHis] 미소에서 위선을 감지한다" # 기만적, 계산적
- carnx_sex_scene_dubcon_dom_first_target_12: "[second.GetSheHe|U]은(는) 내 앞에 수줍고 순종적으로 서 있다" # 순종
- carnx_sex_scene_dubcon_dom_first_target_14: "[second.GetSheHe|U]은(는) 도전적으로 나를 노려본다" # 저항
- carnx_sex_scene_dubcon_dom_first_target_15: "[second.GetSheHe|U]은(는) 욕정에 떨며 숨을 거칠게 내쉰다" # 다정한, 요염한
- carnx_sex_scene_dubcon_dom_first_target_16: "[second.GetSheHe|U]은(는) 욕정으로 불타는 눈으로 나를 응시한다" # 다정한, 요염한
- carnx_sex_scene_dubcon_dom_first_target_f: "[second.GetSheHe|U]은(는) 예의 바르게 나를 맞이하지만, [second.GetHerHis] 진짜 감정을 읽기는 쉽지 않다" # 대체
-
- carnx_sex_scene_dubcon_dom_first_player_01: "나는 [second.GetHerHim]에게 다가가 천천히 [second.GetHerHis] 옷을 벗긴다" # 존중, 순응, 충실, 부드러운
- carnx_sex_scene_dubcon_dom_first_player_02: "[second.GetHerHis] 아름다움에 나는 욕망으로 떨린다" # 다정한, 쾌락주의적
- carnx_sex_scene_dubcon_dom_first_player_03: "나는 [second.GetHerHim]에게 앞으로 올 일의 맛보기로 한 대 때린다" # 지배적
- carnx_sex_scene_dubcon_dom_first_player_04: "갑작스럽고 강렬한 욕망의 파도가 나를 덮친다" # 다정한, 쾌락주의적
- carnx_sex_scene_dubcon_dom_first_player_05: "나는 무심하게 [second.GetHerHim]을(를) 바라보며 힘을 모으려 한다" # 내성적
- carnx_sex_scene_dubcon_dom_first_player_06: "나는 존경심과 흠모로 압도된다" # 존중, 충실
- carnx_sex_scene_dubcon_dom_first_player_07: "열정으로 불타오르는 대신, 나는 혐오감을 느낀다" # 혐오
- carnx_sex_scene_dubcon_dom_first_player_08: "나는 [second.GetHerHim]을(를) 부드럽게 애무하며 [second.GetHerHis] 귀에 열정적인 말을 속삭인다" # 충실, 부드러운
- carnx_sex_scene_dubcon_dom_first_player_09: "나는 가짜 미소를 지으며 의심스럽게 [second.GetHerHim]을(를) 바라본다" # 기만적
- carnx_sex_scene_dubcon_dom_first_player_10: "나는 [second.GetHerHim]에게 내 발기한 자지를 보여준다" # 남성, 쾌락주의적, 지배적
- carnx_sex_scene_dubcon_dom_first_player_f: "나는 내 진정한 감정을 확신하지 못한다" # 대체
-
- carnx_sex_scene_dubcon_sub_text: "$carnx_sex_scene_dubcon_sub_opening$$carnx_sex_scene_dubcon_sub_first$"
-
- carnx_sex_scene_dubcon_sub_opening: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_opening', SCOPE.sC('second'))] [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_location', SCOPE.sC('second'))]. "
- carnx_sex_scene_dubcon_sub_first: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
-
- carnx_sex_scene_dubcon_sub_opening_f: "내 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]이(가) 나를 발견했다"
-
  carnx_sex_scene_dubcon_sub_location_private_chambers_1: "[second.GetHerHis] 개인 침실의 소파에 기대어 있는"
  carnx_sex_scene_dubcon_sub_location_garden_1: "[second.GetHerHis] 정원의 한적한 곳을 거닐고 있는"
  carnx_sex_scene_dubcon_sub_location_f: "[second.GetHerHim]을(를) 기다리고 있는"
 
- carnx_sex_scene_dubcon_sub_first_target_f: "<대체 복종 첫 대상>"
+ carnx_sex_scene_noncon_dom_location_private_chambers_1: "in [second.GetHerHis] chambers"
+ carnx_sex_scene_noncon_dom_location_dungeon_1: "in [second.GetHerHis] dungeon cell"
+ carnx_sex_scene_noncon_dom_location_f: ""
 
- carnx_sex_scene_dubcon_sub_first_player_f: "<대체 복종 첫 플레이어>"
+ carnx_sex_scene_giving_first: "[ROOT.Char.Custom2('carnx_sex_scene_giving_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_giving_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
+
+ carnx_sex_scene_giving_first_target_01: "[second.GetSheHe|U]은(는) 내 뜻을 예상하려는 듯 의문스럽게 나를 바라본다" # 존중, 순응, 충실, 순종
+ carnx_sex_scene_giving_first_target_02: "[second.GetSheHe|U]은(는) 나에게 요염하게 미소 짓는다" # 여성, 쾌락주의적, 요염한
+ carnx_sex_scene_giving_first_target_03: "[second.GetSheHe|U]은(는) 천천히 [second.GetHerHis] 가슴을 드러낸다" # 여성, 쾌락주의적, 요염한, !bdsm
+ carnx_sex_scene_giving_first_target_04: "[second.GetSheHe|U]은(는) 몸을 돌려 옷을 벗어 [second.GetHerHis] 알몸의 엉덩이를 드러낸다" # 쾌락주의적, 요염한, !bdsm
+ carnx_sex_scene_giving_first_target_05: "[second.GetSheHe|U]은(는) 맑은 목소리로 정중하게 나를 맞이한다" # 존중, 충실
+ carnx_sex_scene_giving_first_target_06: "[second.GetSheHe|U]은(는) 나를 보고 매우 기뻐하며 나를 기쁘게 하려 열망하는 것 같다" # 존중, 충실
+ carnx_sex_scene_giving_first_target_07: "[second.GetSheHe|U]은(는) 내 애정의 대상이 되는 것을 꺼리는 것 같다" # 내성적, 혐오, 저항
+ carnx_sex_scene_giving_first_target_08: "[second.GetSheHe|U]은(는) 침묵을 지키며 내 눈을 마주치지 않으려 한다" # 내성적, 혐오, 저항
+ carnx_sex_scene_giving_first_target_09: "[second.GetSheHe|U]은(는) 예의 바르지만 냉담하게 나를 맞이한다" # 내성적, 혐오, 저항
+ carnx_sex_scene_giving_first_target_10: "[second.GetSheHe|U]은(는) 나를 기쁘게 하려 너무 열심인 것 같다" # 기만적, 계산적
+ carnx_sex_scene_giving_first_target_11: "[second.GetSheHe|U]은(는) 명랑하게 나를 맞이하지만, 나는 [second.GetHerHis] 미소에서 위선을 감지한다" # 기만적, 계산적
+ carnx_sex_scene_giving_first_target_12: "[second.GetSheHe|U]은(는) 내 앞에 수줍고 순종적으로 서 있다" # 순종
+ carnx_sex_scene_giving_first_target_14: "[second.GetSheHe|U]은(는) 도전적으로 나를 노려본다" # 저항
+ carnx_sex_scene_giving_first_target_15: "[second.GetSheHe|U]은(는) 욕정에 떨며 숨을 거칠게 내쉰다" # 다정한, 요염한
+ carnx_sex_scene_giving_first_target_16: "[second.GetSheHe|U]은(는) 욕정으로 불타는 눈으로 나를 응시한다" # 다정한, 요염한
+ carnx_sex_scene_giving_first_target_17: "[second.GetSheHe|U] prays for mercy, shocked and trembling with fear" # shocked
+ carnx_sex_scene_giving_first_target_18: "[second.GetSheHe|U] appeals to my honor and curses me, full of anger" # angry
+ carnx_sex_scene_giving_first_target_f: "[second.GetSheHe|U]은(는) 예의 바르게 나를 맞이하지만, [second.GetHerHis] 진짜 감정을 읽기는 쉽지 않다" # 대체
+
+ carnx_sex_scene_giving_first_player_01: "나는 [second.GetHerHim]에게 다가가 천천히 [second.GetHerHis] 옷을 벗긴다" # 존중, 순응, 충실, 부드러운
+ carnx_sex_scene_giving_first_player_02: "[second.GetHerHis] 아름다움에 나는 욕망으로 떨린다" # 다정한, 쾌락주의적
+ carnx_sex_scene_giving_first_player_03: "나는 [second.GetHerHim]에게 앞으로 올 일의 맛보기로 한 대 때린다" # 지배적
+ carnx_sex_scene_giving_first_player_04: "갑작스럽고 강렬한 욕망의 파도가 나를 덮친다" # 다정한, 쾌락주의적
+ carnx_sex_scene_giving_first_player_05: "나는 무심하게 [second.GetHerHim]을(를) 바라보며 힘을 모으려 한다" # 내성적
+ carnx_sex_scene_giving_first_player_06: "나는 존경심과 흠모로 압도된다" # 존중, 충실
+ carnx_sex_scene_giving_first_player_07: "열정으로 불타오르는 대신, 나는 혐오감을 느낀다" # 혐오
+ carnx_sex_scene_giving_first_player_08: "나는 [second.GetHerHim]을(를) 부드럽게 애무하며 [second.GetHerHis] 귀에 열정적인 말을 속삭인다" # 충실, 부드러운
+ carnx_sex_scene_giving_first_player_09: "나는 가짜 미소를 지으며 의심스럽게 [second.GetHerHim]을(를) 바라본다" # 기만적
+ carnx_sex_scene_giving_first_player_10: "나는 [second.GetHerHim]에게 내 발기한 자지를 보여준다" # 남성, 쾌락주의적, 지배적
+ carnx_sex_scene_giving_first_player_11: "but I just laugh contemptuously and proceed to what I came for" # schadenfreude
+ carnx_sex_scene_giving_first_player_12: "but I unceremoniously grab [second.GetHerHim] and start giving [second.GetHerHim] what [second.GetSheHe] deserves" # vengeful
+ carnx_sex_scene_giving_first_player_13: "while I show my eagerness to please [second.GetHerHim]" # deceitful, calculating
+ carnx_sex_scene_giving_first_player_14: "and I greet [second.GetHerHim] merrily with a duplicitous smile" # deceitful, calculating, status-seeking
+ carnx_sex_scene_giving_first_player_f: "나는 내 진정한 감정을 확신하지 못한다" # 대체
+
+ carnx_sex_scene_receiving_first: "[ROOT.Char.Custom2('carnx_sex_scene_receiving_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_receiving_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
+
+ carnx_sex_scene_receiving_first_target_f: "<대체 복종 첫 대상>"
+
+ carnx_sex_scene_receiving_first_player_f: "<대체 복종 첫 플레이어>"
 
  carnx_sex_scene_text2_orgy_1: "내 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName]도 그곳에 있어, 우리의 즐거움을 함께 나누길 기다리고 있다. "
  carnx_sex_scene_text2_f: ""
 
- carnx_sex_scene_dubcon_dom_quote: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_dom_quote', SCOPE.sC('second'))]"
-
- carnx_sex_scene_dubcon_sub_quote: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_sub_quote', SCOPE.sC('second'))]"
+ carnx_sex_scene_quote: "[ROOT.Char.Custom2('carnx_sex_scene_quote', SCOPE.sC('second'))]"
 
  carnx_sex_scene_consensual_title: "[ROOT.Char.Custom2('carnx_sex_scene_consensual_title', SCOPE.sC('second'))]"
+ carnx_sex_scene_dubcon_title: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_title', SCOPE.sC('second'))]"
+ carnx_sex_scene_noncon_title: "[ROOT.Char.Custom2('carnx_sex_scene_noncon_title', SCOPE.sC('second'))]"
 
  carnx_sex_scene_consensual_title_1: "배가된 열정의 고통" # 난교
  carnx_sex_scene_consensual_title_f: "열정의 고통"
 
- carnx_sex_scene_dubcon_title: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_title', SCOPE.sC('second'))]"
 
  carnx_sex_scene_dubcon_title_1: "배가된 뒤틀린 쾌락" # bdsm & 난교
  carnx_sex_scene_dubcon_title_2: "뒤틀린 쾌락" # bdsm
  carnx_sex_scene_dubcon_title_3: "배가된 육체적 쾌락" # 난교
  carnx_sex_scene_dubcon_title_f: "육체적 쾌락"
 
+ carnx_sex_scene_noncon_title_f: "Rough Pleasures"
+
  carnx_sex_scene_consensual_option: "[ROOT.Char.Custom2('carnx_sex_scene_consensual_option', SCOPE.sC('second'))]"
+ carnx_sex_scene_dubcon_option: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_option', SCOPE.sC('second'))]"
+ carnx_sex_scene_noncon_option: "[ROOT.Char.Custom2('carnx_sex_scene_noncon_option', SCOPE.sC('second'))]"
 
  carnx_sex_scene_consensual_option_f: "멋지군."
 
- carnx_sex_scene_dubcon_option: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_option', SCOPE.sC('second'))]"
 
  carnx_sex_scene_dubcon_option_1: "해방감이 든다." # bdsm
  carnx_sex_scene_dubcon_option_f: "멋지군."
+
+ carnx_sex_scene_noncon_option_1: "해방감이 든다." # bdsm
+ carnx_sex_scene_noncon_option_f: "Done."
 
  carnx_sex_scene_attitude_amorous: "#P 다정한#!"
  carnx_sex_scene_attitude_reserved: "#N 내성적인#!"
@@ -97,6 +124,12 @@
  carnx_sex_scene_attitude_calculating: "#color_yellow 계산적인#!"
  carnx_sex_scene_attitude_gentle: "#P 부드러운#!"
  carnx_sex_scene_attitude_dominating: "#color_yellow 지배적인#!"
+ carnx_sex_scene_attitude_pleasure_seeking: "#color_yellow pleasure-seeking#!"
+ carnx_sex_scene_attitude_status_seeking: "#color_yellow status-seeking#!"
+ carnx_sex_scene_attitude_shocked: "#N shocked#!"
+ carnx_sex_scene_attitude_angry: "#N angry#!"
+ carnx_sex_scene_attitude_schadenfreude: "#N schadenfreude#!"
+ carnx_sex_scene_attitude_vengeful: "#N vengeful#!"
  carnx_sex_scene_attitude_unknown: "#color_yellow 알 수 없는#!"
 
  carnx_sex_scene.t: "[ROOT.Char.Custom2('carnx_sex_scene_title', SCOPE.sC('carn_sex_target'))]"

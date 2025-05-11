@@ -7,17 +7,17 @@
  carnx_sex_debug_msg_debug_0001_fired: "$carnx_sex_debug_prefix$: 디버그 성관계 이벤트 발생"
 
  carnx_sex_debug_msg_sex_scene_0001_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 1 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$)"
- carnx_sex_debug_msg_sex_scene_0002_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 2 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
- carnx_sex_debug_msg_sex_scene_0003_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 3 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
- carnx_sex_debug_msg_sex_scene_0004_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 4 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
- carnx_sex_debug_msg_sex_scene_0005_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 5 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
+ carnx_sex_debug_msg_sex_scene_0002_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 2 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote_flag$)"
+ carnx_sex_debug_msg_sex_scene_0003_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 3 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote_flag$)"
+ carnx_sex_debug_msg_sex_scene_0004_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 4 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote_flag$)"
+ carnx_sex_debug_msg_sex_scene_0005_fired: "$carnx_sex_debug_prefix_2$: 성관계 장면 5 이벤트 발생: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote_flag$)"
 
  carnx_carn_sex_target: "carn_sex_target: [THIS.Var('carn_sex_target').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_target').Char.GetID], [Select_CString(THIS.Var('carn_sex_target').Char.IsFemale, '여성', '남성')])"
  carnx_sex_scene_location: "sex_scene_location: [THIS.Var('sex_scene_location').GetFlagName]"
  carnx_sex_scene_target: "sex_scene_target: [THIS.Var('sex_scene_target').GetFlagName]"
  carnx_sex_scene_player_attitude: "sex_scene_player_attitude: [THIS.Var('sex_scene_player_attitude').GetFlagName]"
  carnx_sex_scene_target_attitude: "sex_scene_target_attitude: [THIS.Var('sex_scene_target_attitude').GetFlagName]"
- carnx_sex_scene_quote: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
+ carnx_sex_scene_quote_flag: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
 
  carnx_sex_debug.0001.t: "디버그 성관계"
  carnx_sex_debug.0001.desc: "나는 방금 [target.GetFirstNameNoTooltip]와(과) 성관계를 가졌다."

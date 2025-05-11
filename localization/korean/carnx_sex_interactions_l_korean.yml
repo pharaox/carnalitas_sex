@@ -22,8 +22,19 @@
  carnx_sex_bdsm_option: "당신의 어두운 열정을 탐닉하다"
  carnx_sex_bdsm_option_desc: "파트너와 함께 당신의 어두운 열정을 탐닉합니다. 이 옵션은 당신이 $trait_sadistic$(가학적) 특성을 가지고 있고 [recipient.GetShortUINameNoTooltip]이(가) 당신의 노예이거나 매춘부일 때 사용 가능합니다."
 
+ carnx_sex_travel_option: "Travel to partner location"
+ carnx_sex_travel_option_desc: "Travel to your partner location to make love. This option is available because $carnx_sex_target_too_far_away$."
+
+ carnx_sex_travel_warning_tt: "#X [actor.GetShortUINameNoTooltip|U] will start traveling to [recipient.GetCurrentLocation.GetName] and will $carn_sex_interaction$ to [recipient.GetShortUINameNoTooltip] upon arrival#!"
+ carnx_demand_sex_travel_warning_tt: "#X [actor.GetShortUINameNoTooltip|U] will start traveling to [recipient.GetCurrentLocation.GetName] and will $dsi_demand_sex_interaction$ from [recipient.GetShortUINameNoTooltip] upon arrival#!"
+
  carnx_sex_carnal_court_option: "Carnal Court sex scenes"
  carnx_sex_carnal_court_option_desc: "Show Carnal Court sex scenes."
+
+ # Extra icons
+ carn_sex_interaction_extra_icon: "$carnx_travel_extra_icon$"
+ dsi_demand_sex_interaction_extra_icon: "$carnx_travel_extra_icon$"
+ carnx_travel_extra_icon: "@travel_speed_icon! Requires [travel|E]"
 
  carnx_has_eligible_sex_secondary_target_tt: "당신은 적합한 두 번째 파트너가 될 수 있는 첩을 가지고 있습니다"
  carnx_has_eligible_demand_sex_secondary_target_tt: "당신은 적합한 두 번째 파트너가 될 수 있는 노예를 가지고 있습니다"

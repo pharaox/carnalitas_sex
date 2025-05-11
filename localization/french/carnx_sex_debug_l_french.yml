@@ -7,17 +7,17 @@
  carnx_sex_debug_msg_debug_0001_fired: "$carnx_sex_debug_prefix$: Lancement du débogage de sexe"
 
  carnx_sex_debug_msg_sex_scene_0001_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 1: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$)"
- carnx_sex_debug_msg_sex_scene_0002_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 2: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
- carnx_sex_debug_msg_sex_scene_0003_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 3: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
- carnx_sex_debug_msg_sex_scene_0004_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 4: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
- carnx_sex_debug_msg_sex_scene_0005_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 5: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote$)"
+ carnx_sex_debug_msg_sex_scene_0002_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 2: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote_flag$)"
+ carnx_sex_debug_msg_sex_scene_0003_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 3: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote_flag$)"
+ carnx_sex_debug_msg_sex_scene_0004_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 4: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote_flag$)"
+ carnx_sex_debug_msg_sex_scene_0005_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 5: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$, $carnx_sex_scene_quote_flag$)"
 
  carnx_carn_sex_target: "carn_sex_target: [THIS.Var('carn_sex_target').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_target').Char.GetID], [Select_CString(THIS.Var('carn_sex_target').Char.IsFemale, 'femme', 'homme')])"
  carnx_sex_scene_location: "sex_scene_location: [THIS.Var('sex_scene_location').GetFlagName]"
  carnx_sex_scene_target: "sex_scene_target: [THIS.Var('sex_scene_target').GetFlagName]"
  carnx_sex_scene_player_attitude: "sex_scene_player_attitude: [THIS.Var('sex_scene_player_attitude').GetFlagName]"
  carnx_sex_scene_target_attitude: "sex_scene_target_attitude: [THIS.Var('sex_scene_target_attitude').GetFlagName]"
- carnx_sex_scene_quote: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
+ carnx_sex_scene_quote_flag: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
 
  carnx_sex_debug.0001.t: "Débogage de sexe"
  carnx_sex_debug.0001.desc: "Je viens juste d'avoir du sexe avec [target.GetFirstNameNoTooltip]."

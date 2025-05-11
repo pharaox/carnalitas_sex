@@ -1,0 +1,9 @@
+﻿l_korean:
+ carnx_sex_travel.0001.t: "$travel_completion_event.1000.t$"
+ carnx_sex_travel.0001.desc.start_valid: "After a long journey, I have finally arrived in [current_location.GetName]. I can now $carnx_sex_travel_interaction$ my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName] and attend to other matters while I am here."
+ carnx_sex_travel.0001.desc.start_invalid: "Upon arrival in [current_location.GetName], I find that I am no longer able to $carnx_sex_travel_interaction$ my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName]. I can start the return journey immediately, or take a moment to look around before I leave."
+ carnx_sex_travel.0001.a: "Get on with it, then return home"
+ carnx_sex_travel.0001.b: "Return home"
+ carnx_sex_travel.0001.c: "Stay here and look around"
+
+ carnx_sex_travel_interaction: "[SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')] [Select_CString(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'to', 'from')]"
