@@ -7,6 +7,7 @@
  recipient_secondary_dsi_demand_sex_interaction: "伴侣"
  carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip]不被[partner.GetShortUINameNoTooltip]吸引#!"
  carnx_sex_interaction_bdsm_warning_tt: "#X 放纵你阴暗的激情#!"
+ carnx_rape_interaction_warning_tt: "#X Raping your prisoner#!"
  carnx_sex_interaction_sodomy_crime_warning_tt: "#X  鸡奸在[character.GetFaith.GetName]中是违法的#!"
  carnx_sex_interaction_sodomy_shunned_warning_tt: "#X 鸡奸是被忌讳在[character.GetFaith.GetName]#!"
  carnx_sex_interaction_adultery_crime_warning_tt: "#X  通奸在[character.GetFaith.GetName]中是违法的#!"

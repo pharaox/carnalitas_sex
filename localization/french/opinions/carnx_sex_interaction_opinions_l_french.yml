@@ -2,3 +2,9 @@
  carnx_demanded_sex_crime_opinion: "A exigé du sexe"
  carnx_demanded_sex_shunned_opinion: "A exigé du sexe"
  carnx_forced_me_into_bdsm_opinion: "M’a imposé ses passions les plus sombres"
+
+ carnx_raped_me_opinion: "$carn_raped_me$"
+ carnx_raped_close_family_opinion: "$carn_raped_family_member$"
+ carnx_raped_my_spouse_opinion: "Raped My Spouse"
+ carnx_raped_my_friend_opinion: "$carn_raped_my_friend$"
+ carnx_raped_my_lover_opinion: "$carn_raped_my_lover$"

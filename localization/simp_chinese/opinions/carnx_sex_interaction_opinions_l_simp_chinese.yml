@@ -2,3 +2,9 @@
  carnx_demanded_sex_crime_opinion: "强迫做爱"
  carnx_demanded_sex_shunned_opinion: "强迫做爱"
  carnx_forced_me_into_bdsm_opinion: "把他们阴暗的欲望强加于我"
+
+ carnx_raped_me_opinion: "$carn_raped_me$"
+ carnx_raped_close_family_opinion: "$carn_raped_family_member$"
+ carnx_raped_my_spouse_opinion: "Raped My Spouse"
+ carnx_raped_my_friend_opinion: "$carn_raped_my_friend$"
+ carnx_raped_my_lover_opinion: "$carn_raped_my_lover$"

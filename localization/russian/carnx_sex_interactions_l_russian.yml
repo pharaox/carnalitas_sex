@@ -9,6 +9,7 @@
 
  carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip] не испытывает тяги к [partner.GetShortUINameNoTooltip]#!"
  carnx_sex_interaction_bdsm_warning_tt: "#X Удовлетворение темных страстей#!"
+ carnx_rape_interaction_warning_tt: "#X Raping your prisoner#!"
 
  carnx_sex_interaction_sodomy_crime_warning_tt: "#X [character.GetFaith.GetName] запрещает содомию#!"
  carnx_sex_interaction_sodomy_shunned_warning_tt: "#X [character.GetFaith.GetName] порицает содомию#!"

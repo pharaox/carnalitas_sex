@@ -2,3 +2,9 @@
  carnx_demanded_sex_crime_opinion: "성관계 강요"
  carnx_demanded_sex_shunned_opinion: "성관계 강요"
  carnx_forced_me_into_bdsm_opinion: "나에게 그들의 어두운 욕망을 강요함"
+
+ carnx_raped_me_opinion: "$carn_raped_me$"
+ carnx_raped_close_family_opinion: "$carn_raped_family_member$"
+ carnx_raped_my_spouse_opinion: "Raped My Spouse"
+ carnx_raped_my_friend_opinion: "$carn_raped_my_friend$"
+ carnx_raped_my_lover_opinion: "$carn_raped_my_lover$"

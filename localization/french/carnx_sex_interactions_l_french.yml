@@ -9,6 +9,7 @@
 
  carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip] n’est pas attiré[character.Custom('FR_E')] par [partner.GetShortUINameNoTooltip]#!"
  carnx_sex_interaction_bdsm_warning_tt: "#X S’adonner à vos passions les plus sombres#!"
+ carnx_rape_interaction_warning_tt: "#X Raping your prisoner#!"
 
  carnx_sex_interaction_sodomy_crime_warning_tt: "#X La sodomie est illégale en [character.GetFaith.GetName]#!"
  carnx_sex_interaction_sodomy_shunned_warning_tt: "#X La sodomie est mal vue en [character.GetFaith.GetName]#!"

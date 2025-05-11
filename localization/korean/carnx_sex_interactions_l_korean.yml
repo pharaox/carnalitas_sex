@@ -9,6 +9,7 @@
 
  carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip]은(는) [partner.GetShortUINameNoTooltip]에게 끌리지 않습니다#!"
  carnx_sex_interaction_bdsm_warning_tt: "#X 당신의 어두운 열정을 탐닉하다#!"
+ carnx_rape_interaction_warning_tt: "#X Raping your prisoner#!"
 
  carnx_sex_interaction_sodomy_crime_warning_tt: "#X [character.GetFaith.GetName]에서 동성애는 불법입니다#!"
  carnx_sex_interaction_sodomy_shunned_warning_tt: "#X [character.GetFaith.GetName]에서 동성애는 금기시됩니다#!"
