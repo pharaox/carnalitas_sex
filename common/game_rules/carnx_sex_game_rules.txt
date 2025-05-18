@@ -49,3 +49,19 @@ carnx_sex_demand_sex_consumes_slave_hooks = {
 		flag = GG_can_change_rule
 	}
 }
+
+carnx_sex_memories = {
+	categories = {
+		carnx_carnalitas_sex
+	}
+
+	default = carnx_sex_memories_disabled
+
+	carnx_sex_memories_disabled = {
+		flag = GG_can_change_rule
+	}
+
+	carnx_sex_memories_enabled = {
+		flag = GG_can_change_rule
+	}
+}

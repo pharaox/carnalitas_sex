@@ -20,3 +20,9 @@
  setting_carnx_sex_demand_sex_consumes_slave_hooks_disabled_desc: "Demanding sex from a slave doesn't consume their slave hook."
  setting_carnx_sex_demand_sex_consumes_slave_hooks_enabled: "Enabled"
  setting_carnx_sex_demand_sex_consumes_slave_hooks_enabled_desc: "Demanding sex from a slave consumes their slave hook."
+
+ rule_carnx_sex_memories: "#X CLR:#! Carnalitas Sex Memories"
+ setting_carnx_sex_memories_disabled: "Disabled"
+ setting_carnx_sex_memories_disabled_desc: "Carnalitas sex memories are disabled."
+ setting_carnx_sex_memories_enabled: "#high Enabled#!"
+ setting_carnx_sex_memories_enabled_desc: "Carnalitas sex memories are enabled."

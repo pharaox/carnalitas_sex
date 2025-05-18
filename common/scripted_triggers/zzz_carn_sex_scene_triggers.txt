@@ -1,3 +1,15 @@
 ﻿carn_sex_scene_no_memory_trigger = {
-	always = yes
+	trigger_if = {
+		limit = { has_game_rule = carnx_sex_memories_enabled }
+		OR = {
+			is_target_in_variable_list = {
+				name = carn_sex_scene_option_flag_list
+				target = flag:no_memory
+			}
+			exists = scope:carn_sex_no_memory
+		}
+	}
+	trigger_else = {
+		always = yes
+	}
 }
