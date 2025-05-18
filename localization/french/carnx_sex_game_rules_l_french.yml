@@ -20,3 +20,9 @@
  setting_carnx_sex_demand_sex_consumes_slave_hooks_disabled_desc: "Exiger du sexe d’un esclave ne consomme pas son hameçon d’esclave."
  setting_carnx_sex_demand_sex_consumes_slave_hooks_enabled: "Activé"
  setting_carnx_sex_demand_sex_consumes_slave_hooks_enabled_desc: "Exiger du sexe d’un esclave consomme son hameçon d’esclave."
+
+ rule_carnx_sex_memories: "#X CLR:#! Carnalitas Sex Memories"
+ setting_carnx_sex_memories_disabled: "Disabled"
+ setting_carnx_sex_memories_disabled_desc: "Carnalitas sex memories are disabled."
+ setting_carnx_sex_memories_enabled: "#high Enabled#!"
+ setting_carnx_sex_memories_enabled_desc: "Carnalitas sex memories are enabled."

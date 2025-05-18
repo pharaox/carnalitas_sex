@@ -17,3 +17,8 @@
  setting_carnx_sex_demand_sex_consumes_slave_hooks_disabled_desc: "向奴隶提出性要求不会消耗他们的奴隶牵制。"
  setting_carnx_sex_demand_sex_consumes_slave_hooks_enabled: "启用"
  setting_carnx_sex_demand_sex_consumes_slave_hooks_enabled_desc: "向奴隶提出性要求会消耗他们的奴隶牵制。"
+ rule_carnx_sex_memories: "#X CLR:#! Carnalitas Sex Memories"
+ setting_carnx_sex_memories_disabled: "Disabled"
+ setting_carnx_sex_memories_disabled_desc: "Carnalitas sex memories are disabled."
+ setting_carnx_sex_memories_enabled: "#high Enabled#!"
+ setting_carnx_sex_memories_enabled_desc: "Carnalitas sex memories are enabled."
