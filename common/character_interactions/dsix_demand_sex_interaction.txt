@@ -57,6 +57,10 @@
 		}
 		scope:recipient = {
 			carn_can_have_sex_trigger = yes
+			custom_tooltip = {
+				text = "carnx_sex_interaction_recipient_cooldown"
+				NOT = { var:carnx_sex_interaction_used_by_actor ?= scope:actor }
+			}
 		}
 		trigger_if = {
 			limit = {
@@ -207,6 +211,13 @@
 				hidden_effect = {
 					carnx_sex_interaction_sex_scene_effect = yes
 				}
+			}
+		}
+		scope:recipient = {
+			set_variable = {
+				name = carnx_sex_interaction_used_by_actor
+				value = scope:actor
+				months = carn_sex_interaction_cooldown_base
 			}
 		}
 	}

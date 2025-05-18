@@ -3,7 +3,10 @@ carnx_sex_interaction_main_effect = {
 	# If not on cooldown, show the effect and add the cooldown flag
 	if = {
 		limit = {
-			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+			OR = { 
+				has_game_rule = carnx_sex_interaction_effect_cd_disabled
+				NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+			}
 		}
 
 		show_as_tooltip = {
@@ -31,6 +34,11 @@ carnx_sex_interaction_main_effect = {
 			}
 		}
 
+		if = {
+			limit = { has_character_flag = carn_sex_interaction_effect_cd }
+			custom_tooltip = carnx_sex_interaction_effect_cd_disabled_tt
+		}
+
 		# Effects for actor and recipient
 		carnx_sex_interaction_player_impact_effect = { PARTNER = scope:recipient }
 		scope:recipient = {
@@ -45,6 +53,7 @@ carnx_sex_interaction_main_effect = {
 			}
 		}
 
+		remove_character_flag = carn_sex_interaction_effect_cd
 		add_character_flag = {
 			flag = carn_sex_interaction_effect_cd
 			months = carn_sex_interaction_cooldown_base
@@ -52,27 +61,56 @@ carnx_sex_interaction_main_effect = {
 	}
 	else = {
 		custom_tooltip = carn_sex_interaction_effect_cd_tt
-		add_character_flag = carn_block_next_had_sex_with_effect
+		add_character_flag = {
+			flag = carn_block_next_had_sex_with_effect
+			days = 1
+		}
 	}
 }
 
 carnx_rape_interaction_main_effect = {
-	# No cooldown for rape, but also no additional stress loss
+	# If not on cooldown, show the effect and add the cooldown flag
+	if = {
+		limit = {
+			OR = { 
+				has_game_rule = carnx_sex_interaction_effect_cd_disabled
+				NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+			}
+		}
 
-	show_as_tooltip = {
-		carn_had_sex_with_effect = {
-			CHARACTER_1 = scope:actor
-			CHARACTER_2 = scope:recipient
-			C1_PREGNANCY_CHANCE = pregnancy_chance
-			C2_PREGNANCY_CHANCE = pregnancy_chance
-			STRESS_EFFECTS = no
-			DRAMA = yes
+		show_as_tooltip = {
+			carn_had_sex_with_effect = {
+				CHARACTER_1 = scope:actor
+				CHARACTER_2 = scope:recipient
+				C1_PREGNANCY_CHANCE = pregnancy_chance
+				C2_PREGNANCY_CHANCE = pregnancy_chance
+				STRESS_EFFECTS = no
+				DRAMA = yes
+			}
+		}
+
+		if = {
+			limit = { has_character_flag = carn_sex_interaction_effect_cd }
+			custom_tooltip = carnx_sex_interaction_effect_cd_disabled_tt
+		}
+
+		carnx_rape_interaction_player_impact_effect = { PARTNER = scope:recipient }
+		scope:recipient = {
+			carnx_rape_interaction_target_impact_effect = { PARTNER = scope:actor }
+		}
+
+		remove_character_flag = carn_sex_interaction_effect_cd
+		add_character_flag = {
+			flag = carn_sex_interaction_effect_cd
+			months = carn_sex_interaction_cooldown_base
 		}
 	}
-
-	carnx_rape_interaction_player_impact_effect = { PARTNER = scope:recipient }
-	scope:recipient = {
-		carnx_rape_interaction_target_impact_effect = { PARTNER = scope:actor }
+	else = {
+		custom_tooltip = carn_sex_interaction_effect_cd_tt
+		add_character_flag = {
+			flag = carn_block_next_had_sex_with_effect
+			days = 1
+		}
 	}
 }
 
@@ -187,6 +225,7 @@ carnx_sex_interaction_player_impact_effect = {
 			has_game_rule = carn_arousal_stress_enabled
 			is_attracted_to_gender_of = $PARTNER$
 			NOT = { has_trait = chaste }
+			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
 		}
 		add_stress = carnx_sex_interaction_stress_loss_value
 	}
@@ -215,17 +254,6 @@ carnx_sex_interaction_target_impact_effect = {
 	# Show tooltip for sinful actions
 	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
 
-	# Lose stress if arousal stress is enabled (player only)
-	if = {
-		limit = {
-			is_ai = no
-			has_game_rule = carn_arousal_stress_enabled
-			is_attracted_to_gender_of = $PARTNER$
-			NOT = { has_trait = chaste }
-		}
-		add_stress = carnx_sex_interaction_stress_loss_value
-	}
-
 	# Stress impact
 	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
 
@@ -249,6 +277,18 @@ carnx_sex_interaction_target_impact_effect = {
 carnx_rape_interaction_player_impact_effect = {
 	# Show tooltip for sinful actions
 	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
+
+	# Lose stress if arousal stress is enabled (player only)
+	if = {
+		limit = {
+			is_ai = no
+			has_game_rule = carn_arousal_stress_enabled
+			is_attracted_to_gender_of = $PARTNER$
+			NOT = { has_trait = chaste }
+			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+		}
+		add_stress = carnx_sex_interaction_stress_loss_value
+	}
 
 	# Stress impact of having sex
 	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
@@ -491,33 +531,36 @@ carnx_sex_interaction_stress_impact_effect = {
 			NOT = { is_attracted_to_gender_of = $PARTNER$ }
 		}
 		custom_tooltip = carnx_sex_interaction_not_attracted_to_warning_tt
-		add_stress = minor_stress_impact_gain
+		carnx_sex_add_scaled_stress_effect = { HI = minor LO = miniscule GL = gain }
 	}
 	# Lose stress if attracted to the gender of partner and lustful or rakish
 	else = {
-		stress_impact = {
-			lustful = minor_stress_impact_loss
-			rakish = minor_stress_impact_loss
+		carnx_sex_scaled_stress_impact_2_effect = {
+			HI = minor LO = miniscule
+			T1 = lustful GL1 = loss
+			T2 = rakish GL2 = loss
 		}
 	}
 
-	# Gain / lose stress if sex with partner is crime or shunned and zealous / cynical
+	# Gain / lose stress if sex with partner is crime and zealous / cynical
 	if = {
 		limit = {
 			carnx_is_sex_with_character_crime_trigger = { CHARACTER = $PARTNER$ }
 		}
-		stress_impact = {
-			zealous = minor_stress_impact_gain
-			cynical = minor_stress_impact_loss
+		carnx_sex_scaled_stress_impact_2_effect = {
+			HI = minor LO = miniscule
+			T1 = zealous GL1 = gain
+			T2 = cynical GL2 = loss
 		}
 	}
 	else_if = {
 		limit = {
 			carnx_is_sex_with_character_shunned_trigger = { CHARACTER = $PARTNER$ }
 		}
-		stress_impact = {
-			zealous = miniscule_stress_impact_gain
-			cynical = miniscule_stress_impact_loss
+		carnx_sex_scaled_stress_impact_2_effect = {
+			HI = miniscule LO = none
+			T1 = zealous GL1 = gain
+			T2 = cynical GL2 = loss
 		}
 	}
 }
@@ -527,11 +570,11 @@ carnx_sex_interaction_other_impact_effect = {
 }
 
 carnx_demand_sex_interaction_player_effect = {
-	stress_impact = {
-		compassionate = miniscule_stress_impact_gain
-		sadistic = miniscule_stress_impact_loss
-		callous = miniscule_stress_impact_loss
-		# TODO More traits causing stress impact?
+	carnx_sex_scaled_stress_impact_3_effect = {
+		HI = miniscule LO = none
+		T1 = compassionate GL1 = gain
+		T2 = sadistic GL2 = loss
+		T3 = callous GL3 = loss
 	}
 	$PARTNER$ = {}
 }
@@ -581,14 +624,18 @@ carnx_rape_interaction_player_effect = {
 					has_trait = forgiving
 				}
 			}
-			add_stress = minor_stress_impact_loss
+			carnx_sex_add_scaled_stress_effect = { HI = minor LO = miniscule GL = loss }
 		}
 		else = {
-			stress_impact = {
-				sadistic = medium_stress_impact_loss
-				vengeful = medium_stress_impact_loss
-				compassionate = miniscule_stress_impact_loss
-				forgiving = miniscule_stress_impact_loss
+			carnx_sex_scaled_stress_impact_2_effect = {
+				HI = medium LO = minor
+				T1 = sadistic GL1 = loss
+				T2 = vengeful GL2 = loss
+			}
+			carnx_sex_scaled_stress_impact_2_effect = {
+				HI = miniscule LO = none
+				T1 = compassionate GL1 = loss
+				T2 = forgiving GL2 = loss
 			}
 		}
 	}
@@ -602,12 +649,13 @@ carnx_rape_interaction_player_effect = {
 					has_trait = forgiving
 				}
 			}
-			add_stress = miniscule_stress_impact_gain
+			carnx_sex_add_scaled_stress_effect = { HI = miniscule LO = none GL = gain }
 		}
 		else = {
-			stress_impact = {
-				compassionate = minor_stress_impact_gain
-				forgiving = minor_stress_impact_gain
+			carnx_sex_scaled_stress_impact_2_effect = {
+				HI = minor LO = miniscule
+				T1 = compassionate GL1 = gain
+				T2 = forgiving GL2 = gain
 			}
 		}
 	}
@@ -777,21 +825,26 @@ carnx_sex_interaction_bdsm_player_effect = {
 					has_trait = forgiving
 				}
 			}
-			add_stress = miniscule_stress_impact_loss
+			carnx_sex_add_scaled_stress_effect = { HI = miniscule LO = none GL = loss }
 		}
 		else = {
-			stress_impact = {
-				sadistic = minor_stress_impact_loss
-				vengeful = minor_stress_impact_loss
+			carnx_sex_scaled_stress_impact_2_effect = {
+				HI = minor LO = miniscule
+				T1 = sadistic GL1 = loss
+				T2 = vengeful GL2 = loss
 			}
 		}
 	}
 	else = {
-		stress_impact = {
-			sadistic = miniscule_stress_impact_loss
-			vengeful = miniscule_stress_impact_loss
-			compassionate = miniscule_stress_impact_gain
-			forgiving = miniscule_stress_impact_gain
+		carnx_sex_scaled_stress_impact_2_effect = {
+			HI = miniscule LO = none
+			T1 = sadistic GL1 = loss
+			T2 = vengeful GL2 = loss
+		}
+		carnx_sex_scaled_stress_impact_2_effect = {
+			HI = miniscule LO = none
+			T1 = compassionate GL1 = gain
+			T2 = forgiving GL2 = gain
 		}
 	}
 }
@@ -853,6 +906,84 @@ carnx_run_sex_interaction_effect = {
 				recipient = $RECIPIENT$
 				send_threshold = accept
 			}
+		}
+	}
+}
+
+carnx_sex_add_scaled_stress_effect = {
+	if = {
+		limit = {
+			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+		}
+		add_stress = $HI$_stress_impact_$GL$
+	}
+	else_if = {
+		limit = {
+			NOT = { flag:$LO$ = flag:none }
+		}
+		add_stress = $LO$_stress_impact_$GL$
+	}
+}
+
+carnx_sex_scaled_stress_impact_1_effect = {
+	if = {
+		limit = {
+			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+		}
+		stress_impact = {
+			$T1$ = $HI$_stress_impact_$GL1$
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { flag:$LO$ = flag:none }
+		}
+		stress_impact = {
+			$T1$ = $LO$_stress_impact_$GL1$
+		}
+	}
+}
+
+carnx_sex_scaled_stress_impact_2_effect = {
+	if = {
+		limit = {
+			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+		}
+		stress_impact = {
+			$T1$ = $HI$_stress_impact_$GL1$
+			$T2$ = $HI$_stress_impact_$GL2$
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { flag:$LO$ = flag:none }
+		}
+		stress_impact = {
+			$T1$ = $LO$_stress_impact_$GL1$
+			$T2$ = $LO$_stress_impact_$GL2$
+		}
+	}
+}
+
+carnx_sex_scaled_stress_impact_3_effect = {
+	if = {
+		limit = {
+			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
+		}
+		stress_impact = {
+			$T1$ = $HI$_stress_impact_$GL1$
+			$T2$ = $HI$_stress_impact_$GL2$
+			$T3$ = $HI$_stress_impact_$GL3$
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = { flag:$LO$ = flag:none }
+		}
+		stress_impact = {
+			$T1$ = $LO$_stress_impact_$GL1$
+			$T2$ = $LO$_stress_impact_$GL2$
+			$T3$ = $LO$_stress_impact_$GL3$
 		}
 	}
 }

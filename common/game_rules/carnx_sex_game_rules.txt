@@ -14,6 +14,22 @@
 	}
 }
 
+carnx_sex_interaction_effect_cd = {
+	categories = {
+		carnx_carnalitas_sex
+	}
+
+	default = carnx_sex_interaction_effect_cd_enabled
+
+	carnx_sex_interaction_effect_cd_disabled = {
+		flag = GG_can_change_rule
+	}
+
+	carnx_sex_interaction_effect_cd_enabled = {
+		flag = GG_can_change_rule
+	}
+}
+
 carnx_sex_demand_sex_from_hooked_characters = {
 	categories = {
 		carnx_carnalitas_sex

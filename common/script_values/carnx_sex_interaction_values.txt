@@ -9,3 +9,6 @@
 carnx_sex_interaction_stress_loss_value = {
 	value = minor_stress_impact_loss
 }
+
+none_stress_impact_gain = 0
+none_stress_impact_loss = 0

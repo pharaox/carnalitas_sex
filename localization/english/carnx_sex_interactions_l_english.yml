@@ -7,6 +7,8 @@
  recipient_secondary_carn_sex_interaction: "Partner"
  recipient_secondary_dsi_demand_sex_interaction: "Partner"
 
+ carnx_sex_interaction_effect_cd_disabled_tt: "#weak Stress effects will be reduced because you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months#!"
+
  carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip] is not attracted to [partner.GetShortUINameNoTooltip]#!"
  carnx_sex_interaction_bdsm_warning_tt: "#X Indulging your darker passions#!"
  carnx_rape_interaction_warning_tt: "#X Raping your prisoner#!"
@@ -42,4 +44,5 @@
  carnx_secondary_target_same_as_primary_target_tt: "The second partner is the same as the primary one"
  carnx_secondary_target_not_eligible_bdsm_target_tt: "The second partner is not your slave or a prostitute"
 
+ carnx_sex_interaction_recipient_cooldown: "Unavailable on [recipient.GetShortUIName] until [GetCurrentDateWithDiff(GetVarTimeRemaining(recipient.MakeScope, 'carnx_sex_interaction_used_by_actor'))]"
  carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U] is too far away for you to have sex with"
