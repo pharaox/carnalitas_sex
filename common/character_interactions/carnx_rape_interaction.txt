@@ -12,6 +12,7 @@
 			carnx_is_sex_interaction_blocked_trigger = no
 		}
 		scope:recipient = {
+			is_ai = yes
 			is_adult = yes
 			carnx_is_sex_interaction_blocked_trigger = no
 			is_imprisoned_by = scope:actor
@@ -58,6 +59,8 @@
 	on_accept = {
 		# TODO Rape player by AI
 		scope:actor = {
+			carnx_sex_debug_log_effect = { MSG = carnx_sex_debug_msg_rape_interaction_accepted }
+
 			carnx_rape_interaction_main_effect = yes
 
 			hidden_effect = {
@@ -68,5 +71,98 @@
 
 	auto_accept = yes
 	
-	# TODO AI
+	ai_targets = {
+		ai_recipients = prisoners
+	}
+
+	ai_frequency = 12
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+
+		# Opinion of prisoner (-25 to 25 depending on opinion)
+		opinion_modifier = {
+			opinion_target = scope:recipient
+			multiplier = -0.25
+		}
+
+		# Prisoner attraction
+		modifier = {
+			is_attracted_to_gender_of = scope:recipient
+			add = {
+				value = scope:recipient.attraction
+				multiply = 0.5
+			}
+		}
+		modifier = {
+			NOT = { is_attracted_to_gender_of = scope:recipient }
+			add = -50
+		}
+
+		# Lustful / Chaste (25 / -25)
+		modifier = {
+			is_attracted_to_gender_of = scope:recipient
+			has_trait = lustful
+			add = 25
+		}
+		modifier = {
+			is_attracted_to_gender_of = scope:recipient
+			has_trait = chaste
+			add = -25
+		}
+
+		# Compassion (-25 to 25 depending on compassion)
+		ai_value_modifier = {
+			ai_compassion = -0.25
+		}
+
+		# Rival (25) or nemesis (50)
+		modifier = {
+			has_relation_rival = scope:recipient
+			add = {
+				value = 25
+				if = {
+					limit = { has_relation_nemesis = scope:recipient }
+					multiply = 2
+				}
+			}
+		}
+
+		# House feud (25)
+		modifier = {
+			exists = house
+			exists = scope:recipient.house
+			house.house_head = {
+				any_owned_story = {
+					story_type = story_cycle_house_feud
+					has_variable = house_feud_house
+					var:house_feud_house = scope:recipient.house
+				}
+			}
+			has_opinion_modifier = {
+				modifier = house_feud_opinion
+				target = scope:recipient.house.house_head
+			}
+			add = 25
+		}
+
+		# Tried to escape from prison (25)
+		modifier = {
+			has_opinion_modifier = {
+				modifier = tried_to_escape_from_prison_opinion
+				target = scope:recipient
+			}
+			add = 25
+		}
+
+		# BDSM (AI should use this if available)
+		modifier = {
+			scope:bdsm = yes
+			add = 1
+		}
+	}
 }

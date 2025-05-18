@@ -32,16 +32,16 @@ carnx_sex_interaction_main_effect = {
 		}
 
 		# Effects for actor and recipient
-		carnx_sex_interaction_impact_effect = { PARTNER = scope:recipient }
+		carnx_sex_interaction_player_impact_effect = { PARTNER = scope:recipient }
 		scope:recipient = {
-			carnx_sex_interaction_impact_effect = { PARTNER = scope:actor }
+			carnx_sex_interaction_target_impact_effect = { PARTNER = scope:actor }
 		}
 
 		# Effects for secondary recipient
 		if = {
 			limit = { scope:orgy = yes }
 			scope:secondary_recipient = {
-				carnx_sex_interaction_impact_effect = { PARTNER = scope:actor }
+				carnx_sex_interaction_target_impact_effect = { PARTNER = scope:actor }
 			}
 		}
 
@@ -70,9 +70,9 @@ carnx_rape_interaction_main_effect = {
 		}
 	}
 
-	carnx_rape_interaction_impact_effect = { PARTNER = scope:recipient }
+	carnx_rape_interaction_player_impact_effect = { PARTNER = scope:recipient }
 	scope:recipient = {
-		carnx_rape_interaction_impact_effect = { PARTNER = scope:actor }
+		carnx_rape_interaction_target_impact_effect = { PARTNER = scope:actor }
 	}
 }
 
@@ -175,8 +175,8 @@ carnx_rape_interaction_sex_scene_effect = {
 	}
 }
 
-# Apply sex interaction effects on a single participant
-carnx_sex_interaction_impact_effect = {
+# Apply sex interaction effects on player (actor)
+carnx_sex_interaction_player_impact_effect = {
 	# Show tooltip for sinful actions
 	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
 
@@ -197,33 +197,56 @@ carnx_sex_interaction_impact_effect = {
 	# Additional stress and opinion impact of demanding sex
 	if = {
 		limit = { scope:demand_sex = yes }
-		if = {
-			limit = { is_ai = no }
-			carnx_demand_sex_interaction_player_effect = { PARTNER = $PARTNER$ }
-		}
-		else = {
-			carnx_demand_sex_interaction_target_effect = { PARTNER = $PARTNER$ }
-		}
+		carnx_demand_sex_interaction_player_effect = { PARTNER = $PARTNER$ }
 	}
 
 	# Additional piety and stress impact for BDSM
 	if = {
 		limit = { scope:bdsm = yes }
-		if = {
-			limit = { is_ai = no }
-			carnx_sex_interaction_bdsm_player_effect = { PARTNER = $PARTNER$ }
-		}
-		else = {
-			carnx_sex_interaction_bdsm_target_effect = { PARTNER = $PARTNER$ }
-		}
+		carnx_sex_interaction_bdsm_player_effect = { PARTNER = $PARTNER$ }
 	}
 
 	# Other impact
 	carnx_sex_interaction_other_impact_effect = { PARTNER = $PARTNER$ }
 }
 
-# Apply rape interaction effects on a single participant
-carnx_rape_interaction_impact_effect = {
+# Apply sex interaction effects on target (recipient)
+carnx_sex_interaction_target_impact_effect = {
+	# Show tooltip for sinful actions
+	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
+
+	# Lose stress if arousal stress is enabled (player only)
+	if = {
+		limit = {
+			is_ai = no
+			has_game_rule = carn_arousal_stress_enabled
+			is_attracted_to_gender_of = $PARTNER$
+			NOT = { has_trait = chaste }
+		}
+		add_stress = carnx_sex_interaction_stress_loss_value
+	}
+
+	# Stress impact
+	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
+
+	# Additional stress and opinion impact of demanding sex
+	if = {
+		limit = { scope:demand_sex = yes }
+		carnx_demand_sex_interaction_target_effect = { PARTNER = $PARTNER$ }
+	}
+
+	# Additional piety and stress impact for BDSM
+	if = {
+		limit = { scope:bdsm = yes }
+		carnx_sex_interaction_bdsm_target_effect = { PARTNER = $PARTNER$ }
+	}
+
+	# Other impact
+	carnx_sex_interaction_other_impact_effect = { PARTNER = $PARTNER$ }
+}
+
+# Apply rape interaction effects on player (actor)
+carnx_rape_interaction_player_impact_effect = {
 	# Show tooltip for sinful actions
 	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
 
@@ -231,24 +254,33 @@ carnx_rape_interaction_impact_effect = {
 	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
 
 	# Additional piety, stress, dread, and opinion impact of rape
-	if = {
-		limit = { is_ai = no }
-		carnx_rape_interaction_player_effect = { PARTNER = $PARTNER$ }
-	}
-	else = {
-		carnx_rape_interaction_target_effect = { PARTNER = $PARTNER$ }
-	}
+	carnx_rape_interaction_player_effect = { PARTNER = $PARTNER$ }
 
 	# Additional piety and stress impact for BDSM
 	if = {
 		limit = { scope:bdsm = yes }
-		if = {
-			limit = { is_ai = no }
-			carnx_sex_interaction_bdsm_player_effect = { PARTNER = $PARTNER$ }
-		}
-		else = {
-			carnx_sex_interaction_bdsm_target_effect = { PARTNER = $PARTNER$ }
-		}
+		carnx_sex_interaction_bdsm_player_effect = { PARTNER = $PARTNER$ }
+	}
+
+	# Other impact
+	carnx_sex_interaction_other_impact_effect = { PARTNER = $PARTNER$ }
+}
+
+# Apply rape interaction effects on target (recipient)
+carnx_rape_interaction_target_impact_effect = {
+	# Show tooltip for sinful actions
+	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
+
+	# Stress impact of having sex
+	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
+
+	# Additional piety, stress, dread, and opinion impact of rape
+	carnx_rape_interaction_target_effect = { PARTNER = $PARTNER$ }
+
+	# Additional piety and stress impact for BDSM
+	if = {
+		limit = { scope:bdsm = yes }
+		carnx_sex_interaction_bdsm_target_effect = { PARTNER = $PARTNER$ }
 	}
 
 	# Other impact

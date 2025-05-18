@@ -2,8 +2,8 @@
 	save_temporary_scope_as = rapist
 	save_temporary_scope_value_as = { name = bdsm value = no }
 
-	carnx_rape_interaction_impact_effect = { PARTNER = $VICTIM$ }
+	carnx_rape_interaction_player_impact_effect = { PARTNER = $VICTIM$ }
 	$VICTIM$ = {
-		carnx_rape_interaction_impact_effect = { PARTNER = scope:rapist }
+		carnx_rape_interaction_target_impact_effect = { PARTNER = scope:rapist }
 	}
 }
