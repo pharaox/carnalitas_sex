@@ -32,15 +32,17 @@ The other changes to *Make Love* (and *Demand Sex*) introduced by this mod inclu
 * Carnalitas DT traits (*Voluptuous*, etc.) have attraction opinion.
 * *Carnal Court Make Love* and *Carnal Court Demand Sex* have conditions and effects consistent with *Make Love* and *Demand Sex* if CBO is installed.
 
+Starting with version 0.8.0, this mod also adds an improved version of the *Rape* Carnalitas interaction for raping prisoners. It uses the new sex scene generator and has conditions and effects that are consistent with the other sex interactions.
+
 ## Compatibility
 
-This mod requires [Carnalitas](https://www.loverslab.com/files/file/14207-carnalitas-unified-sex-mod-framework-for-ck3/) as a prerequisite (obviously). While it modifies the *Make Love* interaction and its related effects in a substantial way, it doesn't touch other Carnalitas features and should be compatible with all of them.
+This mod requires [Carnalitas](https://www.loverslab.com/files/file/14207-carnalitas-unified-sex-mod-framework-for-ck3/) as a prerequisite (obviously). While it modifies the *Make Love* and *Rape* interactions and their related effects in a substantial way, it doesn't touch other Carnalitas features and should be compatible with all of them.
 
 This mod also supports changing its game rules mid-game with the [Gamerule Gadget](https://steamcommunity.com/sharedfiles/filedetails/?id=2826829936) mod.
 
 ### Compatibility with Mods Based on Carnalitas
 
-This mod should be compatible with all mods based on Carnalitas that don't modify the *Make Love* interaction. Enhancing it in a way that is supported by Carnalitas, e.g. adding additional sex scene events, is fully supported.
+This mod should be compatible with all mods based on Carnalitas that don't modify the *Make Love* or *Rape* interactions. Enhancing it in a way that is supported by Carnalitas, for example adding additional sex scene events, is fully supported.
 
 This mod has been explicitly designed to complement [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) and [Carnalitas Prostitution Reimagined](https://www.loverslab.com/files/file/39623-carnalitas-prostitution-reimagined/), so you are encouraged to use all of them. If you do this, put this mod after Carnalitas, but before CSR and CPR in the load order.
 
@@ -85,7 +87,9 @@ There are however some differences in how this interaction works in this mod, ai
 * The [pregnancy chance](#pregnancy-chances) is dynamic instead of hardcoded, and depends on the fertility of the partners and their relationship with each other.
 * If the interaction is available on a character, the *Can Make Love* important action lists all characters that can be targeted.
 
-As in Carnalitas, there is a cooldown of 1 year before the interaction is available again, unless the *No Cooldown* Carnalitas option is chosen. Even if the cooldown is disabled, the stress and other effects will not apply if you have used the interaction (or a similar one such as *[Demand Sex](#demand-sex)*) in the last 1 year.
+As in Carnalitas, there is a cooldown of 1 year before the interaction is available again, unless the *No Cooldown* Carnalitas option is chosen. In the latter case, the interaction is always available, but either its effects will be completely blocked, or its stress effects will be reduced if you have used it (or another sex interaction) in the last 1 year, depending on the *Make Love No Cooldown Effects Blocked* game rule setting.
+
+Unlike in Carnalitas, all sex interactions always get a cooldown against the recipient for 1 year that cannot be disabled.
 
 ##### Make Love Options
 
@@ -102,7 +106,7 @@ The *Demand Sex* interaction is similar to *[Make Love](#make-love)* in most res
 
 * Your slave who is not a "slave consort". You may get "slave consorts" from other mods based on Carnalitas, such as the *Slave Concubine* court position from the [Carnalitas Slavery Reimagined](https://www.loverslab.com/files/file/25565-carnalitas-slavery-reimagined/) mod.
 * A character on whom you have a strong hook, and you are either a *Seducer*, or the game rule *Demand Sex from Hooked Characters* is set to at least *Strong Hooks*.
-* A character on whom you have any hook, and the game rule *Demand Sex from Hooked Characters* is set to  *All Hooks*.
+* A character on whom you have any hook, and the game rule *Demand Sex from Hooked Characters* is set to *All Hooks*.
 
 There are also a few other differences:
 
@@ -113,6 +117,22 @@ There are also a few other differences:
 All other conditions and effects are generally the same as in *Make Love*. Since the target is not your official consort, you are more likely to get negative [stress impact](#stress-impact) from having sex with them. Also, there is a higher chance of the "dubcon" / "dominant player" [sex scene flags](#sex-scene-flags) being requested.
 
 The [*Make Love* options](#make-love-options) are also available in *Demand Sex*, subject to the same conditions. All valid *Demand Sex* partners are eligible for *Include a second partner*.
+
+#### Rape
+
+The *Rape* interaction is also similar to its Carnalitas counterpart. You rape a prisoner and get similar stress-reducing effects to *[Make Love](#make-love)* as a result, a certain chance for pregnancy, as well as some additional effects, as this is in effect a milder version of the *Torture* vanilla interaction:
+
+* As with *Torture*, you lose a certain amount of piety (usually 100), unless you have the *Divine Retribution* perk.
+* You lose or gain additional stress if you are *Compassionate*, *Forgiving*, *Sadistic*, or *Vengeful*.
+* You gain some dread if the victim is your liege, a vassal, their close family, or a landed duke or above.
+* The victim gets a *Recently Raped* small health reduction modifier.
+* The victim gets a strong negative opinion modifier on you. Their family, spouses, lovers, and friends also get somewhat weaker negative opinion modifiers.
+
+Only the *Indulge your darker passions* option is available with *Rape*, and its effects are cumulative with those listed above.
+
+Note that the *Rape* interaction requests a "noncon" scene. Such scenes are disabled by default in Carnalitas, and can be enabled by setting the *Non-Consensual Scenes* Carnalitas game rule to *Any*. Currently the [sex scene generator](#sex-scene-generator) has limited number of quotes for such scenes, so you may see the fallback empty quote more often.
+
+Unlike the other sex interactions, this interaction is occasionally also used by the AI. The chance for this is higher with lower rapist opinion of the victim, higher victim attraction, lower rapist compassion, the rapist being lustful, or the victim being their rival or a feuding house member.
 
 #### CBO Interactions
 
@@ -125,10 +145,12 @@ Both you and the target may lose (or gain) stress as a result of the sex interac
 * Gain stress if not attracted to the partner's gender.
 * Lose stress if attracted to the partner's gender and *Lustful* or *Rakish*.
 * Gain / lose stress if having sex with that partner is sinful (adultery, sodomy, or incest) according to their faith and *Zealous* or *Cynical*.
+* Gain / lose stress if using *Demand Sex* and *Compassionate*, *Sadistic*, or *Callous*.
+* Gain / lose stress if using *Rape* and *Compassionate*, *Forgiving*, *Sadistic*, or *Vengeful*.
 
 #### Sex Scene Flags
 
-The sex interactions request either the "consensual" or the "dubcon" / "dominant player" Carnalitas sex scene flags, depending on your relationship with the target, your mutual opinion, and how much you are attracted to each other. Only [sex scene events](#sex-scene-events) that support the requested flags may fire as a result.
+The *Make Love* and *Demand Sex* interactions request either the "consensual" or the "dubcon" / "dominant player" Carnalitas sex scene flags, depending on your relationship with the target, your mutual opinion, and how much you are attracted to each other. Only [sex scene events](#sex-scene-events) that support the requested flags may fire as a result.
 
 * For lovers, always request "consensual" (as in Carnalitas).
 * For consorts and prostitutes that are attracted to your gender (and you are attracted to their), request "consensual" if both your and their *opinion attraction value (OAV)* is at least 20, otherwise request "dubcon".
@@ -140,7 +162,7 @@ Besides the fact that the Paradox sex scene generator may be available for "cons
 
 If any of the [*Make Love* options](#make-love-options) is chosen, the "orgy" or "bdsm" flags may also be requested. These flags are supported by the new sex scene events and generator.
 
-Note that "noncon" scenes are never requested, to avoid the *Rape Prisoner* Carnalitas event to fire as a result, among other reasons.
+The *Rape* interaction always requests the "noncon" / "dominant player" flags, and uses a limited set of special [attitudes](#player-and-target-attitudes).
 
 #### Location Flags
 
@@ -148,6 +170,7 @@ In addition to [sex scene flags](#sex-scene-flags) the sex interactions also req
 
 * For lovers, the requested location flags are `private_chamber`, `garden`, `stable`, `copse`, and `kitchen`.
 * For "dubcon" / "bdsm" scenes, the requested location flags are `private_chamber` and `dungeon`.
+* For "noncon" (rape) scenes, a single flag that corresponds to the actual prison type is requested, either `private_chamber` and `dungeon`.
 * In all other cases, the requested location flags are `private_chamber` and `garden`.
 
 #### Pregnancy Chances
@@ -170,6 +193,10 @@ Above, `target_fertility_multiplier` is one of the multipliers from `00_defines.
 
 Statistically, the above formula produces a distribution that has a mean value around 25, but individual values may be as low as 10 or as high as 40. Note that the pregnancy chance only matters if both partners are fertile in the first place - have fertility higher than 0.1, an appropriate age (females older than 45 are not fertile), and the female is not already pregnant.
 
+#### Sex Memories
+
+Carnalitas sex memories are disabled by default with this mod, but can be enabled via the *Carnalitas Sex Memories* game rule.
+
 ### Sex Scene Events
 
 This mod replaces the single Carnalitas sex scene event *Throes of Passion* (`carn_sex_scene.0001`) with the following new set of events:
@@ -177,6 +204,7 @@ This mod replaces the single Carnalitas sex scene event *Throes of Passion* (`ca
 * *Throes of Passion* (`carnx_sex_scene.0001`): Generic "consensual" scene using the Paradox sex scene generator.
 * *Throes of Passion* (`carnx_sex_scene.0002`): Generic "consensual" scene using the [new sex scene generator](#sex-scene-generator), also supports the "orgy" flag.
 * *Carnal Pleasures* / *Twisted Pleasures* (`carnx_sex_scene.0003`): Generic "dubcon" / "dominant player" scene using the new sex scene generator, also supports the "orgy" and "bdsm" flags.
+* *Rough Pleasures* (`carnx_sex_scene.0005`): Rape prisoner "noncon" / "dominant player" scene using the new sex scene generator, also supports "bdsm" flag.
 
 The above events, including the first one, differ from the Carnalitas event in a number of ways:
 
@@ -210,8 +238,8 @@ For an attitude to be selected, certain conditions must be fulfilled, and the ch
 | calculating | negative | prostitute | opinion (-), ai_greed (+), ai_rationality (+), rival (+) |
 | pleasure seeking | any | client, attraction > 0 | attraction (+), lustful / chaste (+/-), ai_sociability (+) |
 | status seeking | any | client, not attracted or attraction < 0 | attraction (-), lustful / chaste (-/+), ai_rationality (+) |
-| shocked | positive | prisoner | opinion (+), dread (+), ai_boldness (-), ai_vengefulness (-), lover / friend (+) |
-| angry | negative | prisoner | opinion (-), ai_boldness (+), ai_vengefulness (+), rival (+) |
+| shocked | positive | rape | opinion (+), dread (+), ai_boldness (-), ai_vengefulness (-), lover / friend (+) |
+| angry | negative | rape | opinion (-), ai_boldness (+), ai_vengefulness (+), rival (+) |
 
 ##### Player Attitudes
 
@@ -231,8 +259,8 @@ For an attitude to be selected, certain conditions must be fulfilled, and the ch
 | calculating | negative | prostitute | opinion (-), ai_greed (+), ai_rationality (+), rival (+) |
 | pleasure seeking | any | client, attraction > 0 | attraction (+), lustful / chaste (+/-), ai_sociability (+) |
 | status seeking | any | client, not attracted or attraction < 0 | attraction (-), lustful / chaste (-/+), ai_rationality (+) |
-| schadenfreude | positive | prisoner | opinion (+), ai_compassion (-), ai_vengefulness (-), lover / friend (+) |
-| vengeful | negative | prisoner | opinion (-), ai_honor (-), ai_vengefulness (+), rival (+) |
+| schadenfreude | positive | rape | opinion (+), ai_compassion (-), ai_vengefulness (-), lover / friend (+) |
+| vengeful | negative | rape | opinion (-), ai_honor (-), ai_vengefulness (+), rival (+) |
 
 #### Sex Scene Quotes
 
@@ -268,6 +296,7 @@ The sections below list the changes made to existing Carnalitas objects in somew
 ### Interactions (`character_interactions`)
 
 * *Make Love* (`carn_sex_interaction`): Modified as described in [Make Love](#make-love).
+* *Rape* (`carn_rape_interaction`): Modified as described in [Rape](#rape).
 
 ### Important Actions (`important_actions`)
 

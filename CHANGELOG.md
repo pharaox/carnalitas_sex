@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 0.8.0
+
+### Interaction
+
+* Added an improved version of the Carnalitas *Rape* interaction for raping prisoners.
+* Added a cooldown against the recipient for 1 year to all sex interactions.
+
+### Game Rules
+
+* Added the *Make Love No Cooldown Effects Blocked* game rule to allow specifying if the *No Cooldown* Carnalitas option should block any sex interaction effects (default), or only reduce their stress impact.
+* Added the *Carnalitas Sex Memories* game rule to allow enabling or disabling Carnalitas sex memories.
+
 ## Version 0.7.0
 
 ### Compatibility
