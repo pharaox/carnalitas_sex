@@ -7,6 +7,8 @@
  recipient_secondary_carn_sex_interaction: "파트너"
  recipient_secondary_dsi_demand_sex_interaction: "파트너"
 
+ carnx_sex_interaction_effect_cd_disabled_tt: "#weak Stress effects will be reduced because you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months#!"
+
  carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip]은(는) [partner.GetShortUINameNoTooltip]에게 끌리지 않습니다#!"
  carnx_sex_interaction_bdsm_warning_tt: "#X 당신의 어두운 열정을 탐닉하다#!"
  carnx_rape_interaction_warning_tt: "#X Raping your prisoner#!"
@@ -42,4 +44,5 @@
  carnx_secondary_target_same_as_primary_target_tt: "두 번째 파트너가 첫 번째 파트너와 동일합니다"
  carnx_secondary_target_not_eligible_bdsm_target_tt: "두 번째 파트너는 당신의 노예나 매춘부가 아닙니다"
 
+ carnx_sex_interaction_recipient_cooldown: "Unavailable on [recipient.GetShortUIName] until [GetCurrentDateWithDiff(GetVarTimeRemaining(recipient.MakeScope, 'carnx_sex_interaction_used_by_actor'))]"
  carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U] is too far away for you to have sex with"

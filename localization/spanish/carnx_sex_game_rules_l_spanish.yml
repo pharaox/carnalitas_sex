@@ -7,6 +7,12 @@
  setting_carnx_sex_requires_same_location_enabled: "Enabled"
  setting_carnx_sex_requires_same_location_enabled_desc: "Sex interactions require both characters to be at the same location."
 
+ rule_carnx_sex_interaction_effect_cd: "#X CLR:#! $carn_sex_interaction$ No Cooldown Effects Blocked"
+ setting_carnx_sex_interaction_effect_cd_disabled: "#high Disabled#!"
+ setting_carnx_sex_interaction_effect_cd_disabled_desc: "Only stress effects will be reduced if you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
+ setting_carnx_sex_interaction_effect_cd_enabled: "Enabled"
+ setting_carnx_sex_interaction_effect_cd_enabled_desc: "No game effects will happen if you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
+
  rule_carnx_sex_demand_sex_from_hooked_characters: "#X CLR:#! Demand Sex from Hooked Characters"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled: "Disabled"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled_desc: "You can't Demand Sex from a hooked character (unless you are Seducer and have a strong hook on them)."

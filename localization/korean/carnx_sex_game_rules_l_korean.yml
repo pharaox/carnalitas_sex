@@ -7,6 +7,12 @@
  setting_carnx_sex_requires_same_location_enabled: "활성화"
  setting_carnx_sex_requires_same_location_enabled_desc: "성관계 상호작용 시 두 캐릭터가 같은 위치에 있어야 합니다."
 
+ rule_carnx_sex_interaction_effect_cd: "#X CLR:#! $carn_sex_interaction$ No Cooldown Effects Blocked"
+ setting_carnx_sex_interaction_effect_cd_disabled: "#high Disabled#!"
+ setting_carnx_sex_interaction_effect_cd_disabled_desc: "Only stress effects will be reduced if you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
+ setting_carnx_sex_interaction_effect_cd_enabled: "Enabled"
+ setting_carnx_sex_interaction_effect_cd_enabled_desc: "No game effects will happen if you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
+
  rule_carnx_sex_demand_sex_from_hooked_characters: "#X CLR:#! 구실 잡힌 캐릭터에게 성관계 요구"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled: "비활성화"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled_desc: "구실 잡힌 캐릭터에게 성관계를 요구할 수 없습니다 (유혹자이고 강력한 구실을 가진 경우 제외)."

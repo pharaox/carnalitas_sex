@@ -7,6 +7,12 @@
  setting_carnx_sex_requires_same_location_enabled: "Activé"
  setting_carnx_sex_requires_same_location_enabled_desc: "Les interactions sexuelles nécessitent que les deux personnages se trouvent au même endroit."
 
+ rule_carnx_sex_interaction_effect_cd: "#X CLR:#! $carn_sex_interaction$ No Cooldown Effects Blocked"
+ setting_carnx_sex_interaction_effect_cd_disabled: "#high Disabled#!"
+ setting_carnx_sex_interaction_effect_cd_disabled_desc: "Only stress effects will be reduced if you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
+ setting_carnx_sex_interaction_effect_cd_enabled: "Enabled"
+ setting_carnx_sex_interaction_effect_cd_enabled_desc: "No game effects will happen if you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
+
  rule_carnx_sex_demand_sex_from_hooked_characters: "#X CAR:#! Exiger du sexe de personnages hameçonnés"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled: "Désactivé"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled_desc: "Vous ne pouvez pas exiger du sexe d’un personnage hameçonné (à moins que vous ne soyez Séducteur et que vous ayez un hameçon fort contre lui)."

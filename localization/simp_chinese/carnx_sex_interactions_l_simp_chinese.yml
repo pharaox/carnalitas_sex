@@ -5,6 +5,7 @@
  carnx_demand_sex_interaction_desc: "向奴隶[recipient.GetShortUINameNoTooltip]提出性要求"
  recipient_secondary_carn_sex_interaction: "伴侣"
  recipient_secondary_dsi_demand_sex_interaction: "伴侣"
+ carnx_sex_interaction_effect_cd_disabled_tt: "#weak Stress effects will be reduced because you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months#!"
  carnx_sex_interaction_not_attracted_to_warning_tt: "#X [character.GetShortUINameNoTooltip]不被[partner.GetShortUINameNoTooltip]吸引#!"
  carnx_sex_interaction_bdsm_warning_tt: "#X 放纵你阴暗的激情#!"
  carnx_rape_interaction_warning_tt: "#X Raping your prisoner#!"
@@ -31,4 +32,5 @@
  carnx_has_eligible_demand_sex_secondary_target_tt: "你的奴隶是符合条件的第二伴侣"
  carnx_secondary_target_same_as_primary_target_tt: "第二个伴侣与第一个伴侣相同"
  carnx_secondary_target_not_eligible_bdsm_target_tt: "第二个伴侣不是你的奴隶或妓女"
+ carnx_sex_interaction_recipient_cooldown: "Unavailable on [recipient.GetShortUIName] until [GetCurrentDateWithDiff(GetVarTimeRemaining(recipient.MakeScope, 'carnx_sex_interaction_used_by_actor'))]"
  carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U]距离太远，无法与你共赴巫山。"

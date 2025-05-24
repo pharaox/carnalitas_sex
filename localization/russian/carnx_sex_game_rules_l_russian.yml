@@ -7,6 +7,12 @@
  setting_carnx_sex_requires_same_location_enabled: "Включено"
  setting_carnx_sex_requires_same_location_enabled_desc: "Для секса необходимо, чтобы оба персонажа находились в одной локации."
 
+ rule_carnx_sex_interaction_effect_cd: "#X CLR:#! $carn_sex_interaction$ No Cooldown Effects Blocked"
+ setting_carnx_sex_interaction_effect_cd_disabled: "#high Disabled#!"
+ setting_carnx_sex_interaction_effect_cd_disabled_desc: "Only stress effects will be reduced if you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
+ setting_carnx_sex_interaction_effect_cd_enabled: "Enabled"
+ setting_carnx_sex_interaction_effect_cd_enabled_desc: "No game effects will happen if you have used a similar interaction in the last [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
+
  rule_carnx_sex_demand_sex_from_hooked_characters: "#X CLR:#! Требование утех от персонажей на крючке"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled: "Выключено"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled_desc: "Вы не можете Потребовать утех от персонажей на крючке (только если вы не Соблазнитель и у вас есть сильный крючок на цель)."
