@@ -37,6 +37,17 @@ carnx_relationship_allows_demand_sex_trigger = {
 	}
 }
 
+carnx_should_get_drama_trigger = {
+	save_temporary_scope_as = character
+	$PARTNER$ = {
+		NOR = {
+			is_consort_of = scope:character
+			has_relation_slave_owner = scope:character
+			is_imprisoned_by = scope:character
+		}
+	}
+}
+
 carnx_is_sex_target_at_valid_location_trigger = {
 	trigger_if = {
 		limit = { has_game_rule = carnx_sex_requires_same_location_enabled }

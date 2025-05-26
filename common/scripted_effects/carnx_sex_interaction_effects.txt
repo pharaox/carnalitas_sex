@@ -150,6 +150,9 @@ carnx_sex_interaction_sex_scene_effect = {
 	# Request sex scene locations
 	carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
 
+	# Get drama if appropriate
+	carnx_get_drama_effect = { PARTNER = scope:recipient }
+
 	# Actually fire the sex scene
 	if = {
 		limit = { scope:orgy = yes }
@@ -158,7 +161,7 @@ carnx_sex_interaction_sex_scene_effect = {
 			TARGET = scope:recipient
 			TARGET2 = scope:secondary_recipient
 			STRESS_EFFECTS = no
-			DRAMA = yes
+			DRAMA = scope:drama
 		}
 	}
 	else = {
@@ -166,13 +169,16 @@ carnx_sex_interaction_sex_scene_effect = {
 			PLAYER = scope:actor
 			TARGET = scope:recipient
 			STRESS_EFFECTS = no
-			DRAMA = yes
+			DRAMA = scope:drama
 		}
 	}
 }
 
 # Fire Carnal Court sex interaction sex scene
 carnx_carnal_court_sex_interaction_sex_scene_effect = {
+	# Get drama if appropriate
+	carnx_get_drama_effect = { PARTNER = scope:recipient }
+
 	# Actually fire the sex scene
 	if = {
 		limit = { scope:carnal_court = yes }
@@ -180,7 +186,7 @@ carnx_carnal_court_sex_interaction_sex_scene_effect = {
 			PLAYER = scope:actor
 			TARGET = scope:recipient
 			STRESS_EFFECTS = no
-			DRAMA = yes
+			DRAMA = scope:drama
 		}
 	}
 	else = {
@@ -192,7 +198,7 @@ carnx_carnal_court_sex_interaction_sex_scene_effect = {
 			PLAYER = scope:actor
 			TARGET = scope:recipient
 			STRESS_EFFECTS = no
-			DRAMA = yes
+			DRAMA = scope:drama
 		}
 	}
 }
@@ -209,7 +215,7 @@ carnx_rape_interaction_sex_scene_effect = {
 		PLAYER = scope:actor
 		TARGET = scope:recipient
 		STRESS_EFFECTS = no
-		DRAMA = yes
+		DRAMA = no
 	}
 }
 
@@ -488,6 +494,18 @@ carnx_request_sex_scene_locations_effect = {
 			}
 			carnx_request_sex_scene_location_effect = { LOCATION = dungeon }
 		}
+	}
+}
+
+carnx_get_drama_effect = {
+	if = {
+		limit = {
+			carnx_should_get_drama_trigger = { PARTNER = $PARTNER$ }
+		}
+		save_temporary_scope_value_as = { name = drama value = yes }
+	}
+	else = {
+		save_temporary_scope_value_as = { name = drama value = no }
 	}
 }
 

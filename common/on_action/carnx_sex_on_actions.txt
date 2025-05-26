@@ -54,6 +54,24 @@ carn_on_pregnancy = {
 		#	NAME1 = father TYPE1 = flag:character
 		#	NAME2 = carn_pregnancy_chance TYPE2 = flag:value
 		#}
+
+		# If raped by imprisoner, set known bastard flags to prevent adultery events
+		if = {
+			limit = {
+				is_imprisoned = yes
+				scope:father = imprisoner
+				OR = {
+					carn_sex_scene_is_noncon_trigger = yes
+					scope:father = { carn_sex_scene_is_noncon_trigger = yes }
+				}
+			}
+			carnx_sex_debug_log_effect = { MSG = carnx_sex_debug_msg_raped_prisoner_got_pregnant }
+			set_known_bastard_on_pregnancy = yes
+			add_character_flag = {
+				flag = pregnancy_real_father_of_bastard_is_known_flag
+				months = 9
+			}
+		}
 	}
 }
 
