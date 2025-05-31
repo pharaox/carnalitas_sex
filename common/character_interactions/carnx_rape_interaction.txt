@@ -42,6 +42,23 @@
 
 	cooldown = { months = carn_sex_interaction_cooldown }
 
+	# Secret
+	send_option = {
+		is_shown = {
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level >= 1
+				}
+			}
+		}
+		flag = secret
+		localization = "carnx_sex_secret_option"
+		current_description = {
+			desc = "carnx_sex_secret_option_desc"
+		}
+	}
+
 	# BDSM
 	send_option = {
 		is_shown = {
@@ -166,6 +183,12 @@
 				target = scope:recipient
 			}
 			add = 25
+		}
+
+		# Secret (AI should use this if available)
+		modifier = {
+			scope:secret = yes
+			add = 1
 		}
 
 		# BDSM (AI should use this if available)

@@ -151,7 +151,7 @@ carnx_sex_interaction_sex_scene_effect = {
 	carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
 
 	# Get drama if appropriate
-	carnx_get_drama_effect = { PARTNER = scope:recipient }
+	carnx_get_drama_effect = { PARTNER = scope:recipient SECRET = yes }
 
 	# Actually fire the sex scene
 	if = {
@@ -177,7 +177,7 @@ carnx_sex_interaction_sex_scene_effect = {
 # Fire Carnal Court sex interaction sex scene
 carnx_carnal_court_sex_interaction_sex_scene_effect = {
 	# Get drama if appropriate
-	carnx_get_drama_effect = { PARTNER = scope:recipient }
+	carnx_get_drama_effect = { PARTNER = scope:recipient SECRET = yes }
 
 	# Actually fire the sex scene
 	if = {
@@ -210,12 +210,18 @@ carnx_rape_interaction_sex_scene_effect = {
 	# Request sex scene locations
 	carnx_request_sex_scene_locations_effect = { TARGET = scope:recipient }
 
+	# Get drama if appropriate
+	carnx_get_drama_effect = { PARTNER = scope:recipient SECRET = scope:secret }
+
+	# If drama is enabled, prevent the "peasant affair" part of the drama
+	carnx_prevent_peasant_affair_effect = yes
+
 	# Actually fire the sex scene
 	carn_sex_scene_effect = {
 		PLAYER = scope:actor
 		TARGET = scope:recipient
 		STRESS_EFFECTS = no
-		DRAMA = no
+		DRAMA = scope:drama
 	}
 }
 
@@ -239,13 +245,13 @@ carnx_sex_interaction_player_impact_effect = {
 	# Stress impact
 	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
 
-	# Additional stress and opinion impact of demanding sex
+	# Additional stress impact of demanding sex
 	if = {
 		limit = { scope:demand_sex = yes }
 		carnx_demand_sex_interaction_player_effect = { PARTNER = $PARTNER$ }
 	}
 
-	# Additional piety and stress impact for BDSM
+	# Additional stress impact of BDSM
 	if = {
 		limit = { scope:bdsm = yes }
 		carnx_sex_interaction_bdsm_player_effect = { PARTNER = $PARTNER$ }
@@ -269,7 +275,7 @@ carnx_sex_interaction_target_impact_effect = {
 		carnx_demand_sex_interaction_target_effect = { PARTNER = $PARTNER$ }
 	}
 
-	# Additional piety and stress impact for BDSM
+	# Additional stress and opinion impact of BDSM
 	if = {
 		limit = { scope:bdsm = yes }
 		carnx_sex_interaction_bdsm_target_effect = { PARTNER = $PARTNER$ }
@@ -283,6 +289,16 @@ carnx_sex_interaction_target_impact_effect = {
 carnx_rape_interaction_player_impact_effect = {
 	# Show tooltip for sinful actions
 	carnx_sex_interaction_sin_tooltip_effect = { PARTNER = $PARTNER$ }
+
+	# Consequences from extramarital sex
+	if = {
+		limit = {
+			scope:secret = no
+			carnx_is_sex_with_character_sin_crime_or_shunned_trigger = { SIN = adultery CHARACTER = $PARTNER$ }
+		}
+		$PARTNER$ = { save_scope_as = sex_partner }
+		extramarital_sex_exposure_consequences_effect = { SPOUSE_EVENT = no }
+	}
 
 	# Lose stress if arousal stress is enabled (player only)
 	if = {
@@ -299,10 +315,14 @@ carnx_rape_interaction_player_impact_effect = {
 	# Stress impact of having sex
 	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
 
-	# Additional piety, stress, dread, and opinion impact of rape
+	# Additional stress, piety, and dread impact of rape
 	carnx_rape_interaction_player_effect = { PARTNER = $PARTNER$ }
+	if = {
+		limit = { scope:secret = no }
+		carnx_rape_interaction_player_public_effect = { PARTNER = $PARTNER$ }
+	}
 
-	# Additional piety and stress impact for BDSM
+	# Additional stress impact of BDSM
 	if = {
 		limit = { scope:bdsm = yes }
 		carnx_sex_interaction_bdsm_player_effect = { PARTNER = $PARTNER$ }
@@ -320,10 +340,14 @@ carnx_rape_interaction_target_impact_effect = {
 	# Stress impact of having sex
 	carnx_sex_interaction_stress_impact_effect = { PARTNER = $PARTNER$ }
 
-	# Additional piety, stress, dread, and opinion impact of rape
+	# Additional stress and opinion impact of rape
 	carnx_rape_interaction_target_effect = { PARTNER = $PARTNER$ }
+	if = {
+		limit = { scope:secret = no }
+		carnx_rape_interaction_target_public_effect = { PARTNER = $PARTNER$ }
+	}
 
-	# Additional piety and stress impact for BDSM
+	# Additional stress and opinion impact of BDSM
 	if = {
 		limit = { scope:bdsm = yes }
 		carnx_sex_interaction_bdsm_target_effect = { PARTNER = $PARTNER$ }
@@ -500,12 +524,24 @@ carnx_request_sex_scene_locations_effect = {
 carnx_get_drama_effect = {
 	if = {
 		limit = {
-			carnx_should_get_drama_trigger = { PARTNER = $PARTNER$ }
+			carnx_should_get_drama_trigger = { PARTNER = $PARTNER$ SECRET = $SECRET$ }
 		}
 		save_temporary_scope_value_as = { name = drama value = yes }
 	}
 	else = {
 		save_temporary_scope_value_as = { name = drama value = no }
+	}
+}
+
+carnx_prevent_peasant_affair_effect = {
+	if = {
+		limit = {
+			NOT = { has_character_flag = had_story_cycle_peasant_affair }
+		}
+		add_character_flag = {
+			flag = had_story_cycle_peasant_affair
+			days = 1
+		}
 	}
 }
 
@@ -621,14 +657,6 @@ carnx_demand_sex_interaction_target_effect = {
 carnx_rape_interaction_player_effect = {
 	custom_tooltip = carnx_rape_interaction_warning_tt
 
-	# Piety impact
-	if = {
-		limit = {
-			NOT = { has_perk = divine_retribution_perk }
-		}
-		add_piety = medium_piety_loss
-	}
-
 	# Stress impact
 	if = {
 		limit = { has_relation_rival = $PARTNER$ }
@@ -677,14 +705,20 @@ carnx_rape_interaction_player_effect = {
 			}
 		}
 	}
-
-	# Dread
-	carnx_rape_interaction_player_dread_effect = { PARTNER = $PARTNER$ }
 }
 
-carnx_rape_interaction_player_dread_effect = {
+carnx_rape_interaction_player_public_effect = {
 	save_temporary_scope_as = rapist
 
+	# Piety impact
+	if = {
+		limit = {
+			NOT = { has_perk = divine_retribution_perk }
+		}
+		add_piety = medium_piety_loss
+	}
+
+	# Dread
 	if = {
 		limit = {
 			$PARTNER$ = {
@@ -772,11 +806,15 @@ carnx_rape_interaction_target_effect = {
 		}
 	}
 
-	# Opinion effects
+	# Opinion impact
 	add_opinion = {
 		target = $PARTNER$
 		modifier = carnx_raped_me_opinion
 	}
+}
+
+carnx_rape_interaction_target_public_effect = {
+	# Opinion of family members and spouses
 	every_close_family_member = {
 		limit = { NOT = { this = $PARTNER$ } }
 		add_opinion = {
@@ -821,14 +859,6 @@ carnx_rape_interaction_target_effect = {
 
 carnx_sex_interaction_bdsm_player_effect = {
 	custom_tooltip = carnx_sex_interaction_bdsm_warning_tt
-
-	# Piety impact
-	if = {
-		limit = {
-			NOT = { has_perk = divine_retribution_perk }
-		}
-		add_piety = minor_piety_loss
-	}
 
 	# Stress impact
 	if = {

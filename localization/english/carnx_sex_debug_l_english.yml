@@ -4,7 +4,7 @@
 
  carnx_sex_debug_msg_character_had_sex: "$carnx_sex_debug_prefix_2$: Character had sex (carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'female', 'male')]), carn_pregnancy_chance: [THIS.Var('carn_pregnancy_chance').GetValue])"
  carnx_sex_debug_msg_character_got_pregnant: "$carnx_sex_debug_prefix_2$: Character got pregnant (father: [THIS.Var('father').Char.GetFullNameNoTooltip] ([THIS.Var('father').Char.GetID]), carn_pregnancy_chance: [THIS.Var('carn_pregnancy_chance').GetValue])"
- carnx_sex_debug_msg_raped_prisoner_got_pregnant: "$carnx_sex_debug_prefix$: Raped prisoner got pregnant"
+ carnx_sex_debug_msg_character_got_pregnant_with_known_bastard: "$carnx_sex_debug_prefix$: Character got pregnant with known bastard"
 
  carnx_sex_debug_msg_rape_interaction_accepted: "$carnx_sex_debug_prefix$: Rape interaction accepted"
  carnx_sex_debug_msg_debug_0001_fired: "$carnx_sex_debug_prefix$: Debug Sex event fired"

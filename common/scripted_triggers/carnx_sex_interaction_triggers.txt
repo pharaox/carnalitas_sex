@@ -43,7 +43,10 @@ carnx_should_get_drama_trigger = {
 		NOR = {
 			is_consort_of = scope:character
 			has_relation_slave_owner = scope:character
-			is_imprisoned_by = scope:character
+		}
+		trigger_if = {
+			limit = { is_imprisoned_by = scope:character }
+			$SECRET$ = yes
 		}
 	}
 }
@@ -246,6 +249,14 @@ carnx_is_sex_with_character_shunned_trigger = {
 		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = adultery CHARACTER = $CHARACTER$ }
 		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = sodomy CHARACTER = $CHARACTER$ }
 		carnx_is_sex_with_character_sin_shunned_trigger = { SIN = incest CHARACTER = $CHARACTER$ }
+	}
+}
+
+carnx_is_sex_with_character_sin_crime_or_shunned_trigger = {
+	carnx_is_sex_with_character_$SIN$_trigger = { CHARACTER = $CHARACTER$ }
+	OR = {
+		carnx_is_$SIN$_crime_trigger = yes
+		carnx_is_$SIN$_shunned_trigger = yes
 	}
 }
 
