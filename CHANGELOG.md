@@ -1,5 +1,15 @@
 # Changelog
 
+## Version 0.8.1
+
+### Interaction
+
+* Rebalanced the *Rape* interaction consequences and added *Threaten victim to keep it secret* option to avoid some of the harsher consequences.
+
+### Bug Fixes
+
+* Fixed *Rape* interaction sometimes starting the "peasant affair" story cycle with the victim.
+
 ## Version 0.8.0
 
 ### Interaction
