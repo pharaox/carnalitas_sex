@@ -24,6 +24,8 @@
  carnx_sex_orgy_option_desc: "Inclure un deuxième partenaire dans vos ébats. Cette option est disponible parce que vous êtes $trait_lustful$ ou $trait_rakish$ et qu’il y a des partenaires éligibles."
  carnx_sex_bdsm_option: "Assouvir vos passions les plus sombres"
  carnx_sex_bdsm_option_desc: "Assouvir vos passions les plus sombres avec votre partenaire. Cette option est disponible parce que vous êtes $trait_sadistic$ et que [recipient.GetShortUINameNoTooltip] est votre esclave ou une prostituée."
+ carnx_sex_secret_option: "Threaten victim to keep it secret"
+ carnx_sex_secret_option_desc: "Threaten [recipient.GetShortUINameNoTooltip] to keep what you did secret. This option is available because [recipient.GetShortUINameNoTooltip] is intimidated or terrified by you. It will remove some of the penalties, but the secret may be revealed later."
 
  carnx_sex_travel_option: "Travel to partner location"
  carnx_sex_travel_option_desc: "Travel to your partner location to make love. This option is available because $carnx_sex_target_too_far_away$."
