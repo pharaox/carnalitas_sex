@@ -12,3 +12,32 @@ carnx_sex_interaction_stress_loss_value = {
 
 none_stress_impact_gain = 0
 none_stress_impact_loss = 0
+
+carnx_prisoner_dread_modified_ai_boldness_value = {
+	value = scope:dreaded_character.dread
+	# The multiplier below is currently used for courtiers, so perhaps use it for prisoners as well?
+	# multiply = define:NDreadEffectOnBoldness|MULT_NOT_DIRECT_LIEGE
+	subtract = ai_boldness
+}
+
+carnx_prisoner_dread_level_value = {
+	if = {
+		limit = {
+			ai_boldness < 100
+			scope:dreaded_character.dread > 0
+			carnx_prisoner_dread_modified_ai_boldness_value > define:NCharacter|BOLD_LEVEL_COWED
+		}
+		value = 2
+	}
+	else_if = {
+		limit = { 
+			ai_boldness < 100
+			scope:dreaded_character.dread > 0
+			carnx_prisoner_dread_modified_ai_boldness_value > define:NCharacter|BOLD_LEVEL_INTIMIDATED
+		}
+		value = 1
+	}
+	else = {
+		value = 0
+	}
+}

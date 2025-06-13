@@ -126,12 +126,14 @@ The *Rape* interaction is also similar to its Carnalitas counterpart. You rape a
 * The victim gets a *Recently Raped* small health reduction modifier.
 * The victim gets a strong negative opinion modifier on you.
 
-The other sex interactions don't have piety effects or trigger adultery consequences, since it is assumed that your partner cooperates in keeping the affair secret. With *Rape* the victim doesn't cooperate, unless you choose the *Threaten victim to keep it secret* option that is only available if they are intimidated or terrified by you. Without this option, *Rape* has additional consequences:
+The other sex interactions don't have piety effects or trigger adultery consequences, since it is assumed that your partner cooperates in keeping the affair secret. With *Rape* the victim doesn't cooperate, unless you choose the *Threaten victim to keep it secret* option that is only available if they are cowed by your dreadful reputation. Without this option, *Rape* has additional consequences:
 
 * If having sex with the victim is adulterous, you get the consequences of extramarital sex immediately. This may include losing a level of devotion and a large opinion penalty with your spouse(s).
 * As with *Torture*, you lose a certain amount of piety (usually 100), unless you have the *Divine Retribution* perk.
 * You gain some dread if the victim is your liege, a vassal, their close family, or a landed duke or above.
 * The victim's family, spouses, lovers, and friends also get somewhat weaker negative opinion modifiers.
+
+Above, "cowed by your dreadful reputation" means that the character would be intimidated or terrified by you if they were from your realm. Prisoners not from your realm are often not intimidated compared to characters from your realm with the same boldness. This doesn't make much sense, so it has been adapted for this option.
 
 If you threaten the victim, the secret may still be exposed later, for example as part of the "adultery suspicion" chain of events. In this case, your extramarital sex will be exposed, but you won't get the other consequences listed above.
 

@@ -45,10 +45,16 @@
 	# Secret
 	send_option = {
 		is_shown = {
+			scope:actor = {
+				save_temporary_scope_as = dreaded_character
+			}
 			scope:recipient = {
-				has_dread_level_towards = {
-					target = scope:actor
-					level >= 1
+				OR = {
+					has_dread_level_towards = {
+						target = scope:actor
+						level >= 1
+					}
+					carnx_prisoner_dread_level_value >= 1
 				}
 			}
 		}
