@@ -1,8 +1,14 @@
 # Changelog
 
+## Version 0.8.2
+
+### Interactions
+
+* Enabled the *Threaten victim to keep it secret* option of *Rape* interaction if the victim would be intimidated or terrified by you if they were from your realm, instead of checking their dread levels directly.
+
 ## Version 0.8.1
 
-### Interaction
+### Interactions
 
 * Rebalanced the *Rape* interaction consequences and added *Threaten victim to keep it secret* option to avoid some of the harsher consequences.
 
@@ -12,7 +18,7 @@
 
 ## Version 0.8.0
 
-### Interaction
+### Interactions
 
 * Added an improved version of the Carnalitas *Rape* interaction for raping prisoners.
 * Added a cooldown against the recipient for 1 year to all sex interactions.
