@@ -5,6 +5,13 @@
 ### Interactions
 
 * Enabled the *Threaten victim to keep it secret* option of *Rape* interaction if the victim would be intimidated or terrified by you if they were from your realm, instead of checking their dread levels directly.
+* If *Make Love No Cooldown Effects Blocked* game rule is set to *Disabled*, important actions for sex interactions will be shown even if they are on cooldown.
+* The *Make Love* important action now includes all local prostitutes.
+
+### Bug Fixes
+
+* The cooldown against recipient is now only set when the actual sex happens, not when starting travel.
+* The cooldown against recipient is now properly taken into account by important actions and elsewhere.
 
 ## Version 0.8.1
 
