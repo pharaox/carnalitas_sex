@@ -84,6 +84,7 @@ carnx_is_eligible_sex_target_trigger = {
 	carnx_is_sex_interaction_blocked_trigger = no
 	carn_can_have_sex_trigger = yes
 	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = $PLAYER$ }
+	NOT = { var:carnx_sex_interaction_used_by_actor ?= $PLAYER$ }
 	$PLAYER$ = {
 		carnx_can_have_sex_with_trigger = { PARTNER = scope:target }
 		is_attracted_to_gender_of = scope:target
@@ -97,6 +98,7 @@ carnx_is_eligible_demand_sex_target_trigger = {
 	carnx_is_sex_interaction_blocked_trigger = no
 	carn_can_have_sex_trigger = yes
 	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = $PLAYER$ }
+	NOT = { var:carnx_sex_interaction_used_by_actor ?= $PLAYER$ }
 	$PLAYER$ = {
 		carnx_can_demand_sex_from_trigger = { PARTNER = scope:target }
 		has_usable_hook = scope:target

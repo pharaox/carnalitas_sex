@@ -214,10 +214,13 @@
 			}
 		}
 		scope:recipient = {
-			set_variable = {
-				name = carnx_sex_interaction_used_by_actor
-				value = scope:actor
-				months = carn_sex_interaction_cooldown_base
+			if = {
+				limit = { scope:travel = no }
+				set_variable = {
+					name = carnx_sex_interaction_used_by_actor
+					value = scope:actor
+					months = carn_sex_interaction_cooldown_base
+				}
 			}
 		}
 	}
