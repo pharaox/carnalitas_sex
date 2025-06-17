@@ -4,9 +4,10 @@
 	check_create_action = {
 		if = {
 			limit = {
-				NOR = {
-					has_game_rule = carn_sex_interaction_disabled
-					has_character_flag = carn_sex_interaction_effect_cd
+				NOT = { has_game_rule = carn_sex_interaction_disabled }
+				trigger_if = {
+					limit = { has_character_flag = carn_sex_interaction_effect_cd }
+					has_game_rule = carnx_sex_interaction_effect_cd_disabled
 				}
 				is_adult = yes
 				carnx_is_sex_interaction_blocked_trigger = no
@@ -26,14 +27,13 @@
 				}
 				add_to_list = potential_partners
 			}
-			location = {
-				every_character_in_location = {
-					limit = {
-						NOT = { this = root }
-						carn_is_working_as_prostitute_trigger = yes
-					}
-					add_to_list = potential_partners
+			every_pool_character = {
+				province = root.location
+				limit = {
+					NOT = { this = root }
+					carn_is_working_as_prostitute_trigger = yes
 				}
+				add_to_list = potential_partners
 			}
 
 			every_in_list = {
