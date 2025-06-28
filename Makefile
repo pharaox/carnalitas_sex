@@ -20,6 +20,10 @@ clean:
 	rm -rf tmp
 	rm -f ck3-tiger.out
 
+.PHONY: thumbnail
+thumbnail:
+	convert images/00-grande-odalisque.jpg -crop 1611x1611+280+0 +repage -resize 1536x1536^ -gravity center -extent 1536x1536 thumbnail.png
+
 .PHONY: update-version
 update-version:
 	sed -i 's/$(VERSION)/$(NEW_VERSION)/g' descriptor.mod VERSION
