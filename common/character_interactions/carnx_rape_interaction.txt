@@ -93,10 +93,13 @@
 			}
 		}
 		scope:recipient = {
-			set_variable = {
-				name = carnx_sex_interaction_used_by_actor
-				value = scope:actor
-				months = carn_sex_interaction_cooldown_base
+			if = {
+				limit = { has_game_rule = carnx_sex_interaction_effect_cd_disabled }
+				set_variable = {
+					name = carnx_sex_interaction_used_by_actor
+					value = scope:actor
+					months = carn_sex_interaction_cooldown_base
+				}
 			}
 		}
 	}

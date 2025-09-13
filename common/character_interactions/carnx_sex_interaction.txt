@@ -221,7 +221,10 @@
 		}
 		scope:recipient = {
 			if = {
-				limit = { scope:travel = no }
+				limit = {
+					scope:travel = no
+					has_game_rule = carnx_sex_interaction_effect_cd_disabled
+				}
 				set_variable = {
 					name = carnx_sex_interaction_used_by_actor
 					value = scope:actor
