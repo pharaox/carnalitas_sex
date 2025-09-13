@@ -6,6 +6,10 @@
 
 * Adapted to CK3 1.17.0 and Carnalitas 2.11.
 
+### Bug Fixes
+
+* The cooldown against recipient is now only set if the game rule *Make Love No Cooldown Effects Blocked* is set to *Disabled*.
+
 ## Version 0.8.2
 
 ### Interactions
