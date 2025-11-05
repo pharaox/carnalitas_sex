@@ -85,3 +85,19 @@ carn_on_pregnancy = {
 	events = {
 	}
 }
+
+##################################################################################
+# carn_sex_scene_hidden
+##################################################################################
+# Lyskorie: For events (perhaps narrative?) you want to fire when you otherwise want to suppress the regular sex scene events 
+## e.g. a masked orgy, or some other context where character(s) should not know who they are having sex with, or a context where there is already a sex event and firing this would be extraneous (such as an activity)
+## Remember to use `save_scope_value_as = { name = carn_hide_sex_scene_event value = yes }` before the sex scene effect to actually suppress it and use this on action instead.
+## Theoretically you can set different values for this scope value to finetune how you want to hide, like DOL using flag:hide_all to suppress even partners for a masked orgy.
+
+### In the case of a suppressed event, the sex-related effects are fired in the effects themselves instead of through carn_sex_scene.001 and its branching events, 
+### hence anything put in here should not also contain these effects, or nested in a `show_as_tooltip` effect.
+
+carn_sex_scene_hidden = {
+	random_events = {
+	}
+}
