@@ -20,5 +20,5 @@
  carnx_sex_scene_quote_flag: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
 
  carnx_sex_debug.0001.t: "디버그 성관계"
- carnx_sex_debug.0001.desc: "나는 방금 [target.GetFirstNameNoTooltip]와(과) 성관계를 가졌다."
+ carnx_sex_debug.0001.desc: "나는 방금 [target.GetFirstNameNoTooltip](와)과 성관계를 가졌다."
  carnx_sex_debug.0001.a: "확인"
