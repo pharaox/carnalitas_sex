@@ -1,10 +1,10 @@
 ﻿l_korean:
- action_carn_can_sex_interaction_combined_label: "당신의 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip]에게 ([recipient.GetOpinionOf(GetPlayer)|+=])"
- action_carn_can_sex_interaction_combined_group_label: "$action_carn_can_sex_interaction$"
- action_carn_can_sex_interaction_combined_group_name: "$action_carn_can_sex_interaction$"
- action_carn_can_sex_interaction_combined_group_description: "당신의 배우자나 연인과 사랑을 나누어 [stress|E]를 줄이거나 아이를 가지려 시도하는 등의 효과를 얻을 수 있습니다."
+ #action_carn_can_sex_interaction_combined_label: "당신의 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip]([recipient.GetOpinionOf(GetPlayer)|+=])"
+ #action_carn_can_sex_interaction_combined_group_label: "$action_carn_can_sex_interaction$"
+ #action_carn_can_sex_interaction_combined_group_name: "$action_carn_can_sex_interaction$"
+ #action_carn_can_sex_interaction_combined_group_description: "당신의 배우자나 연인과 사랑을 나누어 [stress|E] 감소, 임신 등의 효과를 얻을 수 있습니다."
 
- dsi_demand_sex_important_interaction_combined_label: "당신의 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip]로부터 ([recipient.GetOpinionOf(GetPlayer)|+=])"
+ dsi_demand_sex_important_interaction_combined_label: "당신의 [actor.Custom2('RelationToMe', recipient)] [recipient.GetUINameNoTooltip]([recipient.GetOpinionOf(GetPlayer)|+=])"
  dsi_demand_sex_important_interaction_combined_group_label: "$dsi_demand_sex_important_interaction$"
  dsi_demand_sex_important_interaction_combined_group_name: "$dsi_demand_sex_important_interaction$"
- dsi_demand_sex_important_interaction_combined_group_description: "당신의 노예에게 성관계를 요구하여 [stress|E]를 줄이거나 아이를 가지려 시도하는 등의 효과를 얻을 수 있습니다."
+ dsi_demand_sex_important_interaction_combined_group_description: "당신의 노예에게 성관계를 요구하여 [stress|E] 감소, 임신 등의 효과를 얻을 수 있습니다."

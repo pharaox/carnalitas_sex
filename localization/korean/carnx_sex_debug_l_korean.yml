@@ -2,7 +2,7 @@
  carnx_sex_debug_prefix: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID])"
  carnx_sex_debug_prefix_2: "[GetCurrentDate.GetStringShort]: [THIS.Char.GetFullNameNoTooltip] ([THIS.Char.GetID], [Select_CString(THIS.Char.IsFemale, '여성', '남성')])"
 
- carnx_sex_debug_msg_character_had_sex: "$carnx_sex_debug_prefix_2$: 캐릭터가 성관계를 가짐 (carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, '여성', '남성')]), carn_sex_pregnancy_chance: [THIS.Var('carn_sex_pregnancy_chance').GetValue], carn_sex_could_be_impregnated: [Select_CString(THIS.Var('carn_sex_could_be_impregnated').IsSet, '예', '아니오')], carn_sex_impregnated: [Select_CString(THIS.Var('carn_sex_impregnated').IsSet, '예', '아니오')])"
+ carnx_sex_debug_msg_character_had_sex: "$carnx_sex_debug_prefix_2$: 인물이 성관계를 가짐 (carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, '여성', '남성')]), carn_sex_pregnancy_chance: [THIS.Var('carn_sex_pregnancy_chance').GetValue], carn_sex_could_be_impregnated: [Select_CString(THIS.Var('carn_sex_could_be_impregnated').IsSet, '예', '아니오')], carn_sex_impregnated: [Select_CString(THIS.Var('carn_sex_impregnated').IsSet, '예', '아니오')])"
 
  carnx_sex_debug_msg_debug_0001_fired: "$carnx_sex_debug_prefix$: 디버그 성관계 이벤트 발생"
 
