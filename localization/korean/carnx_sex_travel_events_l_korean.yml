@@ -1,9 +1,9 @@
 ﻿l_korean:
  carnx_sex_travel.0001.t: "$travel_completion_event.1000.t$"
- carnx_sex_travel.0001.desc.start_valid: "오랜 여정 끝에 나는 마침내 [current_location.GetName]에 다다랐다. 이제 나는 이곳에 머물며 나의 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName](와)과 $carnx_sex_travel_interaction$를 하고 다른 일도 돌볼 수 있게 되었다."
- carnx_sex_travel.0001.desc.start_invalid: "[current_location.GetName]에 도착하자, 나는 더 이상 나의 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName](와)과 $carnx_sex_travel_interaction$를 할 수 없음을 알게 되었다. 나는 곧장 돌아갈 수도 있고, 떠나기 전에 잠시 주변을 둘러볼 수도 있다."
- carnx_sex_travel.0001.a: "어서 하고, 집으로 돌아가자."
+ carnx_sex_travel.0001.desc.start_valid: "오랜 여정 끝에 나는 마침내 [current_location.GetName]에 다다랐다. 이제 나의 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName]$carnx_sex_travel_interaction$를 하고 이곳에 있는 동안 다른 일도 돌볼 수 있게 되었다."
+ carnx_sex_travel.0001.desc.start_invalid: "[current_location.GetName]에 도착하자, 나는 더 이상 나의 [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName]$carnx_sex_travel_interaction$를 할 수 없음을 알게 되었다. 나는 곧장 돌아갈 수도 있고, 떠나기 전에 잠시 주변을 둘러볼 수도 있다."
+ carnx_sex_travel.0001.a: "어서 일을 치르고, 집으로 돌아가자."
  carnx_sex_travel.0001.b: "집으로 돌아간다."
  carnx_sex_travel.0001.c: "이곳에 머물며 주변을 둘러본다."
 
- carnx_sex_travel_interaction: "[SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')]"
+ carnx_sex_travel_interaction: "[Select_CString(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), '(와)과', '에게')] [SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')]"

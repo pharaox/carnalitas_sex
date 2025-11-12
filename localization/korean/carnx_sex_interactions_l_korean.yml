@@ -47,4 +47,4 @@
  carnx_secondary_target_not_eligible_bdsm_target_tt: "두 번째 상대는 당신의 노예나 매춘부가 아님"
 
  carnx_sex_interaction_recipient_cooldown: "[GetCurrentDateWithDiff(GetVarTimeRemaining(recipient.MakeScope, 'carnx_sex_interaction_used_by_actor'))]까지 [recipient.GetShortUIName]에게 사용할 수 없음"
- carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U](이)가 당신에게서 너무 멀리 있음"
+ carnx_sex_target_too_far_away: "[recipient.GetShortUIName|U](이)가 당신과 성관계를 맺기에는 너무 멀리 있음"
