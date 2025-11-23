@@ -79,7 +79,7 @@
 		}
 		scope:recipient = {
 			if = {
-				limit = { has_game_rule = carnx_sex_interaction_effect_cd_disabled }
+				limit = { has_game_rule = carnx_sex_interaction_cd_recipient_enabled }
 				set_variable = {
 					name = carnx_sex_interaction_used_by_actor
 					value = scope:actor

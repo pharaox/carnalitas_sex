@@ -30,6 +30,22 @@ carnx_sex_interaction_effect_cd = {
 	}
 }
 
+carnx_sex_interaction_cd_recipient = {
+	categories = {
+		carnx_carnalitas_sex
+	}
+
+	default = carnx_sex_interaction_cd_recipient_disabled
+
+	carnx_sex_interaction_cd_recipient_disabled = {
+		flag = GG_can_change_rule
+	}
+
+	carnx_sex_interaction_cd_recipient_enabled = {
+		flag = GG_can_change_rule
+	}
+}
+
 carnx_sex_demand_sex_from_hooked_characters = {
 	categories = {
 		carnx_carnalitas_sex

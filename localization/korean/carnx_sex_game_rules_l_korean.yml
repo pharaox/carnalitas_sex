@@ -7,11 +7,17 @@
  setting_carnx_sex_requires_same_location_enabled: "활성화"
  setting_carnx_sex_requires_same_location_enabled_desc: "성관계 상호작용 시 두 인물이 같은 위치에 있어야 합니다."
 
- rule_carnx_sex_interaction_effect_cd: "#X CLR:#! $carn_sex_interaction$ 대기 시간"
- setting_carnx_sex_interaction_effect_cd_disabled: "#high 비활성화#!"
+ rule_carnx_sex_interaction_effect_cd: "#X CLR:#! $carn_sex_interaction$ 쿨다운 동안의 효과"
+ setting_carnx_sex_interaction_effect_cd_disabled: "#high 차단 해제됨#!"
  setting_carnx_sex_interaction_effect_cd_disabled_desc: "지난 [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0]개월 안에 비슷한 상호작용을 했다면 스트레스 효과만이 감소합니다."
- setting_carnx_sex_interaction_effect_cd_enabled: "활성화"
+ setting_carnx_sex_interaction_effect_cd_enabled: "막힌"
  setting_carnx_sex_interaction_effect_cd_enabled_desc: "지난 [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0]개월 안에 비슷한 상호작용을 했다면 게임 내 효과가 없습니다."
+
+ rule_carnx_sex_interaction_cd_recipient: "#X CLR:#! $carn_sex_interaction$ Cooldown Against Partner"
+ setting_carnx_sex_interaction_cd_recipient_disabled: "Disabled"
+ setting_carnx_sex_interaction_cd_recipient_disabled_desc: "You can have sex with the same partner as much as you want."
+ setting_carnx_sex_interaction_cd_recipient_enabled: "#high Enabled#!"
+ setting_carnx_sex_interaction_cd_recipient_enabled_desc: "You can only have sex with the same partner once every [EmptyScope.ScriptValue('carn_sex_interaction_cooldown_base')|0] months."
 
  rule_carnx_sex_demand_sex_from_hooked_characters: "#X CLR:#! 구실 잡힌 인물에게 성관계 요구"
  setting_carnx_sex_demand_sex_from_hooked_characters_disabled: "비활성화"

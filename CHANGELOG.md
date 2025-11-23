@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 0.10.1
+
+### Game Rules
+
+* Renamed the *Make Love No Cooldown Effects Blocked* game rule to *Make Love Effects During Cooldown* and its settings to *Blocked* and *Unblocked* to better describe its effects.
+* Added the *Make Love Cooldown Against Partner* game rule to allow controlling the cooldown against partner independently of the above rule, and changed its default to *Disabled*.
+
+### Localization
+
+* Updated Korean translation by **@songkhla**.
+
 ## Version 0.10.0
 
 ### Compatibility

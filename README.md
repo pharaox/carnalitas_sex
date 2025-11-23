@@ -89,9 +89,12 @@ There are however some differences in how this interaction works in this mod, ai
 * The [pregnancy chance](#pregnancy-chances) is dynamic instead of hardcoded, and depends on the fertility of the partners and their relationship with each other.
 * If the interaction is available on a character, the *Can Make Love* important action lists all characters that can be targeted.
 
-As in Carnalitas, there is a cooldown of 1 year before the interaction is available again, unless the *No Cooldown* Carnalitas option is chosen. In the latter case, the interaction is always available, but either its effects will be completely blocked, or its stress effects will be reduced if you have used it (or another sex interaction) in the last 1 year, depending on the *Make Love No Cooldown Effects Blocked* game rule setting.
+##### Make Love Cooldowns
 
-Unlike in Carnalitas, all sex interactions always get a cooldown against the recipient for 1 year that cannot be disabled.
+In Carnalitas, there is a cooldown of 1 year before the interaction is available again, unless the *No Cooldown* Carnalitas option is chosen. In the latter case, the interaction is always available, but its effects are completely blocked for the duration of the cooldown. This mod introduces the following 2 new game rules:
+
+* The *Make Love Effects During Cooldown* game rule allows unblocking most *Make Love* effects during a cooldown, except for Stress reduction effects. Note that if you are *Lustful* or *Rakish*, *Make Love* will still reduce some stress every time it is used.
+* The *Make Love Cooldown Against Partner* game rule allows adding an additional cooldown against the partner. This improves the game balance of using the above rule, as it prevents you from losing infinite stress by repeatedly having sex with the same partner (if you are *Lustful* or *Rakish*).
 
 ##### Make Love Options
 
