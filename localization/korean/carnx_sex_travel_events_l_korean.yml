@@ -6,4 +6,4 @@
  carnx_sex_travel.0001.b: "집으로 돌아간다."
  carnx_sex_travel.0001.c: "이곳에 머물며 주변을 둘러본다."
 
- carnx_sex_travel_interaction: "[Select_CString(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), '(와)과', '에게')] [SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')]"
+ carnx_sex_travel_interaction: "[Select_CString(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')] [SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')]"
