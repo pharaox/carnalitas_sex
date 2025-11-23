@@ -48,6 +48,10 @@ carnx_on_sex_v2 = {
 }
 
 carn_on_pregnancy = {
+	on_actions = { carnx_on_pregnancy }
+}
+
+carnx_on_pregnancy = {
 	effect = {
 		#carnx_sex_debug_log_2_effect = {
 		#	MSG = carnx_sex_debug_msg_character_got_pregnant
