@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.10.2
+
+### Localization
+
+* Updated Chinese translation by **@jengus**.
+
 ## Version 0.10.1
 
 ### Game Rules
