@@ -1,9 +1,9 @@
 ﻿l_simp_chinese:
  carnx_sex_travel.0001.t: "$travel_completion_event.1000.t$"
- carnx_sex_travel.0001.desc.start_valid: "After a long journey, I have finally arrived in [current_location.GetName]. I can now $carnx_sex_travel_interaction$ my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName] and attend to other matters while I am here."
- carnx_sex_travel.0001.desc.start_invalid: "Upon arrival in [current_location.GetName], I find that I am no longer able to $carnx_sex_travel_interaction$ my [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))] [recipient.GetTitledFirstName]. I can start the return journey immediately, or take a moment to look around before I leave."
- carnx_sex_travel.0001.a: "Get on with it, then return home"
- carnx_sex_travel.0001.b: "Return home"
- carnx_sex_travel.0001.c: "Stay here and look around"
+ carnx_sex_travel.0001.desc.start_valid: "经历长途旅行后，我终于抵达了[current_location.GetName]。我现在可以$carnx_sex_travel_interaction$我的[ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))][recipient.GetTitledFirstName]并在这里处理其他事物"
+ carnx_sex_travel.0001.desc.start_invalid: "抵达[current_location.GetName]后，我发现我无法再$carnx_sex_travel_interaction$我的[ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('recipient'))][recipient.GetTitledFirstName]。我可以立即返程，或者在离开前逛一逛"
+ carnx_sex_travel.0001.a: "继续，然后回家"
+ carnx_sex_travel.0001.b: "回家吧"
+ carnx_sex_travel.0001.c: "在这逛逛"
 
- carnx_sex_travel_interaction: "[SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')] [Select_CString(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'to', 'from')]"
+ carnx_sex_travel_interaction: "[SelectLocalization(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'carn_sex_interaction', 'dsi_demand_sex_interaction')][Select_CString(EqualTo_string(SCOPE.GetFlagName('interaction'), 'sex'), 'to', 'from')]"
