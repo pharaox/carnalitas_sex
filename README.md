@@ -4,7 +4,7 @@
 
 A rework of the Carnalitas *Make Love* interaction and its related effects aiming at better realism and immersion, more variety, and improved player experience.
 
-The latest version is compatible with CK3 1.18.x and Carnalitas 2.12. If you are still on CK3 1.17.x, download [version 0.9.0](https://github.com/pharaox/carnalitas_sex/releases/download/0.9.0/carnalitas_love_reimagined-0.9.0.zip) instead, and use it with Carnalitas 2.11.
+The latest version is compatible with CK3 1.19.x and Carnalitas 2.16. If you are still on CK3 1.18.x, download [version 0.10.2](https://github.com/pharaox/carnalitas_sex/releases/download/0.10.2/carnalitas_love_reimagined-0.10.2.zip) instead, and use it with Carnalitas 2.15.
 
 **Note:** Since an official CBO version compatible with the latest CK3 and Carnalitas versions is not available, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/).
 
@@ -237,13 +237,13 @@ For an attitude to be selected, certain conditions must be fulfilled, and the ch
 ##### Target Attitudes
 
 | **Attitude** | **Opinion** | **Other Conditions** | **Factors** |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | amorous | positive | attraction > 0 | opinion (+), attraction (+), lustful / chaste (+/-), lover (+) |
 | reserved | negative | attraction < 0 | opinion (-), attraction (-), lustful / chaste (-/+), rival (+) |
 | respectful | positive | attraction < 0 | opinion (+), attraction (-), lustful / chaste (-/+), friend (+) |
 | hedonistic | negative | attraction > 0 | opinion (-), attraction (+), lustful / chaste (+/-) |
 | accommodating | positive | not attracted | opinion (+), ai_compassion (+),  ai_sociability (+), lover / friend (+) |
-| disgusted | negative | not attracted |  opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
+| disgusted | negative | not attracted | opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
 | faithful | positive | consort | opinion (+), ai_honor (+), lover / friend (+) |
 | deceitful | negative | consort | opinion (-), ai_honor (-), rival (+) |
 | obedient | positive | slave | opinion (+), ai_boldness (-), ai_vengefulness (-), lover / friend (+) |
@@ -258,13 +258,13 @@ For an attitude to be selected, certain conditions must be fulfilled, and the ch
 ##### Player Attitudes
 
 | **Attitude** | **Opinion** | **Other Conditions** | **Factors** |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | amorous | positive | attraction > 0 | opinion (+), attraction (+), lustful / chaste (+/-), lover (+) |
 | reserved | negative | attraction < 0 | opinion (-), attraction (-), lustful / chaste (-/+), rival (+) |
 | respectful | positive | attraction < 0 | opinion (+), attraction (-), lustful / chaste (-/+), friend (+) |
 | hedonistic | negative | attraction > 0 | opinion (-), attraction (+), lustful / chaste (+/-) |
 | accommodating | positive | not attracted | opinion (+), ai_compassion (+),  ai_sociability (+), lover / friend (+) |
-| disgusted | negative | not attracted |  opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
+| disgusted | negative | not attracted | opinion (-), ai_compassion (-), ai_sociability (-), rival (+) |
 | faithful | positive | consort | opinion (+), ai_honor (+), lover / friend (+) |
 | deceitful | negative | consort | opinion (-), ai_honor (-), rival (+) |
 | gentle | positive | owner | opinion (+), ai_compassion (+), lover / friend (+) |
