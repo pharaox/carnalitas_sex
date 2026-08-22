@@ -4,6 +4,10 @@
 
  carnx_sex_debug_msg_character_had_sex: "$carnx_sex_debug_prefix_2$: Le personnage a eu du sexe (carn_sex_partner: [THIS.Var('carn_sex_partner').Char.GetFullNameNoTooltip] ([THIS.Var('carn_sex_partner').Char.GetID], [Select_CString(THIS.Var('carn_sex_partner').Char.IsFemale, 'femme', 'homme')]), carn_sex_pregnancy_chance: [THIS.Var('carn_sex_pregnancy_chance').GetValue], carn_sex_could_be_impregnated: [Select_CString(THIS.Var('carn_sex_could_be_impregnated').IsSet, 'oui', 'non')], carn_sex_impregnated: [Select_CString(THIS.Var('carn_sex_impregnated').IsSet, 'oui', 'non')])"
 
+ carnx_sex_debug_msg_character_got_pregnant: "$carnx_sex_debug_prefix_2$: Le personnage est tombé enceinte (père : [THIS.Var('father').Char.GetFullNameNoTooltip] ([THIS.Var('father').Char.GetID]), carn_pregnancy_chance : [THIS.Var('carn_pregnancy_chance').GetValue])"
+ carnx_sex_debug_msg_character_got_pregnant_with_known_bastard: "$carnx_sex_debug_prefix$: Le personnage est tombé enceinte d’un bâtard connu"
+
+ carnx_sex_debug_msg_rape_interaction_accepted: "$carnx_sex_debug_prefix$: Interaction de viol acceptée"
  carnx_sex_debug_msg_debug_0001_fired: "$carnx_sex_debug_prefix$: Lancement du débogage de sexe"
 
  carnx_sex_debug_msg_sex_scene_0001_fired: "$carnx_sex_debug_prefix_2$: Lancement de la scène de sexe 1: ($carnx_carn_sex_target$, $carnx_sex_scene_location$, $carnx_sex_scene_target$, $carnx_sex_scene_player_attitude$, $carnx_sex_scene_target_attitude$)"
@@ -19,6 +23,13 @@
  carnx_sex_scene_target_attitude: "sex_scene_target_attitude: [THIS.Var('sex_scene_target_attitude').GetFlagName]"
  carnx_sex_scene_quote_flag: "sex_scene_quote: [THIS.Var('sex_scene_quote').GetFlagName]"
 
+ carnx_sex_debug_msg_travel_arrived: "$carnx_sex_debug_prefix$: Voyage vers le lieu de $carnx_travel_sex_recipient$ arrivé à destination"
+ carnx_sex_debug_msg_travel_moved: "$carnx_sex_debug_prefix$: Voyage vers le lieu de $carnx_travel_sex_recipient$ déplacé"
+ carnx_sex_debug_msg_travel_aborted_or_cancelled: "$carnx_sex_debug_prefix$: Voyage vers le lieu de $carnx_travel_sex_recipient$ abandonné ou annulé"
+ carnx_sex_debug_msg_travel_0001_event_fired: "$carnx_sex_debug_prefix$: Événement $carnx_sex_travel.0001.t$ déclenché"
+
  carnx_sex_debug.0001.t: "Débogage de sexe"
- carnx_sex_debug.0001.desc: "Je viens juste d'avoir du sexe avec [target.GetFirstNameNoTooltip]."
+ carnx_sex_debug.0001.desc: "Je viens juste d’avoir du sexe avec [target.GetFirstNameNoTooltip]."
  carnx_sex_debug.0001.a: "OK"
+
+ carnx_travel_sex_recipient: "[THIS.Var('carnx_travel_sex_recipient').Char.GetFullNameNoTooltip]"

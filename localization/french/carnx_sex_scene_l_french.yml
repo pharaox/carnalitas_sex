@@ -15,23 +15,23 @@
 
  carnx_sex_scene_dubcon_sub_opening_f: "M[second.Custom('FR_OnA')] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] me trouve"
 
- carnx_sex_scene_noncon_dom_opening_f: "My [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] guesses my intentions when I pay [second.GetHerHim] a visit"
+ carnx_sex_scene_noncon_dom_opening_f: "M[second.Custom('FR_OnA')] [ROOT.Char.Custom2('RelationToMeShort', SCOPE.sC('second'))] [second.GetTitledFirstName] devine mes intentions quand je lui rends visite"
 
  carnx_sex_scene_consensual_location_private_chambers_1: "allongé[second.Custom('FR_E')] sur un canapé dans mes quartiers privés"
  carnx_sex_scene_consensual_location_garden_1: "se promenant sur un sentier dans une partie isolée de mon jardin"
- carnx_sex_scene_consensual_location_f: "qui m'attend"
+ carnx_sex_scene_consensual_location_f: "qui m’attend"
 
  carnx_sex_scene_dubcon_dom_location_private_chambers_1: "allongé[second.Custom('FR_E')] sur un canapé dans mes quartiers privés"
  carnx_sex_scene_dubcon_dom_location_garden_1: "se promenant sur un sentier dans une partie isolée de mon jardin"
  carnx_sex_scene_dubcon_dom_location_dungeon_1: "solidement enchaîné[second.Custom('FR_E')] au mur de mon donjon"
- carnx_sex_scene_dubcon_dom_location_f: "qui m'attend"
+ carnx_sex_scene_dubcon_dom_location_f: "qui m’attend"
 
  carnx_sex_scene_dubcon_sub_location_private_chambers_1: "allongé[ROOT.Char.Custom('FR_E')] sur un canapé dans ses quartiers privés"
  carnx_sex_scene_dubcon_sub_location_garden_1: "me promenant sur un sentier dans une partie isolée de son jardin"
- carnx_sex_scene_dubcon_sub_location_f: "qui l'attend"
+ carnx_sex_scene_dubcon_sub_location_f: "qui l’attend"
 
- carnx_sex_scene_noncon_dom_location_private_chambers_1: "in [second.GetHerHis] chambers"
- carnx_sex_scene_noncon_dom_location_dungeon_1: "in [second.GetHerHis] dungeon cell"
+ carnx_sex_scene_noncon_dom_location_private_chambers_1: "dans ses quartiers privés"
+ carnx_sex_scene_noncon_dom_location_dungeon_1: "dans sa cellule de donjon"
  carnx_sex_scene_noncon_dom_location_f: ""
 
  carnx_sex_scene_giving_first: "[ROOT.Char.Custom2('carnx_sex_scene_giving_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_giving_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
@@ -51,8 +51,8 @@
  carnx_sex_scene_giving_first_target_14: "[second.GetSheHe|U] me fixe d’un air de défi" # resisting
  carnx_sex_scene_giving_first_target_15: "[second.GetSheHe|U] respire difficilement, tremblant[second.Custom('FR_E')] de passion" # amorous, flirtatious
  carnx_sex_scene_giving_first_target_16: "[second.GetSheHe|U] me regarde fixement, ses yeux brûlant de convoitise" # amorous, flirtatious
- carnx_sex_scene_giving_first_target_17: "[second.GetSheHe|U] prays for mercy, shocked and trembling with fear" # shocked
- carnx_sex_scene_giving_first_target_18: "[second.GetSheHe|U] appeals to my honor and curses me, full of anger" # angry
+ carnx_sex_scene_giving_first_target_17: "[second.GetSheHe|U] prie pour sa grâce, choqué[second.Custom('FR_E')] et tremblant[second.Custom('FR_E')] de peur" # shocked
+ carnx_sex_scene_giving_first_target_18: "[second.GetSheHe|U] en appelle à mon honneur et me maudit, plein[second.Custom('FR_E')] de colère" # angry
  carnx_sex_scene_giving_first_target_f:  "[second.GetSheHe|U] me salue avec courtoisie, bien que ses véritables sentiments ne soient pas faciles à lire" # fallback
 
  carnx_sex_scene_giving_first_player_01: "pendant que je m’approche d[second.Custom('FR_EluiElle')] et que j’enlève lentement ses vêtements" # respectful, accommodating, faithful, gentle
@@ -65,10 +65,10 @@
  carnx_sex_scene_giving_first_player_08: "pendant que je [second.Custom('FR_LeLa')] caresse doucement et que je lui murmure des mots de passion à l’oreille" # faithful, gentle
  carnx_sex_scene_giving_first_player_09: "tandis que je [second.Custom('FR_LeLa')] regarde avec méfiance, avec un sourire feint" # deceitful
  carnx_sex_scene_giving_first_player_10: "et je lui offre la vue de mon sexe en érection" # male, hedonistic, dominating
- carnx_sex_scene_giving_first_player_11: "but I just laugh contemptuously and proceed to what I came for" # schadenfreude
- carnx_sex_scene_giving_first_player_12: "but I unceremoniously grab [second.GetHerHim] and start giving [second.GetHerHim] what [second.GetSheHe] deserves" # vengeful
- carnx_sex_scene_giving_first_player_13: "while I show my eagerness to please [second.GetHerHim]" # deceitful, calculating
- carnx_sex_scene_giving_first_player_14: "and I greet [second.GetHerHim] merrily with a duplicitous smile" # deceitful, calculating, status-seeking
+ carnx_sex_scene_giving_first_player_11: "mais je me contente de rire avec mépris et poursuis ce pour quoi je suis venu" # schadenfreude
+ carnx_sex_scene_giving_first_player_12: "mais je [second.GetHerHim] empoigne sans ménagement et commence à lui donner ce qu’[second.GetSheHe] mérite" # vengeful
+ carnx_sex_scene_giving_first_player_13: "tandis que je montre mon empressement à lui plaire" # deceitful, calculating
+ carnx_sex_scene_giving_first_player_14: "et je [second.GetHerHim] salue joyeusement avec un sourire trompeur" # deceitful, calculating, status-seeking
  carnx_sex_scene_giving_first_player_f:  "alors que je suis moi-même plutôt incertain de mes véritables sentiments" # fallback
 
  carnx_sex_scene_receiving_first: "[ROOT.Char.Custom2('carnx_sex_scene_receiving_first_target', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_target_attitude')]), [ROOT.Char.Custom2('carnx_sex_scene_receiving_first_player', SCOPE.sC('second'))] ([ROOT.Char.Custom('carnx_sex_scene_player_attitude')]). "
@@ -94,7 +94,7 @@
  carnx_sex_scene_dubcon_title_3: "Plaisirs charnels multipliés" # orgy
  carnx_sex_scene_dubcon_title_f: "Plaisirs charnels"
 
- carnx_sex_scene_noncon_title_f: "Rough Pleasures"
+ carnx_sex_scene_noncon_title_f: "Plaisirs violents"
 
  carnx_sex_scene_consensual_option: "[ROOT.Char.Custom2('carnx_sex_scene_consensual_option', SCOPE.sC('second'))]"
  carnx_sex_scene_dubcon_option: "[ROOT.Char.Custom2('carnx_sex_scene_dubcon_option', SCOPE.sC('second'))]"
@@ -107,7 +107,7 @@
  carnx_sex_scene_dubcon_option_f: "Merveilleux."
 
  carnx_sex_scene_noncon_option_1: "Libérant." # bdsm
- carnx_sex_scene_noncon_option_f: "Done."
+ carnx_sex_scene_noncon_option_f: "C’est fait."
 
  carnx_sex_scene_attitude_amorous: "#P amoureux#!"
  carnx_sex_scene_attitude_reserved: "#N timide#!"
@@ -123,12 +123,12 @@
  carnx_sex_scene_attitude_calculating: "#color_yellow calculant#!"
  carnx_sex_scene_attitude_gentle: "#P doux#!"
  carnx_sex_scene_attitude_dominating: "#color_yellow dominant#!"
- carnx_sex_scene_attitude_pleasure_seeking: "#color_yellow pleasure-seeking#!"
- carnx_sex_scene_attitude_status_seeking: "#color_yellow status-seeking#!"
- carnx_sex_scene_attitude_shocked: "#N shocked#!"
- carnx_sex_scene_attitude_angry: "#N angry#!"
+ carnx_sex_scene_attitude_pleasure_seeking: "#color_yellow avide de plaisir#!"
+ carnx_sex_scene_attitude_status_seeking: "#color_yellow en quête de statut#!"
+ carnx_sex_scene_attitude_shocked: "#N choqué#!"
+ carnx_sex_scene_attitude_angry: "#N coléreux#!"
  carnx_sex_scene_attitude_schadenfreude: "#N schadenfreude#!"
- carnx_sex_scene_attitude_vengeful: "#N vengeful#!"
+ carnx_sex_scene_attitude_vengeful: "#N vindicatif#!"
  carnx_sex_scene_attitude_unknown: "#color_yellow inconnu#!"
 
  carnx_sex_scene.t: "[ROOT.Char.Custom2('carnx_sex_scene_title', SCOPE.sC('carn_sex_target'))]"
