@@ -1,5 +1,5 @@
 NAME := carnalitas_love_reimagined
-VERSION := $(shell cat VERSION)
+VERSION := $(shell sed -n 's/^version="\(.*\)"/\1/p' descriptor.mod)
 
 .PHONY: tiger
 tiger:
@@ -9,7 +9,7 @@ tiger:
 .PHONY: build
 build: clean
 	mkdir -p tmp/$(NAME)
-	rsync -r --exclude=".*" --exclude=tmp --exclude=images --exclude=misc --exclude=resources --exclude=Makefile --exclude=VERSION --exclude=ck3-tiger.conf . tmp/$(NAME)
+	rsync -r --exclude=".*" --exclude=tmp --exclude=images --exclude=misc --exclude=resources --exclude=Makefile --exclude=ck3-tiger.conf . tmp/$(NAME)
 	cp descriptor.mod tmp/$(NAME).mod
 	echo "path=\"mod/$(NAME)\"" >> tmp/$(NAME).mod
 	pandoc README.md -t html5 -o tmp/$(NAME)-$(VERSION).pdf
@@ -26,4 +26,4 @@ thumbnail:
 
 .PHONY: update-version
 update-version:
-	sed -i 's/$(VERSION)/$(NEW_VERSION)/g' descriptor.mod VERSION
+	sed -i 's/$(VERSION)/$(NEW_VERSION)/g' descriptor.mod
