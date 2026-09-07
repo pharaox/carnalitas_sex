@@ -8,6 +8,8 @@ The latest version is compatible with CK3 1.19.x and Carnalitas 2.16. If you are
 
 **Note:** Since an official CBO version compatible with the latest CK3 and Carnalitas versions is not available, you should use [CBO Unofficial](https://www.loverslab.com/files/file/33324-cbo-unofficial/).
 
+**Check out my new mod [Pyrates](https://steamcommunity.com/sharedfiles/filedetails/?id=3797518189) - take landless adventure to the seas with new buildings, contracts, and events.**
+
 ## Overview
 
 [Carnalitas](https://www.loverslab.com/files/file/14207-carnalitas-unified-sex-mod-framework-for-ck3/) introduces a *Make Love* interaction that allows the player character to have sex with their lovers, spouses, concubines, or slaves. This feature is quite popular with players, and there are plenty of other mods that extend it or build upon it. However, it also has certain limitations that have never been addressed so far in any mod.
@@ -16,7 +18,7 @@ By default, *Make Love* uses the vanilla sex scene generator originally used for
 
 Originally, Carnalitas intended to support 3 different types of sex scenes: "consensual", "dubcon", and "noncon". Unfortunately, the logic to select the appropriate type never produces any other result but "consensual". Furthermore, there are actually no events in Carnalitas or other mods that would satisfy the "dubcon" or "noncon" condition.
 
-Even the name *Make Love* itself may not be appropriate when demanding sex from a slave who is neither a lover nor an official consort. Historically such acts were often condemned by religion as adulterous or worse, and should have all sorts of consequences in the game, ranging from stress impact to opinion loss with the victim. For this reason, the [Carnalitas Slavery Expansion](https://www.loverslab.com/files/file/21651-carnalitas-slavery-expansion/) mod introduced the *Demand Sex* interaction, without addressing the above issues however, so that slaves, while losing 20 opinion, are still acting in the sex scene as if enamoured with the player.
+Even the name *Make Love* itself may not be appropriate when demanding sex from a slave who is neither a lover nor an official consort. Historically such acts were often condemned by religion as adulterous or worse, and should have all sorts of consequences in the game, ranging from stress impact to opinion loss with the victim. For this reason, the [Carnalitas Slavery Expansion](https://www.loverslab.com/files/file/21651-carnalitas-slavery-expansion/) mod introduced the *Demand Sex* interaction, without addressing the above issues however, so that slaves, while losing 20 opinion, are still acting in the sex scene as if enamored with the player.
 
 This mod improves and expands the *Make Love* interaction in order to properly address these limitations. It does this by adding a new sex scene generator that generates animations, backgrounds, and texts appropriate to many different attitudes and their combinations in both "consensual" and "dubcon" situations. It also re-introduces the *Demand Sex* interaction with its negative consequences, fully integrated with the new generator, and makes a number of other changes to make *Make Love* more immersive and enjoyable.
 
@@ -66,6 +68,7 @@ If you like this mod, you may also consider my other mods:
 * [Search & Trade Artifacts](https://steamcommunity.com/sharedfiles/filedetails/?id=2962238514), search for artifacts, buy them from other characters, and sell them to other characters.
 * [Travelers](https://steamcommunity.com/sharedfiles/filedetails/?id=3082182371), characters always travel to their home when it changes instead of teleporting.
 * [Active Courtiers](https://steamcommunity.com/sharedfiles/filedetails/?id=3157170996), courtiers search for spouses themselves for less micromanagement, stronger AI, and immersion.
+* [Pyrates](https://steamcommunity.com/sharedfiles/filedetails/?id=3797518189), take landless adventure to the seas with new buildings, contracts, and events.
 
 Thumbnail Source: [*Grande Odalisque* by Jean-Auguste-Dominique Ingres](https://commons.wikimedia.org/wiki/File:Ingre,_Grande_Odalisque.jpg)
 
@@ -170,7 +173,7 @@ The *Make Love* and *Demand Sex* interactions request either the "consensual" or
 * For consorts and prostitutes that are attracted to your gender (and you are attracted to their), request "consensual" if both your and their *opinion attraction value (OAV)* is at least 20, otherwise request "dubcon".
 * For slaves that are not "slave consorts", request "consensual" if their OAV is at least 60 and your OAV is at least 20, otherwise request "dubcon".
 
-The *opinion attraction value (OAV)* with a partner is calculated as `opinion_of_partner + partner_attraction * 2`, so the higher the target's opinion of you and your attraction are, the higher the chance of "consensual" vs. "dubcon". This works both ways - if your OAV with the target is not high enough, or you are simply not attracted to their gender, you will get "dubcon" instead of "consensual". The reason for this is that the Paradox sex scene generator is still available for "consensual" scenes, and it only generates believable descriptions if both partners could be considered enamoured with each other.
+The *opinion attraction value (OAV)* with a partner is calculated as `opinion_of_partner + partner_attraction * 2`, so the higher the target's opinion of you and your attraction are, the higher the chance of "consensual" vs. "dubcon". This works both ways - if your OAV with the target is not high enough, or you are simply not attracted to their gender, you will get "dubcon" instead of "consensual". The reason for this is that the Paradox sex scene generator is still available for "consensual" scenes, and it only generates believable descriptions if both partners could be considered enamored with each other.
 
 Besides the fact that the Paradox sex scene generator may be available for "consensual" but not for "dubcon" scenes, there is no big difference between them. The new [sex scene generator](#sex-scene-generator) generates sex scenes depending on the [player and target attitudes](#player-and-target-attitudes), mostly ignoring if the scene is considered "consensual" or not.
 
@@ -326,7 +329,7 @@ The sections below list the changes made to existing Carnalitas objects in somew
 
 ### On Action (`on_action`)
 
-* `carn_sex_scene`: Replaced the default sex scene events as described in [Sex Scene Events](#sex-scene-events)
+* `carn_sex_scene`: Replaced the default sex scene events as described in [Sex Scene Events](#sex-scene-events).
 
 ## Changes to CBO
 
