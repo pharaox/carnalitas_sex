@@ -67,12 +67,11 @@ carnx_is_slave_consort_of_trigger = {
 }
 
 carnx_is_sex_interaction_blocked_trigger = {
-	has_trait_with_flag = carn_block_send_sex_interaction
-	has_character_flag = carn_block_send_sex_interaction
-	trigger_if = {
-		limit = { exists = scope:recipient }
+	OR = {
+		has_trait_with_flag = carn_block_send_sex_interaction
+		has_character_flag = carn_block_send_sex_interaction
 		has_opinion_modifier = {
-			target = scope:recipient
+			target = $PARTNER$
 			modifier = carn_block_sex_interaction_to_opinion
 		}
 	}
@@ -81,11 +80,12 @@ carnx_is_sex_interaction_blocked_trigger = {
 carnx_is_eligible_sex_target_trigger = {
 	save_temporary_scope_as = target
 	is_adult = yes
-	carnx_is_sex_interaction_blocked_trigger = no
+	NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = $PLAYER$ } }
 	carn_can_have_sex_trigger = yes
 	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = $PLAYER$ }
 	NOT = { var:carnx_sex_interaction_used_by_actor ?= $PLAYER$ }
 	$PLAYER$ = {
+		NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = scope:target } }
 		carnx_can_have_sex_with_trigger = { PARTNER = scope:target }
 		is_attracted_to_gender_of = scope:target
 		#NOT = { carnx_is_sex_with_character_crime_trigger = { CHARACTER = scope:target } }
@@ -95,11 +95,12 @@ carnx_is_eligible_sex_target_trigger = {
 carnx_is_eligible_demand_sex_target_trigger = {
 	save_temporary_scope_as = target
 	is_adult = yes
-	carnx_is_sex_interaction_blocked_trigger = no
+	NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = $PLAYER$ } }
 	carn_can_have_sex_trigger = yes
 	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = $PLAYER$ }
 	NOT = { var:carnx_sex_interaction_used_by_actor ?= $PLAYER$ }
 	$PLAYER$ = {
+		NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = scope:target } }
 		carnx_can_demand_sex_from_trigger = { PARTNER = scope:target }
 		has_usable_hook = scope:target
 		is_attracted_to_gender_of = scope:target
@@ -287,7 +288,7 @@ carnx_is_sex_with_character_adultery_trigger = {
 }
 
 carnx_is_sex_with_character_sodomy_trigger = {
-	relation_with_character_is_sodomy_trigger = { CHARACTER = $CHARACTER$ }
+	relation_with_character_is_sodomy_by_my_rite_trigger = { CHARACTER = $CHARACTER$ }
 }
 
 carnx_is_sex_with_character_incest_trigger = {
@@ -298,11 +299,11 @@ carnx_is_adultery_crime_trigger = {
 	OR = {
 		AND = {
 			is_male = yes
-			faith = { has_doctrine_parameter = adultery_male_crime }
+			rite = { rite_has_parameter = adultery_male_crime }
 		}
 		AND = {
 			is_female = yes
-			faith = { has_doctrine_parameter = adultery_female_crime }
+			rite = { rite_has_parameter = adultery_female_crime }
 		}
 	}
 }
@@ -311,23 +312,23 @@ carnx_is_adultery_shunned_trigger = {
 	OR = {
 		AND = {
 			is_male = yes
-			faith = { has_doctrine_parameter = adultery_male_shunned }
+			rite = { rite_has_parameter = adultery_male_shunned }
 		}
 		AND = {
 			is_female = yes
-			faith = { has_doctrine_parameter = adultery_female_shunned }
+			rite = { rite_has_parameter = adultery_female_shunned }
 		}
 	}
 }
 
 carnx_is_sodomy_crime_trigger = {
 	is_male = yes
-	faith = { has_doctrine_parameter = homosexuality_illegal }
+	rite = { rite_has_parameter = homosexuality_illegal }
 }
 
 carnx_is_sodomy_shunned_trigger = {
 	is_male = yes
-	faith = { has_doctrine_parameter = homosexuality_shunned }
+	rite = { rite_has_parameter = homosexuality_shunned }
 }
 
 carnx_is_incest_crime_trigger = {
@@ -335,7 +336,7 @@ carnx_is_incest_crime_trigger = {
 }
 
 carnx_is_incest_shunned_trigger = {
-	NOT = { faith = { has_doctrine_parameter = allows_unrestricted_marriage } }
+	NOT = { rite = { rite_has_parameter = allows_unrestricted_marriage } }
 }
 
 carnx_is_sex_interaction_shown_trigger = {

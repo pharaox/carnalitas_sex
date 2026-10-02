@@ -30,18 +30,19 @@
 		}
 	}
 
+	is_available = {
+		NOT = { has_game_rule = carn_sex_interaction_disabled }
+		is_adult = yes
+	}
+
 	is_shown = {
-		NOR = {
-			has_game_rule = carn_sex_interaction_disabled
-			scope:actor = scope:recipient
-		}
+		scope:actor != scope:recipient
 		scope:actor = {
-			is_adult = yes
-			carnx_is_sex_interaction_blocked_trigger = no
+			NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = scope:recipient } }
 		}
 		scope:recipient = {
 			is_adult = yes
-			carnx_is_sex_interaction_blocked_trigger = no
+			NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = scope:actor } }
 		}
 		scope:actor = {
 			carnx_can_have_sex_with_trigger = { PARTNER = scope:recipient }

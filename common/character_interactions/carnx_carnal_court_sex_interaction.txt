@@ -4,22 +4,25 @@
 	interface_priority = 40
 	icon = carn_icon
 
-	is_shown = {
+	is_available = {
 		NOR = {
 			has_game_rule = carn_sex_interaction_disabled
-			scope:actor = scope:recipient
 			cbo_body_active = no
 			has_game_rule = carnal_court_make_love_disabled
 		}
+		is_adult = yes
+		age >= 18
+	}
+
+	is_shown = {
+		scope:actor != scope:recipient
 		scope:actor = {
-			is_adult = yes
-			age >= 18
-			carnx_is_sex_interaction_blocked_trigger = no
+			NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = scope:recipient } }
 		}
 		scope:recipient = {
 			is_adult = yes
 			age >= 18
-			carnx_is_sex_interaction_blocked_trigger = no
+			NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = scope:actor } }
 		}
 		scope:actor = {
 			carnx_can_have_sex_with_trigger = { PARTNER = scope:recipient }

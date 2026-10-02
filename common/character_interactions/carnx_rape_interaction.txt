@@ -4,17 +4,20 @@
 	interface_priority = 30
 	icon = carn_icon
 
-	is_shown = {
+	is_available = {
 		NOT = { has_game_rule = carn_sex_interaction_disabled }
 		has_game_rule = carn_content_consent_noncon
+		is_adult = yes
+	}
+
+	is_shown = {
 		scope:actor = {
-			is_adult = yes
-			carnx_is_sex_interaction_blocked_trigger = no
+			NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = scope:recipient } }
 		}
 		scope:recipient = {
 			is_ai = yes
 			is_adult = yes
-			carnx_is_sex_interaction_blocked_trigger = no
+			NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = scope:actor } }
 			is_imprisoned_by = scope:actor
 		}
 	}
@@ -117,10 +120,6 @@
 		kingdom = 12
 		empire = 12
 		hegemony = 12
-	}
-
-	ai_potential = {
-		always = yes
 	}
 
 	ai_will_do = {

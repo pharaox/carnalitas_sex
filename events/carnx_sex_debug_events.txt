@@ -2,13 +2,13 @@
 
 scripted_trigger carnx_sex_debug_0001_valid_liege_trigger = {
 	is_adult = yes
-	carnx_is_sex_interaction_blocked_trigger = no
 	carn_can_have_sex_trigger = yes
 }
 
 scripted_trigger carnx_sex_debug_0001_valid_target_trigger = {
 	is_adult = yes
-	carnx_is_sex_interaction_blocked_trigger = no
+	NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = root } }
+	root = { NOT = { carnx_is_sex_interaction_blocked_trigger = { PARTNER = prev } } }
 	carn_can_have_sex_trigger = yes
 	carnx_is_sex_target_at_valid_location_trigger = { PARTNER = root }
 	OR = {

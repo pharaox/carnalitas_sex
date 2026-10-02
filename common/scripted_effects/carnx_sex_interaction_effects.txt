@@ -793,7 +793,7 @@ carnx_rape_interaction_target_effect = {
 			add_stress = medium_stress_impact_gain
 		}
 		else = {
-			stress_impact = {
+			stress_and_fulfillment_impact = {
 				craven = major_stress_impact_gain
 				brave = minor_stress_impact_gain
 			}
@@ -911,7 +911,7 @@ carnx_sex_interaction_bdsm_target_effect = {
 		add_stress = minor_stress_impact_gain
 	}
 	else = {
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			craven = medium_stress_impact_gain
 			brave = miniscule_stress_impact_gain
 		}
@@ -978,7 +978,7 @@ carnx_sex_scaled_stress_impact_1_effect = {
 		limit = {
 			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			$T1$ = $HI$_stress_impact_$GL1$
 		}
 	}
@@ -986,7 +986,7 @@ carnx_sex_scaled_stress_impact_1_effect = {
 		limit = {
 			NOT = { flag:$LO$ = flag:none }
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			$T1$ = $LO$_stress_impact_$GL1$
 		}
 	}
@@ -997,7 +997,7 @@ carnx_sex_scaled_stress_impact_2_effect = {
 		limit = {
 			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			$T1$ = $HI$_stress_impact_$GL1$
 			$T2$ = $HI$_stress_impact_$GL2$
 		}
@@ -1006,7 +1006,7 @@ carnx_sex_scaled_stress_impact_2_effect = {
 		limit = {
 			NOT = { flag:$LO$ = flag:none }
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			$T1$ = $LO$_stress_impact_$GL1$
 			$T2$ = $LO$_stress_impact_$GL2$
 		}
@@ -1018,7 +1018,7 @@ carnx_sex_scaled_stress_impact_3_effect = {
 		limit = {
 			NOT = { has_character_flag = carn_sex_interaction_effect_cd }
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			$T1$ = $HI$_stress_impact_$GL1$
 			$T2$ = $HI$_stress_impact_$GL2$
 			$T3$ = $HI$_stress_impact_$GL3$
@@ -1028,7 +1028,7 @@ carnx_sex_scaled_stress_impact_3_effect = {
 		limit = {
 			NOT = { flag:$LO$ = flag:none }
 		}
-		stress_impact = {
+		stress_and_fulfillment_impact = {
 			$T1$ = $LO$_stress_impact_$GL1$
 			$T2$ = $LO$_stress_impact_$GL2$
 			$T3$ = $LO$_stress_impact_$GL3$
